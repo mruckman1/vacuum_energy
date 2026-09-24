@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 16, "m": 0.5, "tau0": 0.75, "lam": 4.0, "n_max": 6, "tag": "wt_L16_n6_chiop32_w1_lam4_xsvd", "section": "S8", "part": "wt", "threads": 1, "chi_gs": 16, "priority": 205.0, "kw": {"chi_op": 32, "chi_acc": 64, "chi_mpo": 128, "weight_decay": 1.0, "chi_dmrg": 12, "svd_dense_limit": "inf"}}

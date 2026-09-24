@@ -1,0 +1,11 @@
+{
+  "_source": "notebook.py::s4d_scan",
+  "n_ball": 4,
+  "tau": 18.0,
+  "N": 300,
+  "N_big": 444,
+  "C_shell": 0.002783744959839813,
+  "C_shell_big": 0.00278440867005641,
+  "rel_dev_raw": 0.00023842350005915633,
+  "rel_dev_predicted_by_g4_law": 0.00023419642471129022
+}

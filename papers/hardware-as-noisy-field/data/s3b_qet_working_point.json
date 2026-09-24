@@ -1,0 +1,151 @@
+{
+ "N": 3,
+ "d": 2,
+ "site_A": 0,
+ "site_B": 1,
+ "theta": 0.07976478794334226,
+ "shots_per_circuit": 100000,
+ "dense": {
+  "E_A": 0.8538482301781176,
+  "E_B": 0.01043795429721639,
+  "E_B_wrong": -0.031084232481926488,
+  "E_B_info": 0.04152218677914288,
+  "E_B_cut": -0.01032313909235505,
+  "ledger_defect": 1.1102230246251565e-15,
+  "no_signaling": 2.255140518769849e-16
+ },
+ "ideal_aer": {
+  "E_A": 0.8538482301781193,
+  "E_B_ctrl": 0.010437954297215946,
+  "E_B_raw": 0.01043795429721539,
+  "E_B_info": 0.04152218677914277,
+  "E_B_cut": -0.010323139092355382,
+  "E_B_ctrl_std_error": 0.0021224144580239955,
+  "E_B_info_std_error": 0.0020890655212167483,
+  "no_signaling": 6.245004513516506e-17,
+  "depth": 36,
+  "cx_count": 8,
+  "n_circuits": 9
+ },
+ "ideal_aer_vs_dense": 1.6653345369377348e-15,
+ "ideal_aer_E_B_vs_dense": 4.440892098500626e-16,
+ "ideal_z": {
+  "E_B_ctrl": 4.917962303618051,
+  "E_B_info": 19.875961934864886
+ },
+ "sourced_point": {
+  "none": {
+   "E_A": 0.8323686237828941,
+   "E_A_std_error": 0.0007560586891357642,
+   "HB_ground": 0.8251205381362716,
+   "HB_meas": 0.825120538136272,
+   "HB_final": 0.8367558993124931,
+   "HB_wrong": 0.874831543742586,
+   "E_B_raw": -0.0431883404797031,
+   "E_B_raw_std_error": 0.001777988776280729,
+   "E_B_ctrl": -0.011635361176221104,
+   "E_B_ctrl_std_error": 0.0023767154094121302,
+   "E_B_info": 0.038075644430092925,
+   "E_B_info_std_error": 0.0024143017417434225,
+   "E_B_cut": -0.030673183391267567,
+   "no_signaling_energy": 3.3306690738754696e-16,
+   "no_signaling": 1.2907893025527728e-16,
+   "depth": 36,
+   "cx_count": 8,
+   "n_circuits": 9,
+   "E_B_raw_z": -24.290558554619377,
+   "E_B_raw_shots_for_3sigma": Infinity,
+   "E_B_ctrl_z": -4.895563486542572,
+   "E_B_ctrl_shots_for_3sigma": Infinity,
+   "E_B_info_z": 15.770872286492919,
+   "E_B_info_shots_for_3sigma": 3619
+  },
+  "tensored": {
+   "E_A": 0.8467583480698001,
+   "E_A_std_error": 0.0007693438813712511,
+   "HB_ground": 0.8087303939009226,
+   "HB_meas": 0.8087303939009227,
+   "HB_final": 0.8199184757082292,
+   "HB_wrong": 0.8600223752663938,
+   "E_B_raw": -0.026350916875439223,
+   "E_B_raw_std_error": 0.0018234253888607282,
+   "E_B_ctrl": -0.01118808180730646,
+   "E_B_ctrl_std_error": 0.0024405599621601607,
+   "E_B_info": 0.040103899558164624,
+   "E_B_info_std_error": 0.0024788229782663268,
+   "E_B_cut": -0.031240031586388772,
+   "no_signaling_energy": 1.1102230246251565e-16,
+   "no_signaling": 1.2907893025527728e-16,
+   "depth": 36,
+   "cx_count": 8,
+   "n_circuits": 9,
+   "E_B_raw_z": -14.451327175993317,
+   "E_B_raw_shots_for_3sigma": Infinity,
+   "E_B_ctrl_z": -4.5842273825568265,
+   "E_B_ctrl_shots_for_3sigma": Infinity,
+   "E_B_info_z": 16.178605697052657,
+   "E_B_info_shots_for_3sigma": 3439
+  }
+ },
+ "noise_description": {
+  "n_qubits": 3,
+  "tiling": "qubit q carries Table III row (q mod 2): device qubit 13 for even q, 14 for odd q; the single printed CNOT error on every coupling-map edge (modelling choice)",
+  "t1_ns": [
+   146430.0,
+   94280.0,
+   146430.0
+  ],
+  "t2_ns": [
+   164290.0,
+   186990.0,
+   164290.0
+  ],
+  "pauli_x_error": [
+   0.000163,
+   0.0001732,
+   0.000163
+  ],
+  "cnot_error": 0.00439,
+  "readout_error": [
+   0.0085,
+   0.008,
+   0.0085
+  ],
+  "single_qubit_gate_time_ns": 30.0,
+  "cnot_gate_time_ns": 220.444,
+  "depolarizing_1q": [
+   0.00013601598227703629,
+   0.0001334292476581743,
+   0.00013601598227703629
+  ],
+  "depolarizing_2q": {
+   "0->1": 0.003495446902694123,
+   "1->0": 0.003495446902694419,
+   "1->2": 0.003495446902694419,
+   "2->1": 0.003495446902694123
+  },
+  "relaxation_fidelity_1q": [
+   0.9999049950689495,
+   0.9998935004136694,
+   0.9999049950689495
+  ],
+  "relaxation_fidelity_2q": {
+   "0->1": 0.9982253820943588,
+   "1->0": 0.9982253820943591,
+   "1->2": 0.9982253820943591,
+   "2->1": 0.9982253820943588
+  },
+  "sweep": null,
+  "synthetic": false,
+  "source": "K. Ikeda, 'Demonstration of Quantum Energy Teleportation on Superconducting Quantum Hardware', Phys. Rev. Applied 20, 024051 (2023); arXiv:2301.02666v5",
+  "locations": {
+   "t1_t2_location": "Table III, ibm_cairo column, t1(us)/t2(us) rows for the first and second qubit",
+   "single_qubit_gate_time_location": "Sec. II.D: 'the duration of a single qubit operator is between 20-40 ns' (midpoint unless overridden)",
+   "pauli_x_error_location": "Table III, ibm_cairo column, 'Pauli X error' rows; attached to x and sx",
+   "cnot_error_location": "Table III, ibm_cairo column, 'CNOT error' (direct CNOT between [13,14])",
+   "cnot_gate_time_location": "Table III, ibm_cairo column, 'Gate time (ns)'",
+   "readout_note": "per-qubit 'Readout assignment error', Table III ibm_cairo column (first qubit 8.500e-3, second qubit 8.000e-3), symmetric flips"
+  }
+ },
+ "audit_ideal_aer": true
+}

@@ -1,0 +1,340 @@
+{
+  "source": "S. Ren, 'Design and Implementation of an Entanglement Harvesting Experiment With Superconducting Flux Qubits', MSc thesis (Physics), University of Waterloo, 2022 (supervisor A. Lupascu; committee E. Martin-Martinez). UWSpace item https://uwspace.uwaterloo.ca/items/275fe26d-8e58-4866-9193-51c8405c03ab (PDF bitstream 88ebe433-d0f3-45da-b743-31cad21bc384)",
+  "location": "Full text (pdftotext of the UWSpace PDF). Sec. 4.3 and Fig. 4.5 (quantum state tomography protocol and its simulated precision); Table 3.1 and Secs. 3.3.1-3.3.4 (design parameters and the optimal-point state, Eqs. 3.70-3.71); Secs. 4.1.1-4.1.2 and Table 4.1 (simulated RQI-device properties); Sec. 4.2 (protocol). Per-quantity locations below.",
+  "retrieved": "2026-09-01",
+  "transcribed_by": "vacuum-program build agent (gap-closure pass 2026-09-01)",
+  "comment": "The Waterloo (Lupascu) group's own statement of what its two-flux-qubit tomography can resolve, which is why this file exists: it is the source of negativity_resolution_nats in circuit_qed_harvesting/teixido-bonfill_2026_table1.json. NOTHING in this file is a measurement on the harvesting device: the tomography numbers come from a SIMULATION of the maximum-likelihood protocol with shot noise and Gaussian readout noise tuned to the group's stated ~80% single-shot fidelity ('roughly in line with our setup'); the device numbers are DESIGN values (Table 3.1) or circuit SIMULATIONS (Sec. 4.1.1). Each quantity says which in its 'kind' field ('design', 'simulated', 'assumed', 'stated'). Two derived quantities at the end compute the negativity of the thesis's own optimal-point state from its printed density matrix. One quantity is a PLOT READ (axis extent of Fig. 4.5(b)) and is flagged. The thesis's detector model is a simpler UDW model than Teixido-Bonfill et al. 2026 (Gaussian switching, no gap variation), and its entanglement measure is the concurrence.",
+  "provenance_tags": "Per-quantity 'provenance' in {'transcribed', 'plot_digitized', 'derived'}; no synthetic quantities ('synthetic_quantities' empty, asserted by tests/test_experiments_io.py). 'kind' distinguishes design / simulated / assumed / stated values, none of which is a measurement.",
+  "synthetic_quantities": [],
+  "derived_quantities": ["optimal_point_negativity", "optimal_point_log_negativity_nats"],
+  "plot_digitized": ["qst_spurious_concurrence_separable_max"],
+  "quantities": {
+    "qst_shots_per_prerotation": {
+      "value": 1e7,
+      "units": "counts",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 4.3, simulation paragraph; run-time estimate",
+      "note": "'We generate 10^7 noisy signals for each prerotation operator'"
+    },
+    "qst_prerotations": {
+      "value": 9,
+      "units": "counts",
+      "provenance": "transcribed",
+      "kind": "stated",
+      "location": "Sec. 4.3, Eq. (4.13)",
+      "note": "P = {I, R_x(pi/2), R_y(pi/2)} x {I, R_x(pi/2), R_y(pi/2)}; readout only in the Z basis; the correlator <Z_A Z_B> is recorded per shot to reconstruct the off-diagonal elements"
+    },
+    "single_shot_readout_fidelity": {
+      "value": 80,
+      "units": "percent",
+      "provenance": "transcribed",
+      "kind": "assumed",
+      "location": "Sec. 4.3, simulation paragraph",
+      "note": "stated as approximate: Gaussian noise with sigma = 1 on the +-1 scaled signals, 'chosen such that a one-shot single qubit measurement with a simple discriminator has fidelity of around 80%, which is roughly in line with our setup' -- the only device-informed input of the precision simulation"
+    },
+    "qst_repetition_time": {
+      "value": 15,
+      "units": "us",
+      "provenance": "transcribed",
+      "kind": "assumed",
+      "location": "Sec. 4.3, last paragraph",
+      "note": "'If we set the repetition t_rep to 15 us'; consistent with the ~10 us thermalization wait of Sec. 4.2 step 2 (Gamma_1 ~ 4 MHz at the decoupling point)"
+    },
+    "qst_run_time": {
+      "value": "22.5 minutes = 1e7 x 9 x 15 us, 'reasonable for an experiment'",
+      "units": "label",
+      "provenance": "transcribed",
+      "kind": "stated",
+      "location": "Sec. 4.3, last paragraph"
+    },
+    "qst_simulation_repeats": {
+      "value": 500,
+      "units": "counts",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 4.3, simulation paragraph; Fig. 4.5",
+      "note": "'we repeat this simulation 500 times for each target rho in order to generate the statistics of the reconstructed concurrences'"
+    },
+    "qst_concurrence_floor": {
+      "value": 0.001,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 4.3, discussion of Fig. 4.5(a)",
+      "note": "'In figure 4.5a, nearly half of its reconstructed concurrences are zero, while the other half are spread evenly across a concurrence range from 0.001 to 0.01' -- for the target state of Eq. (3.71) (true C ~ 0.0087). The smallest non-zero reconstructed concurrence, taken as the resolvable-concurrence floor of the group's protocol at 1e7 shots per prerotation"
+    },
+    "qst_reconstructed_concurrence_range_target": {
+      "value": [0.001, 0.01],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 4.3, discussion of Fig. 4.5(a)",
+      "note": "spread of the non-zero half of the 500 reconstructions of the Eq. (3.71) state"
+    },
+    "qst_zero_fraction_target": {
+      "value": "nearly half of the 500 reconstructions of the entangled target state return concurrence 0",
+      "units": "label",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 4.3, discussion of Fig. 4.5(a)",
+      "note": "the thesis's detection strategy is therefore 'repeating QST many times and detecting when a high amount of concurrence is generated'"
+    },
+    "qst_spurious_concurrence_separable_max": {
+      "value": 0.0012,
+      "units": "dimensionless",
+      "provenance": "plot_digitized",
+      "kind": "simulated",
+      "location": "Fig. 4.5(b), horizontal-axis extent",
+      "note": "PLOT READ, NOT a text-stated value: the histogram of reconstructed concurrences for the SEPARABLE input |eg><eg| spans a horizontal axis ending at 0.0012, so spurious concurrence from shot/readout noise is at most ~1.2e-3 (upper bound: the axis may extend past the last bin). The text only says the entangled state shows 'a much larger spread'"
+    },
+    "daq_sampling_rate": {
+      "value": 200,
+      "units": "MHz",
+      "provenance": "transcribed",
+      "kind": "stated",
+      "location": "Sec. 4.3, readout step 2",
+      "note": "'at a sampling rate of 200 MHz or more'; single-bin DFT at +-omega_IF discriminates the multiplexed readout tones"
+    },
+    "design_waveguide_speed": {
+      "value": 1.2e8,
+      "units": "m/s",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Table 3.1",
+      "note": "'the speed of light in a typical superconducting coplanar waveguide as measured in [11]'; same value as Teixido-Bonfill et al. 2026, Eq. (7)"
+    },
+    "design_switching_timescale": {
+      "value": 200,
+      "units": "ps",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Table 3.1; Sec. 4.1.2",
+      "note": "Gaussian switching timescale T, 'chosen such that a fast arbitrary waveform generator (such as the Tektronix 70000A) can generate the required Gaussian pulse with minimal distortion'; the interaction is applied over |t| < 2.5 T (Sec. 4.2 step 3) and the total coupling time is '< 1 ns' (Sec. 4.2)"
+    },
+    "design_gaussian_window_half_width_in_T": {
+      "value": 2.5,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Sec. 4.2, step 3",
+      "note": "'Since the Gaussian switching function chi(t) is suppressed to a negligible amount for |t| > 2.5T, we can start this stage at around t ~ -2.5T and finish at around t ~ 2.5T'"
+    },
+    "design_coupling_lambda": {
+      "value": 0.25,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Table 3.1 (lambda = 1/4)",
+      "note": "'chosen small enough such that the perturbative results are valid'; lambda = sqrt(2 pi alpha_SB) (Eq. 3.72), so lambda = 1 corresponds to alpha_SB ~ 0.16"
+    },
+    "design_qubit_gap_range": {
+      "value": [1.6, 6.5],
+      "units": "GHz",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Table 3.1 (Omega_A, Omega_B = 2 pi x (1.6-6.5 GHz))",
+      "note": "'chosen to be in the operating range of the designed tunable qubits'; the thermal-population estimate of Eq. (3.70) uses Omega = 2 pi x 6.5 GHz"
+    },
+    "design_detector_size_sigma": {
+      "value": 24,
+      "units": "um",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Table 3.1 (sigma = (24 um)/v)",
+      "note": "'chosen as the approximate size of the qubit'; smearing length of the detector"
+    },
+    "design_cutoff_frequency": {
+      "value": 50,
+      "units": "GHz",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Table 3.1 (kappa_0 = 2 pi x (50 GHz) x T ~ 63); Sec. 4.1.2",
+      "note": "field UV cutoff; the meandered transmission line was simulated (Sonnet) to have 'good loss and reflection characteristics from DC to 50 GHz'"
+    },
+    "design_temperature": {
+      "value": 20,
+      "units": "mK",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Table 3.1 (T_th); Sec. 3.3.1; Sec. 3.4",
+      "note": "'chosen as a feasible temperature for our dilution refrigerator'; conclusion: 'the temperature of the device should be kept at around 20 mK or less'"
+    },
+    "harvesting_death_temperature": {
+      "value": 30,
+      "units": "mK",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 3.3.3; Fig. 3.4",
+      "note": "stated as approximate: 'For the parameters we are considering, a hard cutoff happens at around T_th = 30 mK. Thus, it is very important to ensure that the sample device stays below this limit during an experiment' -- perturbative UDW calculation, initial state |eg>, at the optimal point; the same statement is repeated in A. Teixido-Bonfill's PhD thesis (2025), 'Conclusions and Outlook' chapter, 'Outlook' section, item 5"
+    },
+    "design_detector_separation": {
+      "value": 12,
+      "units": "cm",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Sec. 3.3.2 ('T c ~ 12 cm'); Sec. 4.1.2",
+      "note": "'we chose 12 cm as the distance between the qubits, so that using a Gaussian switching function with a characteristic time T ~ 200 ps, a lightlike connection between the qubits will not form'; realised as a meandered coplanar waveguide on a 7 x 7 mm chip"
+    },
+    "thermal_excited_population": {
+      "value": 5e-7,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Eq. (3.70)",
+      "note": "Gibbs-state excited population of a 2 pi x 6.5 GHz qubit at 20 mK: 'effectively in the ground state with negligible impurity'"
+    },
+    "optimal_point_concurrence": {
+      "value": 0.0087,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 3.3.4",
+      "note": "'the concurrence we got for lambda = 0.25, which is approximately 0.0087' -- the target entangled state of the tomography simulation (Eq. 3.71), initial state |eg>, T_th = 20 mK, alpha = 8.08, epsilon = 5.111"
+    },
+    "optimal_point_coherence_magnitude": {
+      "value": 0.0050,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Eq. (3.71) and the sentence after it",
+      "note": "|rho_23| = |4.2e-7 - 0.0050 i| ~ 5e-3: 'The main contribution to the concurrence of this density matrix is its |rho_23| term ... around 5 x 10^-3. To successfully detect entanglement in this case, we need to use a robust qubit readout and state tomography procedure'"
+    },
+    "optimal_point_populations": {
+      "value": [0.63, 0.37, 0, 6.0e-7],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Eq. (3.71), diagonal (rho_11, rho_22, rho_33, rho_44 in the thesis's basis order)",
+      "note": "the printed density matrix has an X form: the only off-diagonal elements are rho_23 = rho_32* ~ 0.0050 i and rho_14 = rho_41* ~ -2.5e-20. The thesis's basis ordering is not spelled out in the excerpt, but the concurrence formula C = 2 max(0, |rho_23| - sqrt(rho_11 rho_44)) reproduces the stated 0.0087 only with rho_11 = 0.63 and rho_44 = 6e-7 paired against rho_23, which fixes the roles used in the derived negativity below"
+    },
+    "extrapolated_usc_concurrence": {
+      "value": 0.14,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 3.3.4",
+      "note": "'Extrapolating from the concurrence we got for lambda = 0.25 ... we can expect the concurrence to increase to 0.0087 (1/0.25)^2 ~ 0.14' at lambda ~ 1, i.e. alpha_SB ~ 0.16, 'much easier to detect'"
+    },
+    "decoupling_point_relaxation_rate": {
+      "value": 4,
+      "units": "MHz",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 4.1.1; Fig. 4.2(d)",
+      "note": "stated as approximate, CIRCUIT SIMULATION of the redesigned RQI qubit (Table 4.1 parameters), not a measurement: 'The decoupling point occurs near f_beta = 0.4, with a Gamma_1 of around 4 MHz, or a T_1 of 400 ns'. Rate convention as printed (MHz)"
+    },
+    "decoupling_point_T1": {
+      "value": 400,
+      "units": "ns",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 4.1.1",
+      "note": "simulated; 'much greater than the time required to perform operations on the qubit, such as state preparation and readout prerotation, which takes around 10 ns'"
+    },
+    "readout_point_T1": {
+      "value": 2.5,
+      "units": "us",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 4.1.1",
+      "note": "stated as approximate, simulated: at the readout flux configuration f_beta = 0.4, f_eps = 0.445 'the relaxation time is around T_1 ~ 2.5 us, providing ample time for readout'"
+    },
+    "decoupling_point_f_beta": {
+      "value": 0.4,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 4.1.1",
+      "note": "stated as approximate ('near f_beta = 0.4'); the measured device of Janzen et al. 2023 decouples at f_beta ~ 0.365"
+    },
+    "decoupling_point_gap": {
+      "value": 6,
+      "units": "GHz",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 4.1.1; Fig. 4.2(a)",
+      "note": "stated as approximate: 'around 6 GHz at the decoupling point, and dips to below 3 GHz when it enters the USC regime'; the microwave setup bandwidth requirement is 1-12 GHz"
+    },
+    "design_alpha_sb_range": {
+      "value": [0, 1.5],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "Sec. 4.1.1; Fig. 4.2(c)",
+      "note": "'the USC qubit can easily be tuned to have an alpha_SB from 0 to more than 1.5' (simulated, Table 4.1 design); requirement 'tunable from 0 to 1+'"
+    },
+    "state_preparation_time": {
+      "value": 10,
+      "units": "ns",
+      "provenance": "transcribed",
+      "kind": "stated",
+      "location": "Sec. 4.1.1; Sec. 4.2 step 2",
+      "note": "'in the order of 10 ns'; the pi pulse itself 'only needs to be a few nanoseconds' given a Rabi frequency 'in the order of 1 GHz [29]'"
+    },
+    "rabi_frequency": {
+      "value": 1,
+      "units": "GHz",
+      "provenance": "transcribed",
+      "kind": "stated",
+      "location": "Sec. 4.2 step 2",
+      "note": "order of magnitude: 'the USC qubit has a Rabi frequency in the order of 1 GHz [29]'"
+    },
+    "readout_resonator_frequency": {
+      "value": 4,
+      "units": "GHz",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Sec. 4.1.2",
+      "note": "stated as approximate: DC-SQUID 'capacitively coupled to a superconducting microwave resonator with a resonance frequency of around 4 GHz'"
+    },
+    "readout_resonator_spacing": {
+      "value": 100,
+      "units": "MHz",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Sec. 4.3, readout step 2",
+      "note": "'the readout resonators are designed to have a resonant gap of around 100 MHz' for multiplexed readout of the two qubits"
+    },
+    "chip_size": {
+      "value": "7 x 7 mm",
+      "units": "label",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Fig. 4.4 caption"
+    },
+    "junction_area_1_3": {
+      "value": "A_1/3 = 0.079 um^2 (junctions 1 and 3); area ratios r_2 = 0.58, r_4/5 = 1.78, r_6 = 0.92 to junction 1",
+      "units": "label",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Table 4.1 ('Optimized USC qubit parameters')",
+      "note": "REDESIGNED qubit for the RQI device; differs from the measured Janzen et al. 2023 device (A_0 = 0.0467 um^2, A_1 = 1.69 A_0)"
+    },
+    "junction_critical_current_density": {
+      "value": "J_c = 3 uA/um^2",
+      "units": "label",
+      "provenance": "transcribed",
+      "kind": "design",
+      "location": "Table 4.1"
+    },
+    "optimal_point_negativity": {
+      "value": 3.91e-5,
+      "units": "dimensionless",
+      "provenance": "derived",
+      "kind": "simulated",
+      "derived_from": "optimal_point_populations, optimal_point_coherence_magnitude",
+      "location": "computed from Eq. (3.71); not printed in the thesis",
+      "note": "X-state negativity N = max(0, sqrt(((rho_11 - rho_44)/2)^2 + |rho_23|^2) - (rho_11 + rho_44)/2) with rho_11 = 0.63, rho_44 = 6e-7, |rho_23| = 0.0050: N = 3.91e-5. Note N ~ |rho_23|^2/(rho_11 - rho_44), quadratically smaller than the concurrence C = 0.0087 = 2(|rho_23| - sqrt(rho_11 rho_44)), because the coherence sits between two unequally populated levels"
+    },
+    "optimal_point_log_negativity_nats": {
+      "value": 7.82e-5,
+      "units": "dimensionless",
+      "provenance": "derived",
+      "kind": "simulated",
+      "derived_from": "optimal_point_negativity",
+      "location": "computed; not printed in the thesis",
+      "note": "E_N = ln(2N + 1) = 7.82e-5 nats for the thesis's optimal-point state: the log-negativity of the state the Waterloo group's tomography simulation deems detectable (with ~half of single tomography runs returning zero). A go/no-go floor in E_N must state which state geometry it assumes (see negativity_resolution_nats in teixido-bonfill_2026_table1.json)"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_source": "notebook.py::s1_family_selfcheck",
+  "rows": [
+    {
+      "label": "bump4(T=6)",
+      "dev_fprime": 8.974455900645495e-11,
+      "dev_fsecond": 4.354236415871071e-11,
+      "fp2_analytic": 0.40634920634920635,
+      "fp2_quad": 0.40634920634920635,
+      "fp2_rel_dev": 0.0
+    },
+    {
+      "label": "sech(tau=3)",
+      "dev_fprime": 6.219928738726566e-11,
+      "dev_fsecond": 1.5625074151204288e-11,
+      "fp2_analytic": 0.2222222222222222,
+      "fp2_quad": 0.22222222222130028,
+      "fp2_rel_dev": 4.148681398419285e-12
+    },
+    {
+      "label": "modgauss(tau=4, c=0.6)",
+      "dev_fprime": 1.0096180835805768e-10,
+      "dev_fsecond": 3.953289084979161e-11,
+      "fp2_analytic": null,
+      "fp2_quad": 0.22820343330391424,
+      "fp2_rel_dev": NaN
+    },
+    {
+      "label": "modgauss d/dtheta[0]",
+      "dev_fprime": 1.4055939745460932e-10,
+      "dev_fsecond": NaN,
+      "fp2_analytic": null,
+      "fp2_quad": NaN,
+      "fp2_rel_dev": NaN
+    },
+    {
+      "label": "modgauss d/dtheta[1]",
+      "dev_fprime": 1.4807471915290193e-10,
+      "dev_fsecond": NaN,
+      "fp2_analytic": null,
+      "fp2_quad": NaN,
+      "fp2_rel_dev": NaN
+    }
+  ]
+}

@@ -1,0 +1,439 @@
+{
+ "format": "vacuum.hardware.real_device/1",
+ "record_sha256": "a3499fbaf74a98ee0bbdf2ae78e025623efdc52fa821f6de43415765b9f535f1",
+ "backend": "ibm_fez",
+ "simulated": false,
+ "shots": 9600,
+ "n_sigma": 5.0,
+ "mitigation": "tensored",
+ "E_A": 0.8499912704932476,
+ "E_A_std_error": 0.0019254439152264712,
+ "E_B_ctrl": -0.013814411917244196,
+ "E_B_ctrl_std_error": 0.007549749531829153,
+ "E_B_raw": -0.028971233367216076,
+ "E_B_raw_std_error": 0.005687561292345718,
+ "E_B_info": 0.04853102209582094,
+ "E_B_info_std_error": 0.007791859802189016,
+ "E_B_cut": -0.03807992296515461,
+ "HB_ground": 0.8137081208236283,
+ "HB_meas": 0.8087243802827618,
+ "HB_final": 0.822538792200006,
+ "HB_wrong": 0.871069814295827,
+ "no_signaling_energy": -0.004983740540866477,
+ "no_signaling_energy_std_error": 0.007091881664135967,
+ "z": {
+  "E_A": 441.45210554900603,
+  "E_B_ctrl": -1.8297841350900075,
+  "E_B_raw": -5.09378833529326,
+  "E_B_info": 6.228425989156891
+ },
+ "ledger": {
+  "mitigated": {
+   "E_A": 0.8499912704932476,
+   "E_A_std_error": 0.0019254439152264712,
+   "HB_ground": 0.8137081208236283,
+   "HB_meas": 0.8087243802827618,
+   "HB_final": 0.822538792200006,
+   "HB_wrong": 0.871069814295827,
+   "E_B": -0.013814411917244196,
+   "E_B_ctrl": -0.013814411917244196,
+   "E_B_ctrl_std_error": 0.007549749531829153,
+   "E_B_raw": -0.028971233367216076,
+   "E_B_raw_std_error": 0.005687561292345718,
+   "E_B_wrong": -0.06234543401306514,
+   "E_B_info": 0.04853102209582094,
+   "E_B_info_std_error": 0.007791859802189016,
+   "E_B_cut": -0.03807992296515461,
+   "no_signaling_energy": -0.004983740540866477,
+   "no_signaling_energy_std_error": 0.007091881664135967
+  },
+  "raw": {
+   "E_A": 0.8456377224036801,
+   "E_A_std_error": 0.0019065906102232123,
+   "HB_ground": 0.8207394920448775,
+   "HB_meas": 0.8158079584955495,
+   "HB_final": 0.8298207306540061,
+   "HB_wrong": 0.8769710026378255,
+   "E_B": -0.014012772158456532,
+   "E_B_ctrl": -0.014012772158456532,
+   "E_B_ctrl_std_error": 0.007412720530933902,
+   "E_B_raw": -0.036253171821216124,
+   "E_B_raw_std_error": 0.005589521143369267,
+   "E_B_wrong": -0.06116304414227591,
+   "E_B_info": 0.04715027198381938,
+   "E_B_info_std_error": 0.007652696446369088,
+   "E_B_cut": -0.03758790815036628,
+   "no_signaling_energy": -0.00493153354932796,
+   "no_signaling_energy_std_error": 0.006955530809948188
+  }
+ },
+ "readout_calibration": [
+  [
+   [
+    0.9973958333333334,
+    0.0071874999999999994
+   ],
+   [
+    0.0026041666666666665,
+    0.9928125
+   ]
+  ],
+  [
+   [
+    0.996875,
+    0.007916666666666667
+   ],
+   [
+    0.003125,
+    0.9920833333333333
+   ]
+  ],
+  [
+   [
+    0.9957291666666667,
+    0.009270833333333334
+   ],
+   [
+    0.004270833333333333,
+    0.9907291666666667
+   ]
+  ]
+ ],
+ "full_energies": {
+  "ground": {
+   "value": 2.6043969029030407,
+   "std_error": 0.007155436843566378
+  },
+  "meas": {
+   "value": 3.4382591701895993,
+   "std_error": 0.006064190061098812
+  },
+  "final": {
+   "value": 3.465059390695797,
+   "std_error": 0.0068918536299967855
+  },
+  "wrong": {
+   "value": 3.519077374167232,
+   "std_error": 0.006667796680272419
+  }
+ },
+ "closure": {
+  "defect": -0.0031431946177359338,
+  "sigma": 0.008704864437408498,
+  "tol": 0.04352432218704249,
+  "passed": true
+ },
+ "no_signaling": {
+  "pairs": [
+   {
+    "ground_circuit": 0,
+    "control_circuit": 0,
+    "basis": {
+     "1": "Z",
+     "2": "Z"
+    },
+    "qubits": [
+     1,
+     2
+    ],
+    "tv_distance": 0.005000000000000004,
+    "chi2": 6.809911983315028,
+    "dof": 3,
+    "p_value": 0.07820975518454193,
+    "chi2_critical": 31.812108348602646,
+    "ratio": 0.21406666633631516,
+    "passed": true
+   },
+   {
+    "ground_circuit": 1,
+    "control_circuit": 0,
+    "basis": {
+     "1": "Z",
+     "2": "Z"
+    },
+    "qubits": [
+     1,
+     2
+    ],
+    "tv_distance": 0.0032291666666666415,
+    "chi2": 1.4511524285480095,
+    "dof": 3,
+    "p_value": 0.6935893226984085,
+    "chi2_critical": 31.812108348602646,
+    "ratio": 0.045616355025766525,
+    "passed": true
+   },
+   {
+    "ground_circuit": 2,
+    "control_circuit": 1,
+    "basis": {
+     "1": "X",
+     "2": "X"
+    },
+    "qubits": [
+     1,
+     2
+    ],
+    "tv_distance": 0.010416666666666644,
+    "chi2": 2.9668311189777827,
+    "dof": 3,
+    "p_value": 0.396767487826435,
+    "chi2_critical": 31.812108348602646,
+    "ratio": 0.09326106545554065,
+    "passed": true
+   }
+  ],
+  "worst_ratio": 0.21406666633631516,
+  "p_min": 5.733031437583869e-07,
+  "n_sigma": 5.0,
+  "passed": true,
+  "non_alice_qubits": [
+   1,
+   2
+  ],
+  "rule": "two-sample chi-square homogeneity of the marginal counts on the non-Alice qubits, ground vs control; ratio = chi2 / chi2_crit(p_min) must be <= 1"
+ },
+ "audits": {
+  "energy_ledger": {
+   "name": "energy_ledger",
+   "passed": true,
+   "worst_violation": 0.0,
+   "details": {
+    "table": [
+     {
+      "kind": "snapshot",
+      "label": "ground",
+      "value": 2.6043969029030407,
+      "std_error": 0.007155436843566378
+     },
+     {
+      "kind": "work",
+      "label": "E_A = <D_A>_ground (Alice's site)",
+      "value": 0.8499912704932476,
+      "std_error": 0.0019254439152264712
+     },
+     {
+      "kind": "snapshot",
+      "label": "meas",
+      "value": 3.4382591701895993,
+      "std_error": 0.006064190061098812
+     },
+     {
+      "kind": "dissipation",
+      "label": "E_B = <H_B>_meas - <H_B>_final (Bob's site)",
+      "value": -0.013814411917244196,
+      "std_error": 0.007549749531829153
+     },
+     {
+      "kind": "snapshot",
+      "label": "final",
+      "value": 3.465059390695797,
+      "std_error": 0.0068918536299967855
+     }
+    ],
+    "delta_E": 0.8606624877927564,
+    "work_in": 0.8499912704932476,
+    "dissipated": -0.013814411917244196,
+    "defect": -0.0031431946177359338,
+    "sigma": 0.008704864437408498,
+    "tol": 0.04352432218704249,
+    "n_sigma": 5.0,
+    "z": -0.3610848440359728,
+    "statistical": true,
+    "spectator_residual": {
+     "value": 0.006401454938216422,
+     "std_error": 0.004163266050886223,
+     "z": 1.53760409735375,
+     "meaning": "<h_spectator>_final - <h_spectator>_ground (untouched site)"
+    },
+    "bob_residual": {
+     "value": -0.004983740540866477,
+     "std_error": 0.007091881664135967,
+     "z": -0.7027388183970307,
+     "meaning": "<H_B>_meas - <H_B>_ground (no-signaling in energy)"
+    },
+    "h_A_after_measurement": {
+     "value": 1.7320508075688772,
+     "measured": false,
+     "meaning": "<h_A>_meas = <h_A>_final = omega_A by the measurement postulate (d = 2: Alice's site is read in its sign basis; the off-diagonal part of h_A has zero expectation); 1 term(s) dropped"
+    },
+    "first_snapshot": "ground",
+    "last_snapshot": "final",
+    "identity": "(E_final - E_ground) - (E_A - E_B) == 0 within n_sigma x propagated shot error",
+    "mitigation": "tensored"
+   }
+  },
+  "no_signaling_marginals": {
+   "name": "no_signaling_marginals",
+   "passed": true,
+   "worst_violation": 0.0,
+   "details": {
+    "pairs": [
+     {
+      "ground_circuit": 0,
+      "control_circuit": 0,
+      "basis": {
+       "1": "Z",
+       "2": "Z"
+      },
+      "qubits": [
+       1,
+       2
+      ],
+      "tv_distance": 0.005000000000000004,
+      "chi2": 6.809911983315028,
+      "dof": 3,
+      "p_value": 0.07820975518454193,
+      "chi2_critical": 31.812108348602646,
+      "ratio": 0.21406666633631516,
+      "passed": true
+     },
+     {
+      "ground_circuit": 1,
+      "control_circuit": 0,
+      "basis": {
+       "1": "Z",
+       "2": "Z"
+      },
+      "qubits": [
+       1,
+       2
+      ],
+      "tv_distance": 0.0032291666666666415,
+      "chi2": 1.4511524285480095,
+      "dof": 3,
+      "p_value": 0.6935893226984085,
+      "chi2_critical": 31.812108348602646,
+      "ratio": 0.045616355025766525,
+      "passed": true
+     },
+     {
+      "ground_circuit": 2,
+      "control_circuit": 1,
+      "basis": {
+       "1": "X",
+       "2": "X"
+      },
+      "qubits": [
+       1,
+       2
+      ],
+      "tv_distance": 0.010416666666666644,
+      "chi2": 2.9668311189777827,
+      "dof": 3,
+      "p_value": 0.396767487826435,
+      "chi2_critical": 31.812108348602646,
+      "ratio": 0.09326106545554065,
+      "passed": true
+     }
+    ],
+    "worst_ratio": 0.21406666633631516,
+    "p_min": 5.733031437583869e-07,
+    "n_sigma": 5.0,
+    "passed": true,
+    "non_alice_qubits": [
+     1,
+     2
+    ],
+    "rule": "two-sample chi-square homogeneity of the marginal counts on the non-Alice qubits, ground vs control; ratio = chi2 / chi2_crit(p_min) must be <= 1"
+   }
+  },
+  "signal_vs_ideal": {
+   "name": "signal_vs_ideal",
+   "passed": true,
+   "worst_violation": 0.0,
+   "details": {
+    "value": 0.04853102209582094,
+    "std_error": 0.007791859802189016,
+    "ideal": 0.04152218677914288,
+    "excess": 0.007008835316678064,
+    "pull": 0.8995073698206207,
+    "tol": 0.03895929901094508,
+    "n_sigma": 5.0,
+    "one_sided": true,
+    "ideal_source": "qet_dense on the record's own VQE parameters (not the spec block)",
+    "rule": "E_B_info - E_B_info(noiseless) <= n_sigma x standard error; noise contracts the signal, so an excess above the ideal is a mis-shaped result, not a better device"
+   }
+  },
+  "hardware_qet": {
+   "name": "hardware_qet",
+   "passed": true,
+   "worst_violation": 0.0,
+   "details": {
+    "checks": {
+     "ledger_closure": {
+      "value": 0.0031431946177359338,
+      "tol": 0.04352432218704249
+     },
+     "E_A_ge_E_B": {
+      "value": 0.0,
+      "tol": 0.038957044377120414
+     },
+     "no_signaling": {
+      "value": 0.21406666633631516,
+      "tol": 1.0
+     }
+    },
+    "margin": 0.8638056824104918,
+    "E_A": 0.8499912704932476,
+    "E_B": -0.013814411917244196,
+    "tolerances": {
+     "E_A_ge_E_B": "5.0 sigma of E_A - E_B (7.791e-03)",
+     "ledger_closure": "5.0 sigma of the closure defect (8.705e-03)",
+     "no_signaling": "chi2 / chi2_crit of the worst ground-vs-control marginal pair <= 1"
+    }
+   }
+  },
+  "all_passed": true
+ },
+ "dense": {
+  "E_ground": 2.5499727140139425,
+  "E_A": 0.8538482301781176,
+  "E_B": 0.01043795429721639,
+  "E_B_wrong": -0.031084232481926488,
+  "E_B_info": 0.04152218677914288,
+  "E_B_cut": -0.01032313909235505,
+  "E_B_raw": 0.010437954297216279,
+  "HB_ground": 0.79356755883279,
+  "HB_meas": 0.7935675588327896,
+  "HB_final": 0.7831296045355737,
+  "HB_wrong": 0.8246517913147161,
+  "ledger_defect": 1.1102230246251565e-15,
+  "no_signaling": 2.255140518769849e-16
+ },
+ "dense_consistency": 0.0,
+ "pull_vs_dense": {
+  "E_A": -2.0031534828768724,
+  "E_B_ctrl": -3.212340503776252,
+  "E_B_info": 0.8995073698206207,
+  "E_B_raw": -6.929013269266914
+ },
+ "prediction": {
+  "sourced_noise_value": 0.040103899558164624,
+  "sourced_noise_std_error_at_shots": 0.00800036676085146,
+  "pull_vs_sourced_noise": 1.0815290253668108,
+  "ideal_value": 0.04152218677914288,
+  "pull_vs_ideal": 0.8995073698206207,
+  "pull_vs_ideal_audited": 0.8995073698206207,
+  "ideal_value_recomputed": 0.04152218677914288
+ },
+ "verdict": {
+  "number_tested": "E_B_info = <H_B>_wrong-bit - <H_B>_right-bit > 0 at 3 sigma: the classical bit is worth a positive amount of Bob's local energy",
+  "E_B_info": 0.04853102209582094,
+  "std_error": 0.007791859802189016,
+  "z": 6.228425989156891,
+  "n_sigma": 5.0,
+  "positive_at_n_sigma": true,
+  "audits_passed": true,
+  "claim_holds": true,
+  "mitigation": "tensored",
+  "raw": {
+   "E_B_info": 0.04715027198381938,
+   "std_error": 0.007652696446369088
+  },
+  "backend": "ibm_fez",
+  "simulated": false,
+  "shots": 9600,
+  "statement": "E_B_info = +0.0485 +- 0.0078 (z = 6.23) on ibm_fez (device) at 9600 shots/circuit: E_B_info > 0 at 5 sigma; audits passed"
+ }
+}

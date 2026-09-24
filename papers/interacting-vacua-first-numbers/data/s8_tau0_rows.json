@@ -1,0 +1,660 @@
+{
+ "_source": "notebook_qei_exact.py::S8 tau0",
+ "date_utc": "2026-09-13T15:49:06Z",
+ "build_git_head": "2bd5c97cbf129fa517924e2c874d7448254dd77f",
+ "rows": [
+  {
+   "axis": "a_half",
+   "tau0": 1.5,
+   "chi_op": 32,
+   "lam": 0.0,
+   "L": 32,
+   "m": 0.25,
+   "n_steps": 16,
+   "dt": 0.375,
+   "E_min": -0.017665588525033193,
+   "E_free_exact": -0.014888820234756572,
+   "E_hartree_exact": -0.014888820234756572,
+   "ratio_exact_over_free_exact": 1.1865002227506591,
+   "ratio_exact_over_hartree_exact": 1.1865002227506591,
+   "control_lam0": 1.1865002227506591,
+   "control_refcons_over_E_min": 0.20014788661498115,
+   "refcons_over_E_min": 0.20014788661498115,
+   "ratio_hartree_normalized": 1.0,
+   "residual_hartree_normalized": 0.0,
+   "ref_consistency": 0.003535730209095256,
+   "norm_ratio": 0.826533946569902,
+   "trunc_op_weighted": 0.008104383949647631,
+   "time_s": 1957.2103850841522
+  },
+  {
+   "axis": "a_half",
+   "tau0": 1.5,
+   "chi_op": 32,
+   "lam": 1.0,
+   "L": 32,
+   "m": 0.25,
+   "n_steps": 16,
+   "dt": 0.375,
+   "E_min": -0.0077595670293511,
+   "E_free_exact": -0.014888820234756572,
+   "E_hartree_exact": -0.003806808798560768,
+   "ratio_exact_over_free_exact": 0.521167352886504,
+   "ratio_exact_over_hartree_exact": 2.03833904983217,
+   "control_lam0": 1.1865002227506591,
+   "control_refcons_over_E_min": 0.20014788661498115,
+   "refcons_over_E_min": 1.7531990543469176,
+   "ratio_hartree_normalized": 1.7179424080567773,
+   "residual_hartree_normalized": -0.7179424080567773,
+   "ref_consistency": 0.013604065577999869,
+   "norm_ratio": 0.8251629722599383,
+   "trunc_op_weighted": 0.005027673471177364,
+   "time_s": 14837.180329799652
+  },
+  {
+   "axis": "a_half",
+   "tau0": 1.5,
+   "chi_op": 48,
+   "lam": 0.0,
+   "L": 32,
+   "m": 0.25,
+   "n_steps": 16,
+   "dt": 0.375,
+   "E_min": -0.01736059109375554,
+   "E_free_exact": -0.014888820234756572,
+   "E_hartree_exact": -0.014888820234756572,
+   "ratio_exact_over_free_exact": 1.1660152261915855,
+   "ratio_exact_over_hartree_exact": 1.1660152261915855,
+   "control_lam0": 1.1660152261915855,
+   "control_refcons_over_E_min": 0.10665978417038939,
+   "refcons_over_E_min": 0.10665978417038939,
+   "ratio_hartree_normalized": 1.0,
+   "residual_hartree_normalized": 0.0,
+   "ref_consistency": 0.00185167689913035,
+   "norm_ratio": 0.8238746557062874,
+   "trunc_op_weighted": 0.00815826408921109,
+   "time_s": 2192.8308420181274
+  },
+  {
+   "axis": "a_half",
+   "tau0": 1.5,
+   "chi_op": 48,
+   "lam": 1.0,
+   "L": 32,
+   "m": 0.25,
+   "n_steps": 16,
+   "dt": 0.375,
+   "E_min": -0.005370822846433754,
+   "E_free_exact": -0.014888820234756572,
+   "E_hartree_exact": -0.003806808798560768,
+   "ratio_exact_over_free_exact": 0.3607285709512474,
+   "ratio_exact_over_hartree_exact": 1.4108464939096204,
+   "control_lam0": 1.1660152261915855,
+   "control_refcons_over_E_min": 0.10665978417038939,
+   "refcons_over_E_min": 0.38235306134297736,
+   "ratio_hartree_normalized": 1.2099726163248294,
+   "residual_hartree_normalized": -0.20997261632482944,
+   "ref_consistency": 0.0020535505572647494,
+   "norm_ratio": 0.8242179198514984,
+   "trunc_op_weighted": 0.005023916375385948,
+   "time_s": 2340.1852700710297
+  },
+  {
+   "axis": "tau0",
+   "tau0": 1.0,
+   "chi_op": 32,
+   "lam": 0.0,
+   "L": 16,
+   "m": 0.5,
+   "n_steps": 11,
+   "dt": 0.36363636363636365,
+   "E_min": -0.01432501605077019,
+   "E_free_exact": -0.013825346937199834,
+   "E_hartree_exact": -0.013825346937199834,
+   "ratio_exact_over_free_exact": 1.0361415243928451,
+   "ratio_exact_over_hartree_exact": 1.0361415243928451,
+   "control_lam0": 1.0361415243928451,
+   "control_refcons_over_E_min": 0.026942112334095606,
+   "refcons_over_E_min": 0.026942112334095606,
+   "ratio_hartree_normalized": 1.0,
+   "residual_hartree_normalized": 0.0,
+   "ref_consistency": 0.00038594619162757304,
+   "norm_ratio": 0.8833663974178243,
+   "trunc_op_weighted": 0.0032703562571906584,
+   "time_s": 906.4800491333008
+  },
+  {
+   "axis": "tau0",
+   "tau0": 1.0,
+   "chi_op": 32,
+   "lam": 4.0,
+   "L": 16,
+   "m": 0.5,
+   "n_steps": 11,
+   "dt": 0.36363636363636365,
+   "E_min": -0.003958064870701605,
+   "E_free_exact": -0.013825346937199834,
+   "E_hartree_exact": -0.0025028922022463096,
+   "ratio_exact_over_free_exact": 0.28629045539910813,
+   "ratio_exact_over_hartree_exact": 1.5813964609220081,
+   "control_lam0": 1.0361415243928451,
+   "control_refcons_over_E_min": 0.026942112334095606,
+   "refcons_over_E_min": 0.3756498938156165,
+   "ratio_hartree_normalized": 1.5262359665091791,
+   "residual_hartree_normalized": -0.5262359665091791,
+   "ref_consistency": 0.0014868466483943799,
+   "norm_ratio": 0.8342345792492623,
+   "trunc_op_weighted": 0.0035290982082954174,
+   "time_s": 1393.28764128685
+  },
+  {
+   "axis": "tau0",
+   "tau0": 1.0,
+   "chi_op": 48,
+   "lam": 0.0,
+   "L": 16,
+   "m": 0.5,
+   "n_steps": 11,
+   "dt": 0.36363636363636365,
+   "E_min": -0.014356626253559046,
+   "E_free_exact": -0.013825346937199834,
+   "E_hartree_exact": -0.013825346937199834,
+   "ratio_exact_over_free_exact": 1.038427919297251,
+   "ratio_exact_over_hartree_exact": 1.038427919297251,
+   "control_lam0": 1.038427919297251,
+   "control_refcons_over_E_min": 0.07653625265241559,
+   "refcons_over_E_min": 0.07653625265241559,
+   "ratio_hartree_normalized": 1.0,
+   "residual_hartree_normalized": 0.0,
+   "ref_consistency": 0.0010988023741786979,
+   "norm_ratio": 0.8837153652206503,
+   "trunc_op_weighted": 0.0032825980714526895,
+   "time_s": 2221.9270889759064
+  },
+  {
+   "axis": "tau0",
+   "tau0": 1.0,
+   "chi_op": 48,
+   "lam": 4.0,
+   "L": 16,
+   "m": 0.5,
+   "n_steps": 11,
+   "dt": 0.36363636363636365,
+   "E_min": -0.004070078105677499,
+   "E_free_exact": -0.013825346937199834,
+   "E_hartree_exact": -0.0025028922022463096,
+   "ratio_exact_over_free_exact": 0.2943924752243394,
+   "ratio_exact_over_hartree_exact": 1.6261499804205164,
+   "control_lam0": 1.038427919297251,
+   "control_refcons_over_E_min": 0.07653625265241559,
+   "refcons_over_E_min": 0.47625477116577414,
+   "ratio_hartree_normalized": 1.5659729001903206,
+   "residual_hartree_normalized": -0.5659729001903206,
+   "ref_consistency": 0.0019383941168462648,
+   "norm_ratio": 0.8340273210231224,
+   "trunc_op_weighted": 0.0034523270861853833,
+   "time_s": 2126.201562166214
+  },
+  {
+   "axis": "tau0",
+   "tau0": 1.5,
+   "chi_op": 32,
+   "lam": 0.0,
+   "L": 16,
+   "m": 0.5,
+   "n_steps": 16,
+   "dt": 0.375,
+   "E_min": -0.005510591470120119,
+   "E_free_exact": -0.00439770573455478,
+   "E_hartree_exact": -0.00439770573455478,
+   "ratio_exact_over_free_exact": 1.253060528088746,
+   "ratio_exact_over_hartree_exact": 1.253060528088746,
+   "control_lam0": 1.253060528088746,
+   "control_refcons_over_E_min": 1.1721334207419396,
+   "refcons_over_E_min": 1.1721334207419396,
+   "ratio_hartree_normalized": 1.0,
+   "residual_hartree_normalized": 0.0,
+   "ref_consistency": 0.006459148430183248,
+   "norm_ratio": 0.8441384653415913,
+   "trunc_op_weighted": 0.007435215219198461,
+   "time_s": 1535.3095018863678
+  },
+  {
+   "axis": "tau0",
+   "tau0": 1.5,
+   "chi_op": 32,
+   "lam": 4.0,
+   "L": 16,
+   "m": 0.5,
+   "n_steps": 16,
+   "dt": 0.375,
+   "E_min": -0.004750395138244823,
+   "E_free_exact": -0.00439770573455478,
+   "E_hartree_exact": -0.00017753410127330227,
+   "ratio_exact_over_free_exact": 1.0801985000767107,
+   "ratio_exact_over_hartree_exact": 26.757648835768723,
+   "control_lam0": 1.253060528088746,
+   "control_refcons_over_E_min": 1.1721334207419396,
+   "refcons_over_E_min": 1.1322057391547908,
+   "ratio_hartree_normalized": 21.353835857060577,
+   "residual_hartree_normalized": -20.353835857060577,
+   "ref_consistency": 0.005378424638773804,
+   "norm_ratio": 0.7977042624735464,
+   "trunc_op_weighted": 0.007905728993844494,
+   "time_s": 1476.2939608097076
+  },
+  {
+   "axis": "tau0",
+   "tau0": 1.5,
+   "chi_op": 48,
+   "lam": 0.0,
+   "L": 16,
+   "m": 0.5,
+   "n_steps": 16,
+   "dt": 0.375,
+   "E_min": -0.0053538588617185745,
+   "E_free_exact": -0.00439770573455478,
+   "E_hartree_exact": -0.00439770573455478,
+   "ratio_exact_over_free_exact": 1.217420897367203,
+   "ratio_exact_over_hartree_exact": 1.217420897367203,
+   "control_lam0": 1.217420897367203,
+   "control_refcons_over_E_min": 0.639761056879877,
+   "refcons_over_E_min": 0.639761056879877,
+   "ratio_hartree_normalized": 1.0,
+   "residual_hartree_normalized": 0.0,
+   "ref_consistency": 0.003425190403758771,
+   "norm_ratio": 0.8462454563712462,
+   "trunc_op_weighted": 0.007182639458938166,
+   "time_s": 2662.7322659492493
+  },
+  {
+   "axis": "tau0",
+   "tau0": 1.5,
+   "chi_op": 48,
+   "lam": 4.0,
+   "L": 16,
+   "m": 0.5,
+   "n_steps": 16,
+   "dt": 0.375,
+   "E_min": -0.0019248737173302999,
+   "E_free_exact": -0.00439770573455478,
+   "E_hartree_exact": -0.00017753410127330227,
+   "ratio_exact_over_free_exact": 0.4376995264157147,
+   "ratio_exact_over_hartree_exact": 10.842275954449343,
+   "control_lam0": 1.217420897367203,
+   "control_refcons_over_E_min": 0.639761056879877,
+   "refcons_over_E_min": 6.543339783125414,
+   "ratio_hartree_normalized": 8.905938757825558,
+   "residual_hartree_normalized": -7.905938757825558,
+   "ref_consistency": 0.012595102772099853,
+   "norm_ratio": 0.8002150987222417,
+   "trunc_op_weighted": 0.00780183164921148,
+   "time_s": 2696.1314058303833
+  }
+ ],
+ "knobs": "n_max 8, weight 0.5, sketched SVD, chi_acc 2 chi_op, chi_mpo 4 chi_op, chi_dmrg 16, dt 0.375 (s7d: DT for tau0 >= 0.75); a = 1/2 as s7e",
+ "archived_controls_chiop16": {
+  "tau0=1.0": 1.085,
+  "tau0=1.5": 1.41,
+  "a_half": 1.173,
+  "_knobs": "s7d: n_max 6, chi_op 16, chi_acc 32, chi_mpo 64, chi_dmrg 12, weight 0.25 (NOT the S8 knobs)"
+ },
+ "chiop16_isolation": {
+  "rows": [
+   {
+    "tau0": 1.0,
+    "chi_op": 16,
+    "lam": 0.0,
+    "L": 16,
+    "m": 0.5,
+    "n_max": 8,
+    "weight_decay": 0.5,
+    "chi_acc": 32,
+    "chi_mpo": 64,
+    "dmrg_chi": 16,
+    "n_steps": 11,
+    "dt": 0.36363636363636365,
+    "E_min": -0.01429252712442497,
+    "E_hartree_exact": -0.013825346937199834,
+    "control_lam0": 1.0337915706092045,
+    "refcons_over_E_min": 0.09808325026306924,
+    "norm_ratio": 0.8791751657555164,
+    "trunc_op_weighted": 0.0033549483515743408,
+    "time_s": 577.4990918636322,
+    "tag": "tau0iso_1_chiop16_nmax8_lam0"
+   },
+   {
+    "tau0": 1.5,
+    "chi_op": 16,
+    "lam": 0.0,
+    "L": 16,
+    "m": 0.5,
+    "n_max": 8,
+    "weight_decay": 0.5,
+    "chi_acc": 32,
+    "chi_mpo": 64,
+    "dmrg_chi": 16,
+    "n_steps": 16,
+    "dt": 0.375,
+    "E_min": -0.005882997487920649,
+    "E_hartree_exact": -0.00439770573455478,
+    "control_lam0": 1.3377424145720471,
+    "refcons_over_E_min": 0.022630281400394,
+    "norm_ratio": 0.8456129784929072,
+    "trunc_op_weighted": 0.007299815629641516,
+    "time_s": 826.9143757820129,
+    "tag": "tau0iso_1.5_chiop16_nmax8_lam0"
+   }
+  ],
+  "split": {
+   "tau0=1": {
+    "s7d_chiop16_nmax6_w0.25_chidmrg12": 1.085,
+    "iso_chiop16_nmax8_w0.5_chidmrg16": 1.0337915706092045,
+    "s8_chiop32_nmax8_w0.5_chidmrg16": 1.0361415243928451,
+    "step_nmax_weight_chidmrg": -0.05120842939079551,
+    "step_chi_op_16_to_32": 0.002349953783640668,
+    "iso_norm_ratio": 0.8791751657555164,
+    "note": "control (lambda = 0, must read 1); the two steps sum to the total s7d -> S8 change, and say which knob carried it"
+   },
+   "tau0=1.5": {
+    "s7d_chiop16_nmax6_w0.25_chidmrg12": 1.41,
+    "iso_chiop16_nmax8_w0.5_chidmrg16": 1.3377424145720471,
+    "s8_chiop32_nmax8_w0.5_chidmrg16": 1.253060528088746,
+    "step_nmax_weight_chidmrg": -0.0722575854279528,
+    "step_chi_op_16_to_32": -0.08468188648330122,
+    "iso_norm_ratio": 0.8456129784929072,
+    "note": "control (lambda = 0, must read 1); the two steps sum to the total s7d -> S8 change, and say which knob carried it"
+   }
+  },
+  "knobs": "S8 recipe at chi_op 16: n_max 8, weight 0.5, chi_acc 32, chi_mpo 64, chi_dmrg 16, sketched SVD, dt as s7d"
+ },
+ "control_chi_op_sequence": {
+  "tau0=1": {
+   "chi_op": [
+    16,
+    32,
+    48
+   ],
+   "control_lam0": [
+    1.0337915706092045,
+    1.0361415243928451,
+    1.038427919297251
+   ],
+   "refcons_over_E_min": [
+    0.09808325026306924,
+    0.026942112334095606,
+    0.07653625265241559
+   ],
+   "steps": [
+    0.002349953783640668,
+    0.002286394904405853
+   ],
+   "toward_1": false,
+   "refcons_gate": 0.05,
+   "refcons_ok": [
+    false,
+    true,
+    false
+   ],
+   "note": "lambda = 0 control at fixed n_max 8 / weight 0.5 / chi_dmrg 16; chi_op 16 is the tau0_iso row, 32/48 are the pool rows"
+  },
+  "tau0=1.5": {
+   "chi_op": [
+    16,
+    32,
+    48
+   ],
+   "control_lam0": [
+    1.3377424145720471,
+    1.253060528088746,
+    1.217420897367203
+   ],
+   "refcons_over_E_min": [
+    0.022630281400394,
+    1.1721334207419396,
+    0.639761056879877
+   ],
+   "steps": [
+    -0.08468188648330122,
+    -0.03563963072154297
+   ],
+   "toward_1": true,
+   "refcons_gate": 0.05,
+   "refcons_ok": [
+    true,
+    false,
+    false
+   ],
+   "note": "lambda = 0 control at fixed n_max 8 / weight 0.5 / chi_dmrg 16; chi_op 16 is the tau0_iso row, 32/48 are the pool rows"
+  }
+ },
+ "scaling_refit": {
+  "control_gate": 0.05,
+  "archived_rows_chiop16": [
+   {
+    "tau0": 0.375,
+    "chi_op": 16,
+    "source": "s7d",
+    "control_lam0": 0.9886695591481608,
+    "residual_hartree_normalized": 0.06784773348262918,
+    "residual_keff_normalized": 0.08242331908413925,
+    "E_keff_over_E_hartree": 1.0158848692481612
+   },
+   {
+    "tau0": 0.5,
+    "chi_op": 16,
+    "source": "s7d",
+    "control_lam0": 1.001114327666417,
+    "residual_hartree_normalized": 0.046795673147797534,
+    "residual_keff_normalized": 0.06900333679977011,
+    "E_keff_over_E_hartree": 1.0238536447334143
+   },
+   {
+    "tau0": 0.75,
+    "chi_op": 16,
+    "source": "s7d",
+    "control_lam0": 1.0127389994556206,
+    "residual_hartree_normalized": 0.13803383004244385,
+    "residual_keff_normalized": 0.1752959941083777,
+    "E_keff_over_E_hartree": 1.045182470073791
+   }
+  ],
+  "by_chi_op": {
+   "chi_op=32": {
+    "rows": [
+     {
+      "tau0": 1.0,
+      "chi_op": 32,
+      "source": "s8",
+      "control_lam0": 1.0361415243928451,
+      "control_ok": true,
+      "refcons_ok": false,
+      "usable": false,
+      "control_refcons_over_E_min": 0.026942112334095606,
+      "ratio_exact_over_hartree": 1.5813964609220081,
+      "residual_hartree_normalized": -0.5262359665091791,
+      "E_keff_over_E_hartree": 1.0714985872574014,
+      "residual_keff_normalized": -0.42439382063556375,
+      "ref_consistency_over_E_min": 0.3756498938156165,
+      "norm_ratio": 0.8342345792492623
+     },
+     {
+      "tau0": 1.5,
+      "chi_op": 32,
+      "source": "s8",
+      "control_lam0": 1.253060528088746,
+      "control_ok": false,
+      "refcons_ok": false,
+      "usable": false,
+      "control_refcons_over_E_min": 1.1721334207419396,
+      "ratio_exact_over_hartree": 26.757648835768723,
+      "residual_hartree_normalized": -20.353835857060577,
+      "E_keff_over_E_hartree": 1.142102197814949,
+      "residual_keff_normalized": -17.696957153146524,
+      "ref_consistency_over_E_min": 1.1322057391547908,
+      "norm_ratio": 0.7977042624735464
+     }
+    ],
+    "n_usable": 0,
+    "usable_tau0": [],
+    "failed_tau0_controls": {
+     "1.5": 1.253060528088746
+    },
+    "failed_tau0_refcons": {
+     "1": 0.3756498938156165,
+     "1.5": 1.1322057391547908
+    },
+    "gates": {
+     "control": 0.05,
+     "refcons_over_E_min": 0.05
+    },
+    "residual_hartree_normalized": {
+     "tau0": [
+      0.375,
+      0.5,
+      0.75
+     ],
+     "value": [
+      0.06784773348262918,
+      0.046795673147797534,
+      0.13803383004244385
+     ],
+     "knobs": "mixed (s7d chi_op 16 + s8 usable rows)",
+     "sign_changed_tau0": [],
+     "exponent_of_inverse_tau0": null,
+     "note": "no usable positive-residual S8 row at this chi_op: the exponent statement stays restricted to the archived tau0 0.375-0.75 range (s7_summary.json)"
+    },
+    "residual_keff_normalized": {
+     "tau0": [
+      0.375,
+      0.5,
+      0.75
+     ],
+     "value": [
+      0.08242331908413925,
+      0.06900333679977011,
+      0.1752959941083777
+     ],
+     "knobs": "mixed (s7d chi_op 16 + s8 usable rows)",
+     "sign_changed_tau0": [],
+     "exponent_of_inverse_tau0": null,
+     "note": "no usable positive-residual S8 row at this chi_op: the exponent statement stays restricted to the archived tau0 0.375-0.75 range (s7_summary.json)"
+    }
+   },
+   "chi_op=48": {
+    "rows": [
+     {
+      "tau0": 1.0,
+      "chi_op": 48,
+      "source": "s8",
+      "control_lam0": 1.038427919297251,
+      "control_ok": true,
+      "refcons_ok": false,
+      "usable": false,
+      "control_refcons_over_E_min": 0.07653625265241559,
+      "ratio_exact_over_hartree": 1.6261499804205164,
+      "residual_hartree_normalized": -0.5659729001903206,
+      "E_keff_over_E_hartree": 1.0714985872574014,
+      "residual_keff_normalized": -0.4614792019451668,
+      "ref_consistency_over_E_min": 0.47625477116577414,
+      "norm_ratio": 0.8340273210231224
+     },
+     {
+      "tau0": 1.5,
+      "chi_op": 48,
+      "source": "s8",
+      "control_lam0": 1.217420897367203,
+      "control_ok": false,
+      "refcons_ok": false,
+      "usable": false,
+      "control_refcons_over_E_min": 0.639761056879877,
+      "ratio_exact_over_hartree": 10.842275954449343,
+      "residual_hartree_normalized": -7.905938757825558,
+      "E_keff_over_E_hartree": 1.142102197814949,
+      "residual_keff_normalized": -6.7978474911126625,
+      "ref_consistency_over_E_min": 6.543339783125414,
+      "norm_ratio": 0.8002150987222417
+     }
+    ],
+    "n_usable": 0,
+    "usable_tau0": [],
+    "failed_tau0_controls": {
+     "1.5": 1.217420897367203
+    },
+    "failed_tau0_refcons": {
+     "1": 0.47625477116577414,
+     "1.5": 6.543339783125414
+    },
+    "gates": {
+     "control": 0.05,
+     "refcons_over_E_min": 0.05
+    },
+    "residual_hartree_normalized": {
+     "tau0": [
+      0.375,
+      0.5,
+      0.75
+     ],
+     "value": [
+      0.06784773348262918,
+      0.046795673147797534,
+      0.13803383004244385
+     ],
+     "knobs": "mixed (s7d chi_op 16 + s8 usable rows)",
+     "sign_changed_tau0": [],
+     "exponent_of_inverse_tau0": null,
+     "note": "no usable positive-residual S8 row at this chi_op: the exponent statement stays restricted to the archived tau0 0.375-0.75 range (s7_summary.json)"
+    },
+    "residual_keff_normalized": {
+     "tau0": [
+      0.375,
+      0.5,
+      0.75
+     ],
+     "value": [
+      0.08242331908413925,
+      0.06900333679977011,
+      0.1752959941083777
+     ],
+     "knobs": "mixed (s7d chi_op 16 + s8 usable rows)",
+     "sign_changed_tau0": [],
+     "exponent_of_inverse_tau0": null,
+     "note": "no usable positive-residual S8 row at this chi_op: the exponent statement stays restricted to the archived tau0 0.375-0.75 range (s7_summary.json)"
+    }
+   }
+  },
+  "a_half": {
+   "rows": [
+    {
+     "chi_op": 32,
+     "lam": 1.0,
+     "ratio_exact_over_hartree": 2.03833904983217,
+     "control_lam0": 1.1865002227506591,
+     "ratio_hartree_normalized": 1.7179424080567773,
+     "control_ok": false,
+     "ref_consistency_over_E_min": 1.7531990543469176,
+     "control_refcons_over_E_min": 0.20014788661498115,
+     "usable": false,
+     "norm_ratio": 0.8251629722599383
+    },
+    {
+     "chi_op": 48,
+     "lam": 1.0,
+     "ratio_exact_over_hartree": 1.4108464939096204,
+     "control_lam0": 1.1660152261915855,
+     "ratio_hartree_normalized": 1.2099726163248294,
+     "control_ok": false,
+     "ref_consistency_over_E_min": 0.38235306134297736,
+     "control_refcons_over_E_min": 0.10665978417038939,
+     "usable": false,
+     "norm_ratio": 0.8242179198514984
+    }
+   ],
+   "archived_control_chiop16": 1.173,
+   "archived_ratio_hartree_chiop16": 1.548,
+   "_archived_knobs": "s7e: n_max 6, chi_op 16, chi_acc 32, chi_mpo 64, chi_dmrg 12, weight 0.25 -- NOT the S8 knobs (n_max 8, weight 0.5, chi_dmrg 16), so a difference is not a chi_op effect; cf. chiop16_isolation"
+  }
+ },
+ "n_finished": 12,
+ "n_specified": 12
+}

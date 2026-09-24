@@ -1,0 +1,1171 @@
+{
+  "build": {
+    "generator": "/Users/mruckman1/Desktop/dev/vacuum_energy/papers/circuit-qed-noise-thresholds/notebook.py",
+    "generator_sha256": "1394970e63aeb8e142de8f2693fb219d27a50c48c00f7b3860cd19d54e22f9d7",
+    "generator_entry_point": "notebook.main()",
+    "git_head": "567ffcf2511c7de089cd3fcaed18647e87720d26",
+    "git_worktree_dirty": "True",
+    "produced_utc": "2026-09-03T00:11:39Z",
+    "vacuum_version": "0.1.0",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "python": "3.13.3",
+    "platform": "macOS-14.6.1-arm64-arm-64bit-Mach-O"
+  },
+  "operating_point": {
+    "table1_scenario": 2,
+    "gap_GHz": 7.3,
+    "gap_shift_gamma": 0.02,
+    "gap_shift_GHz": -0.46,
+    "window_ns": 0.22,
+    "switching_kind": "cos2",
+    "separation_mm": 19.2,
+    "separation_sites": 7,
+    "signaling_time_ns": 0.16,
+    "coupling_lambda_osc": 0.14142135623730953,
+    "coupling_lambda_udw_map1": 0.1,
+    "scenario_lambda_published": -0.1,
+    "scenario_alpha_published": 0.003,
+    "coupling_status": "unsourced: lam_osc = |lambda_TB(scenario)| * sqrt(2 Omega_lat) identifies the proposal's dimensionless lambda with this stack's MAP-1 lam_UDW; the identification is a convention choice, not a derivation (the proposal's coupling is derivative/Z_0-normalised), and no published mapping to the 'xx' oscillator model exists",
+    "site_mm": 2.616245639866773,
+    "window_lat": 10.090795603330415
+  },
+  "resolution": {
+    "derived_nats": 0.001,
+    "band_nats": [
+      7.82e-05,
+      0.04
+    ],
+    "transmon_crosscheck_nats": 0.01,
+    "source": "derived from Ren 2022 Sec. 4.3 / Fig. 4.5 (MLE tomography concurrence floor) via E_N <= ln(1 + C) ~ C",
+    "band_source": "recorded plausible range: low end = exact E_N of Ren 2022's own optimal-point X-state (ren_2022_sec4-3:optimal_point_log_negativity_nats), high end = largest measured concurrence std-dev of DiCarlo 2009"
+  },
+  "axes": {
+    "temperature_mK": [
+      0.0,
+      5.0,
+      10.0,
+      12.5,
+      15.0,
+      17.5,
+      20.0,
+      22.5,
+      25.0,
+      27.5,
+      30.0,
+      35.0,
+      40.0,
+      50.0,
+      65.0,
+      80.0
+    ],
+    "gammaphi_Hz": [
+      10000.0,
+      20000.0,
+      50000.0,
+      100000.0,
+      200000.0,
+      500000.0,
+      1000000.0,
+      2000000.0,
+      5000000.0,
+      10000000.0,
+      20000000.0,
+      50000000.0,
+      100000000.0,
+      200000000.0,
+      500000000.0,
+      1000000000.0
+    ],
+    "gamma1_MHz": [
+      1.0,
+      2.0,
+      5.0,
+      8.7,
+      10.0,
+      20.0,
+      50.0,
+      100.0,
+      200.0,
+      500.0,
+      1000.0,
+      1500.0,
+      1850.0,
+      2000.0,
+      3000.0,
+      5000.0
+    ],
+    "separation_sites": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      9.0,
+      10.0,
+      11.0,
+      12.0,
+      14.0,
+      17.0,
+      23.0,
+      46.0
+    ],
+    "coupling_lambda": [
+      0.05,
+      0.075,
+      0.1,
+      0.125,
+      0.14142135623730953,
+      0.17,
+      0.2,
+      0.225,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6
+    ]
+  },
+  "anchors": {
+    "temperature_mK": {
+      "design_20mK": 20.0,
+      "fridge_base_30mK": 30.0,
+      "orgiazzi_40mK": 40.0,
+      "transmission_line_50mK": 50.0
+    },
+    "gammaphi_Hz": {
+      "digitized_min": 10000000.0,
+      "digitized_max": 200000000.0,
+      "orgiazzi_ramsey_floor_Hz_equiv": 122549.30618075942
+    },
+    "gamma1_MHz": {
+      "measured_min": 8.7,
+      "measured_max": 1850.0
+    },
+    "separation_sites": {
+      "t_d_0.16ns_19.2mm": 7.0,
+      "t_d_0.5ns_60mm": 23.0,
+      "t_d_1ns_120mm": 46.0
+    },
+    "coupling_lambda": {
+      "anchored": 0.14142135623730953
+    }
+  },
+  "n_rows": 19,
+  "n_surface_points": {
+    "dephasing": 16,
+    "relaxation": 1
+  },
+  "wall_clock_s": 5.066840171813965,
+  "cpu_seconds_summed": 5.015206813812256,
+  "slowest_point_s": 0.6754810810089111,
+  "all_audits_passed": true,
+  "all_converged": true,
+  "worst_ledger_defect": 2.1182621628978993e-12,
+  "worst_accepted_movement": 8.739452866262949e-08,
+  "worst_work_movement": 8.314625979926465e-07,
+  "max_halvings_accepted": 7.0,
+  "mp_margin_flagged_rows": 0,
+  "precision_flagged_rows": 0,
+  "go_no_go": {
+    "dephasing": {
+      "x_axis": "gammaphi_Hz",
+      "log_x": true,
+      "T_mK": [
+        0.0,
+        20.0,
+        30.0,
+        50.0
+      ],
+      "X": [
+        100000.0,
+        1000000.0,
+        10000000.0,
+        200000000.0
+      ],
+      "E_N_contour": {
+        "derived": {
+          "level_nats": 0.001,
+          "n_go": 0,
+          "n_points": 16,
+          "go_fraction": 0.0,
+          "max_z": 0.0007430538361275683,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 20.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 30.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 50.0,
+              "crossings": []
+            }
+          ],
+          "cols": [
+            {
+              "x": 100000.0,
+              "crossings": []
+            },
+            {
+              "x": 1000000.0,
+              "crossings": []
+            },
+            {
+              "x": 10000000.0,
+              "crossings": []
+            },
+            {
+              "x": 200000000.0,
+              "crossings": []
+            }
+          ]
+        },
+        "band_low": {
+          "level_nats": 7.82e-05,
+          "n_go": 2,
+          "n_points": 16,
+          "go_fraction": 0.125,
+          "max_z": 0.0007430538361275683,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": [
+                {
+                  "x_lo": 100000.0,
+                  "x_hi": 1000000.0,
+                  "z_lo": 0.0007430538361275683,
+                  "z_hi": 0.0,
+                  "x_interp": 784799.3505481081,
+                  "direction": "go->nogo",
+                  "sudden_death": true
+                }
+              ]
+            },
+            {
+              "temperature_mK": 20.0,
+              "crossings": [
+                {
+                  "x_lo": 100000.0,
+                  "x_hi": 1000000.0,
+                  "z_lo": 0.0005286893173481629,
+                  "z_hi": 0.0,
+                  "x_interp": 711356.072950865,
+                  "direction": "go->nogo",
+                  "sudden_death": true
+                }
+              ]
+            },
+            {
+              "temperature_mK": 30.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 50.0,
+              "crossings": []
+            }
+          ],
+          "cols": [
+            {
+              "x": 100000.0,
+              "crossings": [
+                {
+                  "x_lo": 20.0,
+                  "x_hi": 30.0,
+                  "z_lo": 0.0005286893173481629,
+                  "z_hi": 0.0,
+                  "x_interp": 28.520870434979827,
+                  "direction": "go->nogo",
+                  "sudden_death": true
+                }
+              ]
+            },
+            {
+              "x": 1000000.0,
+              "crossings": []
+            },
+            {
+              "x": 10000000.0,
+              "crossings": []
+            },
+            {
+              "x": 200000000.0,
+              "crossings": []
+            }
+          ]
+        },
+        "band_high": {
+          "level_nats": 0.04,
+          "n_go": 0,
+          "n_points": 16,
+          "go_fraction": 0.0,
+          "max_z": 0.0007430538361275683,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 20.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 30.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 50.0,
+              "crossings": []
+            }
+          ],
+          "cols": [
+            {
+              "x": 100000.0,
+              "crossings": []
+            },
+            {
+              "x": 1000000.0,
+              "crossings": []
+            },
+            {
+              "x": 10000000.0,
+              "crossings": []
+            },
+            {
+              "x": 200000000.0,
+              "crossings": []
+            }
+          ]
+        }
+      },
+      "MI_contour": {
+        "derived": {
+          "level_nats": 0.001,
+          "n_go": 0,
+          "n_points": 16,
+          "go_fraction": 0.0,
+          "max_z": 0.0002228280352209247,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 20.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 30.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 50.0,
+              "crossings": []
+            }
+          ],
+          "cols": [
+            {
+              "x": 100000.0,
+              "crossings": []
+            },
+            {
+              "x": 1000000.0,
+              "crossings": []
+            },
+            {
+              "x": 10000000.0,
+              "crossings": []
+            },
+            {
+              "x": 200000000.0,
+              "crossings": []
+            }
+          ]
+        },
+        "band_low": {
+          "level_nats": 7.82e-05,
+          "n_go": 3,
+          "n_points": 16,
+          "go_fraction": 0.1875,
+          "max_z": 0.0002228280352209247,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 20.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 30.0,
+              "crossings": [
+                {
+                  "x_lo": 100000.0,
+                  "x_hi": 1000000.0,
+                  "z_lo": 0.00015413150581567586,
+                  "z_hi": 6.163402001847437e-05,
+                  "x_interp": 662069.3097017943,
+                  "direction": "go->nogo",
+                  "sudden_death": false
+                }
+              ]
+            },
+            {
+              "temperature_mK": 50.0,
+              "crossings": [
+                {
+                  "x_lo": 1000000.0,
+                  "x_hi": 10000000.0,
+                  "z_lo": 0.00015355068024709012,
+                  "z_hi": 4.012917067197641e-05,
+                  "x_interp": 4616810.703706181,
+                  "direction": "go->nogo",
+                  "sudden_death": false
+                }
+              ]
+            }
+          ],
+          "cols": [
+            {
+              "x": 100000.0,
+              "crossings": [
+                {
+                  "x_lo": 20.0,
+                  "x_hi": 30.0,
+                  "z_lo": 6.060596811744562e-05,
+                  "z_hi": 0.00015413150581567586,
+                  "x_interp": 21.881200826593837,
+                  "direction": "nogo->go",
+                  "sudden_death": false
+                }
+              ]
+            },
+            {
+              "x": 1000000.0,
+              "crossings": [
+                {
+                  "x_lo": 30.0,
+                  "x_hi": 50.0,
+                  "z_lo": 6.163402001847437e-05,
+                  "z_hi": 0.00015355068024709012,
+                  "x_interp": 33.604565252985175,
+                  "direction": "nogo->go",
+                  "sudden_death": false
+                }
+              ]
+            },
+            {
+              "x": 10000000.0,
+              "crossings": []
+            },
+            {
+              "x": 200000000.0,
+              "crossings": []
+            }
+          ]
+        },
+        "band_high": {
+          "level_nats": 0.04,
+          "n_go": 0,
+          "n_points": 16,
+          "go_fraction": 0.0,
+          "max_z": 0.0002228280352209247,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 20.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 30.0,
+              "crossings": []
+            },
+            {
+              "temperature_mK": 50.0,
+              "crossings": []
+            }
+          ],
+          "cols": [
+            {
+              "x": 100000.0,
+              "crossings": []
+            },
+            {
+              "x": 1000000.0,
+              "crossings": []
+            },
+            {
+              "x": 10000000.0,
+              "crossings": []
+            },
+            {
+              "x": 200000000.0,
+              "crossings": []
+            }
+          ]
+        }
+      },
+      "device_anchors": [
+        {
+          "temperature_anchor": "design_20mK",
+          "temperature_mK": 20.0,
+          "x_anchor": "digitized_min",
+          "gammaphi_Hz": 10000000.0,
+          "label": "dephasing-T20-X1e+07",
+          "E_N": 0.0,
+          "MI": 4.235487547271655e-06,
+          "work": 0.0014790106688690875,
+          "verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "MI_verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "temperature_anchor": "design_20mK",
+          "temperature_mK": 20.0,
+          "x_anchor": "digitized_max",
+          "gammaphi_Hz": 200000000.0,
+          "label": "dephasing-T20-X2e+08",
+          "E_N": 0.0,
+          "MI": 7.837274758060175e-07,
+          "work": 0.016032382725675472,
+          "verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "MI_verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "temperature_anchor": "fridge_base_30mK",
+          "temperature_mK": 30.0,
+          "x_anchor": "digitized_min",
+          "gammaphi_Hz": 10000000.0,
+          "label": "dephasing-T30-X1e+07",
+          "E_N": 0.0,
+          "MI": 1.1349273039890084e-05,
+          "work": 0.00218234115640018,
+          "verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "MI_verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "temperature_anchor": "fridge_base_30mK",
+          "temperature_mK": 30.0,
+          "x_anchor": "digitized_max",
+          "gammaphi_Hz": 200000000.0,
+          "label": "dephasing-T30-X2e+08",
+          "E_N": 0.0,
+          "MI": 1.2018819823822469e-06,
+          "work": 0.016735461229954122,
+          "verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "MI_verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "temperature_anchor": "transmission_line_50mK",
+          "temperature_mK": 50.0,
+          "x_anchor": "digitized_min",
+          "gammaphi_Hz": 10000000.0,
+          "label": "dephasing-T50-X1e+07",
+          "E_N": 0.0,
+          "MI": 4.012917067197641e-05,
+          "work": 0.004859568765980071,
+          "verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "MI_verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "temperature_anchor": "transmission_line_50mK",
+          "temperature_mK": 50.0,
+          "x_anchor": "digitized_max",
+          "gammaphi_Hz": 200000000.0,
+          "label": "dephasing-T50-X2e+08",
+          "E_N": 0.0,
+          "MI": 3.0334146698951514e-06,
+          "work": 0.019412667228480365,
+          "verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "MI_verdict": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        }
+      ]
+    },
+    "relaxation": {
+      "x_axis": "gamma1_MHz",
+      "log_x": true,
+      "T_mK": [
+        0.0
+      ],
+      "X": [
+        1850.0
+      ],
+      "E_N_contour": {
+        "derived": {
+          "level_nats": 0.001,
+          "n_go": 0,
+          "n_points": 1,
+          "go_fraction": 0.0,
+          "max_z": 0.00013226571017061685,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": []
+            }
+          ],
+          "cols": [
+            {
+              "x": 1850.0,
+              "crossings": []
+            }
+          ]
+        },
+        "band_low": {
+          "level_nats": 7.82e-05,
+          "n_go": 1,
+          "n_points": 1,
+          "go_fraction": 1.0,
+          "max_z": 0.00013226571017061685,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": []
+            }
+          ],
+          "cols": [
+            {
+              "x": 1850.0,
+              "crossings": []
+            }
+          ]
+        },
+        "band_high": {
+          "level_nats": 0.04,
+          "n_go": 0,
+          "n_points": 1,
+          "go_fraction": 0.0,
+          "max_z": 0.00013226571017061685,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": []
+            }
+          ],
+          "cols": [
+            {
+              "x": 1850.0,
+              "crossings": []
+            }
+          ]
+        }
+      },
+      "MI_contour": {
+        "derived": {
+          "level_nats": 0.001,
+          "n_go": 0,
+          "n_points": 1,
+          "go_fraction": 0.0,
+          "max_z": 1.0341172969924274e-05,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": []
+            }
+          ],
+          "cols": [
+            {
+              "x": 1850.0,
+              "crossings": []
+            }
+          ]
+        },
+        "band_low": {
+          "level_nats": 7.82e-05,
+          "n_go": 0,
+          "n_points": 1,
+          "go_fraction": 0.0,
+          "max_z": 1.0341172969924274e-05,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": []
+            }
+          ],
+          "cols": [
+            {
+              "x": 1850.0,
+              "crossings": []
+            }
+          ]
+        },
+        "band_high": {
+          "level_nats": 0.04,
+          "n_go": 0,
+          "n_points": 1,
+          "go_fraction": 0.0,
+          "max_z": 1.0341172969924274e-05,
+          "rows": [
+            {
+              "temperature_mK": 0.0,
+              "crossings": []
+            }
+          ],
+          "cols": [
+            {
+              "x": 1850.0,
+              "crossings": []
+            }
+          ]
+        }
+      },
+      "device_anchors": []
+    }
+  },
+  "best_pockets_per_switching_work": {
+    "derived": [],
+    "band_low": [
+      {
+        "label": "dephasing-T0-X100000",
+        "sweep": "dephasing",
+        "temperature_mK": 0.0,
+        "gammaphi_Hz": 100000.0,
+        "gamma1_MHz": 0.0,
+        "separation_mm": 19.2,
+        "separation_sites": 7.0,
+        "coupling_lambda": 0.14142135623730953,
+        "E_N": 0.0007430538361275683,
+        "MI": 1.73624143071701e-05,
+        "work": 0.0005182870976567715,
+        "E_N_per_work": 1.4336722628963559,
+        "MI_per_work": 0.03349960742929418
+      },
+      {
+        "label": "dephasing-T20-X100000",
+        "sweep": "dephasing",
+        "temperature_mK": 20.0,
+        "gammaphi_Hz": 100000.0,
+        "gamma1_MHz": 0.0,
+        "separation_mm": 19.2,
+        "separation_sites": 7.0,
+        "coupling_lambda": 0.14142135623730953,
+        "E_N": 0.0005286893173481629,
+        "MI": 6.060596811744562e-05,
+        "work": 0.0007209775592548674,
+        "E_N_per_work": 0.7332951082341106,
+        "MI_per_work": 0.08406082455615135
+      },
+      {
+        "label": "quick-relaxation",
+        "sweep": "relaxation",
+        "temperature_mK": 0.0,
+        "gammaphi_Hz": 0.0,
+        "gamma1_MHz": 1850.0,
+        "separation_mm": 19.2,
+        "separation_sites": 7.0,
+        "coupling_lambda": 0.14142135623730953,
+        "E_N": 0.00013226571017061685,
+        "MI": 1.0341172969924274e-05,
+        "work": 0.0025489173273483367,
+        "E_N_per_work": 0.05189093767439454,
+        "MI_per_work": 0.004057084495824859
+      }
+    ],
+    "band_high": []
+  },
+  "best_MI_pockets_per_switching_work": {
+    "derived": [],
+    "band_low": [
+      {
+        "label": "dephasing-T30-X100000",
+        "sweep": "dephasing",
+        "temperature_mK": 30.0,
+        "gammaphi_Hz": 100000.0,
+        "gamma1_MHz": 0.0,
+        "separation_mm": 19.2,
+        "separation_sites": 7.0,
+        "coupling_lambda": 0.14142135623730953,
+        "E_N": 0.0,
+        "MI": 0.00015413150581567586,
+        "work": 0.0014240474894915824,
+        "E_N_per_work": 0.0,
+        "MI_per_work": 0.10823480744360875
+      },
+      {
+        "label": "dephasing-T50-X100000",
+        "sweep": "dephasing",
+        "temperature_mK": 50.0,
+        "gammaphi_Hz": 100000.0,
+        "gamma1_MHz": 0.0,
+        "separation_mm": 19.2,
+        "separation_sites": 7.0,
+        "coupling_lambda": 0.14142135623730953,
+        "E_N": 0.0,
+        "MI": 0.0002228280352209247,
+        "work": 0.004101275740829001,
+        "E_N_per_work": 0.0,
+        "MI_per_work": 0.05433139571734426
+      },
+      {
+        "label": "dephasing-T50-X1e+06",
+        "sweep": "dephasing",
+        "temperature_mK": 50.0,
+        "gammaphi_Hz": 1000000.0,
+        "gamma1_MHz": 0.0,
+        "separation_mm": 19.2,
+        "separation_sites": 7.0,
+        "coupling_lambda": 0.14142135623730953,
+        "E_N": 0.0,
+        "MI": 0.00015355068024709012,
+        "work": 0.0041702114703879335,
+        "E_N_per_work": 0.0,
+        "MI_per_work": 0.0368208378249955
+      }
+    ],
+    "band_high": []
+  },
+  "pivot": {
+    "per_surface": {
+      "dephasing": {
+        "n_points": 16,
+        "max_E_N": 0.0007430538361275683,
+        "max_MI": 0.0002228280352209247,
+        "derived": {
+          "E_N_resolvable_fraction": 0.0,
+          "MI_resolvable_fraction": 0.0,
+          "MI_only_fraction": 0.0
+        },
+        "band_low": {
+          "E_N_resolvable_fraction": 0.125,
+          "MI_resolvable_fraction": 0.1875,
+          "MI_only_fraction": 0.1875
+        },
+        "band_high": {
+          "E_N_resolvable_fraction": 0.0,
+          "MI_resolvable_fraction": 0.0,
+          "MI_only_fraction": 0.0
+        }
+      },
+      "relaxation": {
+        "n_points": 1,
+        "max_E_N": 0.00013226571017061685,
+        "max_MI": 1.0341172969924274e-05,
+        "derived": {
+          "E_N_resolvable_fraction": 0.0,
+          "MI_resolvable_fraction": 0.0,
+          "MI_only_fraction": 0.0
+        },
+        "band_low": {
+          "E_N_resolvable_fraction": 1.0,
+          "MI_resolvable_fraction": 0.0,
+          "MI_only_fraction": 0.0
+        },
+        "band_high": {
+          "E_N_resolvable_fraction": 0.0,
+          "MI_resolvable_fraction": 0.0,
+          "MI_only_fraction": 0.0
+        }
+      }
+    },
+    "device_box": {
+      "n_anchor_points": 4,
+      "max_E_N": 0.0,
+      "max_MI": 4.012917067197641e-05,
+      "E_N_over_derived_floor": 0.0,
+      "MI_over_derived_floor": 0.04012917067197641,
+      "E_N_resolvable_anywhere": {
+        "derived": false,
+        "band_low": false,
+        "band_high": false
+      },
+      "MI_resolvable_anywhere": {
+        "derived": false,
+        "band_low": false,
+        "band_high": false
+      }
+    }
+  },
+  "finite_size_control": {},
+  "cross_check_run_harvesting": null,
+  "communication_split_rows": [
+    {
+      "label": "split-X7",
+      "separation_mm": 19.2,
+      "separation_sites": 7.0,
+      "window_lat": 10.090795603330415,
+      "E_N": 0.000702910841410961,
+      "MI": 6.10852962190146e-06,
+      "E_N_pert": 0.0007248608555585546,
+      "P_A": 2.2525160418545742e-05,
+      "M_abs": 0.000384728922634069,
+      "M_vac_abs": 0.00036776371566263946,
+      "M_comm_abs": 0.00011298758052626232,
+      "comm_fraction": 0.29368101507078354,
+      "perturbative_ok": true,
+      "perturbative_quadrature_failed": false,
+      "has_perturbative_row": true
+    }
+  ],
+  "provenance": {
+    "G1_max": {
+      "file": "circuit_qed_harvesting/janzen_2023_fig6",
+      "tag": "transcribed",
+      "note": "measured maximum Gamma_1 (Sec. III.B), GHz"
+    },
+    "G1_min": {
+      "file": "circuit_qed_harvesting/janzen_2023_fig6",
+      "tag": "transcribed",
+      "note": "measured minimum Gamma_1 (Sec. III.B)"
+    },
+    "Gphi_max": {
+      "file": "circuit_qed_harvesting/janzen_2023_fig6",
+      "tag": "plot_digitized",
+      "note": "PLOT-DIGITIZED upper end (Fig. 7(a))"
+    },
+    "Gphi_measured_floor_rad_s": {
+      "file": "circuit_qed_harvesting/orgiazzi_2016_fig3",
+      "tag": "transcribed",
+      "note": "Ramsey pure dephasing of a Lupascu-group flux qubit (other device)"
+    },
+    "Gphi_min": {
+      "file": "circuit_qed_harvesting/janzen_2023_fig6",
+      "tag": "plot_digitized",
+      "note": "PLOT-DIGITIZED lower end (Fig. 7(a))"
+    },
+    "T_design": {
+      "file": "circuit_qed_harvesting/ren_2022_sec4-3",
+      "tag": "transcribed",
+      "note": "Lupascu-group design temperature (Table 3.1)"
+    },
+    "T_fridge_base": {
+      "file": "circuit_qed_harvesting/janzen_2023_fig6",
+      "tag": "transcribed",
+      "note": "dilution-fridge base (App. A)"
+    },
+    "T_orgiazzi": {
+      "file": "circuit_qed_harvesting/orgiazzi_2016_fig3",
+      "tag": "transcribed",
+      "note": "mixing chamber of the Orgiazzi 2016 setup"
+    },
+    "T_transmission_line": {
+      "file": "circuit_qed_harvesting/janzen_2023_fig6",
+      "tag": "transcribed",
+      "note": "assumed TL temperature (Sec. IV.A) / heated fridge (App. A)"
+    },
+    "boundary_buffer": {
+      "file": "(none)",
+      "tag": "synthetic",
+      "note": "lattice sizing, 6 sites beyond the causal minimum; its effect is measured by the finite-size control"
+    },
+    "coupling_axis": {
+      "file": "(none)",
+      "tag": "synthetic",
+      "note": "sensitivity axis for the UNSOURCED coupling; the anchored value lies on it"
+    },
+    "coupling_lambda": {
+      "file": "(none)",
+      "tag": "unsourced",
+      "note": "unsourced: lam_osc = |lambda_TB(scenario)| * sqrt(2 Omega_lat) identifies the proposal's dimensionless lambda with this stack's MAP-1 lam_UDW; the identification is a convention choice, not a derivation (the proposal's coupling is derivative/Z_0-normalised), and no published mapping to the 'xx' oscillator model exists"
+    },
+    "dephasing_axis": {
+      "file": "(none)",
+      "tag": "synthetic",
+      "note": "1-2-5 per decade over [1e4, 1e9] Hz: the file's entries plus refinement; plot-digitized anchors 1e7/2e8 on the axis"
+    },
+    "dicarlo_concurrence_std": {
+      "file": "circuit_qed_harvesting/dicarlo_2009_fig3",
+      "tag": "transcribed",
+      "note": "the band's high end (0.04) and the cross-check (0.01) come from these"
+    },
+    "expected_operating_T": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2025_thesis-outlook",
+      "tag": "transcribed",
+      "note": "authors' expected 20-30 mK (thesis Outlook item 5)"
+    },
+    "field_mass": {
+      "file": "(none)",
+      "tag": "synthetic",
+      "note": "IR regulator m = 0.2 lattice units (fundamental of a finite line); model limitation (2)"
+    },
+    "gap_variation_coefficient": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "transcribed",
+      "note": "Eq. (30): Delta-Omega/2pi = coef * gamma GHz"
+    },
+    "omega_ref": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "transcribed",
+      "note": "free-qubit gap Omega^0/2pi (Eq. 30); sets the lattice energy unit"
+    },
+    "pure_dephasing_rate_grid": {
+      "file": "circuit_qed_harvesting/janzen_2023_fig6_variant-noise-sweep",
+      "tag": "synthetic",
+      "note": "file grid (synthetic; brackets the plot-digitized [1e7, 2e8] Hz)"
+    },
+    "relaxation_axis": {
+      "file": "(none)",
+      "tag": "synthetic",
+      "note": "1-2-5 per decade over [1, 5000] MHz plus the measured 8.7 MHz and 1850 MHz on the axis"
+    },
+    "relaxation_rate_grid": {
+      "file": "circuit_qed_harvesting/janzen_2023_fig6_variant-noise-sweep",
+      "tag": "synthetic",
+      "note": "file grid (synthetic between/beyond the measured 8.7 MHz and 1.85 GHz)"
+    },
+    "ren_concurrence_floor": {
+      "file": "circuit_qed_harvesting/ren_2022_sec4-3",
+      "tag": "transcribed",
+      "note": "the derived resolution's input"
+    },
+    "ren_optimal_point_E_N": {
+      "file": "circuit_qed_harvesting/ren_2022_sec4-3",
+      "tag": "derived",
+      "note": "the band's low end, computed from the thesis's printed density matrix"
+    },
+    "resolution_band_nats": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "derived",
+      "note": "recorded plausible range: low end = exact E_N of Ren 2022's own optimal-point X-state (ren_2022_sec4-3:optimal_point_log_negativity_nats), high end = largest measured concurrence std-dev of DiCarlo 2009"
+    },
+    "resolution_crosscheck_nats": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "derived",
+      "note": "DiCarlo 2009 Fig. 3: smallest measured concurrence std-dev"
+    },
+    "resolution_nats": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "derived",
+      "note": "derived from Ren 2022 Sec. 4.3 / Fig. 4.5 (MLE tomography concurrence floor) via E_N <= ln(1 + C) ~ C"
+    },
+    "scenario_alpha": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "transcribed",
+      "note": "Table I scenario 2, column alpha -- inside the device's measured alpha range (the closeness criterion)"
+    },
+    "scenario_gamma": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "transcribed",
+      "note": "Table I scenario 2, column gamma"
+    },
+    "scenario_lambda": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "transcribed",
+      "note": "Table I scenario 2, column lambda"
+    },
+    "sep_120mm": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "transcribed",
+      "note": "d = 12 cm (Sec. VI.A default)"
+    },
+    "sep_60mm": {
+      "file": "circuit_qed_harvesting/janzen_2023_fig6_variant-noise-sweep",
+      "tag": "derived",
+      "note": "d = v t_d for t_d = 0.5 ns (Fig. 15)"
+    },
+    "separation_axis": {
+      "file": "(none)",
+      "tag": "synthetic",
+      "note": "integer lattice sites 1-12, 14, 17, 23, 46; the published 19.2 / 60 / 120 mm round to 7 / 23 / 46 sites"
+    },
+    "separation_mm": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1_variant-switching",
+      "tag": "derived",
+      "note": "d = v t_d (derived in the variant file from the published t_d and v)"
+    },
+    "signaling_time_ns": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1_variant-switching",
+      "tag": "transcribed",
+      "note": "t_d = 0.16 ns, the proposal's shortest published light-crossing delay (Fig. 23(c))"
+    },
+    "switching_flat_fraction": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "transcribed",
+      "note": "S_f = 0 for every cosine-ramps panel (so cos2 IS the published shape)"
+    },
+    "switching_window_ns": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "transcribed",
+      "note": "Fig. 18 caption, cosine ramps S_f = 0 (full window T); sin^2(pi t/T) == this library's cos2 profile"
+    },
+    "temperature_axis": {
+      "file": "(none)",
+      "tag": "synthetic",
+      "note": "refinement of the file's temperature grid: 16 values, published anchors 20/30/40/50 mK on the axis"
+    },
+    "waveguide_speed": {
+      "file": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+      "tag": "transcribed",
+      "note": "v (Sec. II.1); sets the lattice length unit"
+    },
+    "waveguide_temperature_grid": {
+      "file": "circuit_qed_harvesting/janzen_2023_fig6_variant-noise-sweep",
+      "tag": "synthetic",
+      "note": "file grid (synthetic extension beyond 50 mK) -- the T axis here is a refinement of its published entries 20/30/40/50 mK"
+    }
+  },
+  "synthetic_or_unsourced_inputs": [
+    "boundary_buffer",
+    "coupling_axis",
+    "coupling_lambda",
+    "dephasing_axis",
+    "field_mass",
+    "pure_dephasing_rate_grid",
+    "relaxation_axis",
+    "relaxation_rate_grid",
+    "separation_axis",
+    "temperature_axis",
+    "waveguide_temperature_grid"
+  ]
+}

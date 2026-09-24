@@ -1,0 +1,1 @@
+{"kind": "ed", "L": 6, "m": 0.5, "tau0": 0.75, "lam": 4.0, "n_max": 5, "tag": "ed_L6_nmax5_lam4", "section": "S8", "part": "ed", "threads": 2, "dt": 0.375, "priority": 80.0, "kernels": ["analytic", "trapezoid"], "est_wall_s": 4800.0, "cost": 4800.0}

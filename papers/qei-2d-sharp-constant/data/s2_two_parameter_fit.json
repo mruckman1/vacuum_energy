@@ -1,0 +1,20 @@
+{
+  "_source": "notebook.py::s2_two_parameter_fit",
+  "model": "1 - ratio = A/g^2 + c/tau0^2",
+  "A_box": 4.886642347414581,
+  "c_lattice": 0.1737674756463045,
+  "n_points": 13,
+  "max_rel_residual": 0.004520157447256987,
+  "max_abs_residual": 1.58685047535077e-05,
+  "free_offset_b0": 8.197098940050329e-06,
+  "free_offset_b0_stderr": 3.396093709158221e-06,
+  "free_offset_b0_over_stderr": 2.413684557038362,
+  "r_extrap_continuum": 0.9999918029010599,
+  "recovery_error_vs_sharp": 8.197098940050329e-06,
+  "quartic_model_b0": -1.0112291574359557e-07,
+  "quartic_model_b0_stderr": 1.4421016211361783e-06,
+  "quartic_model_b0_over_stderr": -0.07012190698733463,
+  "quartic_model_d": -0.07549021736157016,
+  "quartic_model_r_extrap": 1.0000001011229158,
+  "quartic_model_recovery_error": 1.0112291574359557e-07
+}

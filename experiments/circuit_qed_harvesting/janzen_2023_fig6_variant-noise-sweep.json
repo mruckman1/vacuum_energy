@@ -1,0 +1,90 @@
+{
+  "source": "DECLARED, PARTLY SYNTHETIC VARIANT of N. Janzen, X. Dai, S. Ren, J. Shi, A. Lupascu, Phys. Rev. Research 5, 033155 (2023); arXiv:2208.05571. The parent's measured values are unchanged. Three sweep grids in this file contain entries CHOSEN BY THE SIMULATION (listed in 'synthetic_quantities'); every other grid is a selection of published values (each entry located) or is derived from them by stated arithmetic.",
+  "location": "No publication location for the grids themselves: this file pins the sweep axes of the Layer 2 noise-threshold deliverable (docs/PLAN_LAYERS_2_3.md, M2.7). Per-entry sources: parent (circuit_qed_harvesting/janzen_2023_fig6.json), Teixido-Bonfill et al. 2026 (circuit_qed_harvesting/teixido-bonfill_2026_table1.json: Sec. VI.A, Sec. VI.D, Table I, Figs. 15, 17, 23), Ren 2022 MSc thesis (circuit_qed_harvesting/ren_2022_sec4-3.json), Orgiazzi et al. 2016 (circuit_qed_harvesting/orgiazzi_2016_fig3.json).",
+  "retrieved": "2026-09-01",
+  "transcribed_by": "vacuum-program build agent (milestone M2.6; re-sourced in the gap-closure pass 2026-09-01)",
+  "synthetic": true,
+  "variant_of": "circuit_qed_harvesting/janzen_2023_fig6",
+  "supersedes": "The M2.6 version declared seven synthetic grids and justified the switching-duration and separation grids by 'no publication pins a switching duration in ns / a separation in mm'. That was wrong: Teixido-Bonfill et al. 2026 pin t_d = 1 ns, d = 12 cm (Sec. VI.A), t_d = 0.5 ns (Fig. 15), t_d = T = 0.16 ns (Fig. 23(c)), and every plotted switching duration (Figs. 17-22 captions). Those grids are now selections of published values (durations) or derived from them (separations). The gap and coupling grids were already made of published values and are now tagged as such. Three grids remain synthetic because a threshold search must extend beyond the measured anchors; their anchors are now explicit per entry. Results computed from the old grids must be re-run before being cited against this file.",
+  "comment": "SYNTHETIC IN PART. The measured device paper fixes one operating point per figure; a go/no-go noise-threshold map needs grids. The temperature, relaxation-rate and pure-dephasing-rate grids extend beyond every published anchor to locate the harvesting death point, and their extension entries are declared simulation choices that must never be cited as experimental numbers. Anchors: the parent's measured fridge base 30 mK and assumed/heated 50 mK; the Lupascu group's design temperature 20 mK and stated harvesting death near 30 mK (Ren 2022, Secs. 3.3.1, 3.3.3); the 40 mK mixing-chamber temperature of Orgiazzi et al. 2016; the parent's measured Gamma_1 in [8.7 MHz, 1.85 GHz]; the parent's plot-digitized Gamma_phi in [1e7, 2e8] Hz; and the time-domain Ramsey/echo pure-dephasing rates 0.77-1.85 us^-1 measured on Lupascu-group flux qubits in a resonator (Orgiazzi et al. 2016 -- a DIFFERENT device, quoted as a floor, and in s^-1 not the loader's x2pi 'Hz' convention). Rate convention: rates published as MHz/Hz are converted by the loader's energy rule (x 2pi); the factor-2pi ambiguity of the parent's Gamma_1 is inherited, see the parent's comment.",
+  "provenance_tags": "Per-quantity 'provenance' in {'transcribed', 'selection', 'derived', 'synthetic'}: 'selection' = every entry is a published number (each located in the note) and only the choice of subset is ours; 'derived' = arithmetic on published numbers (formula in note, inputs in 'derived_from'); 'synthetic' = at least one entry is a simulation choice (the entries are labelled in the note). 'synthetic_quantities' lists exactly the 'synthetic'-tagged names (asserted by tests/test_experiments_io.py).",
+  "synthetic_quantities": ["waveguide_temperature_grid", "relaxation_rate_grid", "pure_dephasing_rate_grid"],
+  "derived_quantities": ["detector_separation_grid"],
+  "changes": {
+    "waveguide_temperature_grid": "SYNTHETIC extension retained (100-800 mK); ADDED the published anchors 20 mK (Ren 2022 design temperature) and 40 mK (Orgiazzi 2016 mixing chamber) to the measured 30 mK and 50 mK",
+    "relaxation_rate_grid": "SYNTHETIC extension retained; the two measured endpoints of the parent (8.7 MHz, 1.85 GHz) now appear verbatim as grid entries instead of being bracketed",
+    "pure_dephasing_rate_grid": "SYNTHETIC grid retained unchanged (brackets the parent's plot-digitized Gamma_phi by one decade each way); its lowest entry now has a measured floor to compare against (Orgiazzi 2016, different device, see note)",
+    "detector_gap_grid": "unchanged values; re-tagged 'selection' because every entry is published (amplifier band edges, Fig. 5 operating point, Teixido-Bonfill Eq. 30 gap)",
+    "switching_duration_grid": "REPLACED the synthetic [0.1, 0.3, 1.0, 3.0] ns by a selection of published durations from Teixido-Bonfill et al. 2026: 0.07 ns (Gaussian, Fig. 17), 0.16 ns (trapezoid, Fig. 17/23), 0.21 ns (cosine ramps, Fig. 17), 0.5 ns and 1.0 ns (Sec. VI.D thresholds)",
+    "signaling_time_grid": "ADDED: the three published light-crossing delays t_d = 0.16, 0.5, 1 ns (Teixido-Bonfill Fig. 23(c), Fig. 15, Sec. VI.A)",
+    "detector_separation_grid": "REPLACED the synthetic [1, 6, 12, 40, 120] mm by d = v * t_d for the published t_d above: 19.2, 60, 120 mm (the last equals the published d = 12 cm, the cross-check)",
+    "coupling_alpha_grid": "REPLACED the log-interpolated interior points by the published scenario-2 alpha = 0.003 of Teixido-Bonfill Table I; endpoints remain the parent's measured alpha_min and alpha_max",
+    "waveguide_speed": "unchanged copy of Teixido-Bonfill et al. 2026, Sec. II.1"
+  },
+  "quantities": {
+    "waveguide_temperature_grid": {
+      "value": [20, 30, 40, 50, 100, 200, 400, 800],
+      "units": "mK",
+      "provenance": "synthetic",
+      "location": "sweep axis; entries 1-4 published, entries 5-8 SYNTHETIC",
+      "note": "20 mK: Lupascu-group design temperature 'chosen as a feasible temperature for our dilution refrigerator' (Ren 2022, Table 3.1) and the authors' 'expected temperature for the experiment is around 20-30 mK' (Teixido-Bonfill PhD thesis 2025); 30 mK: parent's fridge base (App. A) and the thesis-stated harvesting death 'around T_th = 30 mK' (Ren 2022, Sec. 3.3.3); 40 mK: mixing-chamber temperature of Orgiazzi et al. 2016 (Supplementary); 50 mK: parent's assumed transmission-line temperature (Sec. IV.A) and measured fridge temperature under bias-line heating (App. A); 100, 200, 400, 800 mK: SYNTHETIC extensions to locate the harvesting death temperature (the parent's residual bias-line noise temperature is only 'on the order of hundreds of mK', Sec. IV.A)"
+    },
+    "relaxation_rate_grid": {
+      "value": [1.0, 8.7, 100.0, 1850.0, 5000.0],
+      "units": "MHz",
+      "provenance": "synthetic",
+      "location": "sweep axis; entries 2 and 4 measured, entries 1, 3, 5 SYNTHETIC",
+      "note": "8.7 MHz and 1850 MHz (= 1.85 GHz) are the parent's minimum and maximum measured Gamma_1 (Sec. III.B, Fig. 6(b)); 1, 100, 5000 MHz are SYNTHETIC (below, between, above the measured range). Other published anchors, not on the grid: ~4 MHz SIMULATED Gamma_1 at the decoupling point of the redesigned RQI qubit (Ren 2022, Sec. 4.1.1); measured 1/T_1 = 0.19 and 0.10 us^-1 for Lupascu-group flux qubits in a resonator (Orgiazzi 2016). Read as a frequency and converted with the loader's energy rule"
+    },
+    "pure_dephasing_rate_grid": {
+      "value": [1.0e6, 1.0e7, 5.0e7, 2.0e8, 1.0e9],
+      "units": "Hz",
+      "provenance": "synthetic",
+      "location": "sweep axis; SYNTHETIC grid bracketing the parent's PLOT-DIGITIZED Gamma_phi range [1e7, 2e8] Hz by one decade on each side",
+      "note": "SYNTHETIC grid: all five entries are simulation choices (1e6 and 1e9 Hz extend one decade beyond the parent's plot-digitized range, 1e7 and 2e8 Hz are that range's digitized ends, 5e7 Hz is an interior point). No text-stated Gamma_phi exists in the parent (only the Fig. 7(a) plot, dominated by transmission-line current noise, Eq. 15). Measured floor for comparison: Ramsey pure-dephasing rates 0.77 and 0.90 us^-1 (echo 1.03 and 1.85 us^-1) on Lupascu-group flux qubits at their symmetry point (Orgiazzi 2016, circuit_qed_harvesting/orgiazzi_2016_fig3.json) -- a different device, and quoted as a decay rate in s^-1, i.e. ~1.2e5-2.9e5 'Hz' under this grid's x2pi convention, so the lowest entry here (1e6 Hz -> 6.3e6 rad/s) is still ~7x above the best measured Lupascu-group flux-qubit dephasing"
+    },
+    "detector_gap_grid": {
+      "value": [4.0, 5.7, 7.3, 8.0],
+      "units": "GHz",
+      "provenance": "selection",
+      "location": "sweep axis; every entry published",
+      "note": "4 and 8 GHz are the parent's amplifier band edges (App. A); 5.7 GHz is the parent's Fig. 5 operating point; 7.3 GHz is the free-qubit gap of Teixido-Bonfill et al. (2026), Eq. (30). Also published, not on the grid: ~6 GHz simulated gap at the decoupling point and the 1.6-6.5 GHz design range of the RQI qubit (Ren 2022)"
+    },
+    "switching_duration_grid": {
+      "value": [0.07, 0.16, 0.21, 0.5, 1.0],
+      "units": "ns",
+      "provenance": "selection",
+      "location": "sweep axis; every entry published in Teixido-Bonfill et al. (2026)",
+      "note": "0.07 ns: Gaussian T (1/e HALF-width, 5-sigma tails) of Fig. 17; 0.16 ns: isosceles-trapezoid full window (S_f = 0.2) of Figs. 17 and 23(b),(c); 0.21 ns: cosine-ramps full window (S_f = 0) of Fig. 17; 0.5 ns and 1.0 ns: the Sec. VI.D thresholds ('For T in [0.5 ns, 1 ns], only t_d = 1 ns allows for the detectors to be spacelike'). Also published: T = 200 ps Gaussian design value (Ren 2022, Table 3.1) and the parent device's ~100 ps minimum fast-line pulse (janzen_2023_fig6, App. A). The Gaussian-vs-compact T conventions differ; see the Teixido-Bonfill file comment"
+    },
+    "signaling_time_grid": {
+      "value": [0.16, 0.5, 1.0],
+      "units": "ns",
+      "provenance": "selection",
+      "location": "sweep axis; every entry published in Teixido-Bonfill et al. (2026)",
+      "note": "light-crossing delays t_d = |x_a - x_b|/v (Eq. 65): 0.16 ns (Fig. 23(c)), 0.5 ns (Fig. 15), 1 ns (Sec. VI.A default)"
+    },
+    "detector_separation_grid": {
+      "value": [19.2, 60.0, 120.0],
+      "units": "mm",
+      "provenance": "derived",
+      "derived_from": "signaling_time_grid, waveguide_speed",
+      "location": "d = v * t_d for each entry of signaling_time_grid, v = 1.2e8 m/s",
+      "note": "19.2 mm (t_d = 0.16 ns), 60 mm (t_d = 0.5 ns), 120 mm (t_d = 1 ns); the last reproduces the published d = 12 cm of Teixido-Bonfill Sec. VI.A and the 12 cm meandered-line design of Ren 2022, Sec. 4.1.2. With the switching durations above the (separation, duration) grid contains both causally connected (t_d < T) and spacelike (t_d > T) pairs"
+    },
+    "coupling_alpha_grid": {
+      "value": [6.2e-5, 3.0e-3, 2.19e-2],
+      "units": "dimensionless",
+      "provenance": "selection",
+      "location": "sweep axis; every entry published",
+      "note": "endpoints are the parent's measured alpha_min (f_beta = 0.36) and alpha_max (f_beta = 0.44); 3.0e-3 is the scenario-2 alpha of Teixido-Bonfill Table I (lambda = -0.1, gamma = 0.02), which lies inside the measured range. Scenarios 3-5 (alpha = 0.03, 0.1, 0.3) exceed the parent's measured maximum and are not on the grid"
+    },
+    "waveguide_speed": {
+      "value": 1.2e8,
+      "units": "m/s",
+      "provenance": "transcribed",
+      "location": "copy of Teixido-Bonfill et al. (2026), Eq. (7), Sec. II.1",
+      "note": "carried here only so this file is self-contained for length conversions; the transcription of record is circuit_qed_harvesting/teixido-bonfill_2026_table1.json"
+    }
+  }
+}

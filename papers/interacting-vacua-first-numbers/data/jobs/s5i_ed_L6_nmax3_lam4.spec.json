@@ -1,0 +1,1 @@
+{"kind": "ed", "L": 6, "m": 0.5, "tau0": 0.75, "lam": 4.0, "n_max": 3, "tag": "ed_L6_nmax3_lam4", "section": "S5i", "threads": 2, "kernels": ["analytic", "trapezoid"], "dt": 0.375}

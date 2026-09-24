@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 16, "m": 0.5, "tau0": 0.75, "lam": 4.0, "n_max": 8, "tag": "sweep_lam4", "section": "S5h", "threads": 4, "chi_gs": 16, "cost": 2125764.0, "kw": {"chi_op": 32, "chi_acc": 64, "chi_mpo": 128, "weight_decay": 0.5, "chi_dmrg": 16}, "axis": "sweep"}

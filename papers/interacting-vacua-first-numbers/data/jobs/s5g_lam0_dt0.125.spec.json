@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 16, "m": 0.5, "tau0": 0.75, "lam": 0.0, "n_max": 6, "tag": "lam0_dt0.125", "section": "S5g", "threads": 2, "chi_gs": 16, "cost": 352947.0, "kw": {"dt": 0.125}, "axis": "trotter"}

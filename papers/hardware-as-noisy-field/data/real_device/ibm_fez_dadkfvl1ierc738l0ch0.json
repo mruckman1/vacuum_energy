@@ -1,0 +1,894 @@
+{
+ "format": "vacuum.hardware.real_device/1",
+ "spec": {
+  "source": "papers/hardware-as-noisy-field/data/s6_free_tier.json: qet_information_signal",
+  "qubits": 3,
+  "circuits": 11,
+  "measurement_circuits": 9,
+  "calibration_circuits": 2,
+  "depth_native": 36,
+  "cx_count_max": 8,
+  "native_basis": [
+   "rz",
+   "sx",
+   "x",
+   "cx"
+  ],
+  "shots_per_circuit_for_3sigma": 3439,
+  "predicted_value_at_sourced_noise": 0.040103899558164624,
+  "predicted_std_error_at_sourced_noise": 0.0024788229782663268,
+  "predicted_std_error_shots": 100000,
+  "ideal_value": 0.04152218677914288,
+  "number_tested": "E_B_info = <H_B>_wrong-bit - <H_B>_right-bit > 0 at 3 sigma: the classical bit is worth a positive amount of Bob's local energy",
+  "open_plan_budget_s": 600.0
+ },
+ "working_point": {
+  "N": 3,
+  "m": 1.0,
+  "d": 2,
+  "bc": "dirichlet",
+  "layers": 2,
+  "restarts": 3,
+  "seed": 0,
+  "maxiter": 400,
+  "site_A": 0,
+  "site_B": 1,
+  "theta": 0.07976478794334226,
+  "vqe_params": [
+   0.05152185441094713,
+   0.19840280431094517,
+   -0.6113693584936554,
+   -0.17585255539639086,
+   0.1921994326948259,
+   -0.9364380121544539,
+   0.04253899147905661,
+   0.07713021238175344,
+   1.5707963380525187
+  ],
+  "vqe_energy": 2.549972714013942,
+  "vqe_energy_error": -1.3322676295501878e-15,
+  "vqe_fidelity": 0.9999999999999996,
+  "vqe_evaluator": "aer",
+  "dense": {
+   "E_ground": 2.5499727140139425,
+   "E_A": 0.8538482301781176,
+   "E_B": 0.01043795429721639,
+   "E_B_wrong": -0.031084232481926488,
+   "E_B_info": 0.04152218677914288,
+   "E_B_cut": -0.01032313909235505,
+   "E_B_raw": 0.010437954297216279,
+   "HB_ground": 0.79356755883279,
+   "HB_meas": 0.7935675588327896,
+   "HB_final": 0.7831296045355737,
+   "HB_wrong": 0.8246517913147161,
+   "ledger_defect": 1.1102230246251565e-15,
+   "no_signaling": 2.255140518769849e-16
+  }
+ },
+ "backend": {
+  "name": "ibm_fez",
+  "kind": "ibm_runtime",
+  "simulated": false,
+  "class": "qiskit_ibm_runtime.ibm_backend.IBMBackend",
+  "version": "1.3.37",
+  "num_qubits": 156,
+  "physical_qubits": [
+   136,
+   143,
+   142
+  ],
+  "two_qubit_gate": "cz",
+  "calibration": {
+   "backend": "ibm_fez",
+   "backend_version": "1.3.37",
+   "taken_utc": "2026-09-04T22:36:45+00:00",
+   "source": "backend.properties() + backend.target",
+   "two_qubit_gate": "cz",
+   "qubits": {
+    "136": {
+     "t1_us": 123.60075960378256,
+     "t2_us": 148.43618594767605,
+     "frequency_GHz": null,
+     "readout_error": 0.00341796875,
+     "readout_length_ns": 1660.0,
+     "sx_error": 0.0002912395818481326,
+     "x_error": 0.0002912395818481326,
+     "sx_length_ns": 24.0,
+     "operational": true,
+     "properties_t1_us": 123.60075960378256,
+     "properties_t2_us": 148.43618594767605,
+     "properties_readout_error": 0.00341796875,
+     "properties_prob_meas1_prep0": 0.0,
+     "properties_prob_meas0_prep1": 0.0068359375
+    },
+    "143": {
+     "t1_us": 131.3598958439345,
+     "t2_us": 138.256332528889,
+     "frequency_GHz": null,
+     "readout_error": 0.0032958984375,
+     "readout_length_ns": 1660.0,
+     "sx_error": 0.00015197609669485463,
+     "x_error": 0.00015197609669485463,
+     "sx_length_ns": 24.0,
+     "operational": true,
+     "properties_t1_us": 131.3598958439345,
+     "properties_t2_us": 138.256332528889,
+     "properties_readout_error": 0.0032958984375,
+     "properties_prob_meas1_prep0": 0.0009765625,
+     "properties_prob_meas0_prep1": 0.005615234375
+    },
+    "142": {
+     "t1_us": 113.65665881862965,
+     "t2_us": 153.74030315632288,
+     "frequency_GHz": null,
+     "readout_error": 0.0042724609375,
+     "readout_length_ns": 1660.0,
+     "sx_error": 0.0003706750120318479,
+     "x_error": 0.0003706750120318479,
+     "sx_length_ns": 24.0,
+     "operational": true,
+     "properties_t1_us": 113.65665881862965,
+     "properties_t2_us": 153.74030315632288,
+     "properties_readout_error": 0.0042724609375,
+     "properties_prob_meas1_prep0": 0.0,
+     "properties_prob_meas0_prep1": 0.008544921875
+    }
+   },
+   "edges": {
+    "136-143": {
+     "gate": "cz",
+     "error": 0.0019561411239538973,
+     "length_ns": 68.0
+    },
+    "143-136": {
+     "gate": "cz",
+     "error": 0.0019561411239538973,
+     "length_ns": 68.0
+    },
+    "143-142": {
+     "gate": "cz",
+     "error": 0.001897853698514751,
+     "length_ns": 68.0
+    },
+    "142-143": {
+     "gate": "cz",
+     "error": 0.001897853698514751,
+     "length_ns": 68.0
+    }
+   },
+   "last_update_date": "2026-09-04T14:37:12-07:00",
+   "properties_backend_version": "1.3.37",
+   "properties_sha256": "f3ed9e05776cb4708e7e359b354ffb14fbb7d84f1a54f2ff2b00876188e3bb6b",
+   "properties_n_qubits": 156
+  }
+ },
+ "layout_score": {
+  "score": 0.015654213638043483,
+  "two_qubit_gate": "cz",
+  "edge_errors": {
+   "136-143": 0.0019561411239538973,
+   "143-142": 0.001897853698514751
+  },
+  "readout_errors": {
+   "136": 0.00341796875,
+   "143": 0.0032958984375,
+   "142": 0.0042724609375
+  },
+  "sx_errors": {
+   "136": 0.0002912395818481326,
+   "143": 0.00015197609669485463,
+   "142": 0.0003706750120318479
+  },
+  "complete": true,
+  "rule": "sum of the two-qubit gate errors on the path edges and of the readout and sx errors on its qubits (backend.target); lowest wins, ties by qubit index",
+  "n_candidates": 244
+ },
+ "native_basis": [
+  "rz",
+  "sx",
+  "x",
+  "cx"
+ ],
+ "native_coupling_map": [
+  [
+   0,
+   1
+  ],
+  [
+   1,
+   0
+  ],
+  [
+   1,
+   2
+  ],
+  [
+   2,
+   1
+  ]
+ ],
+ "job": {
+  "job_id": "dadkfvl1ierc738l0ch0",
+  "submitted_utc": "2026-09-04T22:36:45+00:00",
+  "collected_utc": "2026-09-04T22:38:29+00:00",
+  "shots": 9600,
+  "sampler": "qiskit_ibm_runtime.sampler.SamplerV2",
+  "sampler_options": {
+   "_VERSION": 2,
+   "max_execution_time": "Unset",
+   "environment": {
+    "log_level": "WARNING",
+    "job_tags": [
+     "vacuum-program",
+     "L6-free-tier"
+    ],
+    "private": false
+   },
+   "simulator": {
+    "noise_model": "Unset",
+    "seed_simulator": "Unset",
+    "coupling_map": "Unset",
+    "basis_gates": "Unset"
+   },
+   "default_shots": "Unset",
+   "dynamical_decoupling": {
+    "enable": "Unset",
+    "sequence_type": "Unset",
+    "extra_slack_distribution": "Unset",
+    "scheduling_method": "Unset",
+    "skip_reset_qubits": "Unset"
+   },
+   "execution": {
+    "init_qubits": "Unset",
+    "rep_delay": "Unset",
+    "meas_type": "Unset"
+   },
+   "twirling": {
+    "enable_gates": "Unset",
+    "enable_measure": "Unset",
+    "num_randomizations": "Unset",
+    "shots_per_randomization": "Unset",
+    "strategy": "Unset"
+   },
+   "experimental": "Unset"
+  },
+  "seed": null,
+  "qpu_time_estimate": {
+   "seconds": 38.96,
+   "formula": "2.0 s + 0.00035 s x (circuits x shots)",
+   "circuits": 11,
+   "shots_per_circuit": 9600,
+   "executions": 105600,
+   "open_plan_budget_s": 600.0,
+   "fits_open_plan_budget": true,
+   "source": "K. Ikeda, 'Demonstration of Quantum Energy Teleportation on Superconducting Quantum Hardware', Phys. Rev. Applied 20, 024051 (2023); arXiv:2301.02666v5 (parent file); IBM Quantum documentation, 'Plans overview', https://quantum.cloud.ibm.com/docs/en/guides/plans-overview (Open Plan budget); IBM Quantum documentation, 'Workload usage', https://quantum.cloud.ibm.com/docs/guides/estimate-job-run-time (QPU-time estimate)"
+  },
+  "execution": {
+   "result_metadata": {
+    "execution": {
+     "execution_spans": "ExecutionSpans([DoubleSliceSpan(<start='2026-09-04 22:36:51', stop='2026-09-04 22:37:23', size=105600>)])"
+    },
+    "version": 2
+   },
+   "pub_metadata": [
+    {
+     "circuit_metadata": {}
+    },
+    {
+     "circuit_metadata": {}
+    },
+    {
+     "circuit_metadata": {}
+    },
+    {
+     "circuit_metadata": {}
+    },
+    {
+     "circuit_metadata": {}
+    },
+    {
+     "circuit_metadata": {}
+    },
+    {
+     "circuit_metadata": {}
+    },
+    {
+     "circuit_metadata": {}
+    },
+    {
+     "circuit_metadata": {}
+    },
+    {
+     "circuit_metadata": {}
+    },
+    {
+     "circuit_metadata": {}
+    }
+   ],
+   "status": "DONE",
+   "usage": 30,
+   "creation_date": "2026-09-04T15:36:46.256659-07:00",
+   "backend": "ibm_fez"
+  }
+ },
+ "circuits": [
+  {
+   "index": 0,
+   "kind": "measurement",
+   "family": "ground",
+   "operator": "D_A",
+   "group": 0,
+   "name": "ground_D_A_g0",
+   "basis": {
+    "0": "Z"
+   },
+   "measured": [
+    0,
+    1,
+    2
+   ],
+   "native": {
+    "depth": 17,
+    "cx_count": 4,
+    "two_qubit_count": 4,
+    "n_gates": 40,
+    "ops": {
+     "rz": 18,
+     "sx": 18,
+     "cx": 4,
+     "measure": 3,
+     "barrier": 1
+    }
+   },
+   "isa": {
+    "depth": 22,
+    "cx_count": 0,
+    "two_qubit_count": 4,
+    "n_gates": 42,
+    "ops": {
+     "sx": 20,
+     "rz": 18,
+     "cz": 4,
+     "measure": 3,
+     "barrier": 1
+    }
+   },
+   "counts": {
+    "000": 9182,
+    "010": 76,
+    "011": 67,
+    "110": 114,
+    "100": 115,
+    "111": 3,
+    "101": 17,
+    "001": 26
+   }
+  },
+  {
+   "index": 1,
+   "kind": "measurement",
+   "family": "ground",
+   "operator": "H_B",
+   "group": 0,
+   "name": "ground_H_B_g0",
+   "basis": {
+    "1": "Z"
+   },
+   "measured": [
+    0,
+    1,
+    2
+   ],
+   "native": {
+    "depth": 17,
+    "cx_count": 4,
+    "two_qubit_count": 4,
+    "n_gates": 40,
+    "ops": {
+     "rz": 18,
+     "sx": 18,
+     "cx": 4,
+     "measure": 3,
+     "barrier": 1
+    }
+   },
+   "isa": {
+    "depth": 22,
+    "cx_count": 0,
+    "two_qubit_count": 4,
+    "n_gates": 42,
+    "ops": {
+     "sx": 20,
+     "rz": 18,
+     "cz": 4,
+     "measure": 3,
+     "barrier": 1
+    }
+   },
+   "counts": {
+    "100": 123,
+    "000": 9210,
+    "101": 17,
+    "110": 90,
+    "001": 15,
+    "111": 2,
+    "010": 72,
+    "011": 71
+   }
+  },
+  {
+   "index": 2,
+   "kind": "measurement",
+   "family": "ground",
+   "operator": "H_B",
+   "group": 1,
+   "name": "ground_H_B_g1",
+   "basis": {
+    "0": "X",
+    "1": "X",
+    "2": "X"
+   },
+   "measured": [
+    0,
+    1,
+    2
+   ],
+   "native": {
+    "depth": 18,
+    "cx_count": 4,
+    "two_qubit_count": 4,
+    "n_gates": 39,
+    "ops": {
+     "sx": 18,
+     "rz": 17,
+     "cx": 4,
+     "measure": 3,
+     "barrier": 1
+    }
+   },
+   "isa": {
+    "depth": 22,
+    "cx_count": 0,
+    "two_qubit_count": 4,
+    "n_gates": 41,
+    "ops": {
+     "sx": 20,
+     "rz": 17,
+     "cz": 4,
+     "measure": 3,
+     "barrier": 1
+    }
+   },
+   "counts": {
+    "101": 809,
+    "011": 1175,
+    "110": 1171,
+    "111": 1588,
+    "000": 1631,
+    "001": 1123,
+    "010": 952,
+    "100": 1151
+   }
+  },
+  {
+   "index": 3,
+   "kind": "measurement",
+   "family": "control",
+   "operator": "H_B_rot",
+   "group": 0,
+   "name": "control_H_B_rot_g0",
+   "basis": {
+    "1": "Z"
+   },
+   "measured": [
+    0,
+    1,
+    2
+   ],
+   "native": {
+    "depth": 17,
+    "cx_count": 4,
+    "two_qubit_count": 4,
+    "n_gates": 39,
+    "ops": {
+     "sx": 18,
+     "rz": 17,
+     "cx": 4,
+     "measure": 3,
+     "barrier": 1
+    }
+   },
+   "isa": {
+    "depth": 22,
+    "cx_count": 0,
+    "two_qubit_count": 4,
+    "n_gates": 41,
+    "ops": {
+     "sx": 20,
+     "rz": 17,
+     "cz": 4,
+     "measure": 3,
+     "barrier": 1
+    }
+   },
+   "counts": {
+    "000": 4642,
+    "001": 4614,
+    "100": 69,
+    "101": 62,
+    "011": 54,
+    "010": 77,
+    "111": 39,
+    "110": 43
+   }
+  },
+  {
+   "index": 4,
+   "kind": "measurement",
+   "family": "control",
+   "operator": "H_B_rot",
+   "group": 1,
+   "name": "control_H_B_rot_g1",
+   "basis": {
+    "0": "Z",
+    "1": "X",
+    "2": "X"
+   },
+   "measured": [
+    0,
+    1,
+    2
+   ],
+   "native": {
+    "depth": 18,
+    "cx_count": 4,
+    "two_qubit_count": 4,
+    "n_gates": 39,
+    "ops": {
+     "sx": 18,
+     "rz": 17,
+     "cx": 4,
+     "measure": 3,
+     "barrier": 1
+    }
+   },
+   "isa": {
+    "depth": 22,
+    "cx_count": 0,
+    "two_qubit_count": 4,
+    "n_gates": 41,
+    "ops": {
+     "sx": 20,
+     "rz": 17,
+     "cz": 4,
+     "measure": 3,
+     "barrier": 1
+    }
+   },
+   "counts": {
+    "001": 1194,
+    "100": 1181,
+    "000": 1600,
+    "010": 877,
+    "011": 1165,
+    "110": 1154,
+    "111": 1590,
+    "101": 839
+   }
+  },
+  {
+   "index": 5,
+   "kind": "measurement",
+   "family": "protocol",
+   "operator": "H_B_rot",
+   "group": 0,
+   "name": "protocol_H_B_rot_g0",
+   "basis": {
+    "1": "Z"
+   },
+   "measured": [
+    0,
+    1,
+    2
+   ],
+   "native": {
+    "depth": 34,
+    "cx_count": 8,
+    "two_qubit_count": 8,
+    "n_gates": 57,
+    "ops": {
+     "sx": 24,
+     "rz": 23,
+     "cx": 8,
+     "measure": 3,
+     "x": 2,
+     "barrier": 1
+    }
+   },
+   "isa": {
+    "depth": 40,
+    "cx_count": 0,
+    "two_qubit_count": 8,
+    "n_gates": 61,
+    "ops": {
+     "sx": 27,
+     "rz": 24,
+     "cz": 8,
+     "measure": 3,
+     "x": 2,
+     "barrier": 1
+    }
+   },
+   "counts": {
+    "001": 4506,
+    "000": 4435,
+    "011": 167,
+    "010": 208,
+    "111": 52,
+    "101": 102,
+    "110": 51,
+    "100": 79
+   }
+  },
+  {
+   "index": 6,
+   "kind": "measurement",
+   "family": "protocol",
+   "operator": "H_B_rot",
+   "group": 1,
+   "name": "protocol_H_B_rot_g1",
+   "basis": {
+    "0": "Z",
+    "1": "X",
+    "2": "X"
+   },
+   "measured": [
+    0,
+    1,
+    2
+   ],
+   "native": {
+    "depth": 36,
+    "cx_count": 8,
+    "two_qubit_count": 8,
+    "n_gates": 61,
+    "ops": {
+     "rz": 26,
+     "sx": 25,
+     "cx": 8,
+     "measure": 3,
+     "x": 2,
+     "barrier": 1
+    }
+   },
+   "isa": {
+    "depth": 38,
+    "cx_count": 0,
+    "two_qubit_count": 8,
+    "n_gates": 59,
+    "ops": {
+     "sx": 26,
+     "rz": 23,
+     "cz": 8,
+     "measure": 3,
+     "x": 2,
+     "barrier": 1
+    }
+   },
+   "counts": {
+    "001": 1037,
+    "100": 1288,
+    "000": 1749,
+    "101": 752,
+    "110": 981,
+    "111": 1760,
+    "010": 721,
+    "011": 1312
+   }
+  },
+  {
+   "index": 7,
+   "kind": "measurement",
+   "family": "wrong",
+   "operator": "H_B_rot",
+   "group": 0,
+   "name": "wrong_H_B_rot_g0",
+   "basis": {
+    "1": "Z"
+   },
+   "measured": [
+    0,
+    1,
+    2
+   ],
+   "native": {
+    "depth": 34,
+    "cx_count": 8,
+    "two_qubit_count": 8,
+    "n_gates": 57,
+    "ops": {
+     "sx": 24,
+     "rz": 23,
+     "cx": 8,
+     "measure": 3,
+     "x": 2,
+     "barrier": 1
+    }
+   },
+   "isa": {
+    "depth": 40,
+    "cx_count": 0,
+    "two_qubit_count": 8,
+    "n_gates": 61,
+    "ops": {
+     "sx": 27,
+     "rz": 24,
+     "cz": 8,
+     "measure": 3,
+     "x": 2,
+     "barrier": 1
+    }
+   },
+   "counts": {
+    "001": 4643,
+    "000": 4434,
+    "010": 97,
+    "011": 112,
+    "101": 117,
+    "100": 98,
+    "111": 56,
+    "110": 43
+   }
+  },
+  {
+   "index": 8,
+   "kind": "measurement",
+   "family": "wrong",
+   "operator": "H_B_rot",
+   "group": 1,
+   "name": "wrong_H_B_rot_g1",
+   "basis": {
+    "0": "Z",
+    "1": "X",
+    "2": "X"
+   },
+   "measured": [
+    0,
+    1,
+    2
+   ],
+   "native": {
+    "depth": 36,
+    "cx_count": 8,
+    "two_qubit_count": 8,
+    "n_gates": 61,
+    "ops": {
+     "rz": 26,
+     "sx": 25,
+     "cx": 8,
+     "measure": 3,
+     "x": 2,
+     "barrier": 1
+    }
+   },
+   "isa": {
+    "depth": 38,
+    "cx_count": 0,
+    "two_qubit_count": 8,
+    "n_gates": 59,
+    "ops": {
+     "sx": 26,
+     "rz": 23,
+     "cz": 8,
+     "measure": 3,
+     "x": 2,
+     "barrier": 1
+    }
+   },
+   "counts": {
+    "010": 1055,
+    "111": 1424,
+    "001": 1460,
+    "000": 1411,
+    "100": 1000,
+    "101": 1038,
+    "110": 1174,
+    "011": 1038
+   }
+  },
+  {
+   "index": 9,
+   "kind": "calibration",
+   "family": null,
+   "operator": null,
+   "group": null,
+   "name": "cal_zeros",
+   "prepared": "000",
+   "measured": [
+    0,
+    1,
+    2
+   ],
+   "native": {
+    "depth": 1,
+    "cx_count": 0,
+    "two_qubit_count": 0,
+    "n_gates": 0,
+    "ops": {
+     "measure": 3
+    }
+   },
+   "isa": {
+    "depth": 1,
+    "cx_count": 0,
+    "two_qubit_count": 0,
+    "n_gates": 0,
+    "ops": {
+     "measure": 3
+    }
+   },
+   "counts": {
+    "000": 9505,
+    "010": 30,
+    "100": 40,
+    "001": 24,
+    "101": 1
+   }
+  },
+  {
+   "index": 10,
+   "kind": "calibration",
+   "family": null,
+   "operator": null,
+   "group": null,
+   "name": "cal_ones",
+   "prepared": "111",
+   "measured": [
+    0,
+    1,
+    2
+   ],
+   "native": {
+    "depth": 2,
+    "cx_count": 0,
+    "two_qubit_count": 0,
+    "n_gates": 3,
+    "ops": {
+     "x": 3,
+     "measure": 3
+    }
+   },
+   "isa": {
+    "depth": 2,
+    "cx_count": 0,
+    "two_qubit_count": 0,
+    "n_gates": 3,
+    "ops": {
+     "x": 3,
+     "measure": 3
+    }
+   },
+   "counts": {
+    "111": 9368,
+    "011": 88,
+    "101": 75,
+    "110": 67,
+    "100": 1,
+    "010": 1
+   }
+  }
+ ],
+ "environment": {
+  "python": "3.13.3",
+  "platform": "macOS-14.6.1-arm64-arm-64bit-Mach-O",
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "qiskit": "2.5.2",
+  "qiskit_aer": "0.17.2",
+  "qiskit_ibm_runtime": "0.49.0",
+  "vacuum": "0.1.0",
+  "git_head": "aa3662f46480226b8c3ae6f0c574a174e15283a7",
+  "git_dirty": true
+ },
+ "sha256": "a3499fbaf74a98ee0bbdf2ae78e025623efdc52fa821f6de43415765b9f535f1"
+}

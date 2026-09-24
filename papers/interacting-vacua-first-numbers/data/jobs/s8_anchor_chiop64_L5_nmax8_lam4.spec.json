@@ -1,0 +1,24 @@
+{
+ "kind": "mpo",
+ "L": 5,
+ "m": 0.5,
+ "tau0": 0.75,
+ "n_max": 8,
+ "section": "S8",
+ "part": "mpo_anchor",
+ "threads": 2,
+ "chi_gs": 16,
+ "lam": 4.0,
+ "tag": "anchor_chiop64_L5_nmax8_lam4",
+ "axis": "chiop64_n8",
+ "kw": {
+  "chi_op": 64,
+  "chi_acc": 128,
+  "chi_mpo": 256,
+  "weight_decay": 0.5,
+  "chi_dmrg": 16
+ },
+ "priority": 70.0,
+ "est_wall_s": 1368.0,
+ "cost": 1368.0
+}

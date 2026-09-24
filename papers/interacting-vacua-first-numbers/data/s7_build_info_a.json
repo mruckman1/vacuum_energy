@@ -1,0 +1,52 @@
+{
+ "_source": "notebook_qei_reference.py::S0",
+ "smoke_mode": false,
+ "date_utc": "2026-09-04T23:22:24Z",
+ "sections": [
+  "a"
+ ],
+ "build_git_head": "b4eb0b38df29824d510802ea8b9723100623a990",
+ "python": "3.13.3",
+ "platform": "macOS-14.6.1-arm64-arm-64bit-Mach-O",
+ "numpy": "2.5.2",
+ "tenpy": "1.1.1",
+ "vacuum_version": "0.1.0",
+ "parameters": {
+  "MASS": 0.5,
+  "L": 16,
+  "TAU0": 0.75,
+  "NMAX": 6,
+  "CHI_OP": 16,
+  "CHI_ACC": 32,
+  "CHI_DMRG": 12,
+  "WEIGHT_DECAY": 0.25,
+  "DT": 0.375,
+  "ORDER": 4,
+  "PAD": 2,
+  "CHI_MPO": 64,
+  "SVD_REAL": 1e-06,
+  "LAMS": [
+   0.0,
+   1.0,
+   4.0
+  ],
+  "DISP_T": 10.0,
+  "DISP_DT": 0.1,
+  "DISP_CHI": 32,
+  "DISP_T_FINE": 16.0,
+  "R_MAX": 4,
+  "TAU0_SWEEP": [
+   0.375,
+   0.5,
+   1.0,
+   1.5
+  ],
+  "L_CONTROL": 24,
+  "FINE": {
+   "L": 32,
+   "m": 0.25,
+   "lam": 1.0,
+   "tau0": 1.5
+  }
+ }
+}

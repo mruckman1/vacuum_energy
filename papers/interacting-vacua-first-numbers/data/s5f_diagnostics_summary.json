@@ -1,0 +1,22 @@
+{
+ "_source": "notebook_qei_exact.py::S5f-S5i",
+ "wall_time_s": 0.6451070308685303,
+ "section_times_s": {
+  "S5f": 0.0013890266418457031,
+  "S5g": 0.0035810470581054688,
+  "S5h": 0.2754669189453125,
+  "S5i": 0.08698320388793945
+ },
+ "sections": [
+  "f",
+  "g",
+  "h",
+  "i"
+ ],
+ "files": [
+  "s5f_nmax_ladder_lam4.csv/json",
+  "s5g_calibration.csv/json",
+  "s5h_lambda_sweep.csv/json",
+  "s5i_ed_control.csv/json"
+ ]
+}

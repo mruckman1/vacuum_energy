@@ -1,0 +1,249 @@
+{
+ "_source": "notebook_qei_exact.py::S8 plan",
+ "date_utc": "2026-09-13T07:41:52Z",
+ "build_git_head": "4666ef436a87031a34cbb5534afbbe0ff05d3596",
+ "parts": [
+  "tau0"
+ ],
+ "workers": 8,
+ "threads_per_job": 2,
+ "n_jobs": 12,
+ "est_total_job_wall_h": 10.461870069884727,
+ "est_by_part": {
+  "tau0": {
+   "n_jobs": 12,
+   "est_wall_h": 10.461870069884727
+  }
+ },
+ "wall_model": "900 s ((n_max+1)/9)^4 (chi_op/32)^1.5 (n_steps/8) (L/16) [+ exact SVD: 0.75 n_updates 12.3 s (chi_op (n_max+1)^2/2592)^3]; 2 BLAS threads, idle",
+ "jobs": [
+  {
+   "tag": "tau0_1.5_chiop32_lam4",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 16,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 1.5,
+   "priority": 85.0,
+   "est_wall_s": 1800.0,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "tau0_1.5_chiop32_lam0",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 16,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 1.5,
+   "priority": 85.0,
+   "est_wall_s": 1800.0,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "tau0_1_chiop32_lam4",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 16,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 1.0,
+   "priority": 85.0,
+   "est_wall_s": 1237.5,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "tau0_1_chiop32_lam0",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 16,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 1.0,
+   "priority": 85.0,
+   "est_wall_s": 1237.5,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "tau0_1.5_chiop48_lam4",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 16,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 1.5,
+   "priority": 75.0,
+   "est_wall_s": 3306.8111527572905,
+   "kw": {
+    "chi_op": 48,
+    "chi_acc": 96,
+    "chi_mpo": 192,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "tau0_1.5_chiop48_lam0",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 16,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 1.5,
+   "priority": 75.0,
+   "est_wall_s": 3306.8111527572905,
+   "kw": {
+    "chi_op": 48,
+    "chi_acc": 96,
+    "chi_mpo": 192,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "tau0_1_chiop48_lam4",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 16,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 1.0,
+   "priority": 75.0,
+   "est_wall_s": 2273.432667520637,
+   "kw": {
+    "chi_op": 48,
+    "chi_acc": 96,
+    "chi_mpo": 192,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "tau0_1_chiop48_lam0",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 16,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 1.0,
+   "priority": 75.0,
+   "est_wall_s": 2273.432667520637,
+   "kw": {
+    "chi_op": 48,
+    "chi_acc": 96,
+    "chi_mpo": 192,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "ahalf_chiop32_lam1",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 32,
+   "m": 0.25,
+   "lam": 1.0,
+   "n_max": 8,
+   "tau0": 1.5,
+   "priority": 68.0,
+   "est_wall_s": 3600.0,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "ahalf_chiop32_lam0",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 32,
+   "m": 0.25,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 1.5,
+   "priority": 68.0,
+   "est_wall_s": 3600.0,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "ahalf_chiop48_lam1",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 32,
+   "m": 0.25,
+   "lam": 1.0,
+   "n_max": 8,
+   "tau0": 1.5,
+   "priority": 58.0,
+   "est_wall_s": 6613.622305514581,
+   "kw": {
+    "chi_op": 48,
+    "chi_acc": 96,
+    "chi_mpo": 192,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "ahalf_chiop48_lam0",
+   "part": "tau0",
+   "kind": "mpo",
+   "L": 32,
+   "m": 0.25,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 1.5,
+   "priority": 58.0,
+   "est_wall_s": 6613.622305514581,
+   "kw": {
+    "chi_op": 48,
+    "chi_acc": 96,
+    "chi_mpo": 192,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  }
+ ]
+}

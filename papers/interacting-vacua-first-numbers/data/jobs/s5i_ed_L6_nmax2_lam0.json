@@ -1,0 +1,53 @@
+{
+ "spec": {
+  "kind": "ed",
+  "L": 6,
+  "m": 0.5,
+  "tau0": 0.75,
+  "lam": 0.0,
+  "n_max": 2,
+  "tag": "ed_L6_nmax2_lam0",
+  "section": "S5i",
+  "threads": 2,
+  "kernels": [
+   "analytic",
+   "trapezoid"
+  ],
+  "dt": 0.375
+ },
+ "row": {
+  "E_min": -0.015268200815441668,
+  "E_star": 0.9155792014537267,
+  "E_ref": 0.9308474022691684,
+  "E_min_analytic": -0.015268200815441668,
+  "E_min_trapezoid": -0.015268207217554619,
+  "E_star_even": 0.9155792014537267,
+  "E_star_odd": 0.9157078667684874,
+  "sector_star": 0,
+  "E_vac": 4.272306846281913,
+  "h_vac": 0.7002325443103372,
+  "E_free_exact": -0.01989537780959383,
+  "E_hartree_exact": -0.01989537780959383,
+  "mu_H2": 0.25,
+  "ratio_exact_over_free_exact": 0.7674245224978401,
+  "ratio_exact_over_hartree_exact": 0.7674245224978401,
+  "n_max": 2,
+  "L": 6,
+  "m": 0.5,
+  "lam": 0.0,
+  "tau0": 0.75,
+  "route": "ed",
+  "kernel": "analytic",
+  "dt": null,
+  "dim": 729,
+  "dim_sectors": [
+   365,
+   364
+  ],
+  "omega": 1.2782188733130382,
+  "time_s": 0.40196871757507324,
+  "tag": "ed_L6_nmax2_lam0",
+  "section": "S5i",
+  "threads": "2"
+ }
+}

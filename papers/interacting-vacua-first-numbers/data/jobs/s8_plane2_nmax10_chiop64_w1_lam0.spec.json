@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 16, "m": 0.5, "tau0": 0.75, "lam": 0.0, "n_max": 10, "tag": "plane2_nmax10_chiop64_w1_lam0", "section": "S8", "part": "plane2", "threads": 2, "chi_gs": 16, "kw": {"chi_op": 64, "chi_acc": 128, "chi_mpo": 256, "weight_decay": 1.0, "chi_dmrg": 16}, "priority": 68.0, "axis": "plane2", "est_wall_s": 5680.521472346911, "cost": 5680.521472346911}

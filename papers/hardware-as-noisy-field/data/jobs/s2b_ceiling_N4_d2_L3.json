@@ -1,0 +1,79 @@
+{
+ "spec": {
+  "kind": "ceiling",
+  "tag": "ceiling_N4_d2_L3",
+  "N": 4,
+  "d": 2,
+  "layers": 3,
+  "restarts": 8,
+  "maxiter": 400,
+  "seed": 3000,
+  "method": "lm",
+  "stop_at": 1e-13,
+  "perturb_rounds": 2,
+  "cost": 819200
+ },
+ "row": {
+  "N": 4,
+  "d": 2,
+  "n_qubits": 4,
+  "layers": 3,
+  "n_params": 16,
+  "sector_dof": 5,
+  "infidelity": -4.440892098500626e-16,
+  "fidelity": 1.0000000000000004,
+  "energy": 3.391770993660208,
+  "E0_exact_truncated": 3.391770993660207,
+  "energy_error": 8.881784197001252e-16,
+  "cov_error_vs_ED": 3.469446951953614e-18,
+  "grad_norm": 2.3745097503172875e-17,
+  "restarts": 8,
+  "restarts_run": 1,
+  "best_restart": 0,
+  "best_start": "normal",
+  "restart_infidelities": [
+   -4.440892098500626e-16
+  ],
+  "n_iterations": 22,
+  "n_evaluations": 47,
+  "seed": 3000,
+  "wall_s": 0.11369013786315918,
+  "params": [
+   0.18511121434712022,
+   0.16303049428190028,
+   0.4974227992344987,
+   0.3389865837623935,
+   0.016220400727765535,
+   0.015911639075263422,
+   -0.003788221262387907,
+   -0.0010136652818081035,
+   -0.060564333733262594,
+   -0.0007719555453062133,
+   -0.325753719814337,
+   -0.01791498263875277,
+   -0.003938860393783431,
+   -0.014890798607398654,
+   -0.05377661430883089,
+   -0.32521544063127045
+  ],
+  "history": [
+   {
+    "restart": 0,
+    "start": "normal",
+    "infidelity": -4.440892098500626e-16,
+    "nit": 22,
+    "nfev": 47,
+    "grad_max": 6.42774504156645e-18,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   }
+  ],
+  "kind": "ceiling",
+  "method": "lm",
+  "maxiter": 400,
+  "stop_at": 1e-13,
+  "perturb_rounds": 2,
+  "threads": "1",
+  "time_s": 0.11403107643127441
+ }
+}

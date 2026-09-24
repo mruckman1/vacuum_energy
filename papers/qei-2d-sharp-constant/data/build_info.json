@@ -1,0 +1,23 @@
+{
+  "_source": "notebook.py::s0_provenance",
+  "date_utc": "2026-09-03T03:34:24Z",
+  "python": "3.13.3",
+  "platform": "macOS-14.6.1-arm64-arm-64bit-Mach-O",
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "vacuum_package": "/Users/mruckman1/Desktop/dev/vacuum_energy/vacuum",
+  "vacuum_version": "0.1.0",
+  "constants": {
+    "SHARP_CONSTANT_2D (Flanagan 1997 Eq. 8, rho=f^2)": 0.05305164769729845,
+    "FEWSTER_EVESON_CONSTANT_2D (FE 1998 Eq. 37)": 0.07957747154594767,
+    "FE_CONSTANT_4D (FE 1998 Eq. 40, f^2 convention)": 0.006332573977646111
+  },
+  "git": "3dc22ffe8b6a603086e7e61ed9d93e1190200834",
+  "git_owned_files_dirty": true,
+  "git_owned_files_status": [
+    "M papers/qei-2d-sharp-constant/draft/outline.md",
+    " M papers/qei-2d-sharp-constant/notebook.py",
+    " M tests/test_qei.py",
+    " M vacuum/inequalities/qei.py"
+  ]
+}

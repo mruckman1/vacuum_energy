@@ -1,0 +1,170 @@
+{
+ "spec": {
+  "kind": "ceiling",
+  "tag": "ceiling_N2_d4_L1",
+  "N": 2,
+  "d": 4,
+  "layers": 1,
+  "restarts": 8,
+  "maxiter": 400,
+  "seed": 1000,
+  "method": "lm",
+  "stop_at": 1e-13,
+  "perturb_rounds": 2,
+  "cost": 204800
+ },
+ "row": {
+  "N": 2,
+  "d": 4,
+  "n_qubits": 4,
+  "layers": 1,
+  "n_params": 8,
+  "sector_dof": 5,
+  "infidelity": 0.007467815908719144,
+  "fidelity": 0.9925321840912809,
+  "energy": 1.732800580106779,
+  "E0_exact_truncated": 1.707107754745939,
+  "energy_error": 0.025692825360839944,
+  "cov_error_vs_ED": 0.14642942987611288,
+  "grad_norm": 2.2954304596705374e-10,
+  "restarts": 8,
+  "restarts_run": 10,
+  "best_restart": 0,
+  "best_start": "normal",
+  "restart_infidelities": [
+   0.007467815908719144,
+   0.007467815908719588,
+   0.007467815908719144,
+   0.007467815908719366,
+   0.007468563584797194,
+   0.007467815908719588,
+   0.00746856358479786,
+   0.0074685635847980825,
+   0.007467815908719366,
+   0.007467815908719366
+  ],
+  "n_iterations": 125,
+  "n_evaluations": 156,
+  "seed": 1000,
+  "wall_s": 0.1611161231994629,
+  "params": [
+   0.0017392466199119187,
+   6.927781576292934e-12,
+   -1.7111992987170257e-12,
+   0.7992786725358071,
+   -1.1643310360229954e-10,
+   0.020699352618559277,
+   -3.56889495183378e-10,
+   -0.7784716275022991
+  ],
+  "history": [
+   {
+    "restart": 0,
+    "start": "normal",
+    "infidelity": 0.007467815908719144,
+    "nit": 9,
+    "nfev": 10,
+    "grad_max": 8.667901958142923e-11,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   },
+   {
+    "restart": 1,
+    "start": "normal",
+    "infidelity": 0.007467815908719588,
+    "nit": 11,
+    "nfev": 12,
+    "grad_max": 3.251243526734944e-11,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   },
+   {
+    "restart": 2,
+    "start": "normal",
+    "infidelity": 0.007467815908719144,
+    "nit": 11,
+    "nfev": 12,
+    "grad_max": 1.0871476540084775e-10,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   },
+   {
+    "restart": 3,
+    "start": "normal",
+    "infidelity": 0.007467815908719366,
+    "nit": 12,
+    "nfev": 13,
+    "grad_max": 5.890995137578762e-10,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   },
+   {
+    "restart": 4,
+    "start": "uniform",
+    "infidelity": 0.007468563584797194,
+    "nit": 21,
+    "nfev": 29,
+    "grad_max": 1.4588782095969816e-10,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   },
+   {
+    "restart": 5,
+    "start": "uniform",
+    "infidelity": 0.007467815908719588,
+    "nit": 12,
+    "nfev": 13,
+    "grad_max": 7.442735816692056e-11,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   },
+   {
+    "restart": 6,
+    "start": "uniform",
+    "infidelity": 0.00746856358479786,
+    "nit": 16,
+    "nfev": 25,
+    "grad_max": 1.2477410219078104e-10,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   },
+   {
+    "restart": 7,
+    "start": "uniform",
+    "infidelity": 0.0074685635847980825,
+    "nit": 14,
+    "nfev": 22,
+    "grad_max": 2.2747346299632321e-10,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   },
+   {
+    "restart": 8,
+    "start": "perturb",
+    "infidelity": 0.007467815908719366,
+    "nit": 10,
+    "nfev": 11,
+    "grad_max": 8.924851330722821e-11,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   },
+   {
+    "restart": 9,
+    "start": "perturb",
+    "infidelity": 0.007467815908719366,
+    "nit": 9,
+    "nfev": 10,
+    "grad_max": 3.626716753586776e-11,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   }
+  ],
+  "kind": "ceiling",
+  "method": "lm",
+  "maxiter": 400,
+  "stop_at": 1e-13,
+  "perturb_rounds": 2,
+  "threads": "1",
+  "time_s": 0.1614546775817871
+ }
+}

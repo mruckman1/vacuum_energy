@@ -1,0 +1,307 @@
+{
+  "source": "A. Teixido-Bonfill, X. Dai, A. Lupascu, E. Martin-Martinez, 'Towards an experimental implementation of entanglement harvesting in superconducting circuits: effect of detector gap variation on entanglement harvesting', Phys. Rev. A 113, 043732 (2026), DOI 10.1103/wv9n-k3jj, published online 2026-04-29 (Crossref record created 2026-03-24); arXiv:2505.01516",
+  "location": "arXiv:2505.01516v1 full text (the ONLY arXiv version as of 2026-09-01). Table I (Sec. VI.A: the six explored coupling scenarios); the Sec. VI.A fixed-parameter list; Secs. II.1 (Eq. 7, footnotes 2-3), III.1.3 (footnote 6), III.1.4 (Eq. 30), III.2 (Eq. 33), IV (Eq. 53), VI.A (Eq. 66), VI.B (Eqs. 70-72), VI.D-E running text, App. C, and the captions of Figs. 6, 13-23 -- per-quantity locations below.",
+  "retrieved": "2026-09-01",
+  "transcribed_by": "vacuum-program build agent (gap-closure pass 2026-09-01; original transcription 2026-08-31)",
+  "supersedes": "The 2026-08-31 transcription of this file stated that the arXiv v1 text 'contains NO parameter table' and 'pins no duration in ns and no separation in mm'. Both statements were WRONG: the paper has a Table I (six coupling scenarios), fixes t_d = 1 ns and d = 12 cm in Sec. VI.A, and pins every switching duration it plots in the captions of Figs. 17-23. Those values are transcribed here for the first time (2026-09-01). Every value of the 2026-08-31 transcription was re-read against the full text on 2026-09-01 and is unchanged. The PRA version of record (113, 043732) is paywalled and was NOT accessible from this environment; Crossref confirms only the bibliographic record (80 references), so any change between arXiv v1 and the journal version is not reflected here.",
+  "comment": "Verbatim transcription from the arXiv v1 full text (pdftotext of the arXiv PDF, cross-read against the arXiv HTML rendering and against Table 4.1 of A. Teixido-Bonfill's PhD thesis, UWSpace 2025, which reproduces Table I identically). Values the paper states as approximate ('~', 'around') carry the word in their note. The gap variation and spin-boson coupling are published as coefficients of the dimensionless coupler parameter gamma: Delta-Omega/2pi = -23*gamma GHz (Eq. 30), alpha = 6.54*gamma^2 (Eq. 33), and the detector coupling lambda = -4.53*gamma (Eq. 66), from which Delta-Omega/2pi = 5.2*lambda GHz (Sec. VI.A, Table I caption); the coefficients are stored, the gamma/lambda dependence is applied in simulation code. Duration convention (Sec. VI.B, Eq. 69): chi(t) = X((t - t_nu)/T); for the Gaussian X(s) = exp(-s^2) so T is the 1/e HALF-width (not a full window), while the cosine-ramps and isosceles-trapezoid shapes are compactly supported on [-T/2, T/2] (App. C, Eq. C19), so for them T IS the full window. Detector temperature is NOT in this paper (field assumed in the vacuum, Eq. 53); the authors' expected operating temperature is in circuit_qed_harvesting/teixido-bonfill_2025_thesis-outlook.json. Four quantities at the end of the file are DERIVED (not transcribed) and say so: two from other shipped files (the negativity resolution and its transmon cross-check) and two from this file's own Table I columns (the scenario-2 coupling with its rounding spread, and the oscillator-detector coupling lam_osc derived from it in vacuum/detectors/circuit_mapping.py, added 2026-09-03).",
+  "provenance_tags": "Every quantity carries 'provenance': 'transcribed' (read verbatim from the source at the stated location) or 'derived' (arithmetic on transcribed numbers, with the formula and the source quantity named in 'derived_from'; never an estimate). This file has no synthetic quantities; 'synthetic_quantities' is empty by assertion (tests/test_experiments_io.py).",
+  "synthetic_quantities": [],
+  "derived_quantities": ["negativity_resolution_nats", "negativity_resolution_nats_transmon_crosscheck", "scenario2_coupling_lambda_tb", "oscillator_coupling_lambda_osc_scenario2"],
+  "field_state": "vacuum, rho_phi,0 = |0_phi><0_phi| (Eq. 53)",
+  "switching_shapes": ["gaussian", "cosine ramps", "isosceles trapezoid"],
+  "switching_shapes_location": "Sec. VI.B, Eqs. (70)-(72); examples plotted in Fig. 6",
+  "quantities": {
+    "waveguide_speed": {
+      "value": 1.2e8,
+      "units": "m/s",
+      "provenance": "transcribed",
+      "location": "Eq. (7), Sec. II.1; repeated in the Sec. VI.A fixed-parameter list",
+      "note": "stated as approximate: 'v ~ 1.2e8 m/s', speed of light in the transmission line, 'as measured in [62] (Goppl et al., J. Appl. Phys. 104, 113904 (2008)) for a typical superconducting coplanar waveguide' (Sec. VI.A)"
+    },
+    "characteristic_impedance": {
+      "value": 50,
+      "units": "ohm",
+      "provenance": "transcribed",
+      "location": "Eq. (7), Sec. II.1; Sec. VI.A",
+      "note": "stated as approximate: Z_0 ~ 50 ohm"
+    },
+    "uv_cutoff_frequency": {
+      "value": 50,
+      "units": "GHz",
+      "provenance": "transcribed",
+      "location": "Sec. II.1; Sec. VI.A",
+      "note": "Omega_cut/(2pi) = 50 GHz, exponential UV cutoff of the field mode sum, 'found in [63] (Forn-Diaz et al., Nat. Phys. 13, 39 (2017)) by matching experimental measurements with the renormalized frequency of the coupled qubit'"
+    },
+    "superconducting_gap_aluminium": {
+      "value": 75,
+      "units": "GHz",
+      "provenance": "transcribed",
+      "location": "Sec. II.1",
+      "note": "'For aluminum, commonly used for superconducting transmission lines, the superconducting gap is 75 GHz [64]' -- the physical origin of the UV cutoff"
+    },
+    "field_resolvable_length": {
+      "value": 0.38,
+      "units": "mm",
+      "provenance": "transcribed",
+      "location": "Sec. II.2, footnote 2",
+      "note": "'The cutoff makes it so that distances smaller than v/Omega_cut = 0.38 mm are not resolved by the field' -- the smallest resolvable length, suggested as the discretization Delta-x"
+    },
+    "discretization_inductance": {
+      "value": 0.16,
+      "units": "nH",
+      "provenance": "transcribed",
+      "location": "Sec. II.2, footnote 3",
+      "note": "'If we choose Delta-x = 0.38 mm, then l_0 Delta-x = 0.16 nH, which is comparable to the Josephson inductance of the junction that lies in the transmission line path'"
+    },
+    "qubit_gap_frequency": {
+      "value": 7.3,
+      "units": "GHz",
+      "provenance": "transcribed",
+      "location": "Eq. (30), Sec. III.1.4; Sec. VI.A fixed-parameter list; Fig. 23 caption",
+      "note": "stated as approximate: free-qubit gap Omega^0/(2pi) ~ 7.3 GHz ('transition frequency of the free qubit')"
+    },
+    "gap_variation_coefficient": {
+      "value": -23,
+      "units": "GHz",
+      "provenance": "transcribed",
+      "location": "Eq. (30), Sec. III.1.4",
+      "note": "coefficient of gamma: Delta-Omega/(2pi) ~ -23*gamma GHz (gap shift while the coupler is fully on); multiply by the dimensionless coupler parameter gamma in simulation code"
+    },
+    "gap_variation_per_lambda": {
+      "value": 5.2,
+      "units": "GHz",
+      "provenance": "transcribed",
+      "location": "Sec. VI.A fixed-parameter list; Table I caption",
+      "note": "'Delta-Omega/(2pi) ~ 5.2 * lambda GHz for the difference between the transition frequency of the qubit when the coupling is fully switched on and Omega^0/(2pi) (see Eqs. (30) and (66))' -- the Eq. (30) law re-expressed in the detector coupling lambda"
+    },
+    "lambda_per_gamma": {
+      "value": -4.53,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "Eq. (66), Sec. VI.A",
+      "note": "lambda_nu ~ -4.53 * gamma_nu: the detector coupling strength of the VGSD model per unit coupler parameter gamma (Z_0 ~ 50 ohm used)"
+    },
+    "coupling_range_gamma_x": {
+      "value": [-0.02, 0.22],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "Sec. III.1.3; Sec. VI.A",
+      "note": "gamma_x(f_beta) in [-0.02, 0.22] for f_beta in [0.3, 0.5]; dimensionless light-matter coupling reachable with the tunable coupler"
+    },
+    "coupling_range_lambda": {
+      "value": [-1, 0.1],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "Sec. VI.A",
+      "note": "'These values are in the achievable range lambda in [-1, 0.1]. This range is obtained from combining Eq. (66) with the range gamma in [-0.02, 0.22]'"
+    },
+    "external_flux_range_f_beta": {
+      "value": [0.3, 0.5],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "Sec. III.1.3",
+      "note": "external flux fraction f_beta tuning the coupler strength (Sec. II.2)"
+    },
+    "spin_boson_alpha_coefficient": {
+      "value": 6.54,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "Eq. (33), Sec. III.2",
+      "note": "coefficient of gamma^2: spin-boson coupling alpha ~ 6.54*gamma^2 (R_K/(8 pi^2 Z_0) with Z_0 ~ 50 ohm)"
+    },
+    "table1_scenario_lambda": {
+      "value": [0, -0.1, -0.3, -0.65, -1, 0.1],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "Table I, column lambda, scenarios 1-6",
+      "note": "scenario 1 is printed as '-> 0' (the weak-coupling limit) and is stored as 0; scenarios 2-5 are 'in order of increasingly negative coupling strength', scenario 6 is the small positive gap-variation case"
+    },
+    "table1_scenario_gamma": {
+      "value": [0, 0.02, 0.07, 0.14, 0.22, -0.02],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "Table I, column gamma, scenarios 1-6",
+      "note": "scenario 1 printed as '-> 0', stored as 0; 0.22 and -0.02 are the ends of the published gamma_x range (Sec. III.1.3)"
+    },
+    "table1_scenario_alpha": {
+      "value": [0, 0.003, 0.03, 0.1, 0.3, 0.003],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "Table I, column alpha, scenarios 1-6",
+      "note": "spin-boson coupling of each scenario (Eq. 33); scenario 1 printed as '-> 0', stored as 0"
+    },
+    "table1_scenario_gap_variation": {
+      "value": [0, -0.5, -1.6, -3.4, -5.2, 0.5],
+      "units": "GHz",
+      "provenance": "transcribed",
+      "location": "Table I, column Delta-Omega/(2pi) (GHz), scenarios 1-6",
+      "note": "scenario 1 printed as '-> 0', stored as 0; caption: 'The qubit transition frequency variation follows Delta-Omega/(2pi) ~ 5.2 * lambda GHz'"
+    },
+    "signaling_time_td": {
+      "value": 1,
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "Sec. VI.A fixed-parameter list; Fig. 14 caption; Fig. 23(a),(b) captions",
+      "note": "'t_d = d/v = 1 ns for the time the detectors take to signal to each other' -- the default light-crossing delay of the whole numerical exploration ('kept the same for all the exploration, except for t_d')"
+    },
+    "detector_separation_d": {
+      "value": 12,
+      "units": "cm",
+      "provenance": "transcribed",
+      "location": "Sec. VI.A fixed-parameter list",
+      "note": "'Equivalently, the detectors are separated by d = 12 cm, which is feasible with the current fabrication methods [78] (N. Janzen, MSc thesis, University of Waterloo, 2022, http://hdl.handle.net/10012/18213)'; the same 12 cm meandered-line separation is the design of S. Ren's MSc thesis (2022), Sec. 4.1.2"
+    },
+    "signaling_time_td_fig15": {
+      "value": 0.5,
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "Fig. 15 caption; Fig. 13(a) caption; Sec. VI.D text",
+      "note": "the reduced-distance case: 'the distance between detectors is reduced so that t_d = 0.5 ns'"
+    },
+    "signaling_time_td_fig23c": {
+      "value": 0.16,
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "Fig. 23(c) caption; App. C text",
+      "note": "'spacelike harvesting for isosceles trapezoid switching and Omega_cut -> infinity is still possible by reducing the distance between the detectors to t_d = 0.16 ns'; in Fig. 23(c) T = t_d = 0.16 ns, the light-cone boundary case"
+    },
+    "switching_duration_gaussian_by_scenario": {
+      "value": [0.07, 0.075, 0.09, 0.13, 0.23, 0.065],
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "captions of Figs. 17, 18, 19, 20, 21, 22 (scenarios 1-6 of Table I), left column",
+      "note": "Gaussian switching X(s) = exp(-s^2), s = (t - t_nu)/T (Eqs. 69-70): T is the 1/e half-width, and the interaction is treated as effective out to the 5-sigma tails (Fig. 17 caption). Chosen by the authors 'so that the adimensional quantity T (Omega^0 + Delta-Omega) stays constant' across scenarios (Sec. VI.E)"
+    },
+    "switching_duration_cosine_ramps_by_scenario": {
+      "value": [0.21, 0.22, 0.27, 0.38, 0.71, 0.2],
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "captions of Figs. 17-22 (scenarios 1-6), middle column; Fig. 23(a) uses T = 0.2 ns",
+      "note": "cosine-ramps switching (Eq. 71) with S_f = 0, compactly supported on [-T/2, T/2] (Eq. C19): T is the FULL window"
+    },
+    "switching_duration_trapezoid_by_scenario": {
+      "value": [0.16, 0.17, 0.21, 0.29, 0.54, 0.15],
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "captions of Figs. 17-22 (scenarios 1-6), right column; Fig. 23(b),(c) use T = 0.16 ns",
+      "note": "isosceles-trapezoid switching (Eq. 72) with S_f = 0.2, compactly supported on [-T/2, T/2]: T is the FULL window"
+    },
+    "switching_flat_fraction_cosine_ramps": {
+      "value": 0,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "captions of Figs. 7-12 and 17-23",
+      "note": "S_f, 'the portion of time that the interaction remains at its maximum' (Eq. 71), for every cosine-ramps panel of the paper"
+    },
+    "switching_flat_fraction_trapezoid": {
+      "value": 0.2,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "captions of Figs. 7-12 and 17-23",
+      "note": "S_f of every isosceles-trapezoid panel of the paper (Eq. 72); Figs. 14-16 scan S_f on their vertical axis"
+    },
+    "switching_duration_scaling_rule": {
+      "value": "T chosen per scenario so that T*(Omega^0 + Delta-Omega) is constant, with S_f constant (Sec. VI.E)",
+      "units": "label",
+      "provenance": "transcribed",
+      "location": "Sec. VI.E",
+      "note": "'We pick values of T and S_f for scenario 1 (Delta-Omega -> 0) that have considerable spacelike harvesting. For the rest of scenarios, which have different Delta-Omega, we pick T so that the adimensional quantity T(Omega^0 + Delta-Omega) stays constant, and we keep a constant S_f'"
+    },
+    "spacelike_duration_thresholds": {
+      "value": [0.45, 0.5, 1.0],
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "Sec. VI.D text (end), comparing Fig. 14 (t_d = 1 ns) with Fig. 15 (t_d = 0.5 ns)",
+      "note": "'if T < 0.45 ns, the negativity is the same regardless of whether t_d = 0.5 ns or t_d = 1 ns. The difference appears for T in [0.45 ns, 0.5 ns], for which negativity is larger in the case t_d = 0.5 ns. For T in [0.5 ns, 1 ns], only t_d = 1 ns allows for the detectors to be spacelike' -- compact-support shapes (cosine ramps / trapezoid), spacelike arrangement t_delta = t_d - T"
+    },
+    "gaussian_tail_sigma": {
+      "value": 5,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "Fig. 6(a) caption; Fig. 17 caption",
+      "note": "'Gaussian switching shape, with 5 standard deviations shown'; 'only the 5-sigma tails of the Gaussian can interact' -- the effective support used to draw the light-contact boundaries"
+    },
+    "cutoff_sensitivity_fig23a": {
+      "value": 20,
+      "units": "percent",
+      "provenance": "transcribed",
+      "location": "App. C text; Fig. 23(a)",
+      "note": "'There is only a 20% reduction of N in the limit Omega_cut -> infinity with respect to Omega_cut/(2pi) = 50 GHz' (cosine ramps, T = 0.2 ns, S_f = 0, t_d = 1 ns, spacelike); for the trapezoid at t_d = 1 ns spacelike harvesting vanishes as Omega_cut -> infinity (Fig. 23(b))"
+    },
+    "critical_current_1": {
+      "value": 0.236,
+      "units": "uA",
+      "provenance": "transcribed",
+      "location": "footnote 6, Sec. III.1.3",
+      "note": "Josephson junction critical current I_c1; identical to the best-fit values of the device paper (circuit_qed_harvesting/janzen_2023_fig6.json, Sec. III.A)"
+    },
+    "critical_current_2": {
+      "value": 0.131,
+      "units": "uA",
+      "provenance": "transcribed",
+      "location": "footnote 6, Sec. III.1.3"
+    },
+    "critical_current_3": {
+      "value": 0.236,
+      "units": "uA",
+      "provenance": "transcribed",
+      "location": "footnote 6, Sec. III.1.3"
+    },
+    "critical_current_4": {
+      "value": 0.411,
+      "units": "uA",
+      "provenance": "transcribed",
+      "location": "footnote 6, Sec. III.1.3"
+    },
+    "critical_current_5": {
+      "value": 0.584,
+      "units": "uA",
+      "provenance": "transcribed",
+      "location": "footnote 6, Sec. III.1.3"
+    },
+    "critical_current_6": {
+      "value": 0.185,
+      "units": "uA",
+      "provenance": "transcribed",
+      "location": "footnote 6, Sec. III.1.3"
+    },
+    "negativity_resolution_nats": {
+      "value": 1.0e-3,
+      "units": "dimensionless",
+      "provenance": "derived",
+      "derived_from": "circuit_qed_harvesting/ren_2022_sec4-3:qst_concurrence_floor",
+      "source": "S. Ren, 'Design and Implementation of an Entanglement Harvesting Experiment With Superconducting Flux Qubits', MSc thesis, University of Waterloo (Lupascu group), 2022, Sec. 4.3 and Fig. 4.5 -- the Waterloo group's own tomography-precision statement",
+      "location": "NOT in this paper. Derived: E_N (nats) = ln(2N + 1) <= ln(1 + C) ~ C for a two-qubit state, using N <= C/2 (Verstraete, Audenaert, Dehaene, De Moor, J. Phys. A 34, 10327 (2001)); C_floor = 0.001 is the smallest non-zero reconstructed concurrence in the group's simulated maximum-likelihood tomography of its target state (1e7 shots per prerotation x 9 prerotations, ~80% single-shot readout fidelity 'roughly in line with our setup')",
+      "plausible_range_nats": [7.82e-5, 4.0e-2],
+      "note": "Resolvable log-negativity floor for the go/no-go boundary, in nats. This is a SIMULATED precision from the group's thesis (readout fidelity device-informed, shot statistics simulated), NOT a measured negativity uncertainty; and the concurrence->E_N conversion is state-dependent: N is bounded by C^2/4 <= N <= C/2, so E_N lies between ~C^2/2 and ~C. The value stored is the CONSERVATIVE (upper-bound) conversion E_N ~ C_floor. For the group's own optimal-point X-state (Ren Eq. 3.71: populations 0.63/0.37/0/6e-7, coherence 5.0e-3, C = 0.0087) the exact E_N is only 7.82e-5 nats (see ren_2022_sec4-3:optimal_point_log_negativity_nats), which the thesis deems detectable by repeating tomography -- so the lower end of plausible_range_nats is that value, and the upper end is the largest measured concurrence standard deviation of the transmon cross-check below (0.04). The previously assumed 1e-4 nats floor sits at the BOTTOM of this range: a boundary drawn at 1e-4 nats assumes the harvesting-state geometry, not a generic tomography resolution."
+    },
+    "negativity_resolution_nats_transmon_crosscheck": {
+      "value": 0.01,
+      "units": "dimensionless",
+      "provenance": "derived",
+      "derived_from": "circuit_qed_harvesting/dicarlo_2009_fig3:concurrence",
+      "source": "L. DiCarlo et al., 'Demonstration of two-qubit algorithms with a superconducting quantum processor', Nature 460, 240 (2009), Fig. 3 caption",
+      "location": "NOT in this paper. Derived: the smallest reported standard deviation of the measured concurrence over 16 repetitions of generation-tomography (0.01, for the best of four Bell-state outputs), converted with E_N ~ C (small-N upper bound). MEASURED transmon tomography precision, but for highly entangled states (C ~ 0.8-0.94) and 2009-era joint dispersive readout",
+      "note": "Standard transmon tomography reference: concurrence std-devs 0.01-0.04, purity std-devs 0.02-0.03, and imaginary density-matrix elements of the reconstructed Bell states below 0.02-0.08 (a direct element-level noise floor). Ten times coarser than the Waterloo group's simulated 2022 floor above."
+    },
+    "scenario2_coupling_lambda_tb": {
+      "value": -0.1,
+      "error": 0.004786586560828125,
+      "units": "dimensionless",
+      "provenance": "derived",
+      "derived_from": "table1_scenario_lambda, table1_scenario_gamma, table1_scenario_alpha, lambda_per_gamma, characteristic_impedance",
+      "location": "Table I scenario 2 (value); Eq. (66) at gamma = 0.02 and lambda^2 = pi*alpha at alpha = 0.003 (the spread). Added 2026-09-03 (coupling-derivation pass)",
+      "note": "The dimensionless VGSD coupling lambda of Table I scenario 2, with a 1-sigma spread. VALUE: lambda = -0.1 is what the paper simulates for this scenario (Table I column lambda; the captions of Figs. 8 and 18 state 'scenario 2 of Table I, with lambda = -0.1'). ERROR: the same scenario is printed three ways that agree only to rounding -- Table I lambda = -0.1; Eq. (66) at the scenario's gamma = 0.02, lambda = -sqrt(R_K/(8 pi Z_0)) gamma = -4.532 x 0.02 = -0.09064 (R_K = h/e^2 SI-2019 exact, Z_0 = 50 ohm); lambda^2 = pi alpha at the scenario's alpha = 0.003, |lambda| = 0.09708 -- and the error is the SAMPLE standard deviation of these three readings, 0.00479 (4.8 %). This is the paper's own rounding spread, NOT a device error bar: no quantity entering it (gamma, Z_0, v, Omega^0) carries an error field in this file (all are quoted '~'). Derivation and propagation: vacuum/detectors/circuit_mapping.py (step 7), function scenario_lambda_readings; tests/test_circuit_mapping.py reproduces value and error from the transcribed columns"
+    },
+    "oscillator_coupling_lambda_osc_scenario2": {
+      "value": 0.14142135623730953,
+      "error": 0.006769255631795925,
+      "units": "dimensionless",
+      "provenance": "derived",
+      "derived_from": "scenario2_coupling_lambda_tb, qubit_gap_frequency",
+      "location": "NOT in this paper. Derived from Eqs. (5), (31), (36), (37), (66) of this paper and Eqs. (6), (10) of Janzen et al. 2023 by the derivation in vacuum/detectors/circuit_mapping.py (module docstring, steps 1-7). Added 2026-09-03 (coupling-derivation pass)",
+      "note": "The x-x oscillator-detector coupling lam_osc (lattice units, hbar = 1) of the vacuum.detectors 'xx' model at Table I scenario 2, for the loader convention omega_ref = 2 pi x qubit_gap_frequency (so Omega_lat = Omega^0/omega_ref = 1 exactly). FORMULA: lam_osc = |lambda_TB| Omega_lat sqrt(2 Omega_lat) = sqrt(2) |lambda_TB| (Omega^0/omega_ref)^(3/2); error = sqrt(2) x the error of scenario2_coupling_lambda_tb. DERIVATION (circuit_mapping.py): Eq. (31) with Eq. (5) and l_0 = Z_0/v gives H_int = hbar v lambda chi mu d_x phi with the canonically normalised dimensionless field phi of Eq. (36) and lambda of Eq. (66) -- Z_0 and v are absorbed there and nothing else survives; in lattice units H_int/(hbar omega_ref) = lambda chi mu d_xi phi for ANY omega_ref (the 1+1 canonical field is scale invariant, the spacing enters only through the derivative), and the lattice field of harmonic_chain_K is the same field; MAP-1 (tests/test_gate_crossvalidation.py) turns the qubit into the oscillator, lam_osc = lambda_UDW sqrt(2 Omega), exactly for the derivative ('xp') coupling; for the amplitude ('xx') model the map is the Golden-rule equivalence at the free gap -- equal field-induced rate to the transcribed derivative model on the same lattice (equivalently, in the continuum, lam_osc^2/(2 Omega^2) = lambda_TB^2 Omega = pi alpha Omega, the rate that DEFINES the device's alpha, Janzen Eqs. (6), (10)) -- which supplies the factor Omega_lat that the earlier identification lam_osc = |lambda_TB| sqrt(2 Omega) omitted; it is unity because the energy unit is the gap, so the number is unchanged and its status changes from convention to derived. ALTERNATIVES (enumerated in code, not stored here because they depend on the synthetic lattice mass m = 0.2 of the candidate): matching the lattice finite-difference d_x instead (x 0.980), matching the device's physical rate on the lattice (x 0.924, the lattice density of states at half the band), matching at the fully switched-on gap 0.937 Omega^0 instead of the free gap (x 0.907 / x 0.845), the Eq. (66) reading of lambda (x 0.906); the lower envelope of all of them is 0.118. NOT covered by this map: the amplitude model's harvesting is not the derivative model's (a model difference of ~3.5x in E_N at the operating point, recorded in the candidate's device-point archive), and the sign of lambda is invisible to the oscillator model"
+    }
+  }
+}

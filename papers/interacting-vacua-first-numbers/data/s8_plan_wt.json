@@ -1,0 +1,1389 @@
+{
+ "_source": "notebook_qei_exact.py::S8 plan",
+ "date_utc": "2026-09-13T06:19:46Z",
+ "build_git_head": "8ed69ce0642a1da834a749116fd2efb1bf83d3f7",
+ "parts": [
+  "wt"
+ ],
+ "workers": 8,
+ "threads_per_job": 2,
+ "n_jobs": 72,
+ "est_total_job_wall_h": 5.753362733822107,
+ "est_by_part": {
+  "wt": {
+   "n_jobs": 72,
+   "est_wall_h": 5.753362733822094
+  }
+ },
+ "wall_model": "900 s ((n_max+1)/9)^4 (chi_op/32)^1.5 (n_steps/8) (L/16) [+ exact SVD: 0.75 n_updates 12.3 s (chi_op (n_max+1)^2/2592)^3]; 2 BLAS threads, idle",
+ "jobs": [
+  {
+   "tag": "wt_L5_n8_chiop64_w1_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 168.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop64_w0.5_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 168.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop64_w0.75_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 168.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop64_w0.25_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 168.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop64_w1_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 167.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop64_w1_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 167.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop64_w0.5_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 167.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop64_w0.5_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 167.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop64_w0.75_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 167.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop64_w0.75_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 167.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop64_w0.25_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 167.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop64_w0.25_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 167.0,
+   "est_wall_s": 795.495128834866,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w1_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 166.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w0.5_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 166.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w0.75_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 166.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w0.25_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 166.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w1_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 165.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w1_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 165.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w0.5_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 165.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w0.5_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 165.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w0.75_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 165.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w0.75_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 165.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w0.25_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 165.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n8_chiop32_w0.25_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 8,
+   "tau0": 0.75,
+   "priority": 165.0,
+   "est_wall_s": 281.25,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w1_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 164.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w0.5_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 164.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w0.75_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 164.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w0.25_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 164.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w1_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 163.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w1_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 163.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w0.5_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 163.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w0.5_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 163.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w0.75_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 163.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w0.75_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 163.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w0.25_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 163.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop64_w0.25_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 163.0,
+   "est_wall_s": 188.56180831641265,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w1_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 162.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w0.5_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 162.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w0.75_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 162.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w0.25_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 162.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w1_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 161.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w1_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 161.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w0.5_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 161.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w0.5_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 161.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w0.75_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 161.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w0.75_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 161.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w0.25_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 161.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L6_n5_chiop32_w0.25_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 6,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 5,
+   "tau0": 0.75,
+   "priority": 161.0,
+   "est_wall_s": 66.66666666666666,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w1_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 160.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w0.5_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 160.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w0.75_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 160.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w0.25_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 160.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w1_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 159.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w1_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 159.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w0.5_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 159.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w0.5_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 159.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w0.75_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 159.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w0.75_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 159.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w0.25_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 159.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop64_w0.25_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 159.0,
+   "est_wall_s": 291.1116909514576,
+   "kw": {
+    "chi_op": 64,
+    "chi_acc": 128,
+    "chi_mpo": 256,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w1_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 158.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w0.5_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 158.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w0.75_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 158.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w0.25_lam4",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 4.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 158.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w1_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 157.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w1_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 157.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 1.0,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w0.5_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 157.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w0.5_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 157.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.5,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w0.75_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 157.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w0.75_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 157.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.75,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w0.25_lam2",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 157.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  },
+  {
+   "tag": "wt_L5_n6_chiop32_w0.25_lam0",
+   "part": "wt",
+   "kind": "mpo",
+   "L": 5,
+   "m": 0.5,
+   "lam": 0.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 157.0,
+   "est_wall_s": 102.92352537722908,
+   "kw": {
+    "chi_op": 32,
+    "chi_acc": 64,
+    "chi_mpo": 128,
+    "weight_decay": 0.25,
+    "chi_dmrg": 16
+   }
+  }
+ ]
+}

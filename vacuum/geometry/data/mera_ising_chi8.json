@@ -1,0 +1,17 @@
+{
+  "chi": 8,
+  "chi0": 8,
+  "n_transitional": 2,
+  "init": "local",
+  "n_sweeps_done": 2000,
+  "last_energy": -1.2732281852382992,
+  "n_sweeps": 2000,
+  "n_hbar": 3,
+  "traceless": true,
+  "wall": 613.5805921670981,
+  "produced_by": "vacuum.geometry.mera: local_init_mera(chi) -> optimize_mera(n_sweeps=2000, n_hbar=3, n_power=20, traceless=True), Z2 parity masks",
+  "wall_time_note": "3 concurrent optimizations shared the CPU; ~220 s single-process",
+  "model": "H = -sum XX - sum Z, g = J = 1",
+  "exact_e0": -1.2732395447351628,
+  "date_utc": "2026-09-02"
+}

@@ -1,0 +1,141 @@
+{
+ "spec": {
+  "kind": "ceiling",
+  "tag": "ceiling_N2_d4_L2",
+  "N": 2,
+  "d": 4,
+  "layers": 2,
+  "restarts": 8,
+  "maxiter": 400,
+  "seed": 2000,
+  "method": "lm",
+  "stop_at": 1e-13,
+  "perturb_rounds": 2,
+  "cost": 460800
+ },
+ "row": {
+  "N": 2,
+  "d": 4,
+  "n_qubits": 4,
+  "layers": 2,
+  "n_params": 12,
+  "sector_dof": 5,
+  "infidelity": 2.220446049250313e-16,
+  "fidelity": 0.9999999999999998,
+  "energy": 1.7071077547459386,
+  "E0_exact_truncated": 1.707107754745939,
+  "energy_error": -4.440892098500626e-16,
+  "cov_error_vs_ED": 8.881784197001252e-16,
+  "grad_norm": 1.3611675846036357e-15,
+  "restarts": 8,
+  "restarts_run": 7,
+  "best_restart": 6,
+  "best_start": "uniform",
+  "restart_infidelities": [
+   1.7505810134821331e-09,
+   1.750803280131663e-09,
+   1.7506367466779693e-09,
+   1.751253586590451e-09,
+   1.7507961747043055e-09,
+   1.750542821810086e-09,
+   2.220446049250313e-16
+  ],
+  "n_iterations": 1981,
+  "n_evaluations": 2491,
+  "seed": 2000,
+  "wall_s": 4.726560115814209,
+  "params": [
+   12.393685121699248,
+   50.048175173697665,
+   1.2447802022065706e-15,
+   -1.5016503641760028,
+   -15.709232705099872,
+   -47.1238898038469,
+   -12.566370614359172,
+   -12.573476199649772,
+   9.42477796076938,
+   -6.045466253655724,
+   -1.3920229015411553e-15,
+   1.5311866068199664
+  ],
+  "history": [
+   {
+    "restart": 0,
+    "start": "normal",
+    "infidelity": 1.7505810134821331e-09,
+    "nit": 322,
+    "nfev": 400,
+    "grad_max": 1.126576893758811e-08,
+    "success": false,
+    "message": "The maximum number of function evaluations is exceeded."
+   },
+   {
+    "restart": 1,
+    "start": "normal",
+    "infidelity": 1.750803280131663e-09,
+    "nit": 319,
+    "nfev": 400,
+    "grad_max": 1.1051749557289576e-08,
+    "success": false,
+    "message": "The maximum number of function evaluations is exceeded."
+   },
+   {
+    "restart": 2,
+    "start": "normal",
+    "infidelity": 1.7506367466779693e-09,
+    "nit": 320,
+    "nfev": 400,
+    "grad_max": 1.1059163224401172e-08,
+    "success": false,
+    "message": "The maximum number of function evaluations is exceeded."
+   },
+   {
+    "restart": 3,
+    "start": "normal",
+    "infidelity": 1.751253586590451e-09,
+    "nit": 314,
+    "nfev": 400,
+    "grad_max": 1.084733189418313e-08,
+    "success": false,
+    "message": "The maximum number of function evaluations is exceeded."
+   },
+   {
+    "restart": 4,
+    "start": "uniform",
+    "infidelity": 1.7507961747043055e-09,
+    "nit": 316,
+    "nfev": 400,
+    "grad_max": 1.1190097414166127e-08,
+    "success": false,
+    "message": "The maximum number of function evaluations is exceeded."
+   },
+   {
+    "restart": 5,
+    "start": "uniform",
+    "infidelity": 1.750542821810086e-09,
+    "nit": 321,
+    "nfev": 400,
+    "grad_max": 1.2106359812751288e-08,
+    "success": false,
+    "message": "The maximum number of function evaluations is exceeded."
+   },
+   {
+    "restart": 6,
+    "start": "uniform",
+    "infidelity": 2.220446049250313e-16,
+    "nit": 69,
+    "nfev": 93,
+    "grad_max": 4.561806871065829e-16,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   }
+  ],
+  "kind": "ceiling",
+  "method": "lm",
+  "maxiter": 400,
+  "stop_at": 1e-13,
+  "perturb_rounds": 2,
+  "threads": "1",
+  "time_s": 4.726953983306885
+ }
+}

@@ -1,0 +1,174 @@
+{
+  "qubit_cases": [
+    {
+      "case": "hotta h=1 k=0.5",
+      "n_samples": 3000,
+      "passed": true,
+      "worst_violation": 1.3322676295501878e-15,
+      "worst_free_instrument": 4.440892098500626e-16,
+      "worst_bob_channel": 1.3322676295501878e-15,
+      "worst_bob_unitary": 1.3322676295501878e-15,
+      "worst_negativity": 7.216449660063518e-16,
+      "teeth_nonfree_instrument": 1.3870982831265501,
+      "teeth_bob_injection": 2.193268441915958,
+      "teeth_bob_injection_bound_defect": 1.3322676295501878e-15,
+      "max_signalling_defect": 1.1103097574110884e-15,
+      "runtime_s": 2.205587863922119
+    },
+    {
+      "case": "hotta h=0.3 k=2",
+      "n_samples": 3000,
+      "passed": true,
+      "worst_violation": 6.217248937900877e-15,
+      "worst_free_instrument": 1.7763568394002505e-15,
+      "worst_bob_channel": 4.440892098500626e-15,
+      "worst_bob_unitary": 6.217248937900877e-15,
+      "worst_negativity": 7.216449660063518e-16,
+      "teeth_nonfree_instrument": 7.719488401580865,
+      "teeth_bob_injection": 7.260155011614678,
+      "teeth_bob_injection_bound_defect": 2.220446049250313e-15,
+      "max_signalling_defect": 3.552713678800501e-15,
+      "runtime_s": 2.2061750888824463
+    },
+    {
+      "case": "hotta h=2 k=2 (A=qubit 1)",
+      "n_samples": 1500,
+      "passed": true,
+      "worst_violation": 4.440892098500626e-15,
+      "worst_free_instrument": 1.7763568394002505e-15,
+      "worst_bob_channel": 4.440892098500626e-15,
+      "worst_bob_unitary": 3.552713678800501e-15,
+      "worst_negativity": 4.440892098500626e-16,
+      "teeth_nonfree_instrument": 6.173329576197693,
+      "teeth_bob_injection": 7.499623930487242,
+      "teeth_bob_injection_bound_defect": 4.440892098500626e-15,
+      "max_signalling_defect": 3.552713678800501e-15,
+      "runtime_s": 1.1359989643096924
+    },
+    {
+      "case": "tfim L=4 g=1 A=0",
+      "n_samples": 1500,
+      "passed": true,
+      "worst_violation": 3.552713678800501e-15,
+      "worst_free_instrument": 8.881784197001252e-16,
+      "worst_bob_channel": 3.552713678800501e-15,
+      "worst_bob_unitary": 2.6645352591003757e-15,
+      "worst_negativity": 1.0547118733938987e-15,
+      "teeth_nonfree_instrument": 0.9644071104013106,
+      "teeth_bob_injection": 4.664045052797316,
+      "teeth_bob_injection_bound_defect": 2.6645352591003757e-15,
+      "max_signalling_defect": 2.6706108989572407e-15,
+      "runtime_s": 1.3647880554199219
+    },
+    {
+      "case": "tfim L=5 g=1 A=2",
+      "n_samples": 750,
+      "passed": true,
+      "worst_violation": 2.6645352591003757e-15,
+      "worst_free_instrument": 1.4432899320127035e-15,
+      "worst_bob_channel": 2.6645352591003757e-15,
+      "worst_bob_unitary": 2.6645352591003757e-15,
+      "worst_negativity": 7.216449660063518e-16,
+      "teeth_nonfree_instrument": 2.1022177328604292,
+      "teeth_bob_injection": 6.087113920031241,
+      "teeth_bob_injection_bound_defect": 2.220446049250313e-15,
+      "max_signalling_defect": 3.5547763035059365e-15,
+      "runtime_s": 1.0257079601287842
+    },
+    {
+      "case": "tfim L=5 g=0.6 A=(0,1)",
+      "n_samples": 500,
+      "passed": true,
+      "worst_violation": 1.7763568394002505e-15,
+      "worst_free_instrument": 1.7763568394002505e-15,
+      "worst_bob_channel": 1.7763568394002505e-15,
+      "worst_bob_unitary": 1.5543122344752192e-15,
+      "worst_negativity": 1.1102230246251565e-15,
+      "teeth_nonfree_instrument": 1.1276049086571502,
+      "teeth_bob_injection": 4.434214922038435,
+      "teeth_bob_injection_bound_defect": 1.3600232051658168e-15,
+      "max_signalling_defect": 1.9991202317005108e-15,
+      "runtime_s": 0.7283401489257812
+    },
+    {
+      "case": "tfim L=6 g=1 A=(2,3)",
+      "n_samples": 300,
+      "passed": true,
+      "worst_violation": 8.43769498715119e-15,
+      "worst_free_instrument": 2.6645352591003757e-15,
+      "worst_bob_channel": 7.105427357601002e-15,
+      "worst_bob_unitary": 8.43769498715119e-15,
+      "worst_negativity": 1.3322676295501878e-15,
+      "teeth_nonfree_instrument": 1.347298695068063,
+      "teeth_bob_injection": 5.203045621545085,
+      "teeth_bob_injection_bound_defect": 9.159339953157541e-15,
+      "max_signalling_defect": 1.7874597184208866e-14,
+      "runtime_s": 1.0165083408355713
+    }
+  ],
+  "gaussian_cases": [
+    {
+      "N": 2,
+      "m": 0.7,
+      "A": [
+        0
+      ],
+      "n_samples": 600,
+      "passed": true,
+      "worst_violation": 9.769962616701378e-15,
+      "free_alice": 0.0,
+      "bob_symplectic": 1.9984014443252818e-15,
+      "bob_loss": 4.163336342344337e-16,
+      "log_negativity": 9.769962616701378e-15,
+      "nonfree_alice": 0.51687884512435
+    },
+    {
+      "N": 3,
+      "m": 0.5,
+      "A": [
+        0
+      ],
+      "n_samples": 600,
+      "passed": true,
+      "worst_violation": 1.0658141036401503e-14,
+      "free_alice": 0.0,
+      "bob_symplectic": 5.773159728050814e-15,
+      "bob_loss": 1.1102230246251565e-15,
+      "log_negativity": 1.0658141036401503e-14,
+      "nonfree_alice": 0.9301242042491293
+    },
+    {
+      "N": 4,
+      "m": 0.5,
+      "A": [
+        0,
+        1
+      ],
+      "n_samples": 375,
+      "passed": true,
+      "worst_violation": 2.0650148258027912e-14,
+      "free_alice": 0.0,
+      "bob_symplectic": 2.220446049250313e-15,
+      "bob_loss": 8.881784197001252e-16,
+      "log_negativity": 2.0650148258027912e-14,
+      "nonfree_alice": 1.243354627588603
+    },
+    {
+      "N": 4,
+      "m": 0.3,
+      "A": [
+        1
+      ],
+      "n_samples": 375,
+      "passed": true,
+      "worst_violation": 8.881784197001252e-15,
+      "free_alice": 0.0,
+      "bob_symplectic": 8.881784197001252e-15,
+      "bob_loss": 1.7763568394002505e-15,
+      "log_negativity": 7.105427357601002e-15,
+      "nonfree_alice": 2.4838663100520413
+    }
+  ],
+  "total_samples": 12500,
+  "worst_violation_all": 2.0650148258027912e-14
+}

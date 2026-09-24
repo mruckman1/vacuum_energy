@@ -1,0 +1,1 @@
+{"kind": "keff", "L": 16, "m": 0.5, "tau0": 0.75, "lam": 2.0, "n_max": 6, "tag": "keff_lam2", "section": "S8", "part": "keff", "threads": 2, "chi_gs": 16, "T": 10.0, "disp_dt": 0.1, "disp_chi": 32, "r_max": 4, "axis": "keff", "priority": 95.0, "est_wall_s": 1000.0, "cost": 1000.0}

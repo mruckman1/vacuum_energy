@@ -1,0 +1,4616 @@
+{
+  "build": {
+    "generator": "/Users/mruckman1/Desktop/dev/vacuum_energy/papers/circuit-qed-noise-thresholds/notebook.py",
+    "generator_sha256": "0717fa69ab9e57249cb0121a9b5e33e9d54de6d0308810e772fca472c3290691",
+    "generator_entry_point": "notebook.main()",
+    "git_head": "d248e3c5ab69093a2f7a3aada8574222e64ca01e",
+    "git_worktree_dirty": "True",
+    "produced_utc": "2026-09-04T15:01:01Z",
+    "vacuum_version": "0.1.0",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "python": "3.13.3",
+    "platform": "macOS-14.6.1-arm64-arm-64bit-Mach-O"
+  },
+  "lambda_osc": 0.14142135623730953,
+  "exponents": {
+    "xx": 1.5,
+    "xp": 0.5
+  },
+  "bound_stated": {
+    "xx": "<= 9 % in lambda ((0.937)^1.5)",
+    "xp": "<= 3.2 % in lambda ((0.937)^0.5)"
+  },
+  "n_rows": 90,
+  "wall_clock_s": 73.79487705230713,
+  "all_audits_passed": true,
+  "all_converged": true,
+  "worst_ledger_defect": 4.757183882930782e-11,
+  "device_point": {
+    "build": {
+      "generator": "/Users/mruckman1/Desktop/dev/vacuum_energy/papers/circuit-qed-noise-thresholds/notebook.py",
+      "generator_sha256": "0717fa69ab9e57249cb0121a9b5e33e9d54de6d0308810e772fca472c3290691",
+      "generator_entry_point": "notebook.main()",
+      "git_head": "d248e3c5ab69093a2f7a3aada8574222e64ca01e",
+      "git_worktree_dirty": "True",
+      "produced_utc": "2026-09-04T15:01:01Z",
+      "vacuum_version": "0.1.0",
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "python": "3.13.3",
+      "platform": "macOS-14.6.1-arm64-arm-64bit-Mach-O"
+    },
+    "operating_point": {
+      "table1_scenario": 2,
+      "gap_GHz": 7.3,
+      "gap_shift_GHz": -0.46,
+      "window_ns": 0.22,
+      "separation_mm": 19.2,
+      "coupling_lambda_osc": 0.14142135623730953,
+      "coupling_sigma": 0.006769255631795925,
+      "coupling_mode": "derived",
+      "coupling_provenance": [
+        "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+        "derived",
+        "derived: lam_osc = |lambda_TB| Omega_lat sqrt(2 Omega_lat) with lambda_TB = -gamma sqrt(R_K/(8 pi Z_0)) (Teixido-Bonfill et al. 2026, Eq. 66; lambda_TB^2 = pi alpha, Eq. 33; Janzen et al. 2023 Eqs. 6, 10 fix the normalisation as the Golden-rule rate lambda^2 Omega) and Omega_lat = Omega^0/omega_ref: the field normalisation (Eq. 5/36, Z_0 absorbed), the waveguide speed (l_0 = Z_0/v) and the lattice spacing (1+1 scale invariance; the derivative's 1/a becomes Omega_lat) all contribute unit factors at this operating point; MAP-1 gives the oscillator; the amplitude ('xx') model is matched to the transcribed derivative ('xp') model on the same lattice by equal field-induced rate at the free gap. 1 sigma = the paper's own rounding spread of the scenario coupling (three published readings, 4.8 %); no input carries a published error bar. Alternatives (finite-difference derivative, physical-rate matching on the lattice, matching at the shifted gap, the Eq. 66 reading) span 0.118-0.148 and are run by --device-point"
+      ],
+      "coupling_status": "derived: lam_osc = |lambda_TB| Omega_lat sqrt(2 Omega_lat) with lambda_TB = -gamma sqrt(R_K/(8 pi Z_0)) (Teixido-Bonfill et al. 2026, Eq. 66; lambda_TB^2 = pi alpha, Eq. 33; Janzen et al. 2023 Eqs. 6, 10 fix the normalisation as the Golden-rule rate lambda^2 Omega) and Omega_lat = Omega^0/omega_ref: the field normalisation (Eq. 5/36, Z_0 absorbed), the waveguide speed (l_0 = Z_0/v) and the lattice spacing (1+1 scale invariance; the derivative's 1/a becomes Omega_lat) all contribute unit factors at this operating point; MAP-1 gives the oscillator; the amplitude ('xx') model is matched to the transcribed derivative ('xp') model on the same lattice by equal field-induced rate at the free gap. 1 sigma = the paper's own rounding spread of the scenario coupling (three published readings, 4.8 %); no input carries a published error bar. Alternatives (finite-difference derivative, physical-rate matching on the lattice, matching at the shifted gap, the Eq. 66 reading) span 0.118-0.148 and are run by --device-point"
+    },
+    "coupling_map": {
+      "lambda_osc": 0.14142135623730953,
+      "sigma": 0.0067692556317959255,
+      "lambda_tb": -0.1,
+      "sigma_tb": 0.004786586560828125,
+      "lambda_udw_map1": 0.1,
+      "gap_lat": 1.0000000000000002,
+      "criterion": "xp",
+      "field_mass": 0.2,
+      "factor": 1.4142135623730954,
+      "readings": {
+        "scenario": 2,
+        "table1": -0.1,
+        "eq66_at_gamma": -0.09064475607808387,
+        "sqrt_pi_alpha": -0.09708129562778496,
+        "gamma": 0.02,
+        "alpha": 0.003,
+        "Z0_ohm": 50.0,
+        "mean": -0.09590868390195628,
+        "sample_std": 0.004786586560828125,
+        "sigma_propagated_from_file_errors": 0.0
+      },
+      "alternatives": {
+        "xp@free_gap": 0.14142135623730953,
+        "xp@shifted_gap": 0.12826697724743347,
+        "finite-difference@free_gap": 0.13856406460551024,
+        "finite-difference@shifted_gap": 0.1253109269421375,
+        "physical-rate@free_gap": 0.13070319507667022,
+        "physical-rate@shifted_gap": 0.11954442181002607,
+        "reading_table1@default": 0.14142135623730953,
+        "reading_eq66@default": 0.12819104340362728,
+        "reading_sqrt_pi_alpha@default": 0.13729368492956537,
+        "identification_map1_only": 0.14142135623730953,
+        "lower_envelope(eq66_reading,physical-rate)": 0.11847559236350984
+      },
+      "band": [
+        0.11847559236350984,
+        0.14819061186910545
+      ],
+      "inputs": {
+        "lambda_tb": {
+          "quantity": "table1_scenario_lambda[1]",
+          "note": "Table I; Figs. 8/18 captions: the value the paper simulates"
+        },
+        "gamma": {
+          "quantity": "table1_scenario_gamma[1]",
+          "note": "Eq. (66) reading"
+        },
+        "alpha": {
+          "quantity": "table1_scenario_alpha[1]",
+          "note": "lambda^2 = pi alpha reading"
+        },
+        "Z0": {
+          "quantity": "characteristic_impedance",
+          "note": "Eq. (7); Eq. (66) coefficient"
+        },
+        "gap": {
+          "quantity": "qubit_gap_frequency",
+          "note": "Eq. (30); Omega_lat = Omega^0 / omega_ref"
+        },
+        "R_K": {
+          "quantity": "(SI-2019 exact)",
+          "note": "h / e^2"
+        },
+        "field_mass": {
+          "quantity": "(synthetic, candidate)",
+          "note": "lattice IR regulator; enters the lattice criteria only"
+        }
+      },
+      "formula": "lambda_osc = |lambda_TB| * M(Omega_lat, m); M['xp'] = Omega_lat sqrt(2 Omega_lat), M['finite-difference'] = sqrt(2 Omega_lat (Omega_lat^2 - m^2)), M['physical-rate'] = Omega_lat sqrt(2 |sin kappa(Omega_lat)|); lambda_TB = -gamma sqrt(R_K / 8 pi Z_0) (TB26 Eq. 66), lambda_TB^2 = pi alpha (Eq. 33); sigma_osc = M sigma_TB, sigma_TB = sample std of the three published readings (+) file errors on gamma, Z_0 in quadrature"
+    },
+    "couplings": {
+      "gtxx": {
+        "lambda_osc": 0.14142135623730953,
+        "description": ""
+      },
+      "gtxp": {
+        "lambda_osc": 0.14142135623730953,
+        "description": ""
+      }
+    },
+    "anchors": {
+      "Gphi_min": {
+        "description": "plot-digitised lower end of Gamma_phi (Janzen Fig. 7(a))",
+        "overrides": {
+          "gammaphi_Hz": 10000000.0
+        }
+      },
+      "Gphi_max": {
+        "description": "plot-digitised upper end of Gamma_phi (Janzen Fig. 7(a))",
+        "overrides": {
+          "gammaphi_Hz": 200000000.0
+        }
+      },
+      "G1_min": {
+        "description": "measured minimum Gamma_1 (Janzen Sec. III.B)",
+        "overrides": {
+          "gamma1_MHz": 8.7
+        }
+      },
+      "G1_max": {
+        "description": "measured maximum Gamma_1 (Janzen Sec. III.B)",
+        "overrides": {
+          "gamma1_MHz": 1850.0
+        }
+      },
+      "d19.2": {
+        "description": "sourced separation t_d_0.16ns_19.2mm (7 sites)",
+        "overrides": {
+          "separation_mm": 19.2
+        }
+      },
+      "d60": {
+        "description": "sourced separation t_d_0.5ns_60mm (23 sites)",
+        "overrides": {
+          "separation_mm": 60.0
+        }
+      },
+      "d120": {
+        "description": "sourced separation t_d_1ns_120mm (46 sites)",
+        "overrides": {
+          "separation_mm": 120.0
+        }
+      },
+      "G1min+Gphimin": {
+        "description": "combined: measured minimum Gamma_1 with the digitised minimum Gamma_phi",
+        "overrides": {
+          "gamma1_MHz": 8.7,
+          "gammaphi_Hz": 10000000.0
+        }
+      },
+      "G1max+Gphimax": {
+        "description": "combined: measured maximum Gamma_1 with the digitised maximum Gamma_phi",
+        "overrides": {
+          "gamma1_MHz": 1850.0,
+          "gammaphi_Hz": 200000000.0
+        }
+      }
+    },
+    "temperatures_mK": [
+      0.0,
+      20.0,
+      30.0,
+      40.0,
+      50.0
+    ],
+    "resolution": {
+      "derived_nats": 0.001,
+      "band_nats": [
+        7.82e-05,
+        0.04
+      ]
+    },
+    "n_rows": 90,
+    "wall_clock_s": 73.79487705230713,
+    "cpu_seconds_summed": 886.6948516368866,
+    "all_audits_passed": true,
+    "all_converged": true,
+    "worst_ledger_defect": 4.757183882930782e-11,
+    "mp_margin_flagged_rows": 0,
+    "verdict": {
+      "device_box_E_N_zero_at_every_coupling": false,
+      "device_box_max_E_N_over_couplings": 0.00012957230552580602,
+      "device_box_max_MI_over_couplings": 0.00016069588359267015,
+      "device_box_E_N_GO_anywhere_at_any_coupling": {
+        "derived": false,
+        "band_low": true,
+        "band_high": false
+      },
+      "device_box_MI_GO_anywhere_at_any_coupling": {
+        "derived": false,
+        "band_low": true,
+        "band_high": false
+      },
+      "design_20mK_E_N_GO_anywhere_at_any_coupling": {
+        "derived": false,
+        "band_low": true,
+        "band_high": false
+      },
+      "vacuum_0mK_E_N_GO_at_derived_floor_by_coupling": {
+        "gtxx": false,
+        "gtxp": false
+      },
+      "derived_coupling_device_box": {}
+    },
+    "per_coupling": {
+      "gtxx": {
+        "description": "",
+        "lambda_osc": 0.14142135623730953,
+        "lambda_udw_map1": 0.1,
+        "n_rows": 45,
+        "all_audits_passed": true,
+        "all_converged": true,
+        "worst_ledger_defect": 4.757183882930782e-11,
+        "device_box_30_50mK": {
+          "temperatures_mK": [
+            30.0,
+            50.0
+          ],
+          "n_rows": 18,
+          "max_E_N": 7.392294012603364e-06,
+          "max_MI": 0.00016069588359267015,
+          "E_N_over_derived_floor": 0.0073922940126033634,
+          "MI_over_derived_floor": 0.16069588359267015,
+          "E_N_GO_anywhere": {
+            "derived": false,
+            "band_low": false,
+            "band_high": false
+          },
+          "MI_GO_anywhere": {
+            "derived": false,
+            "band_low": true,
+            "band_high": false
+          },
+          "n_GO": {
+            "derived": 0,
+            "band_low": 0,
+            "band_high": 0
+          },
+          "GO_anchors": {
+            "derived": [],
+            "band_low": [],
+            "band_high": []
+          }
+        },
+        "design_20mK": {
+          "temperatures_mK": [
+            20.0
+          ],
+          "n_rows": 9,
+          "max_E_N": 0.0006789482925899999,
+          "max_MI": 5.536131543851849e-05,
+          "E_N_over_derived_floor": 0.6789482925899999,
+          "MI_over_derived_floor": 0.05536131543851849,
+          "E_N_GO_anywhere": {
+            "derived": false,
+            "band_low": true,
+            "band_high": false
+          },
+          "MI_GO_anywhere": {
+            "derived": false,
+            "band_low": false,
+            "band_high": false
+          },
+          "n_GO": {
+            "derived": 0,
+            "band_low": 2,
+            "band_high": 0
+          },
+          "GO_anchors": {
+            "derived": [],
+            "band_low": [
+              "20mK:G1_min",
+              "20mK:d19.2"
+            ],
+            "band_high": []
+          }
+        },
+        "orgiazzi_40mK": {
+          "temperatures_mK": [
+            40.0
+          ],
+          "n_rows": 9,
+          "max_E_N": 0.0,
+          "max_MI": 0.00015645314544059444,
+          "E_N_over_derived_floor": 0.0,
+          "MI_over_derived_floor": 0.15645314544059444,
+          "E_N_GO_anywhere": {
+            "derived": false,
+            "band_low": false,
+            "band_high": false
+          },
+          "MI_GO_anywhere": {
+            "derived": false,
+            "band_low": true,
+            "band_high": false
+          },
+          "n_GO": {
+            "derived": 0,
+            "band_low": 0,
+            "band_high": 0
+          },
+          "GO_anchors": {
+            "derived": [],
+            "band_low": [],
+            "band_high": []
+          }
+        },
+        "vacuum_0mK": {
+          "temperatures_mK": [
+            0.0
+          ],
+          "n_rows": 9,
+          "max_E_N": 0.0008664075786620236,
+          "max_MI": 9.903546289744686e-06,
+          "E_N_over_derived_floor": 0.8664075786620236,
+          "MI_over_derived_floor": 0.009903546289744686,
+          "E_N_GO_anywhere": {
+            "derived": false,
+            "band_low": true,
+            "band_high": false
+          },
+          "MI_GO_anywhere": {
+            "derived": false,
+            "band_low": false,
+            "band_high": false
+          },
+          "n_GO": {
+            "derived": 0,
+            "band_low": 3,
+            "band_high": 0
+          },
+          "GO_anchors": {
+            "derived": [],
+            "band_low": [
+              "0mK:G1_min",
+              "0mK:G1_max",
+              "0mK:d19.2"
+            ],
+            "band_high": []
+          }
+        },
+        "rows": [
+          {
+            "label": "dp-gtxx-T0-Gphi_min",
+            "temperature_mK": 0.0,
+            "anchor": "Gphi_min",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.87464397530257e-06,
+            "work": 0.001104032003259516,
+            "min_nu_pt": 0.5130637736018989,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T0-Gphi_max",
+            "temperature_mK": 0.0,
+            "anchor": "Gphi_max",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 4.58738127484537e-07,
+            "work": 0.015950032676842977,
+            "min_nu_pt": 0.7695023481699947,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T0-G1_min",
+            "temperature_mK": 0.0,
+            "anchor": "G1_min",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.000859431579634996,
+            "MI": 9.77654911293944e-06,
+            "work": 0.00033192646549806443,
+            "min_nu_pt": 0.49957046881295425,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T0-G1_max",
+            "temperature_mK": 0.0,
+            "anchor": "G1_max",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.00010005294526007635,
+            "MI": 4.5734252393935144e-06,
+            "work": 0.002012207971147154,
+            "min_nu_pt": 0.49994997602993446,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T0-d19.2",
+            "temperature_mK": 0.0,
+            "anchor": "d19.2",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0008664075786620236,
+            "MI": 9.903546289744686e-06,
+            "work": 0.0003226641493086092,
+            "min_nu_pt": 0.49956698382200554,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T0-d60",
+            "temperature_mK": 0.0,
+            "anchor": "d60",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 60.0,
+            "separation_sites": 23.0,
+            "E_N": 0.0,
+            "MI": 3.100223441204796e-07,
+            "work": 0.00032279143410266056,
+            "min_nu_pt": 0.5000312032557293,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T0-d120",
+            "temperature_mK": 0.0,
+            "anchor": "d120",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 120.0,
+            "separation_sites": 46.0,
+            "E_N": 0.0,
+            "MI": 2.6673593780772442e-11,
+            "work": 0.0003227918952775281,
+            "min_nu_pt": 0.500036757466344,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T0-G1min+Gphimin",
+            "temperature_mK": 0.0,
+            "anchor": "G1min+Gphimin",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.852466145646492e-06,
+            "work": 0.001108544222714476,
+            "min_nu_pt": 0.512987221778878,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T0-G1max+Gphimax",
+            "temperature_mK": 0.0,
+            "anchor": "G1max+Gphimax",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 5.827880156239473e-08,
+            "work": 0.0068014882618577495,
+            "min_nu_pt": 0.5984996292419718,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T20-Gphi_min",
+            "temperature_mK": 20.0,
+            "anchor": "Gphi_min",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.438691212136579e-06,
+            "work": 0.0012725595170632908,
+            "min_nu_pt": 0.5131574348366513,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T20-Gphi_max",
+            "temperature_mK": 20.0,
+            "anchor": "Gphi_max",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 5.007810006674163e-07,
+            "work": 0.016118562725227582,
+            "min_nu_pt": 0.7695960513484956,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T20-G1_min",
+            "temperature_mK": 20.0,
+            "anchor": "G1_min",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0006730655650297428,
+            "MI": 5.486818770261996e-05,
+            "work": 0.0005004341470243222,
+            "min_nu_pt": 0.4996635804463939,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T20-G1_max",
+            "temperature_mK": 20.0,
+            "anchor": "G1_max",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 4.205297486029106e-05,
+            "MI": 1.5625530650881323e-05,
+            "work": 0.002169817314075121,
+            "min_nu_pt": 0.49997897395467683,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T20-d19.2",
+            "temperature_mK": 20.0,
+            "anchor": "d19.2",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0006789482925899999,
+            "MI": 5.536131543851849e-05,
+            "work": 0.0004911941976935223,
+            "min_nu_pt": 0.49966064107032415,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T20-d60",
+            "temperature_mK": 20.0,
+            "anchor": "d60",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 60.0,
+            "separation_sites": 23.0,
+            "E_N": 0.0,
+            "MI": 4.467550752673688e-07,
+            "work": 0.0004917881915922625,
+            "min_nu_pt": 0.5001335738132365,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T20-d120",
+            "temperature_mK": 20.0,
+            "anchor": "d120",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 120.0,
+            "separation_sites": 46.0,
+            "E_N": 0.0,
+            "MI": 4.8466817365033776e-11,
+            "work": 0.0004917895286720089,
+            "min_nu_pt": 0.5001409806525504,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T20-G1min+Gphimin",
+            "temperature_mK": 20.0,
+            "anchor": "G1min+Gphimin",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.413347130580945e-06,
+            "work": 0.0012770492868157681,
+            "min_nu_pt": 0.5130803376903619,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T20-G1max+Gphimax",
+            "temperature_mK": 20.0,
+            "anchor": "G1max+Gphimax",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 7.349626729435954e-08,
+            "work": 0.006959097604785576,
+            "min_nu_pt": 0.5985287402095005,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T30-Gphi_min",
+            "temperature_mK": 30.0,
+            "anchor": "Gphi_min",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 6.358884669488418e-06,
+            "work": 0.001842226025974802,
+            "min_nu_pt": 0.513493099158868,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T30-Gphi_max",
+            "temperature_mK": 30.0,
+            "anchor": "Gphi_max",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 7.216858008973759e-07,
+            "work": 0.01668822638346035,
+            "min_nu_pt": 0.7699318535959988,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T30-G1_min",
+            "temperature_mK": 30.0,
+            "anchor": "G1_min",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 5.164991962676147e-06,
+            "MI": 0.000123551948993399,
+            "work": 0.0010699368666963185,
+            "min_nu_pt": 0.49999741751068794,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T30-G1_max",
+            "temperature_mK": 30.0,
+            "anchor": "G1_max",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 3.730148027125506e-05,
+            "work": 0.002689941832908066,
+            "min_nu_pt": 0.5000925585070135,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T30-d19.2",
+            "temperature_mK": 30.0,
+            "anchor": "d19.2",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 7.392294012603364e-06,
+            "MI": 0.00012441899710763545,
+            "work": 0.0010608575897781813,
+            "min_nu_pt": 0.49999630386665517,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T30-d60",
+            "temperature_mK": 30.0,
+            "anchor": "d60",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 60.0,
+            "separation_sites": 23.0,
+            "E_N": 0.0,
+            "MI": 2.9668164254134655e-07,
+            "work": 0.0010618929471779203,
+            "min_nu_pt": 0.5004980869931559,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T30-d120",
+            "temperature_mK": 30.0,
+            "anchor": "d120",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 120.0,
+            "separation_sites": 46.0,
+            "E_N": 0.0,
+            "MI": 3.050168971563405e-11,
+            "work": 0.0010618949528018685,
+            "min_nu_pt": 0.5005088140606411,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T30-G1min+Gphimin",
+            "temperature_mK": 30.0,
+            "anchor": "G1min+Gphimin",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 6.310605591530738e-06,
+            "work": 0.0018465541850471382,
+            "min_nu_pt": 0.5134141768079394,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T30-G1max+Gphimax",
+            "temperature_mK": 30.0,
+            "anchor": "G1max+Gphimax",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.479805716853022e-07,
+            "work": 0.007479222368287641,
+            "min_nu_pt": 0.5986425829955432,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T40-Gphi_min",
+            "temperature_mK": 40.0,
+            "anchor": "Gphi_min",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.4168684185661418e-05,
+            "work": 0.0027844717601987,
+            "min_nu_pt": 0.5140848109404825,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T40-Gphi_max",
+            "temperature_mK": 40.0,
+            "anchor": "Gphi_max",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.1595698725663794e-06,
+            "work": 0.017630472288582194,
+            "min_nu_pt": 0.7705237576328499,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T40-G1_min",
+            "temperature_mK": 40.0,
+            "anchor": "G1_min",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 0.00015514442491210145,
+            "work": 0.002011901914111437,
+            "min_nu_pt": 0.5005879369710358,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T40-G1_max",
+            "temperature_mK": 40.0,
+            "anchor": "G1_max",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 3.649003660756954e-05,
+            "work": 0.003539485745643094,
+            "min_nu_pt": 0.5004456941004445,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T40-d19.2",
+            "temperature_mK": 40.0,
+            "anchor": "d19.2",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 0.00015645314544059444,
+            "work": 0.002003103324002364,
+            "min_nu_pt": 0.5005880072985163,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T40-d60",
+            "temperature_mK": 40.0,
+            "anchor": "d60",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 60.0,
+            "separation_sites": 23.0,
+            "E_N": 0.0,
+            "MI": 2.3575990801272262e-07,
+            "work": 0.0020045890872509237,
+            "min_nu_pt": 0.5011357850342749,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T40-d120",
+            "temperature_mK": 40.0,
+            "anchor": "d120",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 120.0,
+            "separation_sites": 46.0,
+            "E_N": 0.0,
+            "MI": 2.419243277929084e-11,
+            "work": 0.002004591761416703,
+            "min_nu_pt": 0.5011500612527774,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T40-G1min+Gphimin",
+            "temperature_mK": 40.0,
+            "anchor": "G1min+Gphimin",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.4072388005492709e-05,
+            "work": 0.0027885202790355283,
+            "min_nu_pt": 0.514004704382326,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T40-G1max+Gphimax",
+            "temperature_mK": 40.0,
+            "anchor": "G1max+Gphimax",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.933254030779153e-07,
+            "work": 0.00832876630978575,
+            "min_nu_pt": 0.5989959769514899,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T50-Gphi_min",
+            "temperature_mK": 50.0,
+            "anchor": "Gphi_min",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.3066551945671865e-05,
+            "work": 0.004009643673019476,
+            "min_nu_pt": 0.5149043274827544,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T50-Gphi_max",
+            "temperature_mK": 50.0,
+            "anchor": "Gphi_max",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.7182124603110083e-06,
+            "work": 0.018855643774184114,
+            "min_nu_pt": 0.7713434773829937,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T50-G1_min",
+            "temperature_mK": 50.0,
+            "anchor": "G1_min",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 0.00015867613080599793,
+            "work": 0.0032370598543982627,
+            "min_nu_pt": 0.5014134758813027,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T50-G1_max",
+            "temperature_mK": 50.0,
+            "anchor": "G1_max",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.3007898984701153e-05,
+            "work": 0.0046602555825466215,
+            "min_nu_pt": 0.5015181374678366,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T50-d19.2",
+            "temperature_mK": 50.0,
+            "anchor": "d19.2",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 0.00016069588359267015,
+            "work": 0.0032282752466478745,
+            "min_nu_pt": 0.5014075144504357,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T50-d60",
+            "temperature_mK": 50.0,
+            "anchor": "d60",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 60.0,
+            "separation_sites": 23.0,
+            "E_N": 0.0,
+            "MI": 2.1042746179561478e-07,
+            "work": 0.003230212444979633,
+            "min_nu_pt": 0.5020134304286396,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T50-d120",
+            "temperature_mK": 50.0,
+            "anchor": "d120",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 120.0,
+            "separation_sites": 46.0,
+            "E_N": 0.0,
+            "MI": 2.15868330155633e-11,
+            "work": 0.003230215787687527,
+            "min_nu_pt": 0.5020312724378356,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T50-G1min+Gphimin",
+            "temperature_mK": 50.0,
+            "anchor": "G1min+Gphimin",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.2901591227586504e-05,
+            "work": 0.00401367820955753,
+            "min_nu_pt": 0.5148302528719928,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxx-T50-G1max+Gphimax",
+            "temperature_mK": 50.0,
+            "anchor": "G1max+Gphimax",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 4.773884378916904e-07,
+            "work": 0.009449536188210041,
+            "min_nu_pt": 0.6000686165131278,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          }
+        ]
+      },
+      "gtxp": {
+        "description": "",
+        "lambda_osc": 0.14142135623730953,
+        "lambda_udw_map1": 0.1,
+        "n_rows": 45,
+        "all_audits_passed": true,
+        "all_converged": true,
+        "worst_ledger_defect": 3.356760008843551e-11,
+        "device_box_30_50mK": {
+          "temperatures_mK": [
+            30.0,
+            50.0
+          ],
+          "n_rows": 18,
+          "max_E_N": 0.00012957230552580602,
+          "max_MI": 1.38945723244209e-06,
+          "E_N_over_derived_floor": 0.129572305525806,
+          "MI_over_derived_floor": 0.00138945723244209,
+          "E_N_GO_anywhere": {
+            "derived": false,
+            "band_low": true,
+            "band_high": false
+          },
+          "MI_GO_anywhere": {
+            "derived": false,
+            "band_low": false,
+            "band_high": false
+          },
+          "n_GO": {
+            "derived": 0,
+            "band_low": 2,
+            "band_high": 0
+          },
+          "GO_anchors": {
+            "derived": [],
+            "band_low": [
+              "30mK:G1_min",
+              "30mK:d19.2"
+            ],
+            "band_high": []
+          }
+        },
+        "design_20mK": {
+          "temperatures_mK": [
+            20.0
+          ],
+          "n_rows": 9,
+          "max_E_N": 0.00019827447030013436,
+          "max_MI": 1.4252643168029223e-06,
+          "E_N_over_derived_floor": 0.19827447030013434,
+          "MI_over_derived_floor": 0.0014252643168029223,
+          "E_N_GO_anywhere": {
+            "derived": false,
+            "band_low": true,
+            "band_high": false
+          },
+          "MI_GO_anywhere": {
+            "derived": false,
+            "band_low": false,
+            "band_high": false
+          },
+          "n_GO": {
+            "derived": 0,
+            "band_low": 2,
+            "band_high": 0
+          },
+          "GO_anchors": {
+            "derived": [],
+            "band_low": [
+              "20mK:G1_min",
+              "20mK:d19.2"
+            ],
+            "band_high": []
+          }
+        },
+        "orgiazzi_40mK": {
+          "temperatures_mK": [
+            40.0
+          ],
+          "n_rows": 9,
+          "max_E_N": 0.0,
+          "max_MI": 2.378978946815033e-07,
+          "E_N_over_derived_floor": 0.0,
+          "MI_over_derived_floor": 0.0002378978946815033,
+          "E_N_GO_anywhere": {
+            "derived": false,
+            "band_low": false,
+            "band_high": false
+          },
+          "MI_GO_anywhere": {
+            "derived": false,
+            "band_low": false,
+            "band_high": false
+          },
+          "n_GO": {
+            "derived": 0,
+            "band_low": 0,
+            "band_high": 0
+          },
+          "GO_anchors": {
+            "derived": [],
+            "band_low": [],
+            "band_high": []
+          }
+        },
+        "vacuum_0mK": {
+          "temperatures_mK": [
+            0.0
+          ],
+          "n_rows": 9,
+          "max_E_N": 0.000213352515853442,
+          "max_MI": 3.6283517968193095e-07,
+          "E_N_over_derived_floor": 0.213352515853442,
+          "MI_over_derived_floor": 0.00036283517968193095,
+          "E_N_GO_anywhere": {
+            "derived": false,
+            "band_low": true,
+            "band_high": false
+          },
+          "MI_GO_anywhere": {
+            "derived": false,
+            "band_low": false,
+            "band_high": false
+          },
+          "n_GO": {
+            "derived": 0,
+            "band_low": 2,
+            "band_high": 0
+          },
+          "GO_anchors": {
+            "derived": [],
+            "band_low": [
+              "0mK:G1_min",
+              "0mK:d19.2"
+            ],
+            "band_high": []
+          }
+        },
+        "rows": [
+          {
+            "label": "dp-gtxp-T0-Gphi_min",
+            "temperature_mK": 0.0,
+            "anchor": "Gphi_min",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.0954914944627525e-07,
+            "work": 0.0010831918478491887,
+            "min_nu_pt": 0.5134079680794676,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T0-Gphi_max",
+            "temperature_mK": 0.0,
+            "anchor": "Gphi_max",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 3.5521744878863615e-08,
+            "work": 0.021035922060996082,
+            "min_nu_pt": 0.7701852781320798,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T0-G1_min",
+            "temperature_mK": 0.0,
+            "anchor": "G1_min",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0002105849751388949,
+            "MI": 3.5226442746959827e-07,
+            "work": 3.63444762006315e-05,
+            "min_nu_pt": 0.4998947185981603,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T0-G1_max",
+            "temperature_mK": 0.0,
+            "anchor": "G1_max",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.9147171354937792e-08,
+            "work": 0.0006876316896310616,
+            "min_nu_pt": 0.5000178696429433,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T0-d19.2",
+            "temperature_mK": 0.0,
+            "anchor": "d19.2",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.000213352515853442,
+            "MI": 3.6283517968193095e-07,
+            "work": 3.3048435510652646e-05,
+            "min_nu_pt": 0.499893335121088,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T0-d60",
+            "temperature_mK": 0.0,
+            "anchor": "d60",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 60.0,
+            "separation_sites": 23.0,
+            "E_N": 0.0,
+            "MI": 6.359142650392419e-12,
+            "work": 3.2901728548372735e-05,
+            "min_nu_pt": 0.5000066947165067,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T0-d120",
+            "temperature_mK": 0.0,
+            "anchor": "d120",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 120.0,
+            "separation_sites": 46.0,
+            "E_N": 0.0,
+            "MI": -4.502772937495236e-15,
+            "work": 3.290172712618897e-05,
+            "min_nu_pt": 0.5000067952041127,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T0-G1min+Gphimin",
+            "temperature_mK": 0.0,
+            "anchor": "G1min+Gphimin",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.0802706237877935e-07,
+            "work": 0.0010804731755905265,
+            "min_nu_pt": 0.5133292230109937,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T0-G1max+Gphimax",
+            "temperature_mK": 0.0,
+            "anchor": "G1max+Gphimax",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.841836432843081e-09,
+            "work": 0.0076265598813678405,
+            "min_nu_pt": 0.5986648279002572,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T20-Gphi_min",
+            "temperature_mK": 20.0,
+            "anchor": "Gphi_min",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.0996867116919162e-07,
+            "work": 0.0010948084839218426,
+            "min_nu_pt": 0.5134155098784963,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T20-Gphi_max",
+            "temperature_mK": 20.0,
+            "anchor": "Gphi_max",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 3.48772057900959e-08,
+            "work": 0.0210475387081841,
+            "min_nu_pt": 0.7701928936102311,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T20-G1_min",
+            "temperature_mK": 20.0,
+            "anchor": "G1_min",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.000195604994146025,
+            "MI": 1.3723191830591333e-06,
+            "work": 4.795609503689663e-05,
+            "min_nu_pt": 0.4999022070676318,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T20-G1_max",
+            "temperature_mK": 20.0,
+            "anchor": "G1_max",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 7.968326606812466e-08,
+            "work": 0.0006980118437627153,
+            "min_nu_pt": 0.5000199462559252,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T20-d19.2",
+            "temperature_mK": 20.0,
+            "anchor": "d19.2",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.00019827447030013436,
+            "MI": 1.4252643168029223e-06,
+            "work": 4.466508047555285e-05,
+            "min_nu_pt": 0.4999008725923918,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T20-d60",
+            "temperature_mK": 20.0,
+            "anchor": "d60",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 60.0,
+            "separation_sites": 23.0,
+            "E_N": 0.0,
+            "MI": 7.794845883124166e-11,
+            "work": 4.451815049823388e-05,
+            "min_nu_pt": 0.5000143804866805,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T20-d120",
+            "temperature_mK": 20.0,
+            "anchor": "d120",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 120.0,
+            "separation_sites": 46.0,
+            "E_N": 0.0,
+            "MI": -8.55169884558804e-15,
+            "work": 4.451815049855357e-05,
+            "min_nu_pt": 0.5000144103231499,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T20-G1min+Gphimin",
+            "temperature_mK": 20.0,
+            "anchor": "G1min+Gphimin",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.0845527304015334e-07,
+            "work": 0.0010920847855236371,
+            "min_nu_pt": 0.5133367157766999,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T20-G1max+Gphimax",
+            "temperature_mK": 20.0,
+            "anchor": "G1max+Gphimax",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.774254492798889e-09,
+            "work": 0.007636940035829345,
+            "min_nu_pt": 0.5986669185482271,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T30-Gphi_min",
+            "temperature_mK": 30.0,
+            "anchor": "Gphi_min",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.1192524174141738e-07,
+            "work": 0.0011424269523582678,
+            "min_nu_pt": 0.5134498682050419,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T30-Gphi_max",
+            "temperature_mK": 30.0,
+            "anchor": "Gphi_max",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 3.43782013967342e-08,
+            "work": 0.021095157217265896,
+            "min_nu_pt": 0.7702274725986337,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T30-G1_min",
+            "temperature_mK": 30.0,
+            "anchor": "G1_min",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.00012704034090209462,
+            "MI": 1.221453700687514e-06,
+            "work": 9.555096117248106e-05,
+            "min_nu_pt": 0.49993648386419015,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T30-G1_max",
+            "temperature_mK": 30.0,
+            "anchor": "G1_max",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.27774471520058e-07,
+            "work": 0.0007393940071087415,
+            "min_nu_pt": 0.5000406577383465,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T30-d19.2",
+            "temperature_mK": 30.0,
+            "anchor": "d19.2",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.00012957230552580602,
+            "MI": 1.2443247997130213e-06,
+            "work": 9.228358142831401e-05,
+            "min_nu_pt": 0.4999352180443014,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T30-d60",
+            "temperature_mK": 30.0,
+            "anchor": "d60",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 60.0,
+            "separation_sites": 23.0,
+            "E_N": 0.0,
+            "MI": 4.361112165840453e-13,
+            "work": 9.213456700550609e-05,
+            "min_nu_pt": 0.500048996710283,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T30-d120",
+            "temperature_mK": 30.0,
+            "anchor": "d120",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 120.0,
+            "separation_sites": 46.0,
+            "E_N": 0.0,
+            "MI": 9.905271047827569e-16,
+            "work": 9.213456700553437e-05,
+            "min_nu_pt": 0.5000490016773774,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T30-G1min+Gphimin",
+            "temperature_mK": 30.0,
+            "anchor": "G1min+Gphimin",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.1042377850989382e-07,
+            "work": 0.0011396796190826755,
+            "min_nu_pt": 0.5133710053568179,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T30-G1max+Gphimax",
+            "temperature_mK": 30.0,
+            "anchor": "G1max+Gphimax",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.8256172956986347e-09,
+            "work": 0.007678322200573904,
+            "min_nu_pt": 0.5986876747324801,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T40-Gphi_min",
+            "temperature_mK": 40.0,
+            "anchor": "Gphi_min",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.110426557371369e-07,
+            "work": 0.0012380422462921546,
+            "min_nu_pt": 0.5135295765975395,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T40-Gphi_max",
+            "temperature_mK": 40.0,
+            "anchor": "Gphi_max",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 3.582115448708123e-08,
+            "work": 0.021190772583053887,
+            "min_nu_pt": 0.7703075398385553,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T40-G1_min",
+            "temperature_mK": 40.0,
+            "anchor": "G1_min",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.338225018440679e-07,
+            "work": 0.00019126426603144995,
+            "min_nu_pt": 0.50001800206767,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T40-G1_max",
+            "temperature_mK": 40.0,
+            "anchor": "G1_max",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.0179059557052783e-08,
+            "work": 0.0008326681925583181,
+            "min_nu_pt": 0.5002379788740847,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T40-d19.2",
+            "temperature_mK": 40.0,
+            "anchor": "d19.2",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.378978946815033e-07,
+            "work": 0.00018789867052645964,
+            "min_nu_pt": 0.5000149058182343,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T40-d60",
+            "temperature_mK": 40.0,
+            "anchor": "d60",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 60.0,
+            "separation_sites": 23.0,
+            "E_N": 0.0,
+            "MI": 1.6479873021779667e-16,
+            "work": 0.00018775094130422574,
+            "min_nu_pt": 0.5001291259917009,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T40-d120",
+            "temperature_mK": 40.0,
+            "anchor": "d120",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 120.0,
+            "separation_sites": 46.0,
+            "E_N": 0.0,
+            "MI": -6.8486882831564344e-15,
+            "work": 0.00018775094130427632,
+            "min_nu_pt": 0.5001291266910837,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T40-G1min+Gphimin",
+            "temperature_mK": 40.0,
+            "anchor": "G1min+Gphimin",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.0956032089892709e-07,
+            "work": 0.0012353942276804577,
+            "min_nu_pt": 0.5134525432200977,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T40-G1max+Gphimax",
+            "temperature_mK": 40.0,
+            "anchor": "G1max+Gphimax",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 3.250801849929985e-09,
+            "work": 0.007771596391118403,
+            "min_nu_pt": 0.5988850738039853,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T50-Gphi_min",
+            "temperature_mK": 50.0,
+            "anchor": "Gphi_min",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.3910250812321223e-07,
+            "work": 0.0013823368750434813,
+            "min_nu_pt": 0.5136710034894332,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T50-Gphi_max",
+            "temperature_mK": 50.0,
+            "anchor": "Gphi_max",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 4.031586553487898e-08,
+            "work": 0.02133506900175734,
+            "min_nu_pt": 0.7704494491623185,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T50-G1_min",
+            "temperature_mK": 50.0,
+            "anchor": "G1_min",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.3204061762653319e-06,
+            "work": 0.00033630525585409015,
+            "min_nu_pt": 0.5001694528148697,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T50-G1_max",
+            "temperature_mK": 50.0,
+            "anchor": "G1_max",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 2.4909771457332086e-08,
+            "work": 0.0010180224064640722,
+            "min_nu_pt": 0.5011058884336204,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T50-d19.2",
+            "temperature_mK": 50.0,
+            "anchor": "d19.2",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.38945723244209e-06,
+            "work": 0.0003321949916939983,
+            "min_nu_pt": 0.5001563038094615,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T50-d60",
+            "temperature_mK": 50.0,
+            "anchor": "d60",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 60.0,
+            "separation_sites": 23.0,
+            "E_N": 0.0,
+            "MI": -4.44436154545258e-15,
+            "work": 0.00033205364422264085,
+            "min_nu_pt": 0.5002712699514422,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T50-d120",
+            "temperature_mK": 50.0,
+            "anchor": "d120",
+            "gamma1_MHz": 0.0,
+            "gammaphi_Hz": 0.0,
+            "separation_mm": 120.0,
+            "separation_sites": 46.0,
+            "E_N": 0.0,
+            "MI": -1.8240617349896127e-15,
+            "work": 0.0003320536442223198,
+            "min_nu_pt": 0.5002712700324763,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T50-G1min+Gphimin",
+            "temperature_mK": 50.0,
+            "anchor": "G1min+Gphimin",
+            "gamma1_MHz": 8.7,
+            "gammaphi_Hz": 10000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 1.3741543947176638e-07,
+            "work": 0.0013804341282238801,
+            "min_nu_pt": 0.5136040223709694,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          },
+          {
+            "label": "dp-gtxp-T50-G1max+Gphimax",
+            "temperature_mK": 50.0,
+            "anchor": "G1max+Gphimax",
+            "gamma1_MHz": 1850.0,
+            "gammaphi_Hz": 200000000.0,
+            "separation_mm": 19.2,
+            "separation_sites": 7.0,
+            "E_N": 0.0,
+            "MI": 4.310638290760949e-09,
+            "work": 0.007956950444547159,
+            "min_nu_pt": 0.5997530929024415,
+            "verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "MI_verdict": {
+              "derived": "NO-GO",
+              "band_low": "NO-GO",
+              "band_high": "NO-GO"
+            },
+            "all_audits_passed": true,
+            "converged": true,
+            "mp_margin_flagged": false
+          }
+        ]
+      }
+    },
+    "archive_cross_check": {
+      "available": false
+    },
+    "model_mismatch_companion": null,
+    "synthetic_inputs_remaining": [
+      "boundary_buffer",
+      "coupling_axis",
+      "dephasing_axis",
+      "field_mass",
+      "pure_dephasing_rate_grid",
+      "relaxation_axis",
+      "relaxation_rate_grid",
+      "separation_axis",
+      "temperature_axis",
+      "waveguide_temperature_grid"
+    ]
+  },
+  "comparison_vs_untracked": {
+    "xx": {
+      "exponent": 1.5,
+      "n": 45,
+      "max_abs_rel_change_E_N": 0.3361640915980658,
+      "any_verdict_changed": true,
+      "changed": [
+        "T0-G1_min",
+        "T0-d19.2"
+      ],
+      "pairs": [
+        {
+          "key": "T0-Gphi_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.0091511517005287e-06,
+          "MI_tracked": 1.87464397530257e-06,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-Gphi_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 7.013290475033074e-07,
+          "MI_tracked": 4.58738127484537e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-G1_min",
+          "E_N_untracked": 0.0010009617718012749,
+          "E_N_tracked": 0.000859431579634996,
+          "MI_untracked": 4.410107588864384e-05,
+          "MI_tracked": 9.77654911293944e-06,
+          "rel_change_E_N": -0.14139420320876891,
+          "verdict_changed": true,
+          "verdict_untracked": {
+            "derived": "GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-G1_max",
+          "E_N_untracked": 0.0001307819930251329,
+          "E_N_tracked": 0.00010005294526007635,
+          "MI_untracked": 1.0688282241537884e-05,
+          "MI_tracked": 4.5734252393935144e-06,
+          "rel_change_E_N": -0.2349639048485155,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-d19.2",
+          "E_N_untracked": 0.0010090636828396847,
+          "E_N_tracked": 0.0008664075786620236,
+          "MI_untracked": 4.46929386368174e-05,
+          "MI_tracked": 9.903546289744686e-06,
+          "rel_change_E_N": -0.14137472847719723,
+          "verdict_changed": true,
+          "verdict_untracked": {
+            "derived": "GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-d60",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.6620776137615343e-07,
+          "MI_tracked": 3.100223441204796e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-d120",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.8408317365169466e-11,
+          "MI_tracked": 2.6673593780772442e-11,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-G1min+Gphimin",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.9757943672825693e-06,
+          "MI_tracked": 1.852466145646492e-06,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-G1max+Gphimax",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.0118681648130234e-07,
+          "MI_tracked": 5.827880156239473e-08,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-Gphi_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 4.377120984000449e-06,
+          "MI_tracked": 2.438691212136579e-06,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-Gphi_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 7.990236603472312e-07,
+          "MI_tracked": 5.007810006674163e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-G1_min",
+          "E_N_untracked": 0.0007805800732028358,
+          "E_N_tracked": 0.0006730655650297428,
+          "MI_untracked": 0.00010587509394991389,
+          "MI_tracked": 5.486818770261996e-05,
+          "rel_change_E_N": -0.1377366805329082,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-G1_max",
+          "E_N_untracked": 6.334844850668903e-05,
+          "E_N_tracked": 4.205297486029106e-05,
+          "MI_untracked": 2.6622980795977004e-05,
+          "MI_tracked": 1.5625530650881323e-05,
+          "rel_change_E_N": -0.3361640915980658,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-d19.2",
+          "E_N_untracked": 0.0007873769528376492,
+          "E_N_tracked": 0.0006789482925899999,
+          "MI_untracked": 0.00010680756440930445,
+          "MI_tracked": 5.536131543851849e-05,
+          "rel_change_E_N": -0.13770870465141283,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-d60",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 6.236933875651898e-07,
+          "MI_tracked": 4.467550752673688e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-d120",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 6.690661479707982e-11,
+          "MI_tracked": 4.8466817365033776e-11,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-G1min+Gphimin",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 4.335746339179103e-06,
+          "MI_tracked": 2.413347130580945e-06,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-G1max+Gphimax",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.3201526793960028e-07,
+          "MI_tracked": 7.349626729435954e-08,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-Gphi_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.175528035143869e-05,
+          "MI_tracked": 6.358884669488418e-06,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-Gphi_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.2348087727875878e-06,
+          "MI_tracked": 7.216858008973759e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-G1_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 5.164991962676147e-06,
+          "MI_untracked": 0.000190286215214025,
+          "MI_tracked": 0.000123551948993399,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-G1_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 5.51239019499581e-05,
+          "MI_tracked": 3.730148027125506e-05,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-d19.2",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 7.392294012603364e-06,
+          "MI_untracked": 0.00019160575052545002,
+          "MI_tracked": 0.00012441899710763545,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-d60",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 4.569928213991187e-07,
+          "MI_tracked": 2.9668164254134655e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-d120",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 4.6961056571204196e-11,
+          "MI_tracked": 3.050168971563405e-11,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-G1min+Gphimin",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.167037470578558e-05,
+          "MI_tracked": 6.310605591530738e-06,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-G1max+Gphimax",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.6747235015722737e-07,
+          "MI_tracked": 1.479805716853022e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-Gphi_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.5611568766958914e-05,
+          "MI_tracked": 1.4168684185661418e-05,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-Gphi_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.0612305686729115e-06,
+          "MI_tracked": 1.1595698725663794e-06,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-G1_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 0.00023071302993144666,
+          "MI_tracked": 0.00015514442491210145,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-G1_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 5.5065630490406386e-05,
+          "MI_tracked": 3.649003660756954e-05,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-d19.2",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 0.0002325549442702135,
+          "MI_tracked": 0.00015645314544059444,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-d60",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.7401416721691283e-07,
+          "MI_tracked": 2.3575990801272262e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-d120",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.837200349132708e-11,
+          "MI_tracked": 2.419243277929084e-11,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-G1min+Gphimin",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.5440923634906243e-05,
+          "MI_tracked": 1.4072388005492709e-05,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-G1max+Gphimax",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 5.239506309928643e-07,
+          "MI_tracked": 2.933254030779153e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-Gphi_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 4.1338764316611876e-05,
+          "MI_tracked": 2.3066551945671865e-05,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-Gphi_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.1253485535120973e-06,
+          "MI_tracked": 1.7182124603110083e-06,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-G1_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 0.00023723908335548938,
+          "MI_tracked": 0.00015867613080599793,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-G1_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.680581633886543e-05,
+          "MI_tracked": 2.3007898984701153e-05,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-d19.2",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 0.0002399468503333016,
+          "MI_tracked": 0.00016069588359267015,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-d60",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.384608392928423e-07,
+          "MI_tracked": 2.1042746179561478e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-d120",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.472696435968814e-11,
+          "MI_tracked": 2.15868330155633e-11,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-G1min+Gphimin",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 4.1046835659946934e-05,
+          "MI_tracked": 2.2901591227586504e-05,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-G1max+Gphimax",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 8.513860609848933e-07,
+          "MI_tracked": 4.773884378916904e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        }
+      ]
+    },
+    "xp": {
+      "exponent": 0.5,
+      "n": 45,
+      "max_abs_rel_change_E_N": 0.02319638987561489,
+      "any_verdict_changed": false,
+      "changed": [],
+      "pairs": [
+        {
+          "key": "T0-Gphi_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.1390705234592957e-07,
+          "MI_tracked": 1.0954914944627525e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-Gphi_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.7003567321391984e-08,
+          "MI_tracked": 3.5521744878863615e-08,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-G1_min",
+          "E_N_untracked": 0.00021384064819187192,
+          "E_N_tracked": 0.0002105849751388949,
+          "MI_untracked": 6.328392372354007e-07,
+          "MI_tracked": 3.5226442746959827e-07,
+          "rel_change_E_N": -0.015224762366300926,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-G1_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.032316357406452e-08,
+          "MI_tracked": 1.9147171354937792e-08,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-d19.2",
+          "E_N_untracked": 0.00021670497481633311,
+          "E_N_tracked": 0.000213352515853442,
+          "MI_untracked": 6.662775217224234e-07,
+          "MI_tracked": 3.6283517968193095e-07,
+          "rel_change_E_N": -0.015470152292223387,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-d60",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.2234813314380977e-12,
+          "MI_tracked": 6.359142650392419e-12,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-d120",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.8461391229916977e-15,
+          "MI_tracked": -4.502772937495236e-15,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-G1min+Gphimin",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.1231821656076946e-07,
+          "MI_tracked": 1.0802706237877935e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T0-G1max+Gphimax",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.9124956890669296e-09,
+          "MI_tracked": 2.841836432843081e-09,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-Gphi_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.1490632567667802e-07,
+          "MI_tracked": 1.0996867116919162e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-Gphi_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.6290649152448395e-08,
+          "MI_tracked": 3.48772057900959e-08,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-G1_min",
+          "E_N_untracked": 0.00019767799203029724,
+          "E_N_tracked": 0.000195604994146025,
+          "MI_untracked": 2.0517366617790874e-06,
+          "MI_tracked": 1.3723191830591333e-06,
+          "rel_change_E_N": -0.01048674090110409,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-G1_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.1024631368862677e-07,
+          "MI_tracked": 7.968326606812466e-08,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-d19.2",
+          "E_N_untracked": 0.0002004366820388945,
+          "E_N_tracked": 0.00019827447030013436,
+          "MI_untracked": 2.1344470581266192e-06,
+          "MI_tracked": 1.4252643168029223e-06,
+          "rel_change_E_N": -0.010787505145094021,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-d60",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 7.85064181631906e-11,
+          "MI_tracked": 7.794845883124166e-11,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-d120",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": -2.235787509990983e-15,
+          "MI_tracked": -8.55169884558804e-15,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-G1min+Gphimin",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.1332383359485831e-07,
+          "MI_tracked": 1.0845527304015334e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T20-G1max+Gphimax",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.8398143836483314e-09,
+          "MI_tracked": 2.774254492798889e-09,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-Gphi_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.1771649563452335e-07,
+          "MI_tracked": 1.1192524174141738e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-Gphi_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.569643558520852e-08,
+          "MI_tracked": 3.43782013967342e-08,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-G1_min",
+          "E_N_untracked": 0.00012416027085234175,
+          "E_N_tracked": 0.00012704034090209462,
+          "MI_untracked": 1.656056669812559e-06,
+          "MI_tracked": 1.221453700687514e-06,
+          "rel_change_E_N": 0.02319638987561489,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-G1_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.693571332729918e-07,
+          "MI_tracked": 1.27774471520058e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-d19.2",
+          "E_N_untracked": 0.00012675028323359138,
+          "E_N_tracked": 0.00012957230552580602,
+          "MI_untracked": 1.6871555247311137e-06,
+          "MI_tracked": 1.2443247997130213e-06,
+          "rel_change_E_N": 0.022264425926479814,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-d60",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 4.682022998470092e-13,
+          "MI_tracked": 4.361112165840453e-13,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-d120",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": -4.15336168235747e-15,
+          "MI_tracked": 9.905271047827569e-16,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-G1min+Gphimin",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.1614348499611182e-07,
+          "MI_tracked": 1.1042377850989382e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T30-G1max+Gphimax",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.8908284654960426e-09,
+          "MI_tracked": 2.8256172956986347e-09,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-Gphi_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.1494770163489321e-07,
+          "MI_tracked": 1.110426557371369e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-Gphi_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.71078900940347e-08,
+          "MI_tracked": 3.582115448708123e-08,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-G1_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.41456636021313e-07,
+          "MI_tracked": 2.338225018440679e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-G1_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.3418534273307303e-08,
+          "MI_tracked": 1.0179059557052783e-08,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-d19.2",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.4554861094297845e-07,
+          "MI_tracked": 2.378978946815033e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-d60",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": -3.2764589652511944e-15,
+          "MI_tracked": 1.6479873021779667e-16,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-d120",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": -5.920611223508843e-15,
+          "MI_tracked": -6.8486882831564344e-15,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-G1min+Gphimin",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.1340758565570042e-07,
+          "MI_tracked": 1.0956032089892709e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T40-G1max+Gphimax",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 3.319345243113503e-09,
+          "MI_tracked": 3.250801849929985e-09,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-Gphi_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.4121253580356985e-07,
+          "MI_tracked": 1.3910250812321223e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-Gphi_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 4.1754699697804654e-08,
+          "MI_tracked": 4.031586553487898e-08,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-G1_min",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.1683083190891855e-06,
+          "MI_tracked": 1.3204061762653319e-06,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-G1_max",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 2.3068865220854384e-08,
+          "MI_tracked": 2.4909771457332086e-08,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-d19.2",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.2251807342206558e-06,
+          "MI_tracked": 1.38945723244209e-06,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-d60",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.8127860323957634e-15,
+          "MI_tracked": -4.44436154545258e-15,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-d120",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": -5.429684479807406e-15,
+          "MI_tracked": -1.8240617349896127e-15,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-G1min+Gphimin",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 1.3948116173168046e-07,
+          "MI_tracked": 1.3741543947176638e-07,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        },
+        {
+          "key": "T50-G1max+Gphimax",
+          "E_N_untracked": 0.0,
+          "E_N_tracked": 0.0,
+          "MI_untracked": 4.412918030993751e-09,
+          "MI_tracked": 4.310638290760949e-09,
+          "rel_change_E_N": null,
+          "verdict_changed": false,
+          "verdict_untracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          },
+          "verdict_tracked": {
+            "derived": "NO-GO",
+            "band_low": "NO-GO",
+            "band_high": "NO-GO"
+          }
+        }
+      ]
+    }
+  }
+}

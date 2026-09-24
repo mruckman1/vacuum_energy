@@ -1,0 +1,61 @@
+{
+  "n_points": 48,
+  "n_surviving": 27,
+  "n_resolvable": 22,
+  "E_N_noiseless": 0.0006344651339023611,
+  "vac_fraction_T0": 0.9994316183773758,
+  "comm_fraction_T0": 0.03371112854205051,
+  "xx_vac_fraction_T0": 0.9311558557147019,
+  "xx_comm_fraction_T0": 0.3646214096404942,
+  "temperature_death_clean": {
+    "last_surviving": 0.1,
+    "first_dead": null
+  },
+  "temperature_death_lossy": {
+    "last_surviving": 0.06,
+    "first_dead": 0.08
+  },
+  "dephasing_death_T0": {
+    "last_surviving": 1e-05,
+    "first_dead": 3e-05
+  },
+  "dephasing_death_T0_lossy": {
+    "last_surviving": 1e-05,
+    "first_dead": 3e-05
+  },
+  "vac_fraction_range_surviving": [
+    0.9994316183773758,
+    0.9995916629817393
+  ],
+  "comm_fraction_range_surviving": [
+    0.02857459181511382,
+    0.03371112854205051
+  ],
+  "vac_fraction_by_T": {
+    "0.0": 0.9994316183773758,
+    "0.02": 0.9994397976145658,
+    "0.04": 0.9994678263546238,
+    "0.06": 0.9995042119841896,
+    "0.08": 0.9995467196652099,
+    "0.1": 0.9995916629817393
+  },
+  "m_over_M_range_surviving": [
+    0.8297210724251234,
+    1.0186179585689348
+  ],
+  "all_audits_passed": true,
+  "all_converged": true,
+  "max_ledger_defect": 1.1712425170354313e-10,
+  "controls": [
+    {
+      "label": "xx-control-T0",
+      "coupling": "xx",
+      "E_N": 0.0,
+      "xx_vac_fraction_T": 0.9311558557147019,
+      "xx_comm_fraction_T": 0.3646214096404942,
+      "xx_N2_T": -0.006505670430231203
+    }
+  ],
+  "total_elapsed_s": 823.382696390152,
+  "wall_s": 823.4899141788483
+}

@@ -1,0 +1,1053 @@
+% A resource theory of quantum energy teleportation.
+% Build: latexmk -pdf main.tex   (figures are drawn by pgfplots from ./data/*.dat,
+% which export_figdata.py writes from the candidate's archived ../../data/).
+%
+% BEFORE SUBMISSION (see ../../MANIFEST.md and the commit that added this file):
+%  1. Read Fan et al. 2024 (PRA 110, 052424; QIP 23, 367) and Wu et al. 2024
+%     (PRA 109, 062208) in full. They are journal-only; the Related-work paragraph
+%     below describes them from their abstracts and from how Refs. [Xie2025, Yan2026]
+%     cite them. Check in particular whether their "QET passive" states coincide with
+%     the free states here and whether their correlation-matrix analysis already
+%     contains Proposition 1 or Proposition 3 for the minimal model.
+%  2. Have a quantum-energy-teleportation researcher read the whole draft.
+%  3. Confirm or edit the AI-assistance disclosure in the acknowledgments.
+\documentclass[aps,pra,twocolumn,reprint,superscriptaddress,nofootinbib,floatfix]{revtex4-2}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\Wto}{W_{\to}}
+\newcommand{\WCK}{W_{\to}^{\mathrm{CK}}}
+\newcommand{\Wloc}{W_{\mathrm{loc}}}
+\newcommand{\HBl}{H_B^{\mathrm{loc}}}
+\newcommand{\Abar}{\bar{\mathcal{A}}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\lmin}{\lambda_{\min}}
+\newcommand{\Hmin}{H_{\min}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle #1|}
+\newcommand{\proj}[1]{|#1\rangle\langle #1|}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\spread}{\operatorname{spread}}
+
+\begin{document}
+
+\title{A resource theory of quantum energy teleportation}
+
+\author{Matthew Ruckman}
+\email{mruckman1@gmail.com}
+\thanks{ORCID: \href{https://orcid.org/0009-0002-1723-3823}{0009-0002-1723-3823}}
+\affiliation{Unaffiliated}
+
+\date{\today}
+
+\begin{abstract}
+In quantum energy teleportation (QET) a receiver, Bob, extracts energy from a strongly
+locally passive state after a sender, Alice, measures her part and sends him the outcome.
+We formulate QET as a resource theory. The free operations are Alice's instruments whose
+average cannot change Bob's energy (energy-non-signalling instruments), one-way classical
+communication, and arbitrary channels on Bob's side, with the energy that Bob's device
+receives booked. The QET potential $\Wto$, the most energy Bob can receive by free
+operations, is a ledger monotone: no free operation increases $\Wto$ plus the energy
+already delivered. When Alice's bond operators commute, the value of $\Wto$ over
+commuting-Kraus instruments has a closed form, which recovers Hotta's optimum for the
+minimal model. We prove that commuting-Kraus instruments exhaust the free class exactly
+when the joint eigenvalue vectors of the bond operators are in convex position. In that
+case $\Wto$ is linear in the state, the ledger holds with equality, and two-way classical
+communication delivers no more energy to Bob than one-way communication. Off convex
+position the closed form is not a monotone: in a star-coupled model, a free instrument
+outside the commuting class raises it 6.15-fold. The QET surplus $\Wto-\Wloc$ is not a
+monotone in either direction. For a single-qubit receiver we apply the local-ergotropy
+formula of Salvia, De Palma, and Giovannetti branch by branch; entropic bounds on Bob's
+yield are valid but loose, and we identify why. Numerical checks cover 12\,500 random free
+operations and transverse-field Ising chains of up to 12 sites.
+\end{abstract}
+
+\maketitle
+
+% ---------------------------------------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+
+Ground states of interacting many-body systems are, in general, strongly locally passive:
+no operation on a subsystem lowers the total energy~\cite{Frey2014,Alhambra2019}. Hotta
+observed that this energy is nevertheless available to local operations aided by classical
+communication~\cite{Hotta2008,Hotta2009,Hotta2011review}. In quantum energy teleportation
+(QET), Alice measures a local observable and sends the outcome to Bob, who applies an
+outcome-dependent operation that lowers the energy near him. Alice's measurement injects an
+energy $E_A$ near her, Bob extracts $E_B<E_A$ near him, and no energy travels between them
+faster than the classical message. QET has been demonstrated in nuclear magnetic
+resonance~\cite{RodriguezBriones2023} and on superconducting hardware~\cite{Ikeda2023};
+Ref.~\cite{Ragula2025} reviews its applications.
+
+Recent work varies the ingredients: the initial state~\cite{Wu2024,Yan2026}, Alice's
+measurement~\cite{Xie2025}, and the roles of entanglement, coherence, steering, and
+information teleportation~\cite{Fan2024steering,Fan2024resources,Wang2024}. Comparing such
+variants requires fixing which operations are allowed and what is being spent. Resource
+theories supply that language: a class of free operations, the states they cannot improve,
+and monotones that quantify what the free operations consume~\cite{ChitambarGour2019}. This
+paper builds such a theory for QET.
+
+The free operations (Sec.~\ref{sec:setting}) are Alice's energy-non-signalling
+instruments, one-way classical communication from Alice to Bob, and arbitrary channels on
+Bob's side. An instrument is energy-non-signalling if its average leaves Bob's energy
+unchanged on every state, the energetic form of no-signalling. The energy each of Bob's
+channels delivers to his device is booked. The monotone is the QET potential $\Wto$, the
+most energy Bob can receive by free operations. Our results are the following.
+\begin{enumerate}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}
+\item $\Wto$ is a ledger monotone: no free operation increases $\Wto$ plus the energy
+already delivered to Bob's device (Theorem~\ref{thm:ledger}). This is close to built in;
+the content lies in the next items.
+\item For commuting bond operators, the potential over commuting-Kraus instruments,
+$\WCK$, has a closed form (Proposition~\ref{prop:closed}). It is built on the conditional
+Hamiltonian that Xie, Sajjan, and Kais call Bob's local effective Hamiltonian~\cite{Xie2025}.
+For the minimal model it gives Hotta's optimum in the compact form
+$E_B^{\max}=\sqrt{h^2+4k^2}-(h^2+2k^2)/\sqrt{h^2+k^2}$.
+\item Commuting-Kraus instruments are the whole free class if and only if the joint
+eigenvalue vectors of the bond operators are in convex position
+(Theorem~\ref{thm:freeclass}).
+\item $\WCK$ is a linear functional of the state. In convex position, therefore, the
+ledger is an equality, and two-way classical communication delivers no more to Bob than
+one-way communication (Theorem~\ref{thm:linear}, Corollary~\ref{cor:twoway}). Off convex
+position the closed form is not a monotone (Sec.~\ref{sec:offconvex}).
+\item The QET surplus $\Wto-\Wloc$ is not a monotone under the free operations, in either
+direction, nor under local operations and classical communication (LOCC)
+(Proposition~\ref{prop:surplus}).
+\item For a single-qubit Bob, the local-ergotropy formula of Salvia, De Palma, and
+Giovannetti~\cite{Salvia2023} gives his optimal unitary yield on each measurement branch.
+We use it to show that the conditional rotation of the spin-chain protocol is optimal among
+unitaries, and we show why entropic bounds on the yield are loose (Sec.~\ref{sec:single}).
+\end{enumerate}
+
+Everything is finite-dimensional, apart from a Gaussian analogue in
+Sec.~\ref{sec:gaussian}. Nothing here concerns quantum fields or a thermodynamic limit.
+The numerical checks (Sec.~\ref{sec:numerics}) use exact diagonalization of the minimal
+model, open transverse-field Ising chains~\cite{Pfeuty1970} of up to 12 sites, and harmonic
+chains of up to four modes.
+
+% ---------------------------------------------------------------------------------------
+\section{Setting and free operations}
+\label{sec:setting}
+
+\subsection{Energy booking}
+
+Alice holds a finite-dimensional system $A$ and Bob a system $B$, of dimensions $d_A$ and
+$d_B$; the Hamiltonian $H$ acts on $A\otimes B$. Following Hotta~\cite[Sec.~3]{Hotta2011review},
+we book the interaction on Bob's side. The part of $H$ supported on $A$ alone,
+\begin{equation}
+H_A := \tfrac{1}{d_B}\Tr_B(H)\otimes I_B ,
+\label{eq:HA}
+\end{equation}
+is Alice's energy, and $\HBl:=H-H_A$ is Bob's local energy operator; it contains the
+interaction. An operator-Schmidt decomposition gives
+\begin{equation}
+\HBl = I_A\otimes B_0 + \sum_{j=1}^{m} X_j\otimes Y_j ,
+\label{eq:schmidt}
+\end{equation}
+with the $X_j$ traceless, Hermitian, and linearly independent, and the $Y_j$ Hermitian and
+linearly independent. We call the $X_j$ Alice's \emph{bond operators}.
+
+\subsection{Free operations}
+
+\begin{itemize}
+\item[(O1)] Alice applies an instrument $\{K_\mu\}$ on $A$, with
+$\sum_\mu K_\mu^\dagger K_\mu=I$, whose average channel
+$\Abar(\cdot)=\sum_\mu K_\mu(\cdot)K_\mu^\dagger$ satisfies
+\begin{equation}
+(\Abar^\dagger\otimes\id)(\HBl)=\HBl
+\;\Longleftrightarrow\;
+\Abar^\dagger(X_j)=X_j \;\;\forall j ,
+\label{eq:ens}
+\end{equation}
+where $\Abar^\dagger(Z)=\sum_\mu K_\mu^\dagger Z K_\mu$. (The equivalence follows from
+applying $\Abar^\dagger\otimes\id$ to Eq.~\eqref{eq:schmidt}, using
+$\Abar^\dagger(I)=I$ and the linear independence of the $Y_j$.)
+\item[(O2)] Alice sends classical messages to Bob.
+\item[(O3)] Bob applies any channel $\E$ on $B$, which may depend on the messages he has
+received. The energy his device receives is
+\begin{equation}
+w_B(\E,\rho):=\Tr[\HBl\rho]-\Tr[\HBl(\id\otimes\E)(\rho)] .
+\label{eq:wB}
+\end{equation}
+It can be negative, in which case the device supplies energy.
+\item[(O4)] Classical randomness may be mixed in, and classical flags discarded or
+relabelled.
+\end{itemize}
+
+Condition~\eqref{eq:ens} says that Alice's operation, averaged over its outcomes, leaves
+$\langle \HBl\rangle$ unchanged in every state: before Bob learns the outcome, Alice cannot
+change his energy. We call such instruments \emph{energy-non-signalling}. A sufficient
+condition is that every Kraus operator commute with every bond operator,
+$[K_\mu,X_j]=0$; we call these instruments \emph{commuting-Kraus}. Hotta's measurement of
+$\sigma_x^A$ in the minimal model is of this kind~\cite[Sec.~3]{Hotta2011review}.
+
+The class is closed under composition: if $\{K_\mu\}$ and, for each $\mu$,
+$\{K'_{\nu|\mu}\}$ satisfy Eq.~\eqref{eq:ens}, then
+$\sum_{\mu\nu}K_\mu^\dagger K'^{\dagger}_{\nu|\mu}X_jK'_{\nu|\mu}K_\mu=\sum_\mu
+K_\mu^\dagger X_j K_\mu=X_j$. It is a subclass of one-way LOCC. Condition~\eqref{eq:ens}
+places no limit on the energy Alice's apparatus injects into $H_A$; in the minimal model
+that energy is Hotta's $E_A$. The theory tracks Bob's side. Bob's device plays the part of
+the battery in resource theories of work extraction: every channel on $B$ is allowed, and
+the energy it exchanges with the device is booked.
+
+\subsection{Models}
+\label{sec:models}
+
+The \emph{minimal model}~\cite[Sec.~3]{Hotta2011review} has two qubits and, up to an
+additive constant,
+\begin{equation}
+H=h\sigma_z^A+h\sigma_z^B+2k\,\sigma_x^A\sigma_x^B ,\qquad h,k>0 .
+\label{eq:minimal}
+\end{equation}
+Here $\HBl=h\sigma_z^B+2k\sigma_x^A\sigma_x^B$, the single bond operator is
+$X=\sigma_x^A$, and $Y=2k\sigma_x^B$. The \emph{transverse-field Ising chain} is the open
+chain of $L$ qubits, sites $0,\dots,L-1$,
+\begin{equation}
+H=-J\sum_{i=0}^{L-2}\sigma_x^i\sigma_x^{i+1}-g\sum_{i=0}^{L-1}\sigma_z^i ,
+\label{eq:tfim}
+\end{equation}
+with $J=1$ and $g\in\{0.5,1,2\}$; the critical point is $g=J$. Alice's bond operators are
+the $\sigma_x$ of her sites adjacent to Bob's. The \emph{star model} has $n_A$ Alice qubits
+and one Bob qubit,
+\begin{equation}
+H=h\sum_{i=1}^{n_A+1}\sigma_z^i+k\Big(\sum_{i\in A}\sigma_x^i\Big)\otimes\sigma_x^B ,
+\label{eq:star}
+\end{equation}
+with the single bond operator $X=\sum_{i\in A}\sigma_x^i$. It is the one model here that
+violates the hypothesis of Theorem~\ref{thm:freeclass}.
+
+% ---------------------------------------------------------------------------------------
+\section{The QET potential}
+\label{sec:potential}
+
+For an instrument $\{K_\mu\}$ on $A$ write $\tilde\rho_\mu:=(K_\mu\otimes
+I)\rho(K_\mu\otimes I)^\dagger$ for the unnormalized branches. The \emph{QET potential} is
+\begin{equation}
+\begin{split}
+\Wto(\rho):=\sup_{\{K_\mu\},\{\E_\mu\}}\sum_\mu\Big\{&\Tr[\HBl\tilde\rho_\mu]\\
+&-\Tr\big[\HBl(\id\otimes\E_\mu)(\tilde\rho_\mu)\big]\Big\} ,
+\end{split}
+\label{eq:W}
+\end{equation}
+the supremum running over energy-non-signalling instruments and channels $\E_\mu$ on $B$.
+By Eq.~\eqref{eq:ens}, $\sum_\mu\Tr[\HBl\tilde\rho_\mu]=\Tr[\HBl\rho]$, so $\Wto(\rho)$ is
+$\Tr[\HBl\rho]$ minus the lowest mean energy Bob can reach by free operations. The trivial
+protocol shows $\Wto\ge0$. Restricting the supremum to the trivial instrument gives Bob's
+local extractable energy $\Wloc(\rho)$; a strongly locally passive state has $\Wloc=0$
+\cite{Frey2014,Alhambra2019}. Restricting it to commuting-Kraus instruments gives $\WCK\le\Wto$.
+We call states with $\Wto=0$ \emph{free}: no free protocol delivers energy to Bob from them.
+In every model here the ground state is not free. The vacuum is the resource.
+
+\subsection{A closed form for commuting bonds}
+
+Suppose the bond operators commute, with joint spectral decomposition
+$X_j=\sum_a x_j(a)\Pi_a$, where the $\Pi_a$ are orthogonal projectors summing to $I_A$ and
+the joint eigenvalue vectors $x(a)\in\mathbb{R}^m$ are distinct. Equation~\eqref{eq:schmidt}
+becomes
+\begin{equation}
+\HBl=\sum_a\Pi_a\otimes H^{(a)} ,\qquad H^{(a)}:=B_0+\sum_j x_j(a)Y_j .
+\label{eq:Heff}
+\end{equation}
+$H^{(a)}$ is the Hamiltonian Bob faces when Alice's bonds sit in block $a$: the local
+effective Hamiltonian of Ref.~\cite{Xie2025}, which was introduced there for a product state.
+
+\begin{proposition}[commuting-Kraus potential]
+\label{prop:closed}
+For commuting bonds,
+\begin{equation}
+\WCK(\rho)=\sum_a\Big\{\Tr[H^{(a)}\sigma_a]-p_a\lmin(H^{(a)})\Big\},
+\label{eq:closed}
+\end{equation}
+where $\sigma_a:=\Tr_A[(\Pi_a\otimes I)\rho]$ and $p_a:=\Tr\sigma_a$. The value is attained
+by Alice's projective measurement $\{\Pi_a\}$ followed by Bob's reset of $B$ to a ground
+state of $H^{(a)}$.
+\end{proposition}
+
+\begin{proof}
+A commuting-Kraus $K_\mu$ commutes with every $\Pi_a$, since each $\Pi_a$ is a polynomial in
+the $X_j$. By Eq.~\eqref{eq:Heff} and because $\E_\mu$ preserves trace and positivity, Bob's
+final energy in branch $\mu$ is
+$\sum_a\Tr[H^{(a)}\E_\mu(\Tr_A[(\Pi_a\otimes I)\tilde\rho_\mu])]\ge
+\sum_a\lmin(H^{(a)})\Tr[(K_\mu^\dagger\Pi_aK_\mu\otimes I)\rho]$. Summing over $\mu$ and using
+$\sum_\mu K_\mu^\dagger\Pi_aK_\mu=\sum_\mu K_\mu^\dagger K_\mu\Pi_a=\Pi_a$ bounds the total
+final energy below by $\sum_ap_a\lmin(H^{(a)})$, while the initial energy is
+$\sum_a\Tr[H^{(a)}\sigma_a]$. The stated protocol leaves branch $a$ with energy
+$p_a\lmin(H^{(a)})$, so it attains the bound.
+\end{proof}
+
+In the minimal model the blocks are the eigenspaces $a=\pm$ of $\sigma_x^A$,
+$H^{(\pm)}=h\sigma_z^B\pm2k\sigma_x^B$, and $\lmin(H^{(\pm)})=-\sqrt{h^2+4k^2}$ for both.
+In the ground state~\cite[Sec.~3]{Hotta2011review}, $\langle\sigma_z^B\rangle=-h/\sqrt{h^2+k^2}$
+and $\langle\sigma_x^A\sigma_x^B\rangle=-k/\sqrt{h^2+k^2}$, so
+$\bra{g}\HBl\ket{g}=-(h^2+2k^2)/\sqrt{h^2+k^2}$. Hence
+\begin{equation}
+\WCK(\ket{g})=\sqrt{h^2+4k^2}-\frac{h^2+2k^2}{\sqrt{h^2+k^2}} .
+\label{eq:EBmax}
+\end{equation}
+Since $(h^2+4k^2)(h^2+k^2)=(h^2+2k^2)^2+h^2k^2$, this equals Hotta's
+$E_B^{\max}=\frac{h^2+2k^2}{\sqrt{h^2+k^2}}\big[\sqrt{1+h^2k^2/(h^2+2k^2)^2}-1\big]$
+\cite[Eq.~(11)]{Hotta2011review}. Alice holds a qubit, so commuting-Kraus instruments are her
+whole free class (Theorem~\ref{thm:freeclass}), and $\Wto(\ket g)=E_B^{\max}$. Hotta's
+protocol is therefore optimal among all free protocols, and $E_B^{\max}$ is the resource it
+spends. Hotta's injected energy is $E_A=h^2/\sqrt{h^2+k^2}$ \cite[Eq.~(8)]{Hotta2011review},
+so with $r:=k/h$ and $x:=1+2r^2$,
+\begin{equation}
+\frac{E_B^{\max}}{E_A}=\sqrt{x^2+r^2}-x<\frac{r^2}{2x}<\frac14 ,
+\label{eq:quarter}
+\end{equation}
+using $\sqrt{x^2+r^2}<x+r^2/(2x)$. In the minimal model Bob never receives a quarter of what
+Alice injects; the ratio approaches $1/4$ only as $k/h\to\infty$ (Fig.~\ref{fig:minimal}).
+Equation~\eqref{eq:quarter} is an elementary consequence of Hotta's two formulas.
+
+\subsection{Monotonicity}
+
+\begin{theorem}[ledger monotonicity]
+\label{thm:ledger}
+For every state $\rho$:
+\begin{itemize}
+\item[(a)] for every energy-non-signalling instrument on $A$, with branches $\rho_\mu$ of
+probability $p_\mu$,
+\begin{equation}
+\sum_\mu p_\mu\Wto(\rho_\mu)\le\Wto(\rho);
+\label{eq:mono-a}
+\end{equation}
+\item[(b)] for every channel $\E$ on $B$,
+\begin{equation}
+\Wto\big((\id\otimes\E)(\rho)\big)+w_B(\E,\rho)\le\Wto(\rho).
+\label{eq:mono-b}
+\end{equation}
+\end{itemize}
+Both statements hold for $\WCK$ when (a) is restricted to commuting-Kraus instruments.
+\end{theorem}
+
+The proof is in Appendix~\ref{app:proofs}. Inequality~\eqref{eq:mono-a} is strong
+monotonicity, i.e., monotonicity on average over branches~\cite{ChitambarGour2019}. Because
+$\Wto$ is a supremum of linear functionals, it is convex, so it is also non-increasing under
+the average channel and under mixing.
+
+\begin{corollary}[device ledger]
+\label{cor:ledger}
+Let $D$ be the energy delivered to Bob's device so far. Along any free protocol, the
+expected value of $\Wto(\text{state})+D$ does not increase. Hence the energy any free
+protocol delivers to Bob's device is at most $\Wto(\rho)$; $\Wto$ does not increase under
+free operations that draw no energy from the device; and a free operation can raise $\Wto$
+only by drawing energy from the device, and by at most the amount drawn.
+\end{corollary}
+
+In the minimal model the ledger reads as follows. Alice's measurement leaves
+$\Wto=E_B^{\max}$ on average (Theorem~\ref{thm:linear} below makes this an equality). After
+the measurement the energy is locally extractable on each branch, because Alice's state
+lies in a single block. Bob's rotation delivers $E_B^{\max}$ and leaves branches with
+$\Wto=0$. Corollary~\ref{cor:ledger} is not a statement about $\Wto$ alone. Bob may excite
+his own system; that raises $\Wto$, but only by the energy he put in.
+
+% ---------------------------------------------------------------------------------------
+\section{The free class}
+\label{sec:freeclass}
+
+\begin{theorem}[free class]
+\label{thm:freeclass}
+Let the bond operators commute, with blocks $\Pi_a$ and joint eigenvalue vectors $x(a)$.
+Every energy-non-signalling instrument on $A$ is commuting-Kraus if and only if every $x(a)$
+is an extreme point of $\mathrm{conv}\{x(a')\}_{a'}$, i.e., the $x(a)$ are in convex
+position.
+\end{theorem}
+
+The key identity is the following. Set
+$M_{ab}:=\sum_\mu\Pi_bK_\mu^\dagger\Pi_aK_\mu\Pi_b\ge0$. Sandwiching completeness and
+Eq.~\eqref{eq:ens} between $\Pi_b$'s gives
+\begin{equation}
+\sum_aM_{ab}=\Pi_b ,\qquad \sum_ax(a)M_{ab}=x(b)\,\Pi_b .
+\label{eq:blocks}
+\end{equation}
+For a unit vector $v$ in the range of $\Pi_b$, the numbers $p_a=\bra vM_{ab}\ket v$ thus form
+a probability distribution with barycentre $x(b)$. If $x(b)$ is extreme, $p_a=0$ for
+$a\neq b$. Hence $M_{ab}=0$, i.e., $\Pi_aK_\mu\Pi_b=0$, and every $K_\mu$ is block diagonal.
+Conversely, suppose $x(b)=\sum_{a\neq b}\lambda_ax(a)$ for a probability vector $\lambda$.
+Choose unit vectors $\ket b$ in the range of $\Pi_b$ and $\ket a$ in the range of each
+$\Pi_a$. Then
+\begin{equation}
+K_0=I-\proj b ,\qquad K_a=\sqrt{\lambda_a}\,\ket a\!\bra b
+\label{eq:witness}
+\end{equation}
+is complete and satisfies Eq.~\eqref{eq:ens}, since
+$\sum K^\dagger X_jK=X_j-x_j(b)\proj b+\sum_a\lambda_ax_j(a)\proj b=X_j$. Yet
+$\Pi_aK_a\Pi_b\neq0$. The witness~\eqref{eq:witness} is non-unital:
+$\Abar(I)=I-\proj b+\sum_a\lambda_a\proj a\neq I$. That is unavoidable. For a unital
+instrument, $\Abar^\dagger$ is a unital, trace-preserving channel, and its fixed points form
+the commutant of the Kraus operators~\cite{AGG2002}. So a unital energy-non-signalling
+instrument is commuting-Kraus whatever the spectrum, and convex position is exactly what the
+non-unital instruments need. The complete proof is in Appendix~\ref{app:proofs}.
+
+Which models are in convex position? A single-qubit $A$ always is. Commuting traceless
+Hermitian $2\times2$ matrices are proportional to one $\bm n\cdot\bm\sigma$, so the points
+are $\pm v$. Every region of the Ising chain~\eqref{eq:tfim} is too, since its bond operators
+are $\sigma_x$'s whose joint eigenvalues are the vertices of a box. The star
+model~\eqref{eq:star} with $n_A\ge2$ is not: $X=\sum_i\sigma_x^i$ has the eigenvalues
+$n_A,n_A-2,\dots,-n_A$, and all but the two outermost are interior.
+
+\subsection{A certificate}
+
+Everything in Eq.~\eqref{eq:blocks} depends on the instrument only through its average
+channel, $M_{ab}=\Pi_b\Abar^\dagger(\Pi_a)\Pi_b$, and Eq.~\eqref{eq:ens} is linear in the
+Choi operator $J$ of $\Abar$. Maximizing the weight outside the block-diagonal,
+\begin{equation}
+w_{\mathrm{off}}(J):=\sum_{a\neq b}\Tr M_{ab},
+\label{eq:sdp}
+\end{equation}
+subject to $J\ge0$, trace preservation, and Eq.~\eqref{eq:ens}, is therefore a semidefinite
+program. Its optimum is zero exactly when every energy-non-signalling instrument is
+commuting-Kraus. The optimum is in fact
+$\sum_{b\,\text{non-extreme}}\operatorname{rank}\Pi_b$. It is at most that, because by
+Eq.~\eqref{eq:blocks} the extreme blocks contribute nothing and block $b$ contributes at most
+$\Tr\Pi_b$. Applying the witness~\eqref{eq:witness} to every vector of an orthonormal basis of
+every non-extreme block attains it; take $\lambda_b=0$, which is possible because a
+non-extreme $x(b)$ lies in the hull of the other points. Table~\ref{tab:freeclass} lists
+the solver's optima. They agree with the analytic verdict on every row and equal the total
+rank of the non-extreme blocks: 2 and 6 on the two star models.
+
+\begin{table}[t]
+\caption{The free class of each model. Ranks are those of the joint eigenprojectors
+$\Pi_a$ of Alice's bond operators. $w_{\rm off}^{\rm SDP}$ is the solver optimum of
+Eq.~\eqref{eq:sdp}. The last column is the total rank of the non-extreme blocks, which
+equals the exact optimum. Minimal-model rows use $(h,k)=(1,\tfrac12)$ with Alice at qubit 0
+and $(0.3,2)$ with Alice at qubit 1; Alice's sites are listed. Ising rows use $g=1$. Star rows use $(h,k)=(1,\tfrac12)$.}
+\label{tab:freeclass}
+\begin{ruledtabular}
+\begin{tabular}{lllcrr}
+Model & Alice & Ranks & Convex & $w_{\rm off}^{\rm SDP}$ & Exact \\
+\hline
+Minimal & $\{0\}$ & 1,1 & yes & $2\times10^{-16}$ & 0\\
+Minimal & $\{1\}$ & 1,1 & yes & $1\times10^{-15}$ & 0\\
+Ising $L=5$ & $\{0\}$ & 1,1 & yes & $1\times10^{-15}$ & 0\\
+Ising $L=5$ & $\{1,2\}$ & 1,1,1,1 & yes & $-8\times10^{-11}$ & 0\\
+Ising $L=6$ & $\{2,3\}$ & 1,1,1,1 & yes & $-8\times10^{-11}$ & 0\\
+Star $n_A=2$ & $\{0,1\}$ & 1,2,1 & no & 2.000 & 2\\
+Star $n_A=3$ & $\{0,1,2\}$ & 1,3,3,1 & no & 6.000 & 6\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\subsection{Off convex position}
+\label{sec:offconvex}
+
+Take the star model with $n_A=2$, $(h,k)=(1,\tfrac12)$, and its ground state. There
+$\WCK(\ket g)=0.036634$. Apply the witness~\eqref{eq:witness}, whose energy-signalling
+defect is $9\times10^{-16}$, then the optimal commuting-Kraus protocol on each branch. Bob
+receives $0.225331$, which is 6.15 times as much. With only the witness outcome, Bob's local
+extraction is already $0.188697$ (5.15 times $\WCK$). Hence $\Wto(\ket g)\ge0.225331>\WCK(\ket g)$
+there. The closed form~\eqref{eq:closed} is not the potential, and it is not a monotone under
+the free class: its average over the witness's branches exceeds its initial value by
+$0.188697$. For $n_A=3$ a witness exists, but this particular one extracts nothing measurable
+($6\times10^{-14}$). The optimal free instrument off convex position is not known.
+
+% ---------------------------------------------------------------------------------------
+\section{Linearity and two-way communication}
+\label{sec:twoway}
+
+\begin{theorem}[linearity and the exact ledger]
+\label{thm:linear}
+For commuting bonds, $\WCK(\rho)=\Tr[W_{\rm op}\rho]$ with
+\begin{equation}
+W_{\rm op}:=\sum_a\Pi_a\otimes\big(H^{(a)}-\lmin(H^{(a)})I\big)=\HBl+G ,
+\label{eq:Wop}
+\end{equation}
+where $G:=-\sum_a\lmin(H^{(a)})\,\Pi_a\otimes I_B$ is supported on $A$. Consequently:
+\begin{itemize}
+\item[(a)] for every instrument $\{\mathcal L_\nu\}$ on $B$, with branches $\rho_\nu$ of
+probability $p_\nu$, $\sum_\nu p_\nu\WCK(\rho_\nu)=\WCK(\rho)-w_B$, where
+$w_B=\Tr[\HBl\rho]-\sum_\nu\Tr[\HBl(\id\otimes\mathcal L_\nu)(\rho)]$ is the energy the
+instrument delivers to Bob's device;
+\item[(b)] for every commuting-Kraus instrument on $A$,
+$\sum_\mu p_\mu\WCK(\rho_\mu)=\WCK(\rho)$.
+\end{itemize}
+If the $x(a)$ are in convex position, then $\Wto=\WCK$ and (a) and (b) hold for all free
+operations: the ledger of Corollary~\ref{cor:ledger} is conserved exactly.
+\end{theorem}
+
+\begin{proof}
+Linearity follows from Eqs.~\eqref{eq:closed} and~\eqref{eq:Heff}. For (a), the sum over
+branches of $\Tr[G(\id\otimes\mathcal L_\nu)(\rho)]$ equals $\Tr[G\rho]$ because $G$ acts on
+$A$ alone and $\sum_\nu\mathcal L_\nu$ is trace preserving; the $\HBl$ part changes by
+$-w_B$. For (b), commuting-Kraus instruments satisfy
+$\sum_\mu K_\mu^\dagger\Pi_aK_\mu=\Pi_a$, which preserves $G$, and Eq.~\eqref{eq:ens},
+which preserves $\HBl$. The last sentence follows from Theorem~\ref{thm:freeclass}.
+\end{proof}
+
+\begin{corollary}[two-way communication gives Bob nothing]
+\label{cor:twoway}
+Consider protocols of finitely many rounds. In each round either Alice applies a
+commuting-Kraus instrument on $A$ or Bob applies an instrument on $B$; the outcome is
+broadcast, and every choice may depend on all earlier outcomes. The expected energy
+delivered to Bob's device is $\WCK(\rho)-\mathbb{E}[\WCK(\rho_{\rm fin})]\le\WCK(\rho)$,
+and one-way communication attains it. In convex position this holds for all free
+instruments on $A$, and the two-way value equals $\Wto(\rho)$.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:linear}, the expectation of $\WCK(\text{state})+D$ is the same after
+every round. It starts at $\WCK(\rho)$ and ends at no less than $D$, since $\WCK\ge0$.
+Proposition~\ref{prop:closed} attains it in one round.
+\end{proof}
+
+The mechanism is linearity. Because $\WCK$ is linear, what Bob learns by measuring cannot
+raise its expectation, and Alice's commuting-Kraus instruments conserve it whatever they are
+conditioned on. Bob's own instruments pay for every rise with an equal injection.
+
+The scope matters. Off convex position, part (b) fails for free instruments outside the
+commuting class (Sec.~\ref{sec:offconvex}), and the failure already occurs with one-way
+communication. Corollary~\ref{cor:twoway} then says nothing about the true potential
+$\Wto$. Whether two-way communication can beat one-way communication when the bond spectrum
+is not in convex position is open. We also restrict to finitely many rounds; the round
+number of LOCC protocols is itself a resource~\cite{ChitambarGour2019}.
+
+\begin{remark}[crediting both sides]
+Two-way protocols can deliver more energy in total if a device on Alice's side is also
+credited. To see this, book the interaction half to each side, which leaves
+Eq.~\eqref{eq:ens} and hence Alice's free class unchanged. In each round one party measures
+its finest free instrument and the other cashes out optimally, with the measuring party
+chosen to maximize the total. The total delivered
+then grows with the number of rounds $r$ (Table~\ref{tab:twoway}), reaching $20.5\,\Wto$ at
+$r=3$ for $(h,k)=(1,\tfrac12)$. But the measurements inject exactly as much more. The net
+energy taken from the system, delivered minus injected, is $-0.8219$ for $r=1,2,3$. It is
+round-independent to $2\times10^{-13}$ in all seven cases, and negative, as it must be for a
+ground state, which is passive~\cite{PuszWoronowicz1978}. The extra delivery is the measuring
+apparatus's energy passing through the system.
+\end{remark}
+
+\begin{table}[t]
+\caption{Two-way protocols with both sides' devices credited. $\Wto$ is the one-way
+potential; the next three columns give the total delivered after $r=1,2,3$ rounds; the net
+is delivered minus injected, which is the same for every $r$. Minimal-model rows are labelled
+by $(h,k)$; Ising rows have $g=1$ and Alice at site 0. The $L=7,8$ rows were run to two
+rounds.}
+\label{tab:twoway}
+\begin{ruledtabular}
+\begin{tabular}{lccccc}
+Case & $\Wto$ & $r=1$ & $r=2$ & $r=3$ & Net\\
+\hline
+$(1,\tfrac12)$ & 0.0726 & 0.0726 & 0.7797 & 1.4868 & $-0.8219$\\
+$(0.3,2)$ & 0.0110 & 0.0110 & 0.0334 & 0.0559 & $-0.0335$\\
+$(2,2)$ & 0.2295 & 0.2295 & 1.1239 & 2.0183 & $-1.1847$\\
+$L=5$ & 0.1447 & 0.1447 & 0.7410 & 1.3832 & $-0.7129$\\
+$L=6$ & 0.1546 & 0.1546 & 0.7476 & 1.3861 & $-0.7005$\\
+$L=7$ & 0.1620 & 0.1620 & 0.7530 & --- & $-0.6915$\\
+$L=8$ & 0.1677 & 0.1677 & 0.7575 & --- & $-0.6848$\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+% ---------------------------------------------------------------------------------------
+\section{The surplus and the negativity}
+\label{sec:surplus}
+
+A natural candidate for ``what classical communication buys'' is the surplus
+$Q:=\Wto-\Wloc\ge0$. It is not a monotone.
+
+\begin{proposition}[the surplus]
+\label{prop:surplus}
+Let the bonds commute, let Bob hold all of $B$, and restrict Alice to commuting-Kraus
+instruments. Then:
+\begin{itemize}
+\item[(a)] $Q$ does not increase on average under Alice's instruments, and does not
+decrease under channels on $B$.
+\item[(b)] $Q$ can increase under a local unitary on $A$, an LOCC operation outside the free
+class. In the minimal model, $\rho_1=\proj{+}\otimes\proj0$ has $Q=0$. The unitary
+$U_A:\ket+\mapsto\ket0$ maps it to $\rho_2=\proj0\otimes\proj0$, which has
+$Q=\sqrt{h^2+4k^2}-h$.
+\item[(c)] $Q$ can increase under a free channel on $B$ that delivers energy to Bob's device.
+The state $\rho_3=\tfrac12(\proj+\otimes\proj0+\proj-\otimes\proj1)$ has $Q=0$. Bob's reset
+of $B$ to $\ket1$ delivers $h$ and yields $\rho_5=\tfrac{I}{2}\otimes\proj1$, which has
+$Q=\sqrt{h^2+4k^2}-h$.
+\end{itemize}
+Here $\ket\pm$ are the eigenvectors of $\sigma_x$, and $\sigma_z\ket0=\ket0$,
+$\sigma_z\ket1=-\ket1$.
+\end{proposition}
+
+The proof is in Appendix~\ref{app:proofs}. $Q$ is therefore neither non-increasing nor
+non-decreasing under the free operations, and it is not an LOCC monotone. In (c) Bob
+extracts energy and $Q$ rises, so $Q$ is not what Bob spends; $\Wto$ is. In (c) $\Wto$ falls
+from $\sqrt{h^2+4k^2}$ to $\sqrt{h^2+4k^2}-h$, by exactly the delivered $h$, as
+Theorem~\ref{thm:linear}(a) requires. At $(h,k)=(1,\tfrac12)$ the rises in (b) and (c) are
+both $\sqrt2-1=0.41421$, and the code reproduces them. Over 60 random commuting-Kraus
+instruments, $Q$ never rose by more than $6\times10^{-14}$. Over 60 random channels on $B$ it
+never fell by more than $9\times10^{-14}$.
+
+The negativity $N(\rho)=(\|\rho^{T_A}\|_1-1)/2$ is an LOCC monotone~\cite{VidalWerner2002}, and
+hence a monotone under the free operations, which are a subclass of LOCC. It is not what Bob
+spends, for three reasons. In the minimal model Alice's measurement leaves product branches,
+with $N=0$, that still carry $\Wto=E_B^{\max}$. The state $\rho_2$ above is a product state
+with $Q>0$. On the chains, the two-site negativity $N(\rho_{AB})$ vanishes for $d\ge3$ while
+Bob's yield stays positive (Fig.~\ref{fig:chain}); the correlations Bob uses at those
+distances are carried by the rest of the chain. Hotta derived relations between teleported
+energy and ground-state entanglement for the minimal model~\cite{Hotta2010}.
+
+% ---------------------------------------------------------------------------------------
+\section{A single-qubit receiver}
+\label{sec:single}
+
+On the chains Bob holds one site $b$ at distance $d$ from Alice. An operation on $b$
+changes only the terms of $H$ that touch $b$. We evaluate energies with an operator $H_R$ on
+$R=\{b-1,b,b+1\}$ that contains every such term: the part of the three sites' local energy
+densities that is supported on $R$. Let $\tau_\mu$
+be the conditional state of $R$ after Alice's outcome $\mu$. Bob's yield from unitaries
+$U_\mu$ on $b$ is $E_B=\sum_\mu
+p_\mu\big(\Tr[H_R\tau_\mu]-\Tr[H_RU_\mu\tau_\mu U_\mu^\dagger]\big)$.
+
+\subsection{The exact unitary yield}
+
+Write $H_R=I_b\otimes C_0+\sum_{i=1}^3\sigma_i\otimes C_i$ and let
+$T_{ij}:=\Tr[(\sigma_j\otimes C_i)\tau]$, a real $3\times3$ matrix.
+
+\begin{proposition}[Salvia, De Palma, and Giovannetti~\cite{Salvia2023}]
+\label{prop:salvia}
+The largest energy decrease of $\tau$ under unitaries on the qubit $b$ is
+\begin{equation}
+E^{\rm unit}(\tau)=\Tr T+s_1+s_2-\sgn(\det T)\,s_3 ,
+\label{eq:salvia}
+\end{equation}
+where $s_1\ge s_2\ge s_3$ are the singular values of $T$.
+\end{proposition}
+
+This is the closed formula for the local ergotropy of a two-level system in Sec.~III~A
+of Ref.~\cite{Salvia2023}, their Eq.~(19). Their matrix $M$ (their Eq.~(18)) is $-T^{\top}$ in
+the present notation. The argument is short. $U^\dagger\sigma_iU=\sum_jR_{ij}\sigma_j$ with
+$R\in SO(3)$, and every $R\in SO(3)$ arises. So the energy after the unitary is
+$\Tr[C_0\Tr_b\tau]+\sum_{ij}R_{ij}T_{ij}$. Minimizing over $SO(3)$ is the orthogonal
+Procrustes problem with a determinant constraint~\cite{Kabsch1976}.
+
+We apply Eq.~\eqref{eq:salvia} branch by branch,
+$E_B^{\rm unit}=\sum_\mu p_\mu E^{\rm unit}(\tau_\mu)$. We used 96 chain configurations:
+$L\in\{6,8,10,12\}$, $g\in\{0.5,1,2\}$, Alice at site 0, and Bob at every distance. On all of
+them $E_B^{\rm unit}$ equals the yield of the chain protocol's optimized conditional
+rotation~\cite{Hotta2009} to $4.4\times10^{-16}$ in absolute energy. The one-parameter
+rotation family of the protocol is therefore optimal among all unitaries on $b$. On the
+minimal model Eq.~\eqref{eq:salvia} reproduces $E_B^{\max}$ to $10^{-12}$.
+
+Unitaries are not Bob's best free operations in the ordered phase. At $g=0.5$ and $d=1$, a
+channel on $b$ beats every unitary. At $L=6$ the Choi-matrix semidefinite program of
+Ref.~\cite{Alhambra2019} certifies $9.697\times10^{-3}$ against $1.654\times10^{-3}$, a factor
+5.86. A numerically optimized channel, a lower bound on the optimum, gives factors of 3.2,
+5.86, 8.5, 10.5, 11.7, and 12.4 for $L=5,\dots,10$. At $g=1$ and $g=2$ the rotation attains
+the single-site channel optimum to $2\times10^{-7}$, relative, on configurations with
+$E_B>10^{-6}$. That local channels can beat local unitaries is known~\cite{Alhambra2019,Salvia2023};
+the Ising values are measurements, nothing more.
+
+\subsection{Entropic bounds, and why they are loose}
+
+\begin{proposition}[entropic bounds]
+\label{prop:entropic}
+Let $\varepsilon_1\le\varepsilon_2\le\dots$ be the eigenvalues of $H_R$ and
+$\Hmin(\tau):=-\ln\lambda_{\max}(\tau)$.
+\begin{itemize}
+\item[(a)] For unitaries on $R$ or on any part of it,
+\begin{equation}
+E_B\le\sum_\mu p_\mu\Big(\Tr[H_R\tau_\mu]-\kappa\big(H_R,\Hmin(\tau_\mu)\big)\Big),
+\label{eq:kyfan}
+\end{equation}
+where $\kappa(H,s):=\min\{\Tr[H\omega]:\omega\ge0,\Tr\omega=1,\omega\le e^{-s}I\}$. This
+minimum equals $e^{-s}\sum_{i\le n}\varepsilon_i+(1-ne^{-s})\varepsilon_{n+1}$, with
+$n=\lfloor e^{s}\rfloor$.
+\item[(b)] Suppose the average $\rho_R=\sum_\mu p_\mu\tau_\mu$ is passive for Bob's unitaries on
+$b$, and Alice's outcome is binary with $p_\pm=\tfrac12$. Then
+\begin{equation}
+E_B\le2c\Big(e^{-\Hmin(X|R)}-\tfrac12\Big),
+\label{eq:guess}
+\end{equation}
+where $e^{-\Hmin(X|R)}$ is the probability of guessing Alice's outcome $X$ from
+$R$~\cite{KRS2009}, and $c:=\tfrac12\max_U\spread\big(H_R-(U^\dagger\otimes
+I)H_R(U\otimes I)\big)$ over unitaries $U$ on $b$.
+\end{itemize}
+\end{proposition}
+
+Bound~(a) holds because $U\tau U^\dagger$ has the spectrum of $\tau$ and so is feasible for
+$\kappa$. Bound~(b) combines passivity with the H\"older inequality and the Helstrom formula
+(Appendix~\ref{app:proofs}). The passivity hypothesis holds when the global state is strongly
+locally passive and Alice's instrument is energy-non-signalling; it was checked on every
+configuration.
+
+Bound~(a) is attained when the conditional states are pure and Bob acts on all of $R$. Then
+$\Hmin=0$ and $\kappa=\varepsilon_1$, so it is the pure-state ergotropy. This happens in the
+minimal model,
+where the ratio is 1 to $1.5\times10^{-11}$. Saturation there reflects purity, not a tight
+entropic principle. On the chains, where $\tau_\mu$ is mixed, the bound is loose: $E_B$ is at
+most $0.041$ of it. Replacing $\Hmin$ by its smoothed version~\cite{Tomamichel2016} did not
+tighten it on any of 126 chain configurations. Bound~(b) says that Bob extracts only what his
+region knows about Alice's outcome, and it vanishes exactly when the outcome is unguessable.
+But it is loose too: on the 96 configurations, $E_B$ is at most $0.0080$ of it.
+
+The looseness has an identifiable cause. Alice's outcome moves $\tau_\mu$ by an $O(1)$ trace
+distance, but in a nearly energy-neutral direction. The tight value~\eqref{eq:salvia} comes
+from a cancellation, inside the nuclear norm of $T$, between Bob's field row and the
+correlation rows, and norm-based bounds discard it. An entropic quantity that retains the
+cancellation is not known to us. Itoh, Masaki, and Matsueda derived information-thermodynamic
+bounds of a related kind for measurement-and-feedback extraction from pure
+states~\cite{Itoh2026}.
+
+\subsection{A daemonic gain}
+
+Francica \emph{et al.}~\cite{Francica2017} define the daemonic ergotropy. It is the energy
+extractable from a system by unitaries conditioned on the outcome of a measurement on a
+correlated ancilla (their Eq.~(3)); the daemonic gain is its excess over the unconditioned
+ergotropy (their Eq.~(5)). Bernards \emph{et al.} extended the notion to generalized
+measurements~\cite{Bernards2019}. Read $R$ as the system and the rest of the chain as the
+ancilla, and restrict the daemon's measurements to free instruments. Bob's optimal unitary
+yield is then a daemonic ergotropy. Without the message, Bob's unitary yield vanishes by
+strong local passivity, so $E_B$ is entirely daemonic gain. Itoh \emph{et al.} make the same
+connection between feedback extraction and daemonic ergotropy~\cite{Itoh2026}. The resource
+theory adds a constraint on the daemon, not a new bound.
+
+% ---------------------------------------------------------------------------------------
+\section{Numerical checks}
+\label{sec:numerics}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=\columnwidth, height=0.64\columnwidth,
+  xmode=log, xmin=0.02, xmax=80, ymin=0, ymax=0.27,
+  xlabel={$k/h$}, ylabel={$\Wto(\ket g)/E_A$},
+  tick label style={font=\footnotesize}, label style={font=\small},
+  legend pos=south east, legend cell align=left,
+  legend style={font=\footnotesize, draw=none, fill=none},
+  ytick={0,0.05,0.1,0.15,0.2,0.25},
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+]
+\addplot[thin, color=black] table[x=k_over_h, y=rate_closed_form] {data/fig1_closed.dat};
+\addlegendentry{Hotta's $E_B^{\max}/E_A$}
+\addplot[only marks, mark=*, mark size=0.7pt, color=blue!70!black]
+  table[x=k_over_h, y=W_arrow_over_E_A] {data/fig1_grid.dat};
+\addlegendentry{Eq.~\eqref{eq:closed}, $33\times33$ grid}
+\addplot[dashed, color=gray, domain=0.02:80, samples=2] {0.25};
+\addlegendentry{$1/4$}
+\end{axis}
+\end{tikzpicture}
+\caption{The minimal model. The potential~\eqref{eq:closed} of the ground state, computed
+from the Hamiltonian on a logarithmic $33\times33$ grid ($h\in[0.05,5]$, $k\in[0.1,4]$) and
+divided by Alice's injected energy $E_A$, collapses onto a function of $k/h$. It agrees with
+Hotta's closed form to $3.7\times10^{-15}$ and stays below $1/4$ [Eq.~\eqref{eq:quarter}]; the
+grid maximum is $0.249978$ at $(h,k)=(0.05,4)$.}
+\label{fig:minimal}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=1 by 2, vertical sep=1.05cm},
+  width=\columnwidth, height=0.56\columnwidth,
+  ymode=log, xmin=0.5, xmax=9.5, ymin=1e-9, ymax=3,
+  xtick={1,...,9},
+  tick label style={font=\footnotesize}, label style={font=\small},
+  title style={font=\small, yshift=-1.2ex},
+  unbounded coords=discard, filter discard warning=false,
+  ylabel={energy},
+]
+\nextgroupplot[title={$g=1$ (critical)}, legend to name=chainlegend, legend columns=2,
+  legend cell align=left,
+  legend style={font=\scriptsize, draw=none, /tikz/every even column/.append style={column sep=8pt}}]
+\addplot[only marks, mark=*, mark size=1.6pt, color=blue!70!black]
+  table[x=d, y=E_B] {data/fig2_L10_g1.dat};
+\addlegendentry{$E_B$ (optimal rotation)}
+\addplot[only marks, mark=square, mark size=2.6pt, color=red!70!black]
+  table[x=d, y=W_site] {data/fig2_L10_g1.dat};
+\addlegendentry{$W_{\rm site}$ (best channel on $b$)}
+\addplot[only marks, mark=triangle*, mark size=2pt, color=gray]
+  table[x=d, y=bound_region] {data/fig2_L10_g1.dat};
+\addlegendentry{bound~\eqref{eq:kyfan}}
+\addplot[only marks, mark=diamond*, mark size=2pt, color=green!50!black]
+  table[x=d, y=negativity] {data/fig2_L10_g1.dat};
+\addlegendentry{$N(\rho_{AB})$}
+\addplot[dashed, color=black, domain=0.5:9.5, samples=2] {0.175927};
+\addlegendentry{$\Wto$, Bob $=$ sites $1$--$9$}
+\nextgroupplot[title={$g=0.5$ (ordered)}, xlabel={distance $d$ between Alice and Bob}]
+\addplot[only marks, mark=*, mark size=1.6pt, color=blue!70!black]
+  table[x=d, y=E_B] {data/fig2_L10_g0.5.dat};
+\addplot[only marks, mark=square, mark size=2.6pt, color=red!70!black]
+  table[x=d, y=W_site] {data/fig2_L10_g0.5.dat};
+\addplot[only marks, mark=triangle*, mark size=2pt, color=gray]
+  table[x=d, y=bound_region] {data/fig2_L10_g0.5.dat};
+\addplot[only marks, mark=diamond*, mark size=2pt, color=green!50!black]
+  table[x=d, y=negativity] {data/fig2_L10_g0.5.dat};
+\addplot[dashed, color=black, domain=0.5:9.5, samples=2] {0.112409};
+\end{groupplot}
+\node[anchor=north, yshift=-3pt] at (group c1r2.outer south) {\pgfplotslegendfromname{chainlegend}};
+\end{tikzpicture}
+\caption{An Ising chain of $L=10$ sites; Alice at site 0 measures $\sigma_x$, and Bob holds
+the site at distance $d$. $E_B$ is the yield of the optimized conditional rotation, which
+equals the exact unitary yield~\eqref{eq:salvia}. $W_{\rm site}$ is the best single-site
+channel, found numerically. The triangles show bound~\eqref{eq:kyfan} on the region $R$.
+$N(\rho_{AB})$ is the two-site negativity of the ground state; zeros are not drawn. The
+dashed line is the potential with Bob holding the whole complement: $0.1759$ at $g=1$ and
+$0.1124$ at $g=0.5$, against $E_A=0.851$ and $0.242$. In the ordered phase the best channel
+beats the rotation at $d=1$ by a factor of 12.4.}
+\label{fig:chain}
+\end{figure}
+
+\subsection{The minimal model}
+
+On the grid of Fig.~\ref{fig:minimal}, Eq.~\eqref{eq:closed} is computed from the
+Hamiltonian and its ground state. It agrees with Hotta's $E_B^{\max}$ to $3.7\times10^{-15}$,
+bound~\eqref{eq:kyfan} is attained to $1.5\times10^{-11}$ relative, and the local
+extractable energy is at most $2.3\times10^{-15}$. The last number is strong local passivity,
+certified by the semidefinite program of Ref.~\cite{Alhambra2019}.
+
+\subsection{Random free operations}
+
+We applied 12\,500 random free operations to random pure, mixed, ground-state-mixture, and
+thermal states. Of these, 10\,550 acted on systems of 2 to 6 qubits, in seven cases: the
+minimal model at three values of $(h,k)$, and Ising chains with $L=4$--$6$ and Alice regions
+of one or two sites. The operations were commuting-Kraus instruments with 1 to 3 Kraus
+operators, channels on $B$, and unitaries on $B$. The other 1\,950 acted on harmonic chains of
+2 to 4 modes (Sec.~\ref{sec:gaussian}). There the operations were Gaussian unitaries on $A$
+that commute with the bond quadratures, symplectic maps on $B$, and loss on $B$. The worst
+violation of Eqs.~\eqref{eq:mono-a} and~\eqref{eq:mono-b}, and of negativity monotonicity,
+was $2.1\times10^{-14}$. The energy-signalling defect of the sampled instruments was at most
+$1.8\times10^{-14}$.
+
+The checks can fail. In every case a random non-free instrument on $A$ raised $\Wto$, by
+0.96 to 7.72 on qubits and by 0.52 to 2.48 on modes. An energy-injecting channel on $B$ raised
+it by 2.19 to 7.50, but never by more than the injected energy, to within $9.2\times10^{-15}$.
+
+\subsection{Two-way protocols}
+
+On the minimal model we computed the optimal finite-round two-way value with Bob-only
+cash-out. The computation recurses over which party measures in each round, for up to three
+rounds, and the result equals $\Wto$ to $2\times10^{-15}$. On chains the recursion would need
+Bob's full channel optimum on entangled states, so there the evidence is sampled instead. We
+ran 1\,180 random two-way protocols on the minimal model and on Ising chains of 4 to 6 sites.
+Each is a sequence of three moves. A move is a commuting-Kraus instrument on $A$ conditioned
+on the record so far, an instrument on $B$ whose outcome Alice may use, or a cash-out on $B$.
+Across them the ledger of Corollary~\ref{cor:ledger} is conserved to $9.0\times10^{-15}$,
+while a non-free instrument on $A$ breaks it by at least $1.08$.
+
+\subsection{The chains}
+
+Figure~\ref{fig:chain} shows an Ising chain of 10 sites; the data cover
+$L=4$--$12$ and $g\in\{0.5,1,2\}$. Bob's single-site yield is at most $0.686$ of the
+potential with Bob holding the whole complement; the maximum occurs at $g=2$, $d=1$. At
+$L=12$ the potential~\eqref{eq:closed} and the region quantities are computed without forming
+dense $2^L\times2^L$ matrices, and they agree with the dense computation to $10^{-9}$ where
+both run.
+
+\subsection{A Gaussian analogue}
+\label{sec:gaussian}
+
+For a harmonic chain $H=\tfrac12(p\cdot p+x\cdot Kx)$ with Bob holding the complement, the
+bond terms are $x_aK_{ab}x_b$. Homodyne detection of Alice's bond quadratures $x_a$
+commutes with them. Given the outcome vector $\xi$, Bob's conditional state is Gaussian, and
+his effective Hamiltonian acquires the linear term $\xi^{\top}K_{AB}x_B$. That lowers its
+ground energy by $\tfrac12\xi^{\top}K_{AB}K_{BB}^{-1}K_{AB}^{\top}\xi$. Averaging over $\xi$
+gives the analogue of Eq.~\eqref{eq:closed},
+\begin{equation}
+W=\langle\HBl\rangle-E_0(K_{BB})+\tfrac12\Tr\big[K_{AB}K_{BB}^{-1}K_{AB}^{\top}\Sigma\big],
+\label{eq:gauss}
+\end{equation}
+where $\Sigma$ is the covariance of the bond quadratures and $E_0(K_{BB})$ is the ground
+energy of Bob's uncoupled chain. For 2 to 4 modes it agrees with the explicit
+conditional-state integral to $6.0\times10^{-16}$, with $W$ ranging from $0.0017$ to $0.045$
+over the masses studied. Equation~\eqref{eq:gauss} is the value of the homodyne protocol; we
+prove no Gaussian or infinite-dimensional analogue of Theorems~\ref{thm:freeclass}
+and~\ref{thm:linear}.
+
+% ---------------------------------------------------------------------------------------
+\section{Related work}
+\label{sec:related}
+
+\emph{Local extraction.} Strong local passivity was characterized in
+Refs.~\cite{Frey2014,Alhambra2019}. Alhambra \emph{et al.} cast local channel extraction as a
+semidefinite program. Salvia, De Palma, and Giovannetti introduced the local
+ergotropy~\cite{Salvia2023}, whose qubit formula is our Proposition~\ref{prop:salvia}.
+Castellano \emph{et al.} extended it by exploiting the free evolution of system and
+environment~\cite{Castellano2024}. Bhattacharyya \emph{et al.} studied maps that are not
+completely positive~\cite{Bhattacharyya2024}. Ergotropy itself is due to Allahverdyan,
+Balian, and Nieuwenhuizen~\cite{Allahverdyan2004}.
+
+\emph{Quantum energy teleportation.} The protocol and its spin-chain and field-theory
+versions are Hotta's~\cite{Hotta2008,Hotta2009,Hotta2011review}, including energy--entanglement
+relations for the minimal model~\cite{Hotta2010}. Ref.~\cite{Ragula2025} reviews experiments
+and applications. Wang and Yao proved a trade-off between energy and information
+teleportation~\cite{Wang2024}. Haque derived an upper bound on the energy extractable in gapped lattice systems with a
+unique ground state that decays exponentially with the distance~\cite{Haque2026}. Itoh \emph{et al.} derived
+information-thermodynamic bounds~\cite{Itoh2026}. Yan, Zhang, and Wang studied QET on mixed
+steady states prepared by environments~\cite{Yan2026}. Xie, Sajjan, and Kais proposed storing
+the extracted energy in a quantum register~\cite{Xie2024}, which is Bob's device made
+quantum.
+
+\emph{Closest work.} Xie, Sajjan, and Kais~\cite{Xie2025} relax three conventional constraints
+on QET: a ground state, a measurement that commutes with the interaction, and entanglement.
+They introduce Bob's local effective Hamiltonian, which is our $H^{(a)}$. In their protocol
+Alice measures $\sigma_x^A$ while the coupling contains $\sigma_y^A\sigma_y^B$. That
+measurement violates Eq.~\eqref{eq:ens}, since $\Abar^\dagger(\sigma_y^A)=0$, so it is not free
+here, although on their initial state it injects no energy into the coupling. Their bond
+operators $\sigma_x^A$ and $\sigma_y^A$ do not commute, so the model lies outside the scope of
+Proposition~\ref{prop:closed} and Theorem~\ref{thm:freeclass}. Condition~\eqref{eq:ens} is
+state-independent. For commuting bonds, Theorem~\ref{thm:freeclass} shows it is exactly the
+commutation constraint whenever the bond spectrum is in convex position. Wu \emph{et al.}~\cite{Wu2024}
+find strongly locally passive pure states of the minimal model by a correlation-matrix
+analysis, with Bob's yield exceeding Alice's injection for some non-ground states. Fan
+\emph{et al.}~\cite{Fan2024steering} analyse QET with the correlation matrix, relate it to
+quantum steering, and define ``QET passive'' states. Those states are the analogue of our free
+states; their class of allowed operations may differ. Fan \emph{et al.}~\cite{Fan2024resources}
+study how quantum resources affect the efficiency of QET and give necessary and sufficient
+conditions for the minimal model. As far as we know, none of these works formulates a class
+of free operations with a ledger monotone, characterizes the free class, or addresses two-way
+communication.
+
+% ---------------------------------------------------------------------------------------
+\section{Discussion and limitations}
+\label{sec:discussion}
+
+The theory's central object is a linear functional. For commuting bonds in convex
+position, $\Wto(\rho)=\Tr[W_{\rm op}\rho]$, and everything Bob can receive by free means,
+with one-way or two-way communication, is the expectation of one operator. The limitations
+are the following.
+\begin{itemize}
+\item Proposition~\ref{prop:closed} and Theorems~\ref{thm:freeclass} and~\ref{thm:linear}
+assume commuting bond operators. Non-commuting bonds admit no finest free measurement, and we
+do not treat them.
+\item Off convex position we exhibit one free instrument outside the commuting class, not the
+optimal one. Whether two-way communication helps there is open.
+\item The theory credits Bob's side only. Alice's apparatus pays $E_A$, and crediting a second
+device buys nothing net (Table~\ref{tab:twoway}).
+\item For a single-qubit Bob, Eq.~\eqref{eq:salvia} is exact for unitaries, while the channel
+optimum is a semidefinite program~\cite{Alhambra2019}. For a multi-qubit Bob we have no closed
+form.
+\item The entropic bounds are valid but loose by one to two orders of magnitude on the chains.
+\item The numerics are finite-size: at most 12 sites and 4 modes. Nothing here is a
+statement about a thermodynamic limit or a quantum field.
+\end{itemize}
+
+\begin{acknowledgments}
+[Acknowledgments to be supplied.] [Draft disclosure, to be confirmed or edited by the author:
+the analysis code, the numerical checks, and a first draft of this manuscript were produced
+with the assistance of an AI system (Claude, Anthropic); the author is responsible for the
+content.]
+\end{acknowledgments}
+
+% ---------------------------------------------------------------------------------------
+\appendix
+
+\section{Proofs}
+\label{app:proofs}
+
+\emph{Theorem~\ref{thm:ledger}(a).} Fix $\epsilon>0$. For each $\mu$ choose a free
+instrument $\{K'_{\nu|\mu}\}$ and channels $\{\E_{\mu\nu}\}$ that deliver at least
+$\Wto(\rho_\mu)-\epsilon$ from $\rho_\mu$. The composed instrument $\{K'_{\nu|\mu}K_\mu\}$ is
+free, and with the channels $\E_{\mu\nu}$ it delivers
+$\sum_\mu p_\mu[\Wto(\rho_\mu)-\epsilon]$ from $\rho$. Hence
+$\Wto(\rho)\ge\sum_\mu p_\mu\Wto(\rho_\mu)-\epsilon$ for every $\epsilon$.
+
+\emph{Theorem~\ref{thm:ledger}(b).} Let $\rho'=(\id\otimes\E)(\rho)$, fix $\epsilon>0$, and
+choose $(\{K_\mu\},\{\E_\mu\})$ delivering at least $\Wto(\rho')-\epsilon$ from $\rho'$. Run
+the same instrument on $\rho$, with Bob's channels $\E_\mu\circ\E$. Because $K_\mu$ acts on $A$
+and $\E$ on $B$, $(K_\mu\otimes I)\rho'(K_\mu\otimes I)^\dagger=(\id\otimes\E)(\tilde\rho_\mu)$,
+so the final energies of the two runs coincide. By Eq.~\eqref{eq:ens} their initial energies
+are $\Tr[\HBl\rho]$ and $\Tr[\HBl\rho']$, which differ by $w_B(\E,\rho)$. Hence
+$\Wto(\rho)\ge\Wto(\rho')-\epsilon+w_B(\E,\rho)$. The same arguments apply verbatim to $\WCK$.
+
+\emph{Corollary~\ref{cor:ledger}.} Bob's steps obey Eq.~\eqref{eq:mono-b} and raise $D$ by
+$w_B$. Alice's steps obey Eq.~\eqref{eq:mono-a} and leave $D$ unchanged. Communication
+changes nothing. Mixing and discarding flags cannot increase $\Wto$, by convexity. Since
+$\Wto\ge0$, the final $D$ is at most $\Wto(\rho)$.
+
+\emph{Theorem~\ref{thm:freeclass}.} ($\Rightarrow$) Let every $x(b)$ be extreme, and let $v$
+be a unit vector in the range of $\Pi_b$. By Eq.~\eqref{eq:blocks}, $p_a:=\bra vM_{ab}\ket v$
+is a probability distribution with $\sum_ap_ax(a)=x(b)$. Suppose $p_b<1$. Then
+$x(b)=\sum_{a\ne b}q_ax(a)$ with $q_a=p_a/(1-p_b)$, and taking any $a_0$ with $q_{a_0}>0$
+writes $x(b)$ as a combination of $x(a_0)\ne x(b)$ and a point of the hull. That is either
+trivial, which would give $x(a_0)=x(b)$, or contradicts extremality. So $p_b=1$ and $p_a=0$
+for $a\ne b$. Since $M_{ab}\ge0$ is supported in the range of $\Pi_b$ and $v$ was arbitrary,
+$M_{ab}=0$, i.e., $\sum_\mu\|\Pi_aK_\mu\Pi_b\psi\|^2=0$ for all $\psi$. Every $K_\mu$ is
+then block diagonal and commutes with every $\Pi_a$, hence with every $X_j$. ($\Leftarrow$)
+If some $x(b)$ is not extreme, it lies in $\mathrm{conv}\{x(a)\}_{a\ne b}$, because the extreme
+points of the hull of a finite set belong to the set. The instrument~\eqref{eq:witness} is
+then complete, satisfies Eq.~\eqref{eq:ens}, and has $\Pi_aK_a\Pi_b\ne0$.
+
+\emph{Proposition~\ref{prop:surplus}.} Within the proposition's restriction the potential is
+$\WCK$, so $Q=\WCK-\Wloc$ (in the minimal model $\WCK=\Wto$). Write
+$m(\rho):=\min_\E\Tr[\HBl(\id\otimes\E)(\rho)]$, so that $\Wloc(\rho)=\Tr[\HBl\rho]-m(\rho)$,
+and $\Lambda(\rho):=\sum_ap_a\lmin(H^{(a)})$, so that $\WCK(\rho)=\Tr[\HBl\rho]-\Lambda(\rho)$
+by Eq.~\eqref{eq:closed}. Hence $Q=m(\rho)-\Lambda(\rho)$.
+(a) A channel $\E'$ on $B$ leaves the $p_a$ and hence $\Lambda$ unchanged, and
+$m(\E'(\rho))\ge m(\rho)$ because $\E\circ\E'$ is a channel. So $Q$ does not decrease. For a
+commuting-Kraus instrument, $\sum_\mu K_\mu^\dagger\Pi_aK_\mu=\Pi_a$ gives
+$\sum_\mu p_\mu\Lambda(\rho_\mu)=\Lambda(\rho)$. Let $\E^\star$ attain $m(\rho)$. Then
+$\sum_\mu p_\mu m(\rho_\mu)\le\sum_\mu\Tr[\HBl(\id\otimes\E^\star)(\tilde\rho_\mu)]=m(\rho)$
+by Eq.~\eqref{eq:ens}. So $Q$ does not increase on average.
+(b) For a product state, $m=\lmin(\bar H)$ with the mean field
+$\bar H=h\sigma_z+2k\langle\sigma_x^A\rangle\sigma_x$. For $\rho_1$: $\Wto=\Wloc=h+\sqrt{h^2+4k^2}$.
+For $\rho_2$: $\Wto=h+\sqrt{h^2+4k^2}$, since Alice's $\sigma_x$ measurement restores the
+field $\pm2k\sigma_x$ on each branch, while $\Wloc=2h$.
+(c) For $\rho_3$, Bob can measure $\sigma_z$ and prepare the ground state of $H^{(\pm)}$,
+reaching $m=\Lambda=-\sqrt{h^2+4k^2}$, so $Q=0$. $\Tr[\HBl\rho_3]=0$ and
+$\Tr[\HBl\rho_5]=-h$, so the reset delivers $h$. For the product state $\rho_5$,
+$\Wto=\sqrt{h^2+4k^2}-h$ and $\Wloc=0$.
+
+\emph{Proposition~\ref{prop:entropic}.} (a) $U\tau U^\dagger$ has largest eigenvalue
+$e^{-\Hmin(\tau)}$, so it is feasible in the definition of $\kappa$. The minimum is attained
+on states diagonal in the eigenbasis of $H$ by filling the lowest levels to the cap
+$e^{-s}$. (b) Let $Y_U:=H_R-(U^\dagger\otimes I)H_R(U\otimes I)$. Passivity gives
+$\Tr[Y_U\rho_R]\le0$ for every $U$. So
+$E_B=\sum_\mu p_\mu\max_U\Tr[Y_U\tau_\mu]\le\sum_\mu p_\mu\max_U\Tr[Y_U(\tau_\mu-\rho_R)]$.
+For traceless $\delta$, $|\Tr[Y\delta]|\le\tfrac12\spread(Y)\|\delta\|_1$, so this is at most
+$c\sum_\mu p_\mu\|\tau_\mu-\rho_R\|_1=\tfrac c2\|\tau_+-\tau_-\|_1$. The Helstrom formula
+$e^{-\Hmin(X|R)}=\tfrac12+\tfrac14\|\tau_+-\tau_-\|_1$~\cite{KRS2009} gives Eq.~\eqref{eq:guess}.
+
+\section{Code and data}
+\label{app:code}
+
+Every number in this paper comes from archived data produced by one script. The script is
+\url{papers/resource-theory-vacuum-manipulation/notebook.py} (SHA-256
+\texttt{ddd18909\ldots e68f}), run on 5 September 2026 on a tree whose full test suite passed.
+The candidate's own tests are in \url{tests/test_resource_theory.py} (44 tests). The
+figure tables are written from the archive by \url{export_figdata.py} next to this
+manuscript. Three statements were checked separately while this draft was written: the
+certified gap at $L=6$ (Sec.~\ref{sec:single}), the identity of Eq.~\eqref{eq:EBmax} with
+Hotta's formula, and Proposition~\ref{prop:surplus}(c). The code and data are available at
+\url{https://github.com/mruckman1/vacuum_energy}. Its numbering differs from the paper's, as
+follows.
+
+\begin{table}[h]
+\caption{Correspondence between this paper and the module docstring of
+\texttt{vacuum/qet/resource.py}.}
+\label{tab:map}
+\begin{ruledtabular}
+\begin{tabular}{ll}
+This paper & Code \\
+\hline
+Eq.~\eqref{eq:ens}, energy non-signalling & Eq.~(2)\\
+Eq.~\eqref{eq:W}, the potential & Eq.~(3)\\
+Proposition~\ref{prop:closed} & Proposition A, Eq.~(4)\\
+Theorem~\ref{thm:ledger} & Theorem 1, Eqs.~(5a)--(5b)\\
+Theorem~\ref{thm:freeclass}, Eqs.~\eqref{eq:blocks}--\eqref{eq:witness} & Theorem 2, Eqs.~(7)--(8)\\
+Eq.~\eqref{eq:sdp} & Eq.~(20)\\
+Theorem~\ref{thm:linear} & Theorem 4, Eqs.~(10)--(11)\\
+Corollary~\ref{cor:twoway} & Eq.~(12)\\
+Proposition~\ref{prop:surplus} & surplus section\\
+Proposition~\ref{prop:salvia} & Proposition B, Eq.~(15)\\
+Proposition~\ref{prop:entropic}(a) & chain (ii)\\
+Proposition~\ref{prop:entropic}(b) & Proposition C, Eq.~(17)\\
+Eq.~\eqref{eq:gauss} & Gaussian mirror\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\bibliography{refs}
+
+\end{document}

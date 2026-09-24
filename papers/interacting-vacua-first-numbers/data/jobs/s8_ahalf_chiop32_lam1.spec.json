@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 32, "m": 0.25, "tau0": 1.5, "lam": 1.0, "n_max": 8, "tag": "ahalf_chiop32_lam1", "section": "S8", "part": "tau0", "threads": 2, "chi_gs": 16, "kw": {"chi_op": 32, "chi_acc": 64, "chi_mpo": 128, "weight_decay": 0.5, "chi_dmrg": 16}, "priority": 68.0, "axis": "a_half", "est_wall_s": 3600.0, "cost": 3600.0}

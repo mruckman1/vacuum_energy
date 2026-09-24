@@ -1,0 +1,154 @@
+{
+ "_source": "notebook_qei_exact.py::S5h",
+ "settings": {
+  "n_max": 8,
+  "chi_op": 32,
+  "chi_acc": 64,
+  "chi_mpo": 128,
+  "weight_decay": 0.5,
+  "chi_dmrg": 16
+ },
+ "band_lam0": 0.0019228899680709954,
+ "rows": [
+  {
+   "lam": 0.0,
+   "E_min": -0.02269721061068264,
+   "E_hartree_exact": -0.02265365013409959,
+   "E_free_exact": -0.02265365013409959,
+   "ratio_exact_over_hartree_exact": 1.001922889968071,
+   "ratio_exact_over_free_exact": 1.001922889968071,
+   "residual": -0.0019228899680709954,
+   "residual_ctrl_normalized": 0.0,
+   "trunc_op_weighted": 0.0015216654198235678,
+   "ref_consistency": 0.0002873899741393515,
+   "time_s": 2972.858537912369
+  },
+  {
+   "lam": 0.25,
+   "E_min": -0.02016668695301549,
+   "E_hartree_exact": -0.02040542049335503,
+   "E_free_exact": -0.02265365013409959,
+   "ratio_exact_over_hartree_exact": 0.9883004841572716,
+   "ratio_exact_over_free_exact": 0.8902179928460809,
+   "residual": 0.011699515842728436,
+   "residual_ctrl_normalized": 0.013596261695581702,
+   "trunc_op_weighted": 0.001224607521197806,
+   "ref_consistency": 0.0005073505607778861,
+   "time_s": 3021.610223054886
+  },
+  {
+   "lam": 0.5,
+   "E_min": -0.018339336071263146,
+   "E_hartree_exact": -0.018578194472199883,
+   "E_free_exact": -0.02265365013409959,
+   "ratio_exact_over_hartree_exact": 0.9871430778004741,
+   "ratio_exact_over_free_exact": 0.8095532491542152,
+   "residual": 0.012856922199525944,
+   "residual_ctrl_normalized": 0.014751446758610287,
+   "trunc_op_weighted": 0.0009193114661458979,
+   "ref_consistency": 0.0003945057156033993,
+   "time_s": 3114.538945198059
+  },
+  {
+   "lam": 1.0,
+   "E_min": -0.01535769695992717,
+   "E_hartree_exact": -0.015730674218318197,
+   "E_free_exact": -0.02265365013409959,
+   "ratio_exact_over_hartree_exact": 0.9762898110268726,
+   "ratio_exact_over_free_exact": 0.6779347641115845,
+   "residual": 0.023710188973127377,
+   "residual_ctrl_normalized": 0.025583883947411623,
+   "trunc_op_weighted": 0.0008886385080605151,
+   "ref_consistency": 0.0007889966643110924,
+   "time_s": 3126.750643968582
+  },
+  {
+   "lam": 2.0,
+   "E_min": -0.01157824056534651,
+   "E_hartree_exact": -0.01187275927628817,
+   "E_free_exact": -0.02265365013409959,
+   "ratio_exact_over_hartree_exact": 0.9751937435866436,
+   "ratio_exact_over_free_exact": 0.5110982334770974,
+   "residual": 0.02480625641335643,
+   "residual_ctrl_normalized": 0.026677847815493316,
+   "trunc_op_weighted": 0.0011794317305204114,
+   "ref_consistency": 0.0015283490058892735,
+   "time_s": 3182.5943508148193
+  },
+  {
+   "lam": 3.0,
+   "E_min": -0.008386593059953151,
+   "E_hartree_exact": -0.009330783363987294,
+   "E_free_exact": -0.02265365013409959,
+   "ratio_exact_over_hartree_exact": 0.8988091066739047,
+   "ratio_exact_over_free_exact": 0.37020934861747357,
+   "residual": 0.10119089332609532,
+   "residual_ctrl_normalized": 0.10291588736679358,
+   "trunc_op_weighted": 0.0015045591328046374,
+   "ref_consistency": 0.002580756325992306,
+   "time_s": 3261.113422870636
+  },
+  {
+   "lam": 4.0,
+   "E_min": -0.006644338935471117,
+   "E_hartree_exact": -0.0075215105970971585,
+   "E_free_exact": -0.02265365013409959,
+   "ratio_exact_over_hartree_exact": 0.8833782588879717,
+   "ratio_exact_over_free_exact": 0.2933010307892798,
+   "residual": 0.11662174111202828,
+   "residual_ctrl_normalized": 0.11831712027646857,
+   "trunc_op_weighted": 0.002006874586938175,
+   "ref_consistency": 0.0001660744162830241,
+   "time_s": 3218.694051027298
+  }
+ ],
+ "small_lambda_fit": {
+  "exponent": 0.4560126319776134,
+  "prefactor": 0.023659942409213233,
+  "exponent_range_within_band": [
+   0.3042304924866378,
+   0.6182828087192396
+  ],
+  "points": [
+   [
+    0.25,
+    0.013596261695581702
+   ],
+   [
+    0.5,
+    0.014751446758610287
+   ],
+   [
+    1.0,
+    0.025583883947411623
+   ]
+  ]
+ },
+ "pt_anchor": {
+  "dR_dlambda_at_0": 0.0809088379025304,
+  "dE_min": 0.011930224661680512,
+  "dE_hartree": 0.010097344155080012,
+  "dE_star_quartic": 0.036220188158550944,
+  "dE_star_dynamic": 0.0074807184079081455,
+  "dE_ref": 0.031770681904778574,
+  "E_free": -0.02265365013409959,
+  "predicted_residual_O1": {
+   "lam=0": 0.0,
+   "lam=0.25": 0.0202272094756326,
+   "lam=0.5": 0.0404544189512652,
+   "lam=1": 0.0809088379025304,
+   "lam=2": 0.1618176758050608,
+   "lam=3": 0.24272651370759118,
+   "lam=4": 0.3236353516101216
+  },
+  "measured_minus_predicted": {
+   "lam=0": 0.0,
+   "lam=0.25": -0.006630947780050897,
+   "lam=0.5": -0.02570297219265491,
+   "lam=1": -0.05532495395511877,
+   "lam=2": -0.13513982798956747,
+   "lam=3": -0.1398106263407976,
+   "lam=4": -0.205318231333653
+  }
+ }
+}

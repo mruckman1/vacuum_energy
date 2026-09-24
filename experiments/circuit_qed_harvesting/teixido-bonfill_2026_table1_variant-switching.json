@@ -1,0 +1,175 @@
+{
+  "source": "DECLARED VARIANT (file-level 'synthetic': the SELECTION of operating points is ours; no synthetic number) of A. Teixido-Bonfill, X. Dai, A. Lupascu, E. Martin-Martinez, Phys. Rev. A 113, 043732 (2026); arXiv:2505.01516. Every number in this file is either transcribed from the parent's text, table or figure captions (location given per quantity) or derived from such numbers by the arithmetic stated in its note. What remains 'ours' is only the SELECTION of three published operating points and the names given to them.",
+  "location": "Parent arXiv:2505.01516v1: Sec. VI.A (t_d = 1 ns, d = 12 cm, v), Sec. VI.D text (duration thresholds 0.45/0.5/1 ns), Sec. VI.E text (causal contact |t_delta| ~ t_d), Fig. 13-14 captions (spacelike arrangement t_delta = t_d - T), Fig. 15 caption (t_d = 0.5 ns), Fig. 17 caption (scenario-1 durations), Fig. 23(c) caption (T = t_d = 0.16 ns), Table I (gamma column).",
+  "retrieved": "2026-09-01",
+  "transcribed_by": "vacuum-program build agent (gap-closure pass 2026-09-01; original M2.6 variant 2026-09-01)",
+  "synthetic": true,
+  "variant_of": "circuit_qed_harvesting/teixido-bonfill_2026_table1",
+  "supersedes": "The M2.6 version of this file declared three SYNTHETIC (T, L) operating points -- spacelike 0.1 ns / 30 mm, causal 1.0 ns / 6 mm, marginal 0.25 ns / 30 mm -- and a synthetic gamma sampling [0, 0.05, 0.11, 0.22], justified by the claim that the parent 'pins no duration in ns and no separation in mm'. That claim was wrong (see the parent's 'supersedes'). Every operating point is now built from published numbers and the gamma schedule is the parent's Table I column. Results computed from the old values (papers/circuit-qed-noise-thresholds, summary.json of 2026-09-01) must be re-run before being cited against this file.",
+  "comment": "SYNTHETIC AT FILE LEVEL ONLY. The loader's file-level flag is kept true because the SELECTION (choice and naming) of three operating points on the causal structure of the switching is a simulation decision, and the parent never computes the 'causal' combination as one scenario; but 'synthetic_quantities' is EMPTY: every number below is transcribed from the parent (location given) or derived from transcribed numbers by stated arithmetic. 'spacelike' is the parent's default exploration point (Fig. 14: t_d = 1 ns, d = 12 cm, scenario-1 cosine-ramps duration T = 0.21 ns from Fig. 17, delay t_delta = t_d - T placing the supports exactly at the spacelike boundary; with t_delta = 0 the pair is spacelike by a wider margin). 'marginal' is the parent's Fig. 23(c) point (isosceles trapezoid T = 0.16 ns = t_d, t_delta = 0: the Fig. 13(b)/Fig. 16 light-cone-boundary arrangement). 'causal' pairs the parent's shortest published light-crossing delay t_d = 0.16 ns (Fig. 23(c)) with the top of its published duration range T = 1 ns (Sec. VI.D), so t_d/T = 0.16: deep causal contact for every delay; its delay is the parent's causal-contact condition |t_delta| ~ t_d (Sec. VI.E). Duration convention: the cosine-ramps and trapezoid shapes are compactly supported on [-T/2, T/2] (parent App. C, Eq. C19), so T is the FULL window for every operating point here. Separations not stated by the parent are DERIVED as d = v * t_d with the parent's v = 1.2e8 m/s (Sec. II.1); the parent's own d = 12 cm at t_d = 1 ns reproduces under this rule, which is the cross-check. Separations are stored in mm (the program's length convention for this platform); the parent's printed '12 cm' is kept in 'printed'. Each point states its causal character so a results row cannot silently mislabel a spacelike run.",
+  "provenance_tags": "Per-quantity 'provenance' in {'transcribed', 'derived'}; this variant has NO synthetic quantity ('synthetic_quantities' is empty, asserted by tests/test_experiments_io.py); the file-level 'synthetic' flag records only that the operating-point SELECTION is ours. Derived quantities name their inputs in 'derived_from' and their formula in the note.",
+  "synthetic_quantities": [],
+  "derived_quantities": [
+    "switching_delay_spacelike",
+    "switching_delay_causal",
+    "detector_separation_causal",
+    "detector_separation_marginal"
+  ],
+  "changes": {
+    "switching_duration_spacelike": "ADDED from parent Fig. 17 caption: T = 0.21 ns (cosine ramps, S_f = 0, scenario 1); replaces the synthetic 0.1 ns",
+    "switching_shape_spacelike": "ADDED (label): the shape the transcribed duration belongs to",
+    "signaling_time_spacelike": "ADDED from parent Sec. VI.A: t_d = 1 ns",
+    "detector_separation_spacelike": "ADDED from parent Sec. VI.A: d = 12 cm, stored as 120 mm (prefix rescaling only; 'printed' keeps the source string); replaces the synthetic 30 mm",
+    "switching_delay_spacelike": "ADDED (derived): t_delta = t_d - T = 0.79 ns, the parent's Fig. 14 spacelike-boundary arrangement",
+    "switching_duration_causal": "ADDED from parent Sec. VI.D text: T = 1 ns, the upper end of the published duration range; the old synthetic value happened to coincide (1.0 ns) but is now sourced",
+    "switching_shape_causal": "ADDED (label)",
+    "signaling_time_causal": "ADDED from parent Fig. 23(c) caption: t_d = 0.16 ns, the shortest published light-crossing delay, giving t_d/T = 0.16 (deep causal contact)",
+    "detector_separation_causal": "ADDED (derived): d = v * t_d = 19.2 mm; replaces the synthetic 6 mm",
+    "switching_delay_causal": "ADDED (derived): t_delta = t_d = 0.16 ns, the parent's causal-contact condition |t_delta| ~ t_d (Sec. VI.E)",
+    "switching_duration_marginal": "ADDED from parent Fig. 23(c) caption: T = 0.16 ns (isosceles trapezoid, S_f = 0.2); replaces the synthetic 0.25 ns",
+    "switching_shape_marginal": "ADDED (label)",
+    "signaling_time_marginal": "ADDED from parent Fig. 23(c) caption: t_d = 0.16 ns",
+    "detector_separation_marginal": "ADDED (derived): d = v * t_d = 19.2 mm; replaces the synthetic 30 mm",
+    "switching_delay_marginal": "ADDED from parent Fig. 23 caption (|t_delta| = t_d - T = 0) and Fig. 13(b)/16 (t_delta = 0)",
+    "gap_schedule_gamma": "REPLACED the synthetic sampling [0, 0.05, 0.11, 0.22] by the parent's Table I gamma column [0, 0.02, 0.07, 0.14, 0.22, -0.02]; the LAW Delta-Omega/2pi = -23*gamma GHz (Eq. 30) is the parent's and so are now the sample points",
+    "waveguide_speed": "unchanged copy of the parent (Sec. II.1), repeated so the derived separations are checkable without a second file",
+    "qubit_gap_frequency": "unchanged copy of the parent (Eq. 30)"
+  },
+  "quantities": {
+    "switching_duration_spacelike": {
+      "value": 0.21,
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "parent Fig. 17 caption, middle column (scenario 1: lambda -> 0, Delta-Omega -> 0)",
+      "note": "cosine-ramps switching, S_f = 0; compactly supported, so T = 0.21 ns is the full switching window. Spectral width ~1/T ~ 5 GHz, inside the parent's 50 GHz UV cutoff and the device's 4-8 GHz readout band (janzen_2023_fig6)"
+    },
+    "switching_shape_spacelike": {
+      "value": "cosine ramps, S_f = 0 (parent Eq. 71)",
+      "units": "label",
+      "provenance": "transcribed",
+      "location": "parent Fig. 17 caption"
+    },
+    "signaling_time_spacelike": {
+      "value": 1,
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "parent Sec. VI.A; Fig. 14 caption",
+      "note": "t_d = d/v = 1 ns, the parent's default light-crossing delay"
+    },
+    "detector_separation_spacelike": {
+      "value": 120.0,
+      "units": "mm",
+      "printed": "d = 12 cm",
+      "provenance": "transcribed",
+      "location": "parent Sec. VI.A",
+      "note": "'the detectors are separated by d = 12 cm, which is feasible with the current fabrication methods [78]'. Published as 12 cm; stored as 120 mm (prefix rescaling, no convention change). t_d/T = 4.8: the supports cannot overlap in the causal sense even at t_delta = 0, so M_comm must vanish (spec M2.5 test)"
+    },
+    "switching_delay_spacelike": {
+      "value": 0.79,
+      "units": "ns",
+      "provenance": "derived",
+      "derived_from": "signaling_time_spacelike, switching_duration_spacelike",
+      "location": "parent Fig. 14 caption: 'we explore the boundary where interactions become spacelike, by choosing t_delta = t_d - T'",
+      "note": "t_delta = t_d - T = 1 - 0.21 = 0.79 ns: detector B switches 0.79 ns after A, placing the compact supports exactly on the spacelike boundary (Fig. 13(a)). Any smaller |t_delta| (including 0) is spacelike by a larger margin"
+    },
+    "switching_duration_causal": {
+      "value": 1.0,
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "parent Sec. VI.D text (end): 'For T in [0.5 ns, 1 ns], only t_d = 1 ns allows for the detectors to be spacelike'",
+      "note": "the upper end of the published duration range ('For T in [0.5 ns, 1 ns], only t_d = 1 ns allows for the detectors to be spacelike'); at the t_d = 0.16 ns below the pair is causally connected for every delay (t_d/T = 0.16). Compact-support shape as in Figs. 14-15, so T is the full window"
+    },
+    "switching_shape_causal": {
+      "value": "compact-support shape of parent Figs. 14-15: cosine ramps (S_f = 0) or isosceles trapezoid (S_f = 0.2)",
+      "units": "label",
+      "provenance": "transcribed",
+      "location": "parent Figs. 14-15 captions"
+    },
+    "signaling_time_causal": {
+      "value": 0.16,
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "parent Fig. 23(c) caption; App. C text",
+      "note": "the parent's shortest published light-crossing delay, 'reducing the distance between the detectors to t_d = 0.16 ns'; paired here with T = 1 ns it is deep causal contact (t_d << T), the regime in which the parent reports that gap-varying detectors still become entangled"
+    },
+    "detector_separation_causal": {
+      "value": 19.2,
+      "units": "mm",
+      "provenance": "derived",
+      "derived_from": "signaling_time_causal, waveguide_speed",
+      "location": "not stated by the parent (only t_d is)",
+      "note": "d = v * t_d = 1.2e8 m/s * 0.16 ns = 19.2 mm (the same separation as the marginal point; the two points differ in T)"
+    },
+    "switching_delay_causal": {
+      "value": 0.16,
+      "units": "ns",
+      "provenance": "derived",
+      "derived_from": "signaling_time_causal",
+      "location": "parent Sec. VI.E text: 'negativity is higher when the detectors are in causal contact, i.e. |t_delta| ~ t_d'",
+      "note": "t_delta = t_d = 0.16 ns (B switched one light-crossing after A): full light contact, where the parent reports that gap-varying detectors still become entangled, mostly through communication (harvesting estimator, Figs. 17-22 second row)"
+    },
+    "switching_duration_marginal": {
+      "value": 0.16,
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "parent Fig. 23(c) caption; also Fig. 17 caption right column (scenario 1)",
+      "note": "isosceles trapezoid, S_f = 0.2, full window 0.16 ns; equal to t_d below: the light-cone boundary, where the communication split M_vac / M_comm is most informative"
+    },
+    "switching_shape_marginal": {
+      "value": "isosceles trapezoid, S_f = 0.2 (parent Eq. 72)",
+      "units": "label",
+      "provenance": "transcribed",
+      "location": "parent Fig. 23(c) caption"
+    },
+    "signaling_time_marginal": {
+      "value": 0.16,
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "parent Fig. 23(c) caption; App. C text",
+      "note": "t_d = 0.16 ns = T"
+    },
+    "detector_separation_marginal": {
+      "value": 19.2,
+      "units": "mm",
+      "provenance": "derived",
+      "derived_from": "signaling_time_marginal, waveguide_speed",
+      "location": "not stated by the parent (only t_d is)",
+      "note": "d = v * t_d = 1.2e8 m/s * 0.16 ns = 19.2 mm"
+    },
+    "switching_delay_marginal": {
+      "value": 0,
+      "units": "ns",
+      "provenance": "transcribed",
+      "location": "parent Fig. 23 caption ('|t_delta| = t_d - T', = 0 for panel (c)); Fig. 13(b) and Fig. 16 captions ('t_d = T, t_delta = 0')",
+      "note": "simultaneous switching with t_d = T: the parent's light-cone-boundary arrangement, 'where the most entanglement is found' (Sec. VI.D)"
+    },
+    "gap_schedule_gamma": {
+      "value": [
+        0,
+        0.02,
+        0.07,
+        0.14,
+        0.22,
+        -0.02
+      ],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "location": "parent Table I, column gamma (scenarios 1-6)",
+      "note": "gamma values at which the parent's Eq. (30) law Delta-Omega/2pi = -23*gamma GHz is evaluated; scenario 1 printed as '-> 0', stored as 0. The parent's own Table I lists the resulting Delta-Omega/2pi as 0, -0.5, -1.6, -3.4, -5.2, 0.5 GHz via the rounded 5.2*lambda form"
+    },
+    "waveguide_speed": {
+      "value": 120000000.0,
+      "units": "m/s",
+      "provenance": "transcribed",
+      "location": "parent, Eq. (7), Sec. II.1; Sec. VI.A",
+      "note": "unchanged from the parent; repeated so the derived separations above convert without a second file"
+    },
+    "qubit_gap_frequency": {
+      "value": 7.3,
+      "units": "GHz",
+      "provenance": "transcribed",
+      "location": "parent, Eq. (30), Sec. III.1.4",
+      "note": "unchanged from the parent (stated there as approximate)"
+    }
+  }
+}

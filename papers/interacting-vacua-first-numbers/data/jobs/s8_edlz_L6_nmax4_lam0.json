@@ -1,0 +1,91 @@
+{
+ "spec": {
+  "kind": "ed_lanczos",
+  "L": 6,
+  "m": 0.5,
+  "tau0": 0.75,
+  "lam": 0.0,
+  "n_max": 4,
+  "tag": "edlz_L6_nmax4_lam0",
+  "section": "S8",
+  "part": "ed",
+  "threads": 2,
+  "dt": 0.375,
+  "priority": 98.0,
+  "dt_fine": 0.125,
+  "tol": 1e-10,
+  "ncv": 80,
+  "est_wall_s": 937.5,
+  "cost": 937.5
+ },
+ "row": {
+  "E_min": -0.020239658919991244,
+  "E_star": 0.9093575366809046,
+  "E_ref": 0.9295971956008958,
+  "E_min_trapezoid": -0.020239658919991244,
+  "E_min_fine": -0.02023947084917832,
+  "dt_fine": 0.125,
+  "rel_quadrature_fine_minus_grid": 9.292192801598814e-06,
+  "E_star_even": 0.9093575366809046,
+  "E_star_odd": 0.9095680631936576,
+  "sector_star": 0,
+  "E_vac": 4.2695092465278135,
+  "h_vac": 0.6992920957092373,
+  "E_free_exact": -0.01989537780959383,
+  "E_hartree_exact": -0.01989537780959383,
+  "mu_H2": 0.25,
+  "ratio_exact_over_free_exact": 1.0173045776608172,
+  "ratio_exact_over_hartree_exact": 1.0173045776608172,
+  "n_max": 4,
+  "L": 6,
+  "m": 0.5,
+  "lam": 0.0,
+  "tau0": 0.75,
+  "route": "ed_lanczos",
+  "kernel": "trapezoid",
+  "dt": 0.375,
+  "n_steps": 8,
+  "dim": 15625,
+  "dim_sectors": [
+   7813,
+   7812
+  ],
+  "omega": 1.2782188733130382,
+  "spectral_bounds": {
+   "0": [
+    4.2695092465278135,
+    49.77140309597745
+   ],
+   "1": [
+    4.939064405077831,
+    49.77085299893126
+   ]
+  },
+  "n_cheb": {
+   "0": 34,
+   "1": 33
+  },
+  "matvecs": {
+   "0": {
+    "lanczos": 642,
+    "sparse": 338976
+   },
+   "1": {
+    "lanczos": 602,
+    "sparse": 308224
+   }
+  },
+  "lanczos_residuals": {
+   "0": 4.918515737032042e-11,
+   "1": 8.363490390354795e-11
+  },
+  "time_sector_s": {
+   "0": 75.46175813674927,
+   "1": 64.74367189407349
+  },
+  "time_s": 218.38820719718933,
+  "tag": "edlz_L6_nmax4_lam0",
+  "section": "S8",
+  "threads": "2"
+ }
+}

@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 6, "m": 0.5, "tau0": 0.75, "lam": 0.0, "n_max": 6, "tag": "anchor_sweepknobs_L6_nmax6_lam0", "section": "S8", "part": "mpo_anchor", "threads": 2, "chi_gs": 16, "kw": {"chi_op": 32, "chi_acc": 64, "chi_mpo": 128, "weight_decay": 0.5, "chi_dmrg": 16}, "priority": 78.0, "axis": "sweep_knobs", "est_wall_s": 123.50823045267491, "cost": 123.50823045267491}

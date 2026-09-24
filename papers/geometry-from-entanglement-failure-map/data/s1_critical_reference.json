@@ -1,0 +1,60 @@
+{
+  "_source": "notebook.py::S1",
+  "report": {
+    "I_max": 0.03751565922629463,
+    "floor_fraction": 0.0,
+    "diameter": 6.496141261776635,
+    "stress_flat": 0.10849511014201299,
+    "distortion_flat": 1.8472793946201047,
+    "stress_hyp": 0.05965486300076574,
+    "distortion_hyp": 1.1820818994175566,
+    "curvature_radius": 1.3732350851360264,
+    "hyperbolic_advantage": 0.04884024714124725,
+    "delta": 0.7337622569854485,
+    "delta_rel": 0.11295355618310111,
+    "slope_log": 2.0568292191563624,
+    "intercept_log": -1.3322680397108657,
+    "r2_log": 0.9995281138319058,
+    "slope_lin": 0.14434333739685404,
+    "intercept_lin": 1.4503791387533207,
+    "r2_lin": 0.8362382367704041,
+    "scatter": 6.838079389268636e-17,
+    "n_pairs": 276
+  },
+  "mera": {
+    "chi": 8,
+    "meta": {
+      "chi": 8,
+      "chi0": 8,
+      "n_transitional": 2,
+      "init": "local",
+      "n_sweeps_done": 2000,
+      "last_energy": -1.2732281852382992,
+      "n_sweeps": 2000,
+      "n_hbar": 3,
+      "traceless": true,
+      "wall": 613.5805921670981,
+      "produced_by": "vacuum.geometry.mera: local_init_mera(chi) -> optimize_mera(n_sweeps=2000, n_hbar=3, n_power=20, traceless=True), Z2 parity masks",
+      "wall_time_note": "3 concurrent optimizations shared the CPU; ~220 s single-process",
+      "model": "H = -sum XX - sum Z, g = J = 1",
+      "exact_e0": -1.2732395447351628,
+      "date_utc": "2026-09-02"
+    },
+    "geodesic_vs_log3_sep": {
+      "slope": 4.859940966527273,
+      "intercept": -0.6554321151487424
+    },
+    "min_cut_bond_counts": {
+      "3": 3,
+      "9": 7,
+      "27": 11,
+      "81": 15,
+      "243": 19
+    }
+  },
+  "d_mi_vs_mera_geodesic": {
+    "slope": 0.44976717123706106,
+    "intercept": 1.3951761987124365,
+    "r2": 0.950690917321547
+  }
+}

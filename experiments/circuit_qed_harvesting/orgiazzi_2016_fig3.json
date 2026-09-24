@@ -1,0 +1,160 @@
+{
+  "source": "J.-L. Orgiazzi, C. Deng, D. Layden, R. Marchildon, F. Kitapli, F. Shen, M. Bal, F. R. Ong, A. Lupascu, 'Flux qubits in a planar circuit quantum electrodynamics architecture: quantum control and decoherence', Phys. Rev. B 93, 104518 (2016); arXiv:1407.1346",
+  "location": "arXiv:1407.1346v1 full text (the only arXiv version; the PRB version of record was not accessible beyond its abstract, which rounds the relaxation times to '5 and 10 us' and quotes the qubit-qubit coupling as 38 MHz). Running text of the relaxation and dephasing sections around Figs. 2-3, and the Supplementary Material (setup). Per-quantity locations below.",
+  "retrieved": "2026-09-01",
+  "transcribed_by": "vacuum-program build agent (gap-closure pass 2026-09-01)",
+  "comment": "The Lupascu group's time-domain (Ramsey / spin-echo) decoherence measurements on persistent-current flux qubits, included because the harvesting-device paper (janzen_2023_fig6) gives pure dephasing only as a plot-digitized transmission-fit quantity. This is a DIFFERENT device: two four-junction aluminium flux qubits coupled to a coplanar-waveguide RESONATOR (cQED readout), not the tunable-coupler qubit on an open waveguide. Its numbers are measured floors for what Lupascu-group flux qubits reach, not parameters of the harvesting device. Rate convention: the paper prints the pure-dephasing rates as exponential decay rates in us^-1 (fit C(tau) = exp(-Gamma_1 tau/2) exp(-Gamma_phi tau) ...). The loader's unit table has no inverse-microsecond unit and its 'MHz' entry applies the energy rule (x 2pi), which would be WRONG for these rates; they are therefore stored in s^-1 under the 'rad/s' entry (a decay rate in s^-1 is an angular rate: no 2pi), with the printed string kept in 'printed'. That is a prefix rescaling (x 1e6), not a convention change.",
+  "provenance_tags": "Per-quantity 'provenance' is 'transcribed' throughout; no synthetic or derived quantities ('synthetic_quantities' empty, asserted by tests/test_experiments_io.py). 'kind' is 'measured' unless stated ('bound', 'calculated').",
+  "synthetic_quantities": [],
+  "derived_quantities": [],
+  "quantities": {
+    "T1_qubit1": {
+      "value": 5.3,
+      "units": "us",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "energy-relaxation paragraph (Fig. 3(a))",
+      "note": "'The energy relaxation times are T_1 = 5.3 us and 9.6 us for qubits 1 and 2 respectively at their symmetry points' (PRB abstract rounds to '5 and 10 us')"
+    },
+    "T1_qubit2": {
+      "value": 9.6,
+      "units": "us",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "energy-relaxation paragraph (Fig. 3(b))"
+    },
+    "intrinsic_T1_qubit1": {
+      "value": 7,
+      "units": "us",
+      "provenance": "transcribed",
+      "kind": "calculated",
+      "location": "abstract; energy-relaxation paragraph",
+      "note": "'If the relaxation due to these sources (Purcell effect through the first 10 resonator modes and the control line) is excluded, we calculate intrinsic relaxation times of 7 (20) us for qubit 1 (2)'"
+    },
+    "intrinsic_T1_qubit2": {
+      "value": 20,
+      "units": "us",
+      "provenance": "transcribed",
+      "kind": "calculated",
+      "location": "abstract; energy-relaxation paragraph"
+    },
+    "pure_dephasing_rate_ramsey_qubit1": {
+      "value": 7.7e5,
+      "units": "rad/s",
+      "printed": "Gamma_phi,R = 0.77 us^-1",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "dephasing paragraph (Figs. 3(a),(b))",
+      "note": "'At the symmetry point, decay is exponential, with rates Gamma_phi,R = 0.77 (0.90) us^-1 for Ramsey and Gamma_phi,E = 1.03 (1.85) us^-1 for spin-echo measurements for qubit 1 (2)'. Stored as 0.77e6 s^-1 (see file comment on the unit); the printed echo rates exceeding the Ramsey rates is as published"
+    },
+    "pure_dephasing_rate_ramsey_qubit2": {
+      "value": 9.0e5,
+      "units": "rad/s",
+      "printed": "Gamma_phi,R = 0.90 us^-1",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "dephasing paragraph"
+    },
+    "pure_dephasing_rate_echo_qubit1": {
+      "value": 1.03e6,
+      "units": "rad/s",
+      "printed": "Gamma_phi,E = 1.03 us^-1",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "dephasing paragraph"
+    },
+    "pure_dephasing_rate_echo_qubit2": {
+      "value": 1.85e6,
+      "units": "rad/s",
+      "printed": "Gamma_phi,E = 1.85 us^-1",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "dephasing paragraph"
+    },
+    "dephasing_character_symmetry_point": {
+      "value": "exponential decay at the symmetry point, dominated by a nearly frequency-independent white noise source (dynamical-decoupling noise spectroscopy, Fig. 3(f)); Gaussian (1/f flux-noise) decay away from it",
+      "units": "label",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "dephasing paragraph; Figs. 3(c)-(g)"
+    },
+    "flux_noise_amplitude_qubit1": {
+      "value": "sqrt(A) = 2.6 uPhi_0/sqrt(Hz) at 1 Hz",
+      "units": "label",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "abstract; dephasing paragraph",
+      "note": "1/f flux noise PSD A/|omega|, from the slope of the spin-echo dephasing rate versus flux bias; 'slightly larger than for the smaller aluminum flux qubits' of earlier work, 'in qualitative agreement with size scaling'"
+    },
+    "flux_noise_amplitude_qubit2": {
+      "value": "sqrt(A) = 2.7 uPhi_0/sqrt(Hz) at 1 Hz",
+      "units": "label",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "abstract; dephasing paragraph"
+    },
+    "readout_contrast": {
+      "value": 72,
+      "units": "percent",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "abstract; readout paragraph (Fig. 1(g))",
+      "note": "'Dispersive qubit state readout reaches a maximum contrast of 72%'; 'limited primarily by the initialization procedure which is based on thermalization'"
+    },
+    "mixing_chamber_temperature": {
+      "value": 40,
+      "units": "mK",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "Supplementary Material, setup paragraph",
+      "note": "'The temperature measured at the mixing chamber level of the custom designed top loading probe, to which the device copper box is attached, was 40 mK'"
+    },
+    "resonator_decay_rate_mode1": {
+      "value": 882,
+      "units": "kHz",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "dephasing paragraph (photon-shot-noise estimate)",
+      "note": "kappa = 882 kHz, 'the resonator decay rate for the first mode'; printed as kHz, so the loader's x 2pi energy rule inherits the same factor-2pi ambiguity as the parent device paper"
+    },
+    "thermal_photon_number_bound": {
+      "value": 0.02,
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "bound",
+      "location": "dephasing paragraph",
+      "note": "'an upper bound for the thermal photon number n_th < 0.02' in the readout resonator, from spectroscopy and simulation"
+    },
+    "photon_shot_noise_dephasing_bound": {
+      "value": 18,
+      "units": "kHz",
+      "provenance": "transcribed",
+      "kind": "bound",
+      "location": "dephasing paragraph",
+      "note": "'the dephasing rate, given by kappa n_th ... is smaller than 18 kHz, thus a negligible contribution' at the symmetry point"
+    },
+    "qubit_qubit_coupling": {
+      "value": 37.8,
+      "units": "MHz",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "coupling paragraph (Fig. 4); PRB abstract quotes '38 MHz'",
+      "note": "resonator-mediated qubit-qubit coupling 'of 37.8 MHz', characterised spectroscopically"
+    },
+    "quasiparticle_density_estimate": {
+      "value": "0.12 um^-3 (qubit 1), 0.04 um^-3 (qubit 2), non-equilibrium quasiparticle density that would account for the intrinsic T_1",
+      "units": "label",
+      "provenance": "transcribed",
+      "kind": "calculated",
+      "location": "energy-relaxation paragraph"
+    },
+    "readout_pulse_duration": {
+      "value": 4,
+      "units": "us",
+      "provenance": "transcribed",
+      "kind": "stated",
+      "location": "readout paragraph (Fig. 1(g))",
+      "note": "'readout pulse duration of 4 us'"
+    }
+  }
+}

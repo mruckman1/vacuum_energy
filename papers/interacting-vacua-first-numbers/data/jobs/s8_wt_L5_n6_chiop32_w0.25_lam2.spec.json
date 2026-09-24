@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 5, "m": 0.5, "tau0": 0.75, "lam": 2.0, "n_max": 6, "tag": "wt_L5_n6_chiop32_w0.25_lam2", "section": "S8", "part": "wt", "threads": 1, "chi_gs": 16, "kw": {"chi_op": 32, "chi_acc": 64, "chi_mpo": 128, "weight_decay": 0.25, "chi_dmrg": 16}, "priority": 157.0, "axis": "weight", "est_wall_s": 102.92352537722908, "cost": 102.92352537722908}

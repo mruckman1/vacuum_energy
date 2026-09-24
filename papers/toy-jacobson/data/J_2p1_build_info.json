@@ -1,0 +1,12 @@
+{
+ "produced_utc": "2026-09-12T21:35:30Z",
+ "git_head": "29c8912663b270f75cf0436eab0b00efa0028478",
+ "git_dirty": true,
+ "generator": "papers/toy-jacobson/notebook_2p1.py",
+ "generator_sha256": "a6606e1d03c348bffaa953f87acfef2d514215905e4a1a2854102bcb04f43b97",
+ "mode": "full",
+ "wall_clock_s": 61.41036891937256,
+ "python": "3.13.3",
+ "numpy": "2.5.2",
+ "platform": "macOS-14.6.1-arm64-arm-64bit-Mach-O"
+}

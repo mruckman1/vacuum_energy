@@ -1,0 +1,321 @@
+{
+  "source": "K. Ikeda, 'Demonstration of Quantum Energy Teleportation on Superconducting Quantum Hardware', Phys. Rev. Applied 20, 024051 (2023); arXiv:2301.02666v5",
+  "location": "Fig. 2 (device error maps and state distributions at (h,k)=(1,1) on ibm_cairo) with per-quantity locations below, incl. Table III (ibm_cairo column: device conditions of the Fig. 2 run), Table I ((h,k)=(1,1) analytical values), and Secs. II.B-II.D; Fig. 2(B) bar labels; Table I (h,k)=(1,1) ibm_cairo and qasm_simulator rows",
+  "retrieved": "2026-08-31",
+  "transcribed_by": "vacuum-program build agent",
+  "comment": "Verbatim transcription from the arXiv v5 PDF (fetched 2026-08-31). Model: minimal QET Hamiltonian H_tot = H_0 + H_1 + V with H_n = h Z_n + h^2/sqrt(h^2+k^2) (Eq. 2) and V = 2k X_0 X_1 + 2k^2/sqrt(h^2+k^2) (Eq. 3). Gate angles are functions of (h,k), not free parameters: ground-state preparation angle theta = -arccos(sqrt((1 - h/sqrt(h^2+k^2))/2)) (Eq. 7); Bob's conditional rotation U_1(mu) = R_Y(2*mu*phi) (Eq. 10) with cos(2phi) = (h^2+2k^2)/sqrt((h^2+2k^2)^2 + h^2 k^2) (Eq. 11), sin(2phi) = hk/sqrt((h^2+2k^2)^2 + h^2 k^2) (Eq. 12); compute them in code (vacuum.qet), never store derived numbers here. Fig. 2(B) bar-label probabilities were added on 2026-09-01 from a 400-dpi render (fig2B_* quantities), together with Table I's (h,k)=(1,1) ibm_cairo and qasm_simulator rows (ibm_cairo_*, qasm_* value/error pairs). The readout estimators behind Tables I-II are those of the author's public code (Ref. [16], github.com/IKEDAKAZUKI/Quantum-Energy-Teleportation, QET.py): <H1> = h^2/s + h<Z1> (Eq. A5), <V> = 2k^2/s + 2k<X0 X1> (Eq. A6), <E0> = h^2/s + h<X0> with X0 read after Alice's Hadamard, bit strings in qiskit c1c0 order. Note: the Fig. 2(B) raw bars imply <V> = -0.152 and <H1> = 0.280 whereas Table I's ibm_cairo unmitigated row prints -0.1733 and 0.2630 — the figure and the table are different runs of the same circuits.",
+  "device": {
+    "backend_fig2B": "ibm_cairo",
+    "simulator": "qasm_simulator",
+    "backends_fig2A": [
+      "ibmq_lima",
+      "ibmq_jakarta",
+      "ibm_cairo"
+    ],
+    "n_qubits": {
+      "ibmq_lima": 5,
+      "ibmq_jakarta": 7,
+      "ibm_cairo": 27
+    },
+    "qubits_used_ibm_cairo": [
+      13,
+      14
+    ],
+    "quantum_volume_ibm_cairo": 64,
+    "location": "Fig. 2 caption, Sec. II.D, Table III (ibm_cairo column)"
+  },
+  "quantities": {
+    "h": {
+      "value": 1,
+      "units": "dimensionless",
+      "location": "Fig. 2(B) caption ('k = 1, h = 1')",
+      "note": "model energy parameter of Eqs. (1)-(2), hbar = 1, arbitrary energy units"
+    },
+    "k": {
+      "value": 1,
+      "units": "dimensionless",
+      "location": "Fig. 2(B) caption ('k = 1, h = 1')",
+      "note": "model coupling parameter of Eqs. (1) and (3)"
+    },
+    "analytical_E0": {
+      "value": 0.7071,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, 'Analytical value <E0>' row",
+      "note": "Alice's deposited energy, = h^2/sqrt(h^2+k^2) (Eq. 9); model energy units"
+    },
+    "analytical_H1": {
+      "value": 0.2598,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, 'Analytical value <H1>' row"
+    },
+    "analytical_V": {
+      "value": -0.3746,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, 'Analytical value <V>' row"
+    },
+    "analytical_E1": {
+      "value": -0.1147,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, 'Analytical value <E1>' row",
+      "note": "<E1> = <H1> + <V> (Eq. 14); negative value = energy extracted by Bob"
+    },
+    "shots": {
+      "value": 100000,
+      "units": "counts",
+      "location": "Table III, ibm_cairo column ('shots 10^5')"
+    },
+    "measurement_fidelity": {
+      "value": 0.961935,
+      "units": "dimensionless",
+      "location": "Table III, ibm_cairo column"
+    },
+    "cnot_error": {
+      "value": 0.00439,
+      "units": "dimensionless",
+      "location": "Table III, ibm_cairo column (direct CNOT error between qubits [13,14])"
+    },
+    "gate_time_cnot": {
+      "value": 220.444,
+      "units": "ns",
+      "location": "Table III, ibm_cairo column ('Gate time (ns)', between q0 and q1)"
+    },
+    "qubit0_frequency": {
+      "value": 5.282,
+      "units": "GHz",
+      "location": "Table III, ibm_cairo column, first qubit (device qubit 13)"
+    },
+    "qubit0_anharmonicity": {
+      "value": -0.33874,
+      "units": "GHz",
+      "location": "Table III, ibm_cairo column, first qubit"
+    },
+    "qubit0_t1": {
+      "value": 146.43,
+      "units": "us",
+      "location": "Table III, ibm_cairo column, first qubit (relaxation time)"
+    },
+    "qubit0_t2": {
+      "value": 164.29,
+      "units": "us",
+      "location": "Table III, ibm_cairo column, first qubit (dephasing time)"
+    },
+    "qubit0_pauli_x_error": {
+      "value": 0.000163,
+      "units": "dimensionless",
+      "location": "Table III, ibm_cairo column, first qubit"
+    },
+    "qubit0_readout_assignment_error": {
+      "value": 0.0085,
+      "units": "dimensionless",
+      "location": "Table III, ibm_cairo column, first qubit"
+    },
+    "qubit1_frequency": {
+      "value": 5.044,
+      "units": "GHz",
+      "location": "Table III, ibm_cairo column, second qubit (device qubit 14)"
+    },
+    "qubit1_anharmonicity": {
+      "value": -0.34289,
+      "units": "GHz",
+      "location": "Table III, ibm_cairo column, second qubit"
+    },
+    "qubit1_t1": {
+      "value": 94.28,
+      "units": "us",
+      "location": "Table III, ibm_cairo column, second qubit"
+    },
+    "qubit1_t2": {
+      "value": 186.99,
+      "units": "us",
+      "location": "Table III, ibm_cairo column, second qubit"
+    },
+    "qubit1_pauli_x_error": {
+      "value": 0.0001732,
+      "units": "dimensionless",
+      "location": "Table III, ibm_cairo column, second qubit"
+    },
+    "qubit1_readout_assignment_error": {
+      "value": 0.008,
+      "units": "dimensionless",
+      "location": "Table III, ibm_cairo column, second qubit"
+    },
+    "cnot_gate_time_range": {
+      "value": [
+        200,
+        500
+      ],
+      "units": "ns",
+      "location": "Sec. II.D text ('the gate time of a CNOT gate is between 200-500 ns')"
+    },
+    "single_qubit_gate_time_range": {
+      "value": [
+        20,
+        40
+      ],
+      "units": "ns",
+      "location": "Sec. II.D text ('the duration of a single qubit operator is between 20-40 ns')"
+    },
+    "communication_time_scale": {
+      "value": 10,
+      "units": "ns",
+      "location": "Sec. II text",
+      "note": "order-of-magnitude as stated: 'In our experiment, t = O(10) ns'"
+    },
+    "coupling_time_scale": {
+      "value": 100,
+      "units": "ns",
+      "location": "Sec. II text",
+      "note": "order-of-magnitude as stated: '1/k = O(100) ns'"
+    },
+    "fig2B_V_raw": {
+      "value": [
+        0.059,
+        0.457,
+        0.434,
+        0.049
+      ],
+      "units": "dimensionless",
+      "location": "Fig. 2(B) left panel ('Distribution of states when measuring V', ibm_cairo, k = 1, h = 1), 'raw' bar labels for bit strings 00, 01, 10, 11 (qiskit c1c0 order, rightmost = qubit 0)",
+      "note": "Bar labels read from a 400-dpi render of arXiv:2301.02666v5 page 5 on 2026-09-01; labels are printed to 3 decimals; the four labels sum to 1.000 +- 0.001"
+    },
+    "fig2B_V_mitigated": {
+      "value": [
+        0.048,
+        0.472,
+        0.44,
+        0.04
+      ],
+      "units": "dimensionless",
+      "location": "Fig. 2(B) left panel ('Distribution of states when measuring V', ibm_cairo, k = 1, h = 1), 'mitigated' bar labels for bit strings 00, 01, 10, 11 (qiskit c1c0 order, rightmost = qubit 0)",
+      "note": "Bar labels read from a 400-dpi render of arXiv:2301.02666v5 page 5 on 2026-09-01; labels are printed to 3 decimals; the four labels sum to 1.000 +- 0.001"
+    },
+    "fig2B_V_simulator": {
+      "value": [
+        0.027,
+        0.473,
+        0.474,
+        0.026
+      ],
+      "units": "dimensionless",
+      "location": "Fig. 2(B) left panel ('Distribution of states when measuring V', ibm_cairo, k = 1, h = 1), 'simulator' bar labels for bit strings 00, 01, 10, 11 (qiskit c1c0 order, rightmost = qubit 0)",
+      "note": "Bar labels read from a 400-dpi render of arXiv:2301.02666v5 page 5 on 2026-09-01; labels are printed to 3 decimals; the four labels sum to 1.000 +- 0.001"
+    },
+    "fig2B_H1_raw": {
+      "value": [
+        0.139,
+        0.147,
+        0.354,
+        0.359
+      ],
+      "units": "dimensionless",
+      "location": "Fig. 2(B) right panel ('Distribution of states when measuring H_1', ibm_cairo, k = 1, h = 1), 'raw' bar labels for bit strings 00, 01, 10, 11 (qiskit c1c0 order, rightmost = qubit 0)",
+      "note": "Bar labels read from a 400-dpi render of arXiv:2301.02666v5 page 5 on 2026-09-01; labels are printed to 3 decimals; the four labels sum to 1.000 +- 0.001"
+    },
+    "fig2B_H1_mitigated": {
+      "value": [
+        0.139,
+        0.145,
+        0.349,
+        0.367
+      ],
+      "units": "dimensionless",
+      "location": "Fig. 2(B) right panel ('Distribution of states when measuring H_1', ibm_cairo, k = 1, h = 1), 'mitigated' bar labels for bit strings 00, 01, 10, 11 (qiskit c1c0 order, rightmost = qubit 0)",
+      "note": "Bar labels read from a 400-dpi render of arXiv:2301.02666v5 page 5 on 2026-09-01; labels are printed to 3 decimals; the four labels sum to 1.000 +- 0.001"
+    },
+    "fig2B_H1_simulator": {
+      "value": [
+        0.139,
+        0.136,
+        0.362,
+        0.362
+      ],
+      "units": "dimensionless",
+      "location": "Fig. 2(B) right panel ('Distribution of states when measuring H_1', ibm_cairo, k = 1, h = 1), 'simulator' bar labels for bit strings 00, 01, 10, 11 (qiskit c1c0 order, rightmost = qubit 0)",
+      "note": "Bar labels read from a 400-dpi render of arXiv:2301.02666v5 page 5 on 2026-09-01; labels are printed to 3 decimals; the four labels sum to 1.000 +- 0.001"
+    },
+    "qasm_E0": {
+      "value": 0.7088,
+      "error": 0.0001,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, qasm_simulator row, <E0> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    },
+    "qasm_H1": {
+      "value": 0.255,
+      "error": 0.0028,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, qasm_simulator row, <H1> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    },
+    "qasm_V": {
+      "value": -0.3729,
+      "error": 0.0063,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, qasm_simulator row, <V> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    },
+    "qasm_E1": {
+      "value": -0.1179,
+      "error": 0.0069,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, qasm_simulator row, <E1> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    },
+    "ibm_cairo_mitigated_E0": {
+      "value": 0.7277,
+      "error": 0.0031,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, ibm_cairo 'error mitigated' row, <E0> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    },
+    "ibm_cairo_unmitigated_E0": {
+      "value": 0.7362,
+      "error": 0.0031,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, ibm_cairo 'unmitigated' row, <E0> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    },
+    "ibm_cairo_mitigated_H1": {
+      "value": 0.2579,
+      "error": 0.0031,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, ibm_cairo 'error mitigated' row, <H1> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    },
+    "ibm_cairo_unmitigated_H1": {
+      "value": 0.263,
+      "error": 0.0027,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, ibm_cairo 'unmitigated' row, <H1> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    },
+    "ibm_cairo_mitigated_V": {
+      "value": -0.2569,
+      "error": 0.0063,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, ibm_cairo 'error mitigated' row, <V> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    },
+    "ibm_cairo_unmitigated_V": {
+      "value": -0.1733,
+      "error": 0.0038,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, ibm_cairo 'unmitigated' row, <V> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    },
+    "ibm_cairo_mitigated_E1": {
+      "value": 0.001,
+      "error": 0.007,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, ibm_cairo 'error mitigated' row, <E1> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    },
+    "ibm_cairo_unmitigated_E1": {
+      "value": 0.0897,
+      "error": 0.0047,
+      "units": "dimensionless",
+      "location": "Table I, (h,k)=(1,1) column, ibm_cairo 'unmitigated' row, <E1> block",
+      "note": "value +- statistical error as printed; 'error mitigated' = calibration-matrix measurement error mitigation (Sec. II.D); <E1> = <H1> + <V> (Table I caption)"
+    }
+  }
+}

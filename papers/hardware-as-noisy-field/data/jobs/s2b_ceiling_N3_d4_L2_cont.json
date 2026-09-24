@@ -1,0 +1,120 @@
+{
+ "spec": {
+  "kind": "ceiling",
+  "tag": "ceiling_N3_d4_L2_cont",
+  "N": 3,
+  "d": 4,
+  "layers": 2,
+  "restarts": 0,
+  "maxiter": 4000,
+  "seed": 2000,
+  "method": "lm",
+  "stop_at": 1e-13,
+  "perturb_rounds": 0,
+  "stage": "cont1",
+  "init_params": {
+   "continue": [
+    1.5707963267948706,
+    -3.1241681064122955,
+    1.3900200139678964,
+    0.3817153724576629,
+    1.390020013967897,
+    -1.5274166562486522,
+    -2.6777119931754135e-17,
+    3.847659396151249e-17,
+    -1.8292416360856756e-16,
+    -1.5310566338857882e-16,
+    -6.210800129532383e-17,
+    -6.600385732887498e-17,
+    -1.57079632679487,
+    3.1577689370165714,
+    -1.5707963267948917,
+    2.8047411379859053,
+    -1.5707963267948957,
+    1.6337189489686135
+   ]
+  },
+  "continued_from": {
+   "stage": "scan",
+   "infidelity": 0.00019540164528009107,
+   "maxiter": 400,
+   "budget_exhausted": null
+  },
+  "cost": 2304000
+ },
+ "row": {
+  "N": 3,
+  "d": 4,
+  "n_qubits": 6,
+  "layers": 2,
+  "n_params": 18,
+  "sector_dof": 19,
+  "infidelity": 0.00019540164528009107,
+  "fidelity": 0.9998045983547199,
+  "energy": 2.547262836921492,
+  "E0_exact_truncated": 2.546178491741333,
+  "energy_error": 0.0010843451801592074,
+  "cov_error_vs_ED": 0.012968669558874596,
+  "grad_norm": 1.0587226482316694e-15,
+  "restarts": 1,
+  "restarts_run": 1,
+  "best_restart": 0,
+  "best_start": "continue",
+  "restart_infidelities": [
+   0.00019540164528009107
+  ],
+  "n_iterations": 1,
+  "n_evaluations": 3,
+  "seed": 2000,
+  "wall_s": 0.028520822525024414,
+  "params": [
+   1.5707963267948706,
+   -3.1241681064122955,
+   1.3900200139678964,
+   0.3817153724576629,
+   1.390020013967897,
+   -1.5274166562486522,
+   -2.6777119931754135e-17,
+   3.847659396151249e-17,
+   -1.8292416360856756e-16,
+   -1.5310566338857882e-16,
+   -6.210800129532383e-17,
+   -6.600385732887498e-17,
+   -1.57079632679487,
+   3.1577689370165714,
+   -1.5707963267948917,
+   2.8047411379859053,
+   -1.5707963267948957,
+   1.6337189489686135
+  ],
+  "history": [
+   {
+    "restart": 0,
+    "start": "continue",
+    "infidelity": 0.00019540164528009107,
+    "nit": 1,
+    "nfev": 3,
+    "grad_max": 3.5475095083725705e-16,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   }
+  ],
+  "kind": "ceiling",
+  "method": "lm",
+  "maxiter": 4000,
+  "stop_at": 1e-13,
+  "perturb_rounds": 0,
+  "best_message": "`xtol` termination condition is satisfied.",
+  "best_nfev": 3,
+  "budget_exhausted": false,
+  "stage": "cont1",
+  "continued_from": {
+   "stage": "scan",
+   "infidelity": 0.00019540164528009107,
+   "maxiter": 400,
+   "budget_exhausted": null
+  },
+  "threads": "1",
+  "time_s": 0.028886079788208008
+ }
+}

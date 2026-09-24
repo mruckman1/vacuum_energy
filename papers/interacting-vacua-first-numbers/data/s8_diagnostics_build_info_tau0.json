@@ -1,0 +1,47 @@
+{
+ "_source": "notebook_qei_exact.py::S5f-S5i",
+ "date_utc": "2026-09-13T07:41:52Z",
+ "build_git_head": "4666ef436a87031a34cbb5534afbbe0ff05d3596",
+ "python": "3.13.3",
+ "platform": "macOS-14.6.1-arm64-arm-64bit-Mach-O",
+ "numpy": "2.5.2",
+ "tenpy": "1.1.1",
+ "vacuum_version": "0.1.0",
+ "workers": 8,
+ "sections": [
+  "s8"
+ ],
+ "archived_knobs": {
+  "dt": 0.375,
+  "order": 4,
+  "chi_op": 16,
+  "svd_min_op": 1e-12,
+  "chi_acc": 32,
+  "svd_min_acc": 1e-12,
+  "window_pad": 2,
+  "svd_min_real": 1e-06,
+  "chi_mpo": 64,
+  "weight_decay": 0.25,
+  "chi_dmrg": 12,
+  "max_sweeps": 8,
+  "max_E_err": 1e-10
+ },
+ "best_settings": {
+  "n_max": 8,
+  "chi_op": 32,
+  "chi_acc": 64,
+  "chi_mpo": 128,
+  "weight_decay": 0.5,
+  "chi_dmrg": 16
+ },
+ "lambda_grid": [
+  0.0,
+  0.25,
+  0.5,
+  1.0,
+  2.0,
+  3.0,
+  4.0
+ ],
+ "E_gaussian_exact": -0.02265365013409959
+}

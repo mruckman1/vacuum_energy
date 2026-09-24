@@ -1,0 +1,10 @@
+# LaTeX build products; `latexmk -pdf main.tex` regenerates them.
+# (arXiv does not run BibTeX: upload a freshly built main.bbl with the source.)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+mainNotes.bib

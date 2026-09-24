@@ -1,0 +1,8 @@
+{
+  "rows": null,
+  "r_direct_m0": 0.9967914302327539,
+  "exponent_p": 1.6598408349407923,
+  "r_extrap_mu0": 0.996809230994886,
+  "dev_extrap_vs_direct": 1.780076213220294e-05,
+  "_source": "notebook.py::s2c_mass_axis"
+}

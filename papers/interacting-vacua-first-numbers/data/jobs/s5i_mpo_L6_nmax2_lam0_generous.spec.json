@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 6, "m": 0.5, "tau0": 0.75, "lam": 0.0, "n_max": 2, "tag": "mpo_L6_nmax2_lam0_generous", "section": "S5i", "axis": "generous", "threads": 2, "chi_gs": 16, "kw": {"chi_op": 64, "chi_acc": 128, "chi_mpo": null, "svd_min_real": 1e-10, "weight_decay": 1.0, "svd_dense_limit": "inf", "chi_dmrg": 32, "window_pad": null, "max_sweeps": 16, "max_E_err": 1e-12}}

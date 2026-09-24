@@ -1,0 +1,36 @@
+{
+  "source": "A. Teixido-Bonfill, 'Harvesting entanglement from quantum fields: from theory to proposed superconducting implementations', PhD thesis, Applied Mathematics (Quantum Information), University of Waterloo, 2025 (external examiner N. Klco). UWSpace item https://uwspace.uwaterloo.ca/items/b8bcb92d-3ab1-4cf9-b375-dcea910f9f9c (PDF bitstream 8939d9bd-3556-4326-9d0d-0a506faeec93)",
+  "location": "Full text (pdftotext of the UWSpace PDF). 'Conclusions and Outlook' chapter, 'Outlook' section, enumerated item 5 (temperature); Chapter 4, Table 4.1 (cross-check of the paper's Table I). Per-quantity locations below.",
+  "retrieved": "2026-09-01",
+  "transcribed_by": "vacuum-program build agent (gap-closure pass 2026-09-01)",
+  "comment": "The first author's PhD thesis, whose Chapter 4 reproduces the PRA 113, 043732 (2026) paper (Table 4.1 is identical to the paper's Table I, scenario by scenario, which was used as a second reading of that table). Its value for this program is the one statement the paper itself does not make: the temperature at which the Waterloo experiment is expected to run, and the thesis-level finding that harvesting dies above 30 mK in the group's simpler UDW model. Both are STATED EXPECTATIONS / SIMULATION RESULTS, not measurements.",
+  "provenance_tags": "Per-quantity 'provenance' is 'transcribed' throughout; no synthetic or derived quantities ('synthetic_quantities' empty, asserted by tests/test_experiments_io.py). 'kind' is 'stated' or 'simulated'.",
+  "synthetic_quantities": [],
+  "derived_quantities": [],
+  "quantities": {
+    "expected_operating_temperature": {
+      "value": [20, 30],
+      "units": "mK",
+      "provenance": "transcribed",
+      "kind": "stated",
+      "location": "'Conclusions and Outlook', 'Outlook' section, item 5",
+      "note": "'For simplicity, we assumed that the detectors and field start in the vacuum state, i.e. a zero temperature state. However, in reality, the expected temperature for the experiment is around 20-30 mK.' Consistent with the 20 mK design temperature of Ren 2022 (circuit_qed_harvesting/ren_2022_sec4-3.json) and the 30 mK fridge base of Janzen 2023"
+    },
+    "harvesting_death_temperature": {
+      "value": 30,
+      "units": "mK",
+      "provenance": "transcribed",
+      "kind": "simulated",
+      "location": "'Conclusions and Outlook', 'Outlook' section, item 5, citing the thesis's ref. [101] = S. Ren, MSc thesis, University of Waterloo, 2022",
+      "note": "'This effect has been preliminarily explored in [101], using a simpler UDW model with parameters that match the experiment. For the case explored there, increasing temperature decreases entanglement harvesting until no entanglement is harvested for temperatures higher than 30 mK. Therefore, it is important to include the effect of the temperature in more accurate models of the implementation.' -- the same finding is Sec. 3.3.3 of Ren 2022 (perturbative, Gaussian switching, initial state |eg>)"
+    },
+    "table_4_1_matches_paper_table_I": {
+      "value": "Table 4.1 of the thesis lists scenarios 1-6 with (lambda, gamma, alpha, Delta-Omega/2pi GHz) = (->0, ->0, ->0, ->0), (-0.1, 0.02, 0.003, -0.5), (-0.3, 0.07, 0.03, -1.6), (-0.65, 0.14, 0.1, -3.4), (-1, 0.22, 0.3, -5.2), (0.1, -0.02, 0.003, 0.5), identical to Table I of PRA 113, 043732 (2026)",
+      "units": "label",
+      "provenance": "transcribed",
+      "kind": "stated",
+      "location": "Chapter 4, Table 4.1 and caption ('Delta-Omega/(2pi) ~ 5.2 lambda GHz')",
+      "note": "used as the second, independent reading of the paper's Table I in circuit_qed_harvesting/teixido-bonfill_2026_table1.json"
+    }
+  }
+}

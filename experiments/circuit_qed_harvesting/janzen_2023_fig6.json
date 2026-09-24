@@ -1,0 +1,319 @@
+{
+  "source": "N. Janzen, X. Dai, S. Ren, J. Shi, A. Lupascu, 'Tunable coupler for mediating interactions between a two-level system and a waveguide from a decoupled state to the ultrastrong coupling regime', Phys. Rev. Research 5, 033155 (2023); arXiv:2208.05571",
+  "location": "arXiv:2208.05571v2 (dated September 6, 2023) full text. The paper has NO parameter table; values are transcribed verbatim from the running text of Secs. III.A, III.B, IV.A, IV.B, Figs. 5-8 captions and Appendix A — per-quantity locations below. Filename names Fig. 6, the paper's central parameter figure (qubit gap, relaxation rate, and coupling versus coupler flux bias).",
+  "retrieved": "2026-09-01",
+  "transcribed_by": "vacuum-program build agent (milestone M2.6; re-verified and extended in the gap-closure pass 2026-09-01)",
+  "comment": "This is the DEVICE paper of the Waterloo entanglement-harvesting program: the tunable-coupler flux qubit whose junction parameters footnote 6 of Teixido-Bonfill et al. (2026), arXiv:2505.01516, cites (the six critical currents below reproduce that footnote exactly, which is a cross-check on both transcriptions). It supplies what the harvesting proposal does not: measured coupling range, measured relaxation rate, the waveguide temperature, and the noise budget. Values quoted in the paper as approximate keep the word in their note. THREE quantities are PLOT-DIGITIZED rather than text-stated (listed in 'plot_digitized' below) and are marked as such in their notes; they are order-of-magnitude reads off log-scale figures, NOT verbatim numbers, and any result that depends on them quantitatively must say so. Rate convention: Gamma_1 and Gamma_phi are published as frequencies (MHz/GHz/Hz); the program's loader converts them with the energy rule (x 2*pi) into angular rates. The paper does not state whether a quoted 'Gamma_1 = 8.7 MHz' already includes the 2*pi, so a factor-2*pi ambiguity is inherited here and is a question for the source, not something for code to absorb silently.",
+  "plot_digitized": [
+    "pure_dephasing_rate_min",
+    "pure_dephasing_rate_max",
+    "qubit_gap_range_fig6a"
+  ],
+  "device": {
+    "two_level_system": "superconducting persistent current qubit (PCQ), double loop, six Josephson junctions",
+    "field": "superconducting coplanar waveguide transmission line",
+    "coupler": "flux-biased coupling loop acting as a tunable mutual inductance",
+    "model": "spin-boson, J(omega) = pi*alpha*omega (Sec. II.B)",
+    "relaxation_relation": "Gamma_1 = pi * alpha * Delta   (Eq. 6, small alpha at the symmetry point)"
+  },
+  "quantities": {
+    "qubit_gap_frequency": {
+      "value": 5.7,
+      "units": "GHz",
+      "location": "Fig. 5 caption",
+      "note": "qubit transition frequency Delta at the symmetry point (f_beta, f_eps) = (0.41, 0.433), the operating point of the transmission fit shown in Fig. 5",
+      "provenance": "transcribed"
+    },
+    "qubit_gap_range_fig6a": {
+      "value": [
+        2.3,
+        8.0
+      ],
+      "units": "GHz",
+      "location": "Fig. 6(a)",
+      "note": "PLOT-DIGITIZED, NOT a text-stated value: Delta/(2*pi) read off Fig. 6(a) at the ends of the plotted range f_beta = 0.30 -> 0.50; +-0.3 GHz",
+      "provenance": "plot_digitized"
+    },
+    "coupling_alpha_min": {
+      "value": 6.2e-05,
+      "units": "dimensionless",
+      "location": "Abstract; Sec. III.B; Fig. 6(c) caption",
+      "note": "normalized (spin-boson) coupling strength alpha at f_beta = 0.36, the smallest measured value",
+      "provenance": "transcribed"
+    },
+    "coupling_alpha_max": {
+      "value": 0.0219,
+      "units": "dimensionless",
+      "location": "Abstract; Sec. III.B; Fig. 6(c) caption",
+      "note": "largest measured alpha, at f_beta = 0.44; the circuit model predicts larger attainable values, and f_beta >= 0.45 could not be measured because of the setup transmission bandwidth",
+      "provenance": "transcribed"
+    },
+    "relaxation_rate_gamma1_min": {
+      "value": 8.7,
+      "units": "MHz",
+      "location": "Sec. III.B; Fig. 6(b)",
+      "note": "'The minimum measured value of Gamma_1 is 8.7 MHz at f_beta = 0.36'",
+      "provenance": "transcribed"
+    },
+    "relaxation_rate_gamma1_max": {
+      "value": 1.85,
+      "units": "GHz",
+      "location": "Sec. III.B; Fig. 6(b)",
+      "note": "'the maximum measured value is Gamma_1 = 1.85 GHz at f_beta = 0.44'",
+      "provenance": "transcribed"
+    },
+    "pure_dephasing_rate_min": {
+      "value": 10000000.0,
+      "units": "Hz",
+      "location": "Fig. 7(a), blue 't fit' points",
+      "note": "PLOT-DIGITIZED, NOT a text-stated value: lower end of the fitted pure-dephasing rates Gamma_phi over f_beta in [0.33, 0.44], read off a log-scale axis; order of magnitude only (factor ~2)",
+      "provenance": "plot_digitized"
+    },
+    "pure_dephasing_rate_max": {
+      "value": 200000000.0,
+      "units": "Hz",
+      "location": "Fig. 7(a), blue 't fit' points",
+      "note": "PLOT-DIGITIZED, NOT a text-stated value: upper end of the fitted pure-dephasing rates Gamma_phi, read off a log-scale axis; order of magnitude only (factor ~2). Sec. IV.A states these fitted rates agree with the estimated transmission-line dephasing of Eq. (15) and greatly exceed the 1/f flux-noise estimate.",
+      "provenance": "plot_digitized"
+    },
+    "transmission_line_temperature": {
+      "value": 50,
+      "units": "mK",
+      "location": "Sec. IV.A (below Eq. 16)",
+      "note": "'We assume that the TL is in thermal equilibrium with the dilution refrigerator, at temperature T^TL = 50 mK' — the waveguide (field) temperature of the harvesting problem",
+      "provenance": "transcribed"
+    },
+    "fridge_base_temperature": {
+      "value": 30,
+      "units": "mK",
+      "location": "Appendix A",
+      "note": "'a dilution refrigerator unit with a base temperature of 30 mK'",
+      "provenance": "transcribed"
+    },
+    "residual_noise_temperature": {
+      "value": "order of hundreds of mK (bias lines; not a single quoted number)",
+      "units": "label",
+      "location": "Sec. IV.A",
+      "note": "'the residual noise temperatures found by the transmission fits is on the order of hundreds of mK, consistent with the estimated noise temperature based on the attenuation applied along the bias lines' — deliberately kept as text, not a number",
+      "provenance": "transcribed"
+    },
+    "bias_line_relaxation_rate": {
+      "value": 100,
+      "units": "kHz",
+      "location": "Sec. IV.A",
+      "note": "'this noise channel introduces relaxation rate of about 100 kHz, much smaller than the relaxation found from the transmission fits'",
+      "provenance": "transcribed"
+    },
+    "intrinsic_flux_noise_relaxation_bound": {
+      "value": 10,
+      "units": "kHz",
+      "location": "Sec. IV.A (start of p. 7)",
+      "note": "'we found the relaxation due to intrinsic flux noise below 10 kHz, which is negligible'",
+      "provenance": "transcribed"
+    },
+    "quasiparticle_density_xqp": {
+      "value": 5e-07,
+      "units": "dimensionless",
+      "location": "Sec. IV.A (below Eq. 20)",
+      "note": "'Assuming a modest value of the normalized quasiparticle density x_qp = 5 x 10^-7 on all qubit islands'",
+      "provenance": "transcribed"
+    },
+    "flux_noise_amplitude_eps": {
+      "value": "sqrt(A_eps) = 1.2 uPhi_0/sqrt(Hz)",
+      "units": "label",
+      "location": "Sec. IV.A",
+      "note": "1/f flux noise of the form A_{eps,beta}/(omega/2pi); amplitude estimated by scaling loop geometry from a previous device. Unit uPhi_0/sqrt(Hz) has no hbar=1 conversion in vacuum.experiments_io, so it is carried verbatim as a label.",
+      "provenance": "transcribed"
+    },
+    "flux_noise_amplitude_beta": {
+      "value": "sqrt(A_beta) = 1.1 uPhi_0/sqrt(Hz)",
+      "units": "label",
+      "location": "Sec. IV.A",
+      "note": "as flux_noise_amplitude_eps, for the coupler loop",
+      "provenance": "transcribed"
+    },
+    "f_beta_range_measured": {
+      "value": [
+        0.3,
+        0.5
+      ],
+      "units": "dimensionless",
+      "location": "Figs. 6-8 (abscissa)",
+      "note": "normalized coupler-loop flux bias f_beta = Phi_beta/Phi_0 spanned by the plotted data; values with f_beta >= 0.45 are determined by fitting spectroscopy data to Eq. (2) because the symmetry points cannot be measured directly at the setup bandwidth",
+      "provenance": "transcribed"
+    },
+    "f_beta_decoupling_point": {
+      "value": 0.365,
+      "units": "dimensionless",
+      "location": "Sec. III.B",
+      "note": "stated as approximate: 'At the decoupling point (f_beta ~ 0.365), the interaction strength is very small'",
+      "provenance": "transcribed"
+    },
+    "f_beta_max_coupling": {
+      "value": 0.5,
+      "units": "dimensionless",
+      "location": "Sec. II.A",
+      "note": "coupler susceptibility maximum: 'a maximum at f_beta = 0.5'; extrapolating the measured data to f_beta = 0.5 is expected to approach the USC regime (alpha >~ 0.1)",
+      "provenance": "transcribed"
+    },
+    "usc_threshold_alpha": {
+      "value": 0.1,
+      "units": "dimensionless",
+      "location": "Sec. III.B",
+      "note": "'the USC regime, which is usually associated with alpha >~ 0.1'",
+      "provenance": "transcribed"
+    },
+    "symmetry_point_f_beta_fig5": {
+      "value": 0.41,
+      "units": "dimensionless",
+      "location": "Fig. 5 caption",
+      "note": "coupler flux of the Fig. 5 operating point",
+      "provenance": "transcribed"
+    },
+    "symmetry_point_f_eps_fig5": {
+      "value": 0.433,
+      "units": "dimensionless",
+      "location": "Fig. 5 caption",
+      "note": "qubit flux of the Fig. 5 operating point; note f_eps,sym is NOT 0.5 for this device (Sec. III.A)",
+      "provenance": "transcribed"
+    },
+    "probe_frequency_fig3a": {
+      "value": 7.5,
+      "units": "GHz",
+      "location": "Fig. 3(a); Sec. III.A",
+      "note": "omega_p/(2*pi) of the crosstalk-calibration transmission map",
+      "provenance": "transcribed"
+    },
+    "amplifier_band": {
+      "value": [
+        4,
+        8
+      ],
+      "units": "GHz",
+      "location": "Appendix A",
+      "note": "'The received from the device along the transmission line (TL) are amplified using a 4-8 GHz amplifier, which limits the coupling measurements performed on this device' — the practical bandwidth bound on any switching spectrum for this device",
+      "provenance": "transcribed"
+    },
+    "drive_power_range": {
+      "value": "-48 dBm to -24 dBm at the source (P in Fig. 5)",
+      "units": "label",
+      "location": "Fig. 5 caption",
+      "note": "dBm has no hbar=1 conversion; carried verbatim as a label",
+      "provenance": "transcribed"
+    },
+    "vswr_measured": {
+      "value": 1.5,
+      "units": "dimensionless",
+      "location": "Sec. IV.B",
+      "note": "stated as approximate: room-temperature characterization indicates the VSWR due to components on the output of the transmission line is 'roughly 1.5', smaller than the VSWR >~ 4 needed to explain the coupling discrepancy",
+      "provenance": "transcribed"
+    },
+    "critical_current_1": {
+      "value": 0.236,
+      "units": "uA",
+      "location": "Sec. III.A (best-fit junction parameters)",
+      "note": "I_c1; most junctions agree with the design target to better than 12%, except I_c5 (~40% error)",
+      "provenance": "transcribed"
+    },
+    "critical_current_2": {
+      "value": 0.131,
+      "units": "uA",
+      "location": "Sec. III.A (best-fit junction parameters)",
+      "provenance": "transcribed"
+    },
+    "critical_current_3": {
+      "value": 0.236,
+      "units": "uA",
+      "location": "Sec. III.A (best-fit junction parameters)",
+      "provenance": "transcribed"
+    },
+    "critical_current_4": {
+      "value": 0.411,
+      "units": "uA",
+      "location": "Sec. III.A (best-fit junction parameters)",
+      "provenance": "transcribed"
+    },
+    "critical_current_5": {
+      "value": 0.584,
+      "units": "uA",
+      "location": "Sec. III.A (best-fit junction parameters)",
+      "note": "designed to equal I_c4; measured error approximately 40%, attributed to the neglected inductive renormalization of junction 5",
+      "provenance": "transcribed"
+    },
+    "critical_current_6": {
+      "value": 0.185,
+      "units": "uA",
+      "location": "Sec. III.A (best-fit junction parameters)",
+      "provenance": "transcribed"
+    },
+    "junction_critical_current_density": {
+      "value": "3 uA/um^2 (target)",
+      "units": "label",
+      "location": "Sec. III.A",
+      "provenance": "transcribed"
+    },
+    "junction_unit_area": {
+      "value": "A_0 = 0.0467 um^2, with A_1 = A_3 = 1.69 A_0, A_2 = 0.58 A_1, A_4 = A_5 = 3 A_0, A_6 = 0.52 A_1",
+      "units": "label",
+      "location": "Sec. III.A",
+      "provenance": "transcribed"
+    },
+    "mutual_inductance_bias_qubit": {
+      "value": "M_eps = 0.25 pH (simulated)",
+      "units": "label",
+      "location": "Sec. III.A",
+      "provenance": "transcribed"
+    },
+    "mutual_inductance_bias_coupler": {
+      "value": "M_beta = 0.47 pH (simulated)",
+      "units": "label",
+      "location": "Sec. III.A",
+      "provenance": "transcribed"
+    },
+    "waveguide_layer_thickness": {
+      "value": 100,
+      "units": "nm",
+      "location": "Appendix A",
+      "note": "evaporated aluminium of the waveguide layer; junction layer is 40 nm + 70 nm double-angle shadow evaporation, final bridge/bandage layer 450 nm",
+      "provenance": "transcribed"
+    },
+    "fast_line_min_pulse_duration": {
+      "value": 100,
+      "units": "ps",
+      "provenance": "transcribed",
+      "location": "Appendix A",
+      "note": "stated as approximate and as a DESIGN capability, not demonstrated in this paper: 'With appropriate protocols, the fast lines can be operated with pulses as short as ~100 ps to fast-switch the coupling in and out of the USC regime'; 'the pulsed mode operation and readout are not needed in the current experiment'. The bias-line waveguides are 50-ohm matched with air bridges for this purpose"
+    },
+    "fridge_temperature_during_measurements": {
+      "value": 50,
+      "units": "mK",
+      "provenance": "transcribed",
+      "location": "Appendix A",
+      "note": "stated as approximate: bias currents 'led to significant heating of the DR during operation, with temperature reaching ~50 mK during the transmission measurements' -- the measured-condition counterpart of the 50 mK transmission-line temperature ASSUMED in Sec. IV.A; base temperature without heating is 30 mK"
+    },
+    "bandpass_filter_band": {
+      "value": [
+        4,
+        8
+      ],
+      "units": "GHz",
+      "provenance": "transcribed",
+      "location": "Appendix A",
+      "note": "'The signals sent to and received from the device are each filtered through a 4-8 GHz band pass filter placed near the sample to reduce quasi particle noise from outside this bandwidth'"
+    },
+    "probe_frequency_fig3bc": {
+      "value": [
+        6.0,
+        8.1
+      ],
+      "units": "GHz",
+      "provenance": "transcribed",
+      "location": "Fig. 3(b),(c) caption",
+      "note": "omega_p/(2*pi) of the two additional transmission maps used for the crosstalk calibration"
+    }
+  },
+  "verification": "2026-09-01: every text-stated quantity below was re-read against the arXiv:2208.05571v2 full text (pdftotext of the arXiv PDF) and is unchanged; three quantities are added from Appendix A and Fig. 3 (fast_line_min_pulse_duration, fridge_temperature_during_measurements, bandpass_filter_band, probe_frequency_fig3bc). The three PLOT-DIGITIZED quantities remain plot reads: no text-stated Gamma_phi exists in the paper.",
+  "provenance_tags": "Per-quantity 'provenance' in {'transcribed', 'plot_digitized'}; 'plot_digitized' values are order-of-magnitude reads off a figure, not verbatim numbers, and are also listed in 'plot_digitized'. This file has no synthetic quantities ('synthetic_quantities' empty, asserted by tests/test_experiments_io.py).",
+  "synthetic_quantities": [],
+  "derived_quantities": []
+}

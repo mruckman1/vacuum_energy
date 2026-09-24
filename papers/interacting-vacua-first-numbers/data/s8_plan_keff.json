@@ -1,0 +1,34 @@
+{
+ "_source": "notebook_qei_exact.py::S8 plan",
+ "date_utc": "2026-09-12T17:48:25Z",
+ "build_git_head": "6788ba864ada87a5a04128ab4f1c01584111227b",
+ "parts": [
+  "keff"
+ ],
+ "workers": 1,
+ "threads_per_job": 2,
+ "n_jobs": 1,
+ "est_total_job_wall_h": 0.2777777777777778,
+ "est_by_part": {
+  "keff": {
+   "n_jobs": 1,
+   "est_wall_h": 0.2777777777777778
+  }
+ },
+ "wall_model": "900 s ((n_max+1)/9)^4 (chi_op/32)^1.5 (n_steps/8) (L/16) [+ exact SVD: 0.75 n_updates 12.3 s (chi_op (n_max+1)^2/2592)^3]; 2 BLAS threads, idle",
+ "jobs": [
+  {
+   "tag": "keff_lam2",
+   "part": "keff",
+   "kind": "keff",
+   "L": 16,
+   "m": 0.5,
+   "lam": 2.0,
+   "n_max": 6,
+   "tau0": 0.75,
+   "priority": 95.0,
+   "est_wall_s": 1000.0,
+   "kw": {}
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{"kind": "ed_lanczos", "L": 5, "m": 0.5, "tau0": 0.75, "lam": 4.0, "n_max": 7, "tag": "edlz_L5_nmax7_lam4", "section": "S8", "part": "ed", "threads": 2, "dt": 0.375, "priority": 94.0, "dt_fine": 0.125, "tol": 1e-10, "ncv": 80, "est_wall_s": 1966.08, "cost": 1966.08}

@@ -1,0 +1,70 @@
+{
+  "source": "L. DiCarlo, J. M. Chow, J. M. Gambetta, L. S. Bishop, B. R. Johnson, D. I. Schuster, J. Majer, A. Blais, L. Frunzio, S. M. Girvin, R. J. Schoelkopf, 'Demonstration of two-qubit algorithms with a superconducting quantum processor', Nature 460, 240-244 (9 July 2009), doi:10.1038/nature08121",
+  "location": "Fig. 3 caption ('Entanglement on demand': metrics of the four entangler outputs obtained by maximum-likelihood two-qubit state tomography with a joint dispersive readout), plus the abstract; per-quantity locations below.",
+  "retrieved": "2026-09-01",
+  "transcribed_by": "vacuum-program build agent (gap-closure pass 2026-09-01)",
+  "comment": "The standard transmon two-qubit tomography reference used as the MEASURED cross-check for the resolvable log-negativity (negativity_resolution_nats in circuit_qed_harvesting/teixido-bonfill_2026_table1.json). Two transmons in a coplanar-waveguide cavity, joint dispersive readout, maximum-likelihood reconstruction. The uncertainties are the standard deviation over 16 repetitions of generation-plus-tomography, i.e. a run-to-run precision of the reconstructed metrics; they are quoted for highly entangled Bell-type states (C ~ 0.8-0.94), not for the weakly entangled states of entanglement harvesting, and reflect 2009-era readout. The bounds on the imaginary density-matrix elements (which vanish for the ideal Bell states) are a direct element-level noise floor of the reconstruction.",
+  "provenance_tags": "Per-quantity 'provenance' is 'transcribed' throughout; no synthetic or derived quantities ('synthetic_quantities' empty, asserted by tests/test_experiments_io.py). 'kind' is 'measured'.",
+  "synthetic_quantities": [],
+  "derived_quantities": [],
+  "quantities": {
+    "concurrence": {
+      "value": [0.88, 0.94, 0.86, 0.81],
+      "error": [0.02, 0.01, 0.02, 0.04],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "Fig. 3 caption",
+      "note": "'Extracted metrics for the four entangler outputs include concurrence C = 0.88 +- 0.02, 0.94 +- 0.01, 0.86 +- 0.02, 0.81 +- 0.04' for the C-Phase gates cU10, cU00, cU11, cU01 respectively; 'The uncertainties correspond to the standard deviation in 16 repetitions of generation-tomography for each entangler'"
+    },
+    "purity": {
+      "value": [0.87, 0.92, 0.88, 0.79],
+      "error": [0.02, 0.02, 0.02, 0.03],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "Fig. 3 caption",
+      "note": "P = Tr(rho^2) of the four reconstructed states"
+    },
+    "bell_state_fidelity": {
+      "value": [0.91, 0.94, 0.90, 0.87],
+      "error": [0.01, 0.01, 0.01, 0.02],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "Fig. 3 caption",
+      "note": "fidelity to the ideal Bell state; the paper defines its fidelity as the square of the fidelity commonly used in the literature (main text)"
+    },
+    "imaginary_element_bound": {
+      "value": [0.03, 0.02, 0.07, 0.08],
+      "units": "dimensionless",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "Fig. 3 caption",
+      "note": "'imaginary elements of rho_ml are less than 0.03, 0.02, 0.07, 0.08' for the four outputs -- these elements vanish for the target Bell states, so the bounds are an element-level noise floor of the reconstruction"
+    },
+    "tomography_repetitions": {
+      "value": 16,
+      "units": "counts",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "Fig. 3 caption",
+      "note": "number of independent generation-tomography repetitions over which the standard deviations were taken"
+    },
+    "max_concurrence": {
+      "value": 94,
+      "units": "percent",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "abstract",
+      "note": "'highly entangled states with concurrence up to 94 per cent'"
+    },
+    "readout": {
+      "value": "joint dispersive readout of two transmons through a common cavity; density matrix by maximum-likelihood state tomography",
+      "units": "label",
+      "provenance": "transcribed",
+      "kind": "measured",
+      "location": "main text; Fig. 3(a)"
+    }
+  }
+}

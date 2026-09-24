@@ -1,0 +1,22 @@
+{
+  "_source": "notebook.py::s2e_optimize",
+  "N": 241,
+  "site": 120,
+  "theta0": [
+    4.0,
+    0.0
+  ],
+  "theta_star": [
+    5.802671341515152,
+    0.15988276520391956
+  ],
+  "ratio_star": 0.9923917208331975,
+  "e_min": -0.007114910166468924,
+  "bound": -0.007169457399841416,
+  "n_iter": 11,
+  "converged": true,
+  "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+  "label": "modgauss(tau=5.80267, c=0.159883)",
+  "ratio_replay_independent_grid": 0.9923917208362484,
+  "replay_dev": 3.05089287166993e-12
+}

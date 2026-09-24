@@ -1,0 +1,15 @@
+{
+ "generator": "papers/toy-jacobson/notebook.py",
+ "generator_sha256": "818814015c752ea78854c2e3ea59b1dd3c7b6292741ae509d0271c7b858912c1",
+ "mode": "full",
+ "git_head": "3af08227fdbad2c5da9592e005b94d6feb0fff96",
+ "git_dirty": true,
+ "produced_utc": "2026-09-05T04:13:14Z",
+ "wall_clock_s": 326.8833291530609,
+ "package": "vacuum 0.1.0",
+ "python": "3.13.3",
+ "numpy": "2.5.2",
+ "scipy": "1.18.1",
+ "mpmath": "1.4.1",
+ "platform": "macOS-14.6.1-arm64-arm-64bit-Mach-O"
+}

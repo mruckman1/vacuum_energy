@@ -1,0 +1,336 @@
+{
+  "_source": "notebook.py::s6e_ffr2012_comparison",
+  "quick": false,
+  "continuum": [
+    {
+      "n": 600,
+      "omega_max": 40.0,
+      "T00": {
+        "ratio_FE": 0.2832816160576742,
+        "x0_FFR_units": 0.05975471588716565,
+        "e_min_per_volume": -0.0011887823008117778,
+        "sectors": [
+          [
+            0,
+            1,
+            -0.0005943911504058889
+          ],
+          [
+            1,
+            3,
+            -0.00019813038346862963
+          ]
+        ],
+        "seconds": 2.037799835205078
+      },
+      "ratio_2d_control": 0.9999429294244037
+    },
+    {
+      "n": 800,
+      "omega_max": 40.0,
+      "T00": {
+        "ratio_FE": 0.28329674222520934,
+        "x0_FFR_units": 0.0597579065631301,
+        "e_min_per_volume": -0.0011888457772932211,
+        "sectors": [
+          [
+            0,
+            1,
+            -0.0005944228886466106
+          ],
+          [
+            1,
+            3,
+            -0.00019814096288220352
+          ]
+        ],
+        "seconds": 4.309647083282471
+      },
+      "ratio_2d_control": 0.9999678838333353
+    },
+    {
+      "n": 1200,
+      "omega_max": 40.0,
+      "T00": {
+        "ratio_FE": 0.2833075543186152,
+        "x0_FFR_units": 0.0597601872390829,
+        "e_min_per_volume": -0.001188891149899656,
+        "sectors": [
+          [
+            0,
+            1,
+            -0.000594445574949828
+          ],
+          [
+            1,
+            3,
+            -0.000198148524983276
+          ]
+        ],
+        "seconds": 12.536120891571045
+      },
+      "phidot2": {
+        "ratio_FE": 0.2833075543186152,
+        "x0_FFR_units": 0.0597601872390829,
+        "e_min_per_volume": -0.001188891149899656,
+        "sectors": [
+          [
+            0,
+            1,
+            -0.001188891149899656
+          ]
+        ],
+        "seconds": 13.299416065216064
+      },
+      "gradphi2": {
+        "ratio_FE": 0.2833075543186152,
+        "x0_FFR_units": 0.0597601872390829,
+        "e_min_per_volume": -0.001188891149899656,
+        "sectors": [
+          [
+            1,
+            3,
+            -0.000396297049966552
+          ]
+        ],
+        "seconds": 13.800626993179321
+      },
+      "ratio_2d_control": 0.9999857200112778
+    }
+  ],
+  "exhibited_state_ladder": [
+    {
+      "n_boxes": 150,
+      "nodes": 12,
+      "x_state_FFR_units": 0.059700885741391874,
+      "ratio_FE": 0.2830264212925244,
+      "z_norm_used": 0.2786050865245429,
+      "clipped": false,
+      "state_reg_used": 0.0,
+      "n_kept": 147,
+      "riccati_residual": 4.898390261739928e-18,
+      "seconds": 0.21890497207641602
+    },
+    {
+      "n_boxes": 300,
+      "nodes": 12,
+      "x_state_FFR_units": 0.05974673622480265,
+      "ratio_FE": 0.28324378654721255,
+      "z_norm_used": 0.27732856787028315,
+      "clipped": false,
+      "state_reg_used": 0.0,
+      "n_kept": 292,
+      "riccati_residual": 4.968450088335751e-18,
+      "seconds": 0.7838940620422363
+    },
+    {
+      "n_boxes": 300,
+      "nodes": 24,
+      "x_state_FFR_units": 0.05974673622399949,
+      "ratio_FE": 0.283243786543405,
+      "z_norm_used": 0.2773272218951645,
+      "clipped": false,
+      "state_reg_used": 0.0,
+      "n_kept": 292,
+      "riccati_residual": 5.047562032641299e-18,
+      "seconds": 1.448415994644165
+    },
+    {
+      "n_boxes": 600,
+      "nodes": 12,
+      "x_state_FFR_units": 0.059758194318691456,
+      "ratio_FE": 0.28329810639972247,
+      "z_norm_used": 0.2787533462447126,
+      "clipped": false,
+      "state_reg_used": 0.0,
+      "n_kept": 582,
+      "riccati_residual": 4.724671474643868e-18,
+      "seconds": 3.651432991027832
+    },
+    {
+      "n_boxes": 1000,
+      "nodes": 12,
+      "x_state_FFR_units": 0.05976063836451463,
+      "ratio_FE": 0.2833096929873286,
+      "z_norm_used": 0.27829335116605697,
+      "clipped": false,
+      "state_reg_used": 0.0,
+      "n_kept": 965,
+      "riccati_residual": 4.831330317165805e-18,
+      "seconds": 13.686630010604858
+    }
+  ],
+  "lattice_vs_continuum_rho_quarter": {
+    "rho": 0.25,
+    "rows": [
+      {
+        "n_ball": 3,
+        "tau": 14.0,
+        "N": 235,
+        "g": 16.785714285714285,
+        "C_raw": 0.2658716468798065,
+        "l_stop": 8,
+        "converged": true,
+        "seconds": 4.015419960021973,
+        "C_boxcorr": 0.26792519238225465,
+        "C_boxcorr_gaussian_law": 0.2659981130615098
+      },
+      {
+        "n_ball": 4,
+        "tau": 18.0,
+        "N": 300,
+        "g": 16.666666666666668,
+        "C_raw": 0.2667512591482878,
+        "l_stop": 8,
+        "converged": true,
+        "seconds": 8.258368968963623,
+        "C_boxcorr": 0.2688416717886643,
+        "C_boxcorr_gaussian_law": 0.2668813775482878
+      },
+      {
+        "n_ball": 6,
+        "tau": 26.0,
+        "N": 430,
+        "g": 16.53846153846154,
+        "C_raw": 0.2674926658940962,
+        "l_stop": 8,
+        "converged": true,
+        "seconds": 20.234633922576904,
+        "C_boxcorr": 0.26962382624550635,
+        "C_boxcorr_gaussian_law": 0.26762686613096287
+      }
+    ],
+    "box_sweep_nb4": [
+      {
+        "n_ball": 4,
+        "tau": 18.0,
+        "N": 156,
+        "g": 8.666666666666666,
+        "C_raw": 0.2581535004501752,
+        "l_stop": 8,
+        "converged": true,
+        "seconds": 2.0341732501983643
+      },
+      {
+        "n_ball": 4,
+        "tau": 18.0,
+        "N": 228,
+        "g": 12.666666666666666,
+        "C_raw": 0.2647093917681358,
+        "l_stop": 8,
+        "converged": true,
+        "seconds": 4.0135109424591064
+      },
+      {
+        "n_ball": 4,
+        "tau": 18.0,
+        "N": 300,
+        "g": 16.666666666666668,
+        "C_raw": 0.2667512591482878,
+        "l_stop": 8,
+        "converged": true,
+        "seconds": 8.258368968963623
+      },
+      {
+        "n_ball": 4,
+        "tau": 18.0,
+        "N": 444,
+        "g": 24.666666666666668,
+        "C_raw": 0.2680778542946897,
+        "l_stop": 8,
+        "converged": true,
+        "seconds": 19.49959397315979
+      },
+      {
+        "n_ball": 4,
+        "tau": 18.0,
+        "N": 588,
+        "g": 32.666666666666664,
+        "C_raw": 0.26850924159540207,
+        "l_stop": 8,
+        "converged": true,
+        "seconds": 41.1369469165802
+      }
+    ],
+    "box_sweep_failed": [],
+    "box_fits": {
+      "g-1": {
+        "C_inf": 0.2731834997342904,
+        "coef": [
+          -0.12202184300970416
+        ],
+        "max_resid": 0.0011591954293483364
+      },
+      "g-2": {
+        "C_inf": 0.2695762999768521,
+        "coef": [
+          -0.842706184130769
+        ],
+        "max_resid": 0.0003854156535945674
+      },
+      "g-4": {
+        "C_inf": 0.2678437125464935,
+        "coef": [
+          -55.955249444407784
+        ],
+        "max_resid": 0.0009606615038561528
+      },
+      "g-1_g-2": {
+        "C_inf": 0.2680598718091144,
+        "coef": [
+          0.04894938318325276,
+          -1.167274025961852
+        ],
+        "max_resid": 6.0348595285864004e-05
+      },
+      "g-2_g-4": {
+        "C_inf": 0.2690949604878238,
+        "coef": [
+          -0.5950230976721929,
+          -17.04550147037674
+        ],
+        "max_resid": 1.9291511139996054e-05
+      }
+    },
+    "box_law_measured": {
+      "exponent": 2.5,
+      "B": -2.370576074438242,
+      "C_inf_at_nb4": 0.2688673916075575,
+      "max_resid": 3.0529674949708596e-05,
+      "gaussian_law_for_comparison": "-10.04/g^4 (S4d)"
+    },
+    "C_cont_rho": 0.27060484576560917,
+    "lattice_extrap_aR2": 0.27030599573389713,
+    "lattice_extrap_aR2_aR3": 0.2704073161405101,
+    "lattice_extrap_aR2_with_GAUSSIAN_box_law": 0.26828276660759603,
+    "dev_aR2": -0.00029885003171203905,
+    "dev_aR2_aR3": -0.0001975296250990577,
+    "dev_with_gaussian_box_law": -0.002322079158013135,
+    "continuum_seconds": 32.06090784072876
+  },
+  "verdict": {
+    "x0_ours_FFR_units": 0.0597601872390829,
+    "x0_ours_grid_extrapolated": 0.05976201062383134,
+    "x_exhibited_state_FFR_units": 0.05976063836451463,
+    "x_exhibited_state_boxes": 1000,
+    "x_exhibited_state_quadrature_dependence": 8.031630915894539e-13,
+    "rigorous_lower_bound_x0": 0.05976063836451463,
+    "rigorous_margin_over_y_inf_plus_err": 0.03614063836451463,
+    "rigorous_ratio_over_y_inf": 2.5311579146342496,
+    "x0_ours_uncertainty": 1.1823384748439461e-05,
+    "phidot2_equals_T00": true,
+    "gradphi2_equals_T00": true,
+    "FFR2012_y_inf": 0.02361,
+    "FFR2012_y_inf_err": 1e-05,
+    "ratio_ours_over_FFR": 2.531138807246205,
+    "within_their_error_plus_our_budget": false,
+    "respects_FFR_eq64_y_inf_le_x0": true,
+    "respects_Fewster_Eveson": true,
+    "respects_Ford_Roman": true,
+    "x0_FE_FFR_units": 0.2109375,
+    "x0_FordRoman_FFR_units": 1.5,
+    "FE_over_ours": 3.529732916600499,
+    "lattice_route_dev_at_rho_quarter": -0.0001975296250990577,
+    "reading": "our exact infimum exceeds their moment estimate by a factor ~2.5 while satisfying their rigorous y_inf <= x0 (Eq. 64), the FE and Ford-Roman bounds; their abstract states the distributions are not uniquely determined by the moments, and their Sec. IV says that in that case y_inf = x_F < x0 -- the Friedrichs edge, not the spectral edge. Their Eq. (57) identity x0(rho_S) = x0(phidot^2) holds exactly here."
+  }
+}

@@ -1,0 +1,1 @@
+{"kind": "ceiling", "tag": "ceiling_N4_d4_L30", "N": 4, "d": 4, "layers": 30, "restarts": 3, "maxiter": 300, "seed": 30000, "method": "lm", "stop_at": 1e-13, "perturb_rounds": 2, "cost": 221414400}

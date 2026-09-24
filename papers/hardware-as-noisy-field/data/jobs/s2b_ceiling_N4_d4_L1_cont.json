@@ -1,0 +1,116 @@
+{
+ "spec": {
+  "kind": "ceiling",
+  "tag": "ceiling_N4_d4_L1_cont",
+  "N": 4,
+  "d": 4,
+  "layers": 1,
+  "restarts": 0,
+  "maxiter": 1000,
+  "seed": 1000,
+  "method": "lm",
+  "stop_at": 1e-13,
+  "perturb_rounds": 0,
+  "stage": "cont1",
+  "init_params": {
+   "continue": [
+    1.5531861872805076e-05,
+    -4.492365581364175e-16,
+    -2.031998529793306e-15,
+    0.002474106394178458,
+    0.0029401350169149533,
+    3.053745248384004e-14,
+    1.2986355486660305e-14,
+    1.2928132661212828,
+    2.870748069903663e-13,
+    0.02230072859377659,
+    4.358682222911269e-13,
+    0.04552161407989912,
+    4.307738044689232e-13,
+    0.04526667975096328,
+    2.746740733841849e-13,
+    -1.2705148252651155
+   ]
+  },
+  "continued_from": {
+   "stage": "scan",
+   "infidelity": 0.025575132641375897,
+   "maxiter": null,
+   "budget_exhausted": null
+  },
+  "cost": 1024000
+ },
+ "row": {
+  "N": 4,
+  "d": 4,
+  "n_qubits": 8,
+  "layers": 1,
+  "n_params": 16,
+  "sector_dof": 71,
+  "infidelity": 0.025575132641375897,
+  "fidelity": 0.9744248673586241,
+  "energy": 3.4685507156086537,
+  "E0_exact_truncated": 3.3850293823641473,
+  "energy_error": 0.08352133324450639,
+  "cov_error_vs_ED": 0.1511887638891058,
+  "grad_norm": 1.5712948256564497e-09,
+  "restarts": 1,
+  "restarts_run": 1,
+  "best_restart": 0,
+  "best_start": "continue",
+  "restart_infidelities": [
+   0.025575132641375897
+  ],
+  "n_iterations": 1,
+  "n_evaluations": 2,
+  "seed": 1000,
+  "wall_s": 0.3927159309387207,
+  "params": [
+   1.5531861872805076e-05,
+   -4.492365581364175e-16,
+   -2.031998529793306e-15,
+   0.002474106394178458,
+   0.0029401350169149533,
+   3.053745248384004e-14,
+   1.2986355486660305e-14,
+   1.2928132661212828,
+   2.870748069903663e-13,
+   0.02230072859377659,
+   4.358682222911269e-13,
+   0.04552161407989912,
+   4.307738044689232e-13,
+   0.04526667975096328,
+   2.746740733841849e-13,
+   -1.2705148252651155
+  ],
+  "history": [
+   {
+    "restart": 0,
+    "start": "continue",
+    "infidelity": 0.025575132641375897,
+    "nit": 1,
+    "nfev": 2,
+    "grad_max": 5.462500017208697e-10,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   }
+  ],
+  "kind": "ceiling",
+  "method": "lm",
+  "maxiter": 1000,
+  "stop_at": 1e-13,
+  "perturb_rounds": 0,
+  "best_message": "`ftol` termination condition is satisfied.",
+  "best_nfev": 2,
+  "budget_exhausted": false,
+  "stage": "cont1",
+  "continued_from": {
+   "stage": "scan",
+   "infidelity": 0.025575132641375897,
+   "maxiter": null,
+   "budget_exhausted": null
+  },
+  "threads": "1",
+  "time_s": 0.3931257724761963
+ }
+}

@@ -1,0 +1,168 @@
+{
+ "spec": {
+  "kind": "ceiling",
+  "tag": "ceiling_N3_d2_L1",
+  "N": 3,
+  "d": 2,
+  "layers": 1,
+  "restarts": 8,
+  "maxiter": 400,
+  "seed": 1000,
+  "method": "lm",
+  "stop_at": 1e-13,
+  "perturb_rounds": 2,
+  "cost": 102400
+ },
+ "row": {
+  "N": 3,
+  "d": 2,
+  "n_qubits": 3,
+  "layers": 1,
+  "n_params": 6,
+  "sector_dof": 2,
+  "infidelity": 4.436468420065953e-05,
+  "fidelity": 0.9999556353157993,
+  "energy": 2.5501327984771636,
+  "E0_exact_truncated": 2.5499727140139434,
+  "energy_error": 0.0001600844632201337,
+  "cov_error_vs_ED": 0.011536383658937357,
+  "grad_norm": 3.928206281891916e-15,
+  "restarts": 8,
+  "restarts_run": 10,
+  "best_restart": 1,
+  "best_start": "normal",
+  "restart_infidelities": [
+   4.436468420088158e-05,
+   4.436468420065953e-05,
+   4.436468420088158e-05,
+   4.436468420110362e-05,
+   4.436468420110362e-05,
+   4.436468420110362e-05,
+   4.436468420088158e-05,
+   4.436468420110362e-05,
+   4.436468420065953e-05,
+   4.436468420088158e-05
+  ],
+  "n_iterations": 255,
+  "n_evaluations": 362,
+  "seed": 1000,
+  "wall_s": 0.18317079544067383,
+  "params": [
+   -1.5707963272257297,
+   -1.4034274863636005,
+   4.545020139953395,
+   -1.5707963272318275,
+   -1.5707963268686405,
+   -4.7123889803968035
+  ],
+  "history": [
+   {
+    "restart": 0,
+    "start": "normal",
+    "infidelity": 4.436468420088158e-05,
+    "nit": 28,
+    "nfev": 37,
+    "grad_max": 2.233350278564377e-14,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   },
+   {
+    "restart": 1,
+    "start": "normal",
+    "infidelity": 4.436468420065953e-05,
+    "nit": 31,
+    "nfev": 47,
+    "grad_max": 1.3383656445171028e-15,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   },
+   {
+    "restart": 2,
+    "start": "normal",
+    "infidelity": 4.436468420088158e-05,
+    "nit": 28,
+    "nfev": 37,
+    "grad_max": 2.0378356243440333e-14,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   },
+   {
+    "restart": 3,
+    "start": "normal",
+    "infidelity": 4.436468420110362e-05,
+    "nit": 34,
+    "nfev": 45,
+    "grad_max": 1.0610561928416987e-15,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied."
+   },
+   {
+    "restart": 4,
+    "start": "uniform",
+    "infidelity": 4.436468420110362e-05,
+    "nit": 34,
+    "nfev": 44,
+    "grad_max": 7.365328903669526e-14,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   },
+   {
+    "restart": 5,
+    "start": "uniform",
+    "infidelity": 4.436468420110362e-05,
+    "nit": 13,
+    "nfev": 22,
+    "grad_max": 9.492197954374087e-12,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   },
+   {
+    "restart": 6,
+    "start": "uniform",
+    "infidelity": 4.436468420088158e-05,
+    "nit": 39,
+    "nfev": 58,
+    "grad_max": 2.9993783390129536e-11,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   },
+   {
+    "restart": 7,
+    "start": "uniform",
+    "infidelity": 4.436468420110362e-05,
+    "nit": 14,
+    "nfev": 22,
+    "grad_max": 3.816526422266982e-12,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   },
+   {
+    "restart": 8,
+    "start": "perturb",
+    "infidelity": 4.436468420065953e-05,
+    "nit": 23,
+    "nfev": 43,
+    "grad_max": 7.518070801321164e-12,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   },
+   {
+    "restart": 9,
+    "start": "perturb",
+    "infidelity": 4.436468420088158e-05,
+    "nit": 11,
+    "nfev": 17,
+    "grad_max": 9.680805612151373e-14,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   }
+  ],
+  "kind": "ceiling",
+  "method": "lm",
+  "maxiter": 400,
+  "stop_at": 1e-13,
+  "perturb_rounds": 2,
+  "threads": "1",
+  "time_s": 0.18355011940002441
+ }
+}

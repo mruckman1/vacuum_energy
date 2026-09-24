@@ -1,0 +1,67 @@
+{
+ "spec": {
+  "kind": "ceiling",
+  "tag": "ceiling_N2_d2_L1",
+  "N": 2,
+  "d": 2,
+  "layers": 1,
+  "restarts": 8,
+  "maxiter": 400,
+  "seed": 1000,
+  "method": "lm",
+  "stop_at": 1e-13,
+  "perturb_rounds": 2,
+  "cost": 51200
+ },
+ "row": {
+  "N": 2,
+  "d": 2,
+  "n_qubits": 2,
+  "layers": 1,
+  "n_params": 4,
+  "sector_dof": 1,
+  "infidelity": 0.0,
+  "fidelity": 1.0,
+  "energy": 1.7081593229956313,
+  "E0_exact_truncated": 1.7081593229956316,
+  "energy_error": -2.220446049250313e-16,
+  "cov_error_vs_ED": 2.7755575615628914e-17,
+  "grad_norm": 9.169266595153284e-17,
+  "restarts": 8,
+  "restarts_run": 1,
+  "best_restart": 0,
+  "best_start": "normal",
+  "restart_infidelities": [
+   0.0
+  ],
+  "n_iterations": 20,
+  "n_evaluations": 45,
+  "seed": 1000,
+  "wall_s": 0.011700153350830078,
+  "params": [
+   -0.38611761305724557,
+   -4.260638713150502,
+   0.3506304184806449,
+   4.289956679117289
+  ],
+  "history": [
+   {
+    "restart": 0,
+    "start": "normal",
+    "infidelity": 0.0,
+    "nit": 20,
+    "nfev": 45,
+    "grad_max": 3.4410176666253926e-17,
+    "success": true,
+    "message": "`xtol` termination condition is satisfied."
+   }
+  ],
+  "kind": "ceiling",
+  "method": "lm",
+  "maxiter": 400,
+  "stop_at": 1e-13,
+  "perturb_rounds": 2,
+  "threads": "1",
+  "time_s": 0.012011051177978516
+ }
+}

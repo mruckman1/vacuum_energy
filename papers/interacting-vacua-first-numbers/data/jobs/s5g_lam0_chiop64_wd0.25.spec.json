@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 16, "m": 0.5, "tau0": 0.75, "lam": 0.0, "n_max": 6, "tag": "lam0_chiop64_wd0.25", "section": "S5g", "threads": 2, "chi_gs": 16, "cost": 1882384.0, "kw": {"chi_op": 64, "chi_acc": 128, "chi_mpo": 256, "weight_decay": 0.25}, "axis": "mpo"}

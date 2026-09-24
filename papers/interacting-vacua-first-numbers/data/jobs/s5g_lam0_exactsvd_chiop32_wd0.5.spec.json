@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 16, "m": 0.5, "tau0": 0.75, "lam": 0.0, "n_max": 6, "tag": "lam0_exactsvd_chiop32_wd0.5", "section": "S5g", "threads": 2, "chi_gs": 16, "cost": 1411788.0, "kw": {"chi_op": 32, "chi_acc": 64, "chi_mpo": 128, "weight_decay": 0.5, "svd_dense_limit": "inf"}, "axis": "svd"}

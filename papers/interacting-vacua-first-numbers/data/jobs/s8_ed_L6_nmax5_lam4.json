@@ -1,0 +1,57 @@
+{
+ "spec": {
+  "kind": "ed",
+  "L": 6,
+  "m": 0.5,
+  "tau0": 0.75,
+  "lam": 4.0,
+  "n_max": 5,
+  "tag": "ed_L6_nmax5_lam4",
+  "section": "S8",
+  "part": "ed",
+  "threads": 2,
+  "dt": 0.375,
+  "priority": 80.0,
+  "kernels": [
+   "analytic",
+   "trapezoid"
+  ],
+  "est_wall_s": 4800.0,
+  "cost": 4800.0
+ },
+ "row": {
+  "E_min": -0.0061487958685504385,
+  "E_star": 1.0153005928774856,
+  "E_ref": 1.021449388746036,
+  "E_min_analytic": -0.0061487958685504385,
+  "E_min_trapezoid": -0.006148967937023686,
+  "E_star_even": 1.0155885446864996,
+  "E_star_odd": 1.0153005928774856,
+  "sector_star": 1,
+  "E_vac": 4.645272684794711,
+  "h_vac": 0.7683881403356484,
+  "E_free_exact": -0.01989537780959383,
+  "E_hartree_exact": -0.006996472225372141,
+  "mu_H2": 0.9082070167465974,
+  "ratio_exact_over_free_exact": 0.3090565018365926,
+  "ratio_exact_over_hartree_exact": 0.8788423180259799,
+  "n_max": 5,
+  "L": 6,
+  "m": 0.5,
+  "lam": 4.0,
+  "tau0": 0.75,
+  "route": "ed",
+  "kernel": "analytic",
+  "dt": null,
+  "dim": 46656,
+  "dim_sectors": [
+   23328,
+   23328
+  ],
+  "omega": 1.2782188733130382,
+  "time_s": 6672.433154821396,
+  "tag": "ed_L6_nmax5_lam4",
+  "section": "S8",
+  "threads": "2"
+ }
+}

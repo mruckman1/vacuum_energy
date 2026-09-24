@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" font-family="Helvetica, Arial" font-size="12">
+<rect width="640" height="420" fill="white"/>
+<text x="320.0" y="22" text-anchor="middle" font-size="14">Critical TFIM L=12: exact vs entropic</text>
+<line x1="70" y1="370" x2="620" y2="370" stroke="black"/>
+<line x1="70" y1="40" x2="70" y2="370" stroke="black"/>
+<text x="345.0" y="408" text-anchor="middle">distance |A-B|</text>
+<text x="16" y="205.0" text-anchor="middle" transform="rotate(-90 16 205.0)">energy (J units)</text>
+<text x="70.0" y="386" text-anchor="middle">1</text>
+<text x="125.0" y="386" text-anchor="middle">2</text>
+<text x="180.0" y="386" text-anchor="middle">3</text>
+<text x="235.0" y="386" text-anchor="middle">4</text>
+<text x="290.0" y="386" text-anchor="middle">5</text>
+<text x="345.0" y="386" text-anchor="middle">6</text>
+<text x="400.0" y="386" text-anchor="middle">7</text>
+<text x="455.0" y="386" text-anchor="middle">8</text>
+<text x="510.0" y="386" text-anchor="middle">9</text>
+<text x="565.0" y="386" text-anchor="middle">10</text>
+<text x="620.0" y="386" text-anchor="middle">11</text>
+<line x1="66" y1="345.9" x2="70" y2="345.9" stroke="black"/>
+<text x="64" y="349.9" text-anchor="end">1e-6</text>
+<line x1="66" y1="302.2" x2="70" y2="302.2" stroke="black"/>
+<text x="64" y="306.2" text-anchor="end">1e-5</text>
+<line x1="66" y1="258.4" x2="70" y2="258.4" stroke="black"/>
+<text x="64" y="262.4" text-anchor="end">1e-4</text>
+<line x1="66" y1="214.7" x2="70" y2="214.7" stroke="black"/>
+<text x="64" y="218.7" text-anchor="end">1e-3</text>
+<line x1="66" y1="170.9" x2="70" y2="170.9" stroke="black"/>
+<text x="64" y="174.9" text-anchor="end">1e-2</text>
+<line x1="66" y1="127.2" x2="70" y2="127.2" stroke="black"/>
+<text x="64" y="131.2" text-anchor="end">1e-1</text>
+<line x1="66" y1="83.5" x2="70" y2="83.5" stroke="black"/>
+<text x="64" y="87.5" text-anchor="end">1e0</text>
+<polyline fill="none" stroke="#1f4e79" stroke-width="2" points="70.0,148.6 125.0,212.4 180.0,247.1 235.0,271.4 290.0,289.9 345.0,304.8 400.0,317.2 455.0,327.8 510.0,337.3 565.0,346.8 620.0,355.0"/>
+<circle cx="70.0" cy="148.6" r="3" fill="#1f4e79"/>
+<circle cx="125.0" cy="212.4" r="3" fill="#1f4e79"/>
+<circle cx="180.0" cy="247.1" r="3" fill="#1f4e79"/>
+<circle cx="235.0" cy="271.4" r="3" fill="#1f4e79"/>
+<circle cx="290.0" cy="289.9" r="3" fill="#1f4e79"/>
+<circle cx="345.0" cy="304.8" r="3" fill="#1f4e79"/>
+<circle cx="400.0" cy="317.2" r="3" fill="#1f4e79"/>
+<circle cx="455.0" cy="327.8" r="3" fill="#1f4e79"/>
+<circle cx="510.0" cy="337.3" r="3" fill="#1f4e79"/>
+<circle cx="565.0" cy="346.8" r="3" fill="#1f4e79"/>
+<circle cx="620.0" cy="355.0" r="3" fill="#1f4e79"/>
+<text x="470" y="56" fill="#1f4e79">E_B achieved</text>
+<polyline fill="none" stroke="#c0392b" stroke-width="2" points="70.0,148.6 125.0,212.4 180.0,247.1 235.0,271.4 290.0,289.9 345.0,304.8 400.0,317.2 455.0,327.8 510.0,337.3 565.0,346.8 620.0,355.0"/>
+<circle cx="70.0" cy="148.6" r="3" fill="#c0392b"/>
+<circle cx="125.0" cy="212.4" r="3" fill="#c0392b"/>
+<circle cx="180.0" cy="247.1" r="3" fill="#c0392b"/>
+<circle cx="235.0" cy="271.4" r="3" fill="#c0392b"/>
+<circle cx="290.0" cy="289.9" r="3" fill="#c0392b"/>
+<circle cx="345.0" cy="304.8" r="3" fill="#c0392b"/>
+<circle cx="400.0" cy="317.2" r="3" fill="#c0392b"/>
+<circle cx="455.0" cy="327.8" r="3" fill="#c0392b"/>
+<circle cx="510.0" cy="337.3" r="3" fill="#c0392b"/>
+<circle cx="565.0" cy="346.8" r="3" fill="#c0392b"/>
+<circle cx="620.0" cy="355.0" r="3" fill="#c0392b"/>
+<text x="470" y="70" fill="#c0392b">Prop. B closed form (exact)</text>
+<polyline fill="none" stroke="#2e8b57" stroke-width="2" points="70.0,85.1 125.0,120.4 180.0,123.3 235.0,125.2 290.0,126.5 345.0,127.6 400.0,128.6 455.0,129.6 510.0,131.3 565.0,142.6 620.0,152.9"/>
+<circle cx="70.0" cy="85.1" r="3" fill="#2e8b57"/>
+<circle cx="125.0" cy="120.4" r="3" fill="#2e8b57"/>
+<circle cx="180.0" cy="123.3" r="3" fill="#2e8b57"/>
+<circle cx="235.0" cy="125.2" r="3" fill="#2e8b57"/>
+<circle cx="290.0" cy="126.5" r="3" fill="#2e8b57"/>
+<circle cx="345.0" cy="127.6" r="3" fill="#2e8b57"/>
+<circle cx="400.0" cy="128.6" r="3" fill="#2e8b57"/>
+<circle cx="455.0" cy="129.6" r="3" fill="#2e8b57"/>
+<circle cx="510.0" cy="131.3" r="3" fill="#2e8b57"/>
+<circle cx="565.0" cy="142.6" r="3" fill="#2e8b57"/>
+<circle cx="620.0" cy="152.9" r="3" fill="#2e8b57"/>
+<text x="470" y="84" fill="#2e8b57">region-unitary bound</text>
+<polyline fill="none" stroke="#8e44ad" stroke-width="2" points="70.0,55.0 125.0,67.3 180.0,72.6 235.0,76.3 290.0,79.2 345.0,81.8 400.0,84.1 455.0,86.5 510.0,89.0 565.0,92.1 620.0,104.9"/>
+<circle cx="70.0" cy="55.0" r="3" fill="#8e44ad"/>
+<circle cx="125.0" cy="67.3" r="3" fill="#8e44ad"/>
+<circle cx="180.0" cy="72.6" r="3" fill="#8e44ad"/>
+<circle cx="235.0" cy="76.3" r="3" fill="#8e44ad"/>
+<circle cx="290.0" cy="79.2" r="3" fill="#8e44ad"/>
+<circle cx="345.0" cy="81.8" r="3" fill="#8e44ad"/>
+<circle cx="400.0" cy="84.1" r="3" fill="#8e44ad"/>
+<circle cx="455.0" cy="86.5" r="3" fill="#8e44ad"/>
+<circle cx="510.0" cy="89.0" r="3" fill="#8e44ad"/>
+<circle cx="565.0" cy="92.1" r="3" fill="#8e44ad"/>
+<circle cx="620.0" cy="104.9" r="3" fill="#8e44ad"/>
+<text x="470" y="98" fill="#8e44ad">entropic bound, Prop. C</text>
+<line x1="70" y1="115.9" x2="620" y2="115.9" stroke="#444" stroke-dasharray="6,4"/>
+<text x="76" y="111.9" fill="#444">W_-> (Bob = complement)</text>
+</svg>

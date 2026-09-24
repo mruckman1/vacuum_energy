@@ -1,0 +1,134 @@
+[
+ {
+  "N": 2,
+  "d": 2,
+  "n_qubits": 2,
+  "layers": 1,
+  "n_params": 4,
+  "energy": 1.7081593229956307,
+  "E0_exact_truncated": 1.7081593229956316,
+  "energy_error": -8.881784197001252e-16,
+  "infidelity": 4.440892098500626e-16,
+  "cov_error_vs_ED": 1.1246530651209952e-09,
+  "cov_error_vs_gaussian": 0.024255220985796355,
+  "aer_vs_numpy": 0.0,
+  "n_evaluations": 748,
+  "n_iterations": 27,
+  "restart_energies": [
+   1.7081593229956313,
+   1.7081593229956316,
+   1.7081593229956307
+  ],
+  "runtime_s": 0.1125180721282959
+ },
+ {
+  "N": 3,
+  "d": 2,
+  "n_qubits": 3,
+  "layers": 2,
+  "n_params": 9,
+  "energy": 2.549972714013942,
+  "E0_exact_truncated": 2.5499727140139434,
+  "energy_error": -1.3322676295501878e-15,
+  "infidelity": 4.440892098500626e-16,
+  "cov_error_vs_ED": 2.4562457068277865e-09,
+  "cov_error_vs_gaussian": 0.04966818238463755,
+  "aer_vs_numpy": 8.881784197001252e-16,
+  "n_evaluations": 2186,
+  "n_iterations": 84,
+  "restart_energies": [
+   2.5499727140139443,
+   2.549972714013942,
+   2.549972714013944
+  ],
+  "runtime_s": 0.2089979648590088
+ },
+ {
+  "N": 4,
+  "d": 2,
+  "n_qubits": 4,
+  "layers": 3,
+  "n_params": 16,
+  "energy": 3.3917709936602063,
+  "E0_exact_truncated": 3.391770993660207,
+  "energy_error": -8.881784197001252e-16,
+  "infidelity": 4.440892098500626e-16,
+  "cov_error_vs_ED": 6.633573949258592e-09,
+  "cov_error_vs_gaussian": 0.05065729955435372,
+  "aer_vs_numpy": 3.9968028886505635e-15,
+  "n_evaluations": 14719,
+  "n_iterations": 362,
+  "restart_energies": [
+   3.3917709936602063,
+   3.3917709936602103,
+   3.3917709936602622
+  ],
+  "runtime_s": 1.300868034362793
+ },
+ {
+  "N": 2,
+  "d": 4,
+  "n_qubits": 4,
+  "layers": 2,
+  "n_params": 12,
+  "energy": 1.7071077547459486,
+  "E0_exact_truncated": 1.707107754745939,
+  "energy_error": 9.547918011776346e-15,
+  "infidelity": 2.4424906541753444e-15,
+  "cov_error_vs_ED": 1.432198748485547e-08,
+  "cov_error_vs_gaussian": 4.0182969047730666e-05,
+  "aer_vs_numpy": 4.440892098500626e-16,
+  "n_evaluations": 32276,
+  "n_iterations": 1049,
+  "restart_energies": [
+   1.7071077547459486,
+   1.707107760871657,
+   1.7071077547459725
+  ],
+  "runtime_s": 2.7823667526245117
+ },
+ {
+  "N": 3,
+  "d": 4,
+  "n_qubits": 6,
+  "layers": 3,
+  "n_params": 24,
+  "energy": 2.5464118962932956,
+  "E0_exact_truncated": 2.546178491741333,
+  "energy_error": 0.0002334045519627459,
+  "infidelity": 6.560109548192639e-05,
+  "cov_error_vs_ED": 0.01335609838941895,
+  "cov_error_vs_gaussian": 0.013364741177110862,
+  "aer_vs_numpy": 8.881784197001252e-16,
+  "n_evaluations": 63407,
+  "n_iterations": 1200,
+  "restart_energies": [
+   2.546411939503426,
+   2.546413304810997,
+   2.5464118962932956
+  ],
+  "runtime_s": 7.00863790512085
+ },
+ {
+  "N": 4,
+  "d": 4,
+  "n_qubits": 8,
+  "layers": 3,
+  "n_params": 32,
+  "energy": 3.386455137002219,
+  "E0_exact_truncated": 3.3850293823641473,
+  "energy_error": 0.001425754638071819,
+  "infidelity": 0.00032313683980056407,
+  "cov_error_vs_ED": 0.013923976735962657,
+  "cov_error_vs_gaussian": 0.0139416764361632,
+  "aer_vs_numpy": 1.021405182655144e-14,
+  "n_evaluations": 85281,
+  "n_iterations": 1200,
+  "restart_energies": [
+   3.3864570301769232,
+   3.386455137002219,
+   3.386549360808092
+  ],
+  "runtime_s": 14.9200439453125
+ }
+]

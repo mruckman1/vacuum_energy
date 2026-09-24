@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 16, "m": 0.5, "tau0": 1.5, "lam": 0.0, "n_max": 8, "tag": "tau0_1.5_chiop48_lam0", "section": "S8", "part": "tau0", "threads": 2, "chi_gs": 16, "kw": {"chi_op": 48, "chi_acc": 96, "chi_mpo": 192, "weight_decay": 0.5, "chi_dmrg": 16}, "priority": 75.0, "axis": "tau0", "est_wall_s": 3306.8111527572905, "cost": 3306.8111527572905}

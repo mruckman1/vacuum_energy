@@ -1,0 +1,113 @@
+{
+  "_source": "notebook.py::S5",
+  "probe": {
+    "n_points": 24,
+    "spacing": 2,
+    "L_probe": 46
+  },
+  "critical_reference": {
+    "slope_log": 2.0568292191563624,
+    "r2_log": 0.9995281138319058,
+    "r2_lin": 0.8362382367704041,
+    "stress_flat": 0.10849511014201299,
+    "stress_hyp": 0.05965486300076574,
+    "curvature_radius": 1.3732350851360264,
+    "delta_rel": 0.11295355618310111
+  },
+  "swingle_linear_relation": {
+    "slope": 0.44976717123706106,
+    "intercept": 1.3951761987124365,
+    "r2": 0.950690917321547
+  },
+  "mera_geodesic_log3_slope": 4.859940966527273,
+  "mass_axis": {
+    "crossover": {
+      "xi_cross": 40.0212582765824,
+      "m_cross": 0.02798392610461237,
+      "xi_cross_over_L": 0.8700273538387479
+    },
+    "corr_log_xi_log_R_above_floor": -0.8704628131776914,
+    "max_scatter": 0.03196000036693371,
+    "floor_onset_m": 0.31357142857142856,
+    "floor_onset_xi": 2.02047581265676,
+    "R_at_xi_over_L": {
+      "4.348": 0.4912149729508057,
+      "2.174": 0.6518663484809589,
+      "1.087": 0.8837573730756912,
+      "0.544": 1.3414734898617349,
+      "0.311": 2.2220984779656625,
+      "0.217": 3.7046677955466616,
+      "0.145": 94.67302010212451,
+      "0.109": 303.93802326573933,
+      "0.073": 1324.8742825508552,
+      "0.044": 7260.89992429748,
+      "0.032": 36.31974013941559,
+      "0.023": 8.952244830612882,
+      "0.016": 5.792953699947858,
+      "0.012": 4.716303876200176,
+      "0.009": 3.7317537879761877
+    }
+  },
+  "detuning_axis": {
+    "crossover_ordered_phase": {
+      "xi_cross": 13.017649591658179,
+      "g_cross": 0.9246692737344936,
+      "xi_cross_over_L": 0.2829923824273517
+    },
+    "crossover_disordered_phase": {
+      "xi_cross": 14.600806882603425,
+      "g_cross": 1.0712542131625207,
+      "xi_cross_over_L": 0.3174088452739875
+    },
+    "corr_log_xi_log_R_above_floor": -0.5970419583770816,
+    "max_scatter": 9.863377069209977e-17,
+    "floor_onset_xi": 2.8036732520571284,
+    "R_at_xi_over_L": {
+      "0.031": 24.30879690938953,
+      "0.043": 6207.4776080239235,
+      "0.061": 7058.933866450018,
+      "0.097": 6.967109487574814,
+      "0.134": 3.821438929133139,
+      "0.206": 2.3960656806333933,
+      "0.300": 1.8663874353813656,
+      "0.424": 1.604516667486443,
+      "0.714": 1.415307147147196,
+      "1.076": 1.3573696143018321,
+      "2.163": 1.3400714138679872,
+      "4.337": 1.3537049669805032,
+      "4.359": 1.3422868778696115,
+      "2.185": 1.3151052066579756,
+      "1.098": 1.3068019195541785,
+      "0.735": 1.341253014648812,
+      "0.446": 1.4878542042773522,
+      "0.321": 1.7104670623967284,
+      "0.228": 2.1903674626111522,
+      "0.156": 3.5948261227948652,
+      "0.119": 7.472024476816532,
+      "0.083": 814.14435634656,
+      "0.054": 7329.440400101285
+    }
+  },
+  "disorder_kitaev": {
+    "W_scatter_0.1": 0.2522328005325973,
+    "W_delta_rel_0.2": 0.2960465442229025,
+    "W_r2log_below_0.9": 0.30356350378405433,
+    "curvature_radius_range": [
+      1.1183163045047873,
+      13.718294156202214
+    ]
+  },
+  "disorder_boson": {
+    "W_scatter_0.1": 0.8535677153795078,
+    "W_delta_rel_0.2": null,
+    "curvature_radius_range": [
+      0.6595457249824958,
+      0.8849292935419193
+    ]
+  },
+  "pivot_answer": {
+    "clean_axes": "STRUCTURE: coming down from criticality the distance law crosses from log to linear at xi_cross ~ 0.3-0.6 L_probe (detuning: xi ~ 14 on either side of g = 1; mass: xi ~ 30), while the fitted curvature radius rises monotonically as xi falls (log-log correlation corr_log_xi_log_R_above_floor < 0: 1.4 at criticality, ~4 at xi ~ 6, > 10^3 at xi ~ 3) with zero translation-invariance scatter -- Swingle's factorization scale, quantified. Only when xi <~ 2.5 (correlations at the 1e-12 floor) do distances saturate and delta/diam jump from ~0.05 to ~0.3: a precision-floor artifact, noise-like and reported as such.",
+    "disorder_axis": "NOISE (Kitaev at criticality): translation invariance is lost pair by pair (scatter 0.04 -> 0.25), delta/diam 0.12 -> 0.36 and R2_log 0.999 -> 0.61 grow/fall monotonically in W with NO flattening (curvature radius stays ~1.1-1.5 up to W = 0.7); the harmonic chain at m = 0.02 is nearly immune to spring disorder (scatter < 0.11, delta/diam constant), its single-site MI being dominated by the IR zero mode."
+  },
+  "wall_time_s": 32.411800917005166
+}

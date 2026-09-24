@@ -1,0 +1,34 @@
+{
+ "qpu_time_formula": "t = 2 s + 0.00035 s x (circuits x shots)  [IBM 'Workload usage', transcribed in the sweep file]",
+ "open_plan_budget_s": 600.0,
+ "qet_information_signal": {
+  "qubits": 3,
+  "circuits": 11,
+  "depth_native": 36,
+  "cx_count_max": 8,
+  "shots_per_circuit_for_3sigma_at_sourced_noise": 3439,
+  "shots_per_circuit_used": 100000,
+  "qpu_time_s_at_used_shots": 387.0,
+  "qpu_time_s_at_3sigma_shots": 15.24015,
+  "fits_open_plan_budget": true,
+  "predicted_value_at_sourced_noise": 0.040103899558164624,
+  "predicted_std_error": 0.0024788229782663268,
+  "ideal_value": 0.04152218677914288,
+  "number_tested": "E_B_info = <H_B>_wrong-bit - <H_B>_right-bit > 0 at 3 sigma: the classical bit is worth a positive amount of Bob's local energy; predicted value and error above"
+ },
+ "qet_teleportation_signal": {
+  "predicted_E_B_ctrl_at_sourced_noise": -0.01118808180730646,
+  "predicted_E_B_raw_at_sourced_noise": -0.026350916875439223,
+  "verdict": "negative at the sourced point: not testable on this calibration (see thresholds)"
+ },
+ "harvesting": {
+  "qubits": 5,
+  "circuits": 11,
+  "depth_native": 102,
+  "cx_count": 52,
+  "shots_per_setting_used": 10000,
+  "qpu_time_s_at_used_shots": 40.5,
+  "predicted_E_N_at_sourced_noise": 0.0,
+  "verdict": "dead at the sourced point (lambda_min > 0); revives only at the 'all' multiplier in s4d"
+ }
+}

@@ -1,0 +1,119 @@
+{
+  "rows": [
+    {
+      "case": "hotta A=q0",
+      "in_convex_position": true,
+      "n_blocks": 2,
+      "ranks": [
+        1,
+        1
+      ],
+      "n_non_extreme": 0,
+      "sdp_w_off": 2.220446049250313e-16,
+      "sdp_commuting_only": true,
+      "sdp_agrees": true
+    },
+    {
+      "case": "hotta A=q1",
+      "in_convex_position": true,
+      "n_blocks": 2,
+      "ranks": [
+        1,
+        1
+      ],
+      "n_non_extreme": 0,
+      "sdp_w_off": 1.4432899320127035e-15,
+      "sdp_commuting_only": true,
+      "sdp_agrees": true
+    },
+    {
+      "case": "tfim L=5 A=0",
+      "in_convex_position": true,
+      "n_blocks": 2,
+      "ranks": [
+        1,
+        1
+      ],
+      "n_non_extreme": 0,
+      "sdp_w_off": 1.4432899320127035e-15,
+      "sdp_commuting_only": true,
+      "sdp_agrees": true
+    },
+    {
+      "case": "tfim L=5 A=(1,2)",
+      "in_convex_position": true,
+      "n_blocks": 4,
+      "ranks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "n_non_extreme": 0,
+      "sdp_w_off": -7.959528869339039e-11,
+      "sdp_commuting_only": true,
+      "sdp_agrees": true
+    },
+    {
+      "case": "tfim L=6 A=(2,3)",
+      "in_convex_position": true,
+      "n_blocks": 4,
+      "ranks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "n_non_extreme": 0,
+      "sdp_w_off": -7.958703140964474e-11,
+      "sdp_commuting_only": true,
+      "sdp_agrees": true
+    },
+    {
+      "case": "star n_alice=2",
+      "in_convex_position": false,
+      "n_blocks": 3,
+      "ranks": [
+        1,
+        2,
+        1
+      ],
+      "n_non_extreme": 1,
+      "witness_defect": 9.159339953157541e-16,
+      "witness_commutator": 0.17677669529663728,
+      "witness_unitality_defect": 0.75,
+      "W_closed_form": 0.03663409637065862,
+      "yield_wider_class": 0.18869691451985846,
+      "gain_factor": 5.150854892410876,
+      "monotonicity_violation": 0.1886969145198581,
+      "sdp_w_off": 1.9999999999967133,
+      "sdp_commuting_only": false,
+      "sdp_agrees": true
+    },
+    {
+      "case": "star n_alice=3",
+      "in_convex_position": false,
+      "n_blocks": 4,
+      "ranks": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "n_non_extreme": 2,
+      "witness_defect": 3.3306690738754696e-16,
+      "witness_commutator": 0.09294070053389134,
+      "witness_unitality_defect": 0.3527080485242938,
+      "W_closed_form": 0.043947236216831054,
+      "yield_wider_class": 2.6645352591003773e-15,
+      "gain_factor": 6.063032601080623e-14,
+      "monotonicity_violation": 2.7755575615628914e-17,
+      "sdp_w_off": 5.999999999825041,
+      "sdp_commuting_only": false,
+      "sdp_agrees": true
+    }
+  ],
+  "sdp_agrees_everywhere": true,
+  "max_gain_factor": 5.150854892410876,
+  "max_witness_defect": 9.159339953157541e-16
+}

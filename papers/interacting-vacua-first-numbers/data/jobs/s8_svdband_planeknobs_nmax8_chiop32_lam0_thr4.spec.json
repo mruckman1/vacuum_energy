@@ -1,0 +1,1 @@
+{"kind": "mpo", "L": 16, "m": 0.5, "tau0": 0.75, "lam": 0.0, "n_max": 8, "tag": "svdband_planeknobs_nmax8_chiop32_lam0_thr4", "section": "S8", "part": "svdband", "threads": 4, "chi_gs": 16, "kw": {"chi_op": 32, "chi_acc": 64, "chi_mpo": 128, "weight_decay": 0.5, "chi_dmrg": 16, "svd_dense_limit": "inf"}, "priority": 90.0, "axis": "svd", "est_wall_s": 4248.675, "cost": 4248.675}

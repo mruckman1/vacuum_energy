@@ -1,0 +1,43 @@
+{
+ "_source": "notebook.py::S0",
+ "smoke_mode": false,
+ "date_utc": "2026-09-03T00:00:55Z",
+ "build_git_head": "bd846820d712260eb9a4b6fcd0fbcf2f26b81f8d",
+ "python": "3.13.3",
+ "platform": "macOS-14.6.1-arm64-arm-64bit-Mach-O",
+ "numpy": "2.5.2",
+ "tenpy": "1.1.1",
+ "vacuum_version": "0.1.0",
+ "parameters": {
+  "MASS": 0.5,
+  "L": 32,
+  "NMAX": 8,
+  "NMAX_DENSE": 6,
+  "CHI": 32,
+  "LAMS": [
+   0.0,
+   0.25,
+   0.5,
+   1.0,
+   2.0,
+   4.0
+  ],
+  "QEI": {
+   "L": 16,
+   "n_max": 8,
+   "chi": 16,
+   "tau0": 0.75,
+   "half_width": 2,
+   "dt": 0.2,
+   "order": 4,
+   "s_grid": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+   ]
+  },
+  "critical_ratio_lambda_over_mu2": 65.47800000000001
+ }
+}

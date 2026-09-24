@@ -1,0 +1,322 @@
+{
+  "rows": [
+    {
+      "case": "hotta h=1 k=0.5",
+      "n": 2,
+      "W_one_way": 0.07257277587322108,
+      "W_two_way": [
+        0.0725727758732212,
+        0.7796795570597681,
+        1.4867863382463145
+      ],
+      "net": [
+        -0.8218544151266939,
+        -0.8218544151266938,
+        -0.8218544151266935
+      ],
+      "injected": [
+        0.8944271909999151,
+        1.6015339721864619,
+        2.308640753373008
+      ],
+      "W_two_way_bob_only": 0.07257277587322153,
+      "bob_only_minus_one_way": 4.440892098500626e-16,
+      "rounds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "case": "hotta h=0.3 k=2",
+      "n": 2,
+      "W_one_way": 0.010986676674051843,
+      "W_two_way": [
+        0.0109866766740524,
+        0.033423661146542355,
+        0.05586064561903224
+      ],
+      "net": [
+        -0.033515459205020824,
+        -0.03351545920502083,
+        -0.033515459205020984
+      ],
+      "injected": [
+        0.04450213587907322,
+        0.06693912035156319,
+        0.08937610482405323
+      ],
+      "W_two_way_bob_only": 0.010986676674052514,
+      "bob_only_minus_one_way": 6.713379852030243e-16,
+      "rounds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "case": "hotta h=2 k=2",
+      "n": 2,
+      "W_one_way": 0.22949526788029306,
+      "W_two_way": [
+        0.2294952678802947,
+        1.12392245888021,
+        2.018349649880124
+      ],
+      "net": [
+        -1.1847182944927994,
+        -1.1847182944927999,
+        -1.1847182944928005
+      ],
+      "injected": [
+        1.414213562373094,
+        2.30864075337301,
+        3.2030679443729246
+      ],
+      "W_two_way_bob_only": 0.22949526788029515,
+      "bob_only_minus_one_way": 2.0816681711721685e-15,
+      "rounds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "case": "tfim L=5 g=1 A=0",
+      "n": 5,
+      "W_one_way": 0.14470509778671747,
+      "W_two_way": [
+        0.14470509778671664,
+        0.7410365190929697,
+        1.383187030440769
+      ],
+      "net": [
+        -0.7129226686572314,
+        -0.7129226686572305,
+        -0.7129226686572321
+      ],
+      "injected": [
+        0.8576277664439481,
+        1.4539591877502003,
+        2.096109699098001
+      ],
+      "W_two_way_bob_only": 0.14470509778671664,
+      "bob_only_minus_one_way": -8.326672684688674e-16,
+      "rounds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "case": "tfim L=6 g=1 A=0",
+      "n": 6,
+      "W_one_way": 0.1546219873519168,
+      "W_two_way": [
+        0.1546219873519125,
+        0.7475707733782693,
+        1.3861061635287797
+      ],
+      "net": [
+        -0.7004756978335993,
+        -0.700475697833433,
+        -0.7004756978336117
+      ],
+      "injected": [
+        0.8550976851855118,
+        1.4480464712117023,
+        2.0865818613623914
+      ],
+      "W_two_way_bob_only": 0.1546219873519125,
+      "bob_only_minus_one_way": -4.3021142204224816e-15,
+      "rounds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "case": "tfim L=7 g=1 A=0",
+      "n": 7,
+      "W_one_way": 0.16199592219782621,
+      "W_two_way": [
+        0.16199592219781592,
+        0.752996608208531
+      ],
+      "net": [
+        -0.691526758535878,
+        -0.6915267585358779
+      ],
+      "injected": [
+        0.8535226807336939,
+        1.4445233667444088
+      ],
+      "W_two_way_bob_only": 0.16199592219781592,
+      "bob_only_minus_one_way": -1.0297318553398327e-14,
+      "rounds": [
+        1,
+        2
+      ]
+    },
+    {
+      "case": "tfim L=8 g=1 A=0",
+      "n": 8,
+      "W_one_way": 0.16769428890790472,
+      "W_two_way": [
+        0.16769428890791815,
+        0.7574628786850278
+      ],
+      "net": [
+        -0.6847810598505811,
+        -0.6847810598505798
+      ],
+      "injected": [
+        0.8524753487584993,
+        1.4422439385356076
+      ],
+      "W_two_way_bob_only": 0.16769428890791815,
+      "bob_only_minus_one_way": 1.3433698597964394e-14,
+      "rounds": [
+        1,
+        2
+      ]
+    }
+  ],
+  "audits": [
+    {
+      "case": "hotta h=1 k=0.5",
+      "n_samples": 400,
+      "passed": true,
+      "worst_violation_of_(14)": 0.0,
+      "worst_ledger_drift": 2.3314683517128287e-15,
+      "teeth": 1.2925865193968304,
+      "free_class_is_commuting_kraus": true,
+      "worst_violation_wider_class": 0.0,
+      "counts": {
+        "protocols": 400,
+        "rounds": 1200,
+        "teeth": 80
+      },
+      "tol": 1e-09,
+      "rounds": 3,
+      "seed": 2026,
+      "region_A": [
+        0
+      ],
+      "region_B": [
+        1
+      ]
+    },
+    {
+      "case": "hotta h=0.3 k=2",
+      "n_samples": 300,
+      "passed": true,
+      "worst_violation_of_(14)": 0.0,
+      "worst_ledger_drift": 8.992806499463768e-15,
+      "teeth": 6.204912224577317,
+      "free_class_is_commuting_kraus": true,
+      "worst_violation_wider_class": 0.0,
+      "counts": {
+        "protocols": 300,
+        "rounds": 900,
+        "teeth": 60
+      },
+      "tol": 1e-09,
+      "rounds": 3,
+      "seed": 2026,
+      "region_A": [
+        0
+      ],
+      "region_B": [
+        1
+      ]
+    },
+    {
+      "case": "tfim L=4 g=1 A=0",
+      "n_samples": 250,
+      "passed": true,
+      "worst_violation_of_(14)": 0.0,
+      "worst_ledger_drift": 6.217248937900877e-15,
+      "teeth": 1.0833071990015741,
+      "free_class_is_commuting_kraus": true,
+      "worst_violation_wider_class": 0.0,
+      "counts": {
+        "protocols": 250,
+        "rounds": 750,
+        "teeth": 50
+      },
+      "tol": 1e-09,
+      "rounds": 3,
+      "seed": 2026,
+      "region_A": [
+        0
+      ],
+      "region_B": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "case": "tfim L=5 g=1 A=2",
+      "n_samples": 150,
+      "passed": true,
+      "worst_violation_of_(14)": 0.0,
+      "worst_ledger_drift": 7.105427357601002e-15,
+      "teeth": 1.6836186953769223,
+      "free_class_is_commuting_kraus": true,
+      "worst_violation_wider_class": 0.0,
+      "counts": {
+        "protocols": 150,
+        "rounds": 450,
+        "teeth": 30
+      },
+      "tol": 1e-09,
+      "rounds": 3,
+      "seed": 2026,
+      "region_A": [
+        2
+      ],
+      "region_B": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "case": "tfim L=6 g=1 A=(2,3)",
+      "n_samples": 80,
+      "passed": true,
+      "worst_violation_of_(14)": 0.0,
+      "worst_ledger_drift": 5.329070518200751e-15,
+      "teeth": 1.1341655685927796,
+      "free_class_is_commuting_kraus": true,
+      "worst_violation_wider_class": 0.0,
+      "counts": {
+        "protocols": 80,
+        "rounds": 240,
+        "teeth": 16
+      },
+      "tol": 1e-09,
+      "rounds": 3,
+      "seed": 2026,
+      "region_A": [
+        2,
+        3
+      ],
+      "region_B": [
+        0,
+        1,
+        4,
+        5
+      ]
+    }
+  ],
+  "max_bob_only_minus_one_way": 1.3433698597964394e-14,
+  "worst_ledger_drift": 8.992806499463768e-15,
+  "min_teeth": 1.0833071990015741,
+  "max_two_way_over_one_way": 20.486832980505152,
+  "net_is_round_independent": true,
+  "total_protocols": 1180
+}

@@ -1,0 +1,408 @@
+{
+ "__build__": {
+  "generator": "papers/hardware-as-noisy-field/notebook.py",
+  "generator_sha256": "87e4eba041bcb05f2a1505f1e01b1cef77060090b5bbb3c4d7327e4d6898386e",
+  "git_head": "45f5ee60be4ffb6606cb501441b24c8918c19ad1",
+  "produced_utc": "2026-09-03T03:04:45+00:00",
+  "python": "3.13.3",
+  "platform": "macOS-14.6.1-arm64-arm-64bit-Mach-O",
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "qiskit": "2.5.2",
+  "qiskit_aer": "0.17.2",
+  "vacuum": "0.1.0",
+  "quick": true
+ },
+ "wall_clock_s": 20.440088033676147,
+ "encoding": {
+  "N2_m1.0_d2": {
+   "dE": 0.0010525418090843175,
+   "cov_err": 0.024255220798354515
+  },
+  "N2_m1.0_d4": {
+   "dE": 9.735593917703511e-07,
+   "cov_err": 4.0178462424544925e-05
+  },
+  "N2_m1.0_d8": {
+   "dE": 3.5638159090467525e-13,
+   "cov_err": 3.022149197562385e-11
+  },
+  "N3_m1.0_d2": {
+   "dE": 0.0038057520468930406,
+   "cov_err": 0.04966818199039924
+  },
+  "N3_m1.0_d4": {
+   "dE": 1.1529774282426075e-05,
+   "cov_err": 0.00037176639193048366
+  }
+ },
+ "vqe": {
+  "N3_d2": {
+   "energy_error": -1.3322676295501878e-15,
+   "cov_error_vs_ED": 2.4562457068277865e-09,
+   "cov_error_vs_gaussian": 0.04966818238463755,
+   "infidelity": 4.440892098500626e-16
+  },
+  "N2_d4": {
+   "energy_error": 6.20761397840397e-09,
+   "cov_error_vs_ED": 2.3506243278514916e-06,
+   "cov_error_vs_gaussian": 4.1137860941509174e-05,
+   "infidelity": 6.209261993461723e-10
+  }
+ },
+ "qet_dense": {
+  "N2_d2_A0B1": {
+   "E_A": 0.8542421961772482,
+   "E_B": 0.011170833210402797,
+   "E_B_info": 0.04440993999191001,
+   "E_B_over_E_A": 0.013076892315074707,
+   "audit": true
+  },
+  "N3_d2_A0B1": {
+   "E_A": 0.8538482301461081,
+   "E_B": 0.010437954369938662,
+   "E_B_info": 0.041522184660374606,
+   "E_B_over_E_A": 0.012224601517476412,
+   "audit": true
+  },
+  "N3_d2_A0B2": {
+   "E_A": 0.8538482301461081,
+   "E_B": 7.37763046694262e-05,
+   "E_B_info": 0.00029509285440276756,
+   "E_B_over_E_A": 8.64044710343919e-05,
+   "audit": true
+  }
+ },
+ "qet_working_point": {
+  "dense": {
+   "E_A": 0.8538482301781176,
+   "E_B": 0.01043795429721639,
+   "E_B_wrong": -0.031084232481926488,
+   "E_B_info": 0.04152218677914288,
+   "E_B_cut": -0.01032313909235505,
+   "ledger_defect": 1.1102230246251565e-15,
+   "no_signaling": 2.255140518769849e-16
+  },
+  "ideal_aer_E_B_vs_dense": 4.440892098500626e-16,
+  "sourced_point": {
+   "none": {
+    "E_A": 0.8323686237828941,
+    "E_B_raw": -0.0431883404797031,
+    "E_B_raw_std_error": 0.001777988776280729,
+    "E_B_ctrl": -0.011635361176221104,
+    "E_B_ctrl_std_error": 0.0023767154094121302,
+    "E_B_info": 0.038075644430092925,
+    "E_B_info_std_error": 0.0024143017417434225,
+    "E_B_cut": -0.030673183391267567,
+    "depth": 36,
+    "cx_count": 8,
+    "n_circuits": 9,
+    "E_B_raw_z": -24.290558554619377,
+    "E_B_raw_shots_for_3sigma": Infinity,
+    "E_B_ctrl_z": -4.895563486542572,
+    "E_B_ctrl_shots_for_3sigma": Infinity,
+    "E_B_info_z": 15.770872286492919,
+    "E_B_info_shots_for_3sigma": 3619
+   },
+   "tensored": {
+    "E_A": 0.8467583480698001,
+    "E_B_raw": -0.026350916875439223,
+    "E_B_raw_std_error": 0.0018234253888607282,
+    "E_B_ctrl": -0.01118808180730646,
+    "E_B_ctrl_std_error": 0.0024405599621601607,
+    "E_B_info": 0.040103899558164624,
+    "E_B_info_std_error": 0.0024788229782663268,
+    "E_B_cut": -0.031240031586388772,
+    "depth": 36,
+    "cx_count": 8,
+    "n_circuits": 9,
+    "E_B_raw_z": -14.451327175993317,
+    "E_B_raw_shots_for_3sigma": Infinity,
+    "E_B_ctrl_z": -4.5842273825568265,
+    "E_B_ctrl_shots_for_3sigma": Infinity,
+    "E_B_info_z": 16.178605697052657,
+    "E_B_info_shots_for_3sigma": 3439
+   }
+  }
+ },
+ "qet_thresholds": [
+  {
+   "signal": "E_B_info",
+   "mitigation": "tensored",
+   "axis": "gate",
+   "nu_star": 21.668088750990286,
+   "physical": {
+    "cnot_error": 0.09512290961684736,
+    "pauli_x_error": [
+     0.0035318984664114168,
+     0.0037529129716715177
+    ]
+   },
+   "alive_at_source": true,
+   "note": null
+  },
+  {
+   "signal": "E_B_info",
+   "mitigation": "tensored",
+   "axis": "all",
+   "nu_star": 21.668088750990286,
+   "physical": {
+    "cnot_error": 0.09512290961684736,
+    "pauli_x_error": [
+     0.0035318984664114168,
+     0.0037529129716715177
+    ],
+    "readout_error": [
+     0.18417875438341744,
+     0.1733447100079223
+    ],
+    "t1_us": [
+     6.757864142185027,
+     4.35109903247425
+    ],
+    "t2_us": [
+     7.58211773488751,
+     8.629741282163343
+    ]
+   },
+   "alive_at_source": true,
+   "note": null
+  },
+  {
+   "signal": "E_B_ctrl",
+   "mitigation": "tensored",
+   "axis": "gate",
+   "nu_star": null,
+   "physical": null,
+   "alive_at_source": false,
+   "note": "signal dead down to nu_min"
+  },
+  {
+   "signal": "E_B_ctrl",
+   "mitigation": "tensored",
+   "axis": "all",
+   "nu_star": 0.1692819433671116,
+   "physical": {
+    "cnot_error": 0.00074314773138162,
+    "pauli_x_error": [
+     2.7592956768839193e-05,
+     2.9319632591183732e-05
+    ],
+    "readout_error": [
+     0.0014388965186204487,
+     0.0013542555469368929
+    ],
+    "t1_us": [
+     865.0066101996835,
+     556.940676156704
+    ],
+    "t2_us": [
+     970.5110700656013,
+     1104.6068841169078
+    ]
+   },
+   "alive_at_source": false,
+   "note": null
+  },
+  {
+   "signal": "E_B_raw",
+   "mitigation": "tensored",
+   "axis": "gate",
+   "nu_star": null,
+   "physical": null,
+   "alive_at_source": false,
+   "note": "signal dead down to nu_min"
+  },
+  {
+   "signal": "E_B_raw",
+   "mitigation": "tensored",
+   "axis": "all",
+   "nu_star": 0.1552322265091855,
+   "physical": {
+    "cnot_error": 0.0006814694743753243,
+    "pauli_x_error": [
+     2.5302852920997236e-05,
+     2.688622163139093e-05
+    ],
+    "readout_error": [
+     0.0013194739253280768,
+     0.001241857812073484
+    ],
+    "t1_us": [
+     943.2963972293172,
+     607.3481139847029
+    ],
+    "t2_us": [
+     1058.349826543772,
+     1204.5823486847642
+    ]
+   },
+   "alive_at_source": false,
+   "note": null
+  },
+  {
+   "signal": "E_B_info",
+   "mitigation": "none",
+   "axis": "gate",
+   "nu_star": 21.668088750990286,
+   "physical": {
+    "cnot_error": 0.09512290961684736,
+    "pauli_x_error": [
+     0.0035318984664114168,
+     0.0037529129716715177
+    ]
+   },
+   "alive_at_source": true,
+   "note": null
+  }
+ ],
+ "harvest_working_point": {
+  "ideal": {
+   "E_N": 0.06842620644779145,
+   "lambda_min": -0.03541080115275928,
+   "lambda_min_std_error": 0.0035694445134013563,
+   "z_score": 9.920535539860797,
+   "depth": 102,
+   "cx_count": 52,
+   "n_circuits": 9
+  },
+  "trotter_error_E_N": -0.013177116263271269,
+  "exact_E_N": 0.08160332271106271,
+  "ideal_aer_vs_dense_trotter": 1.3322676369878692e-15,
+  "causal_contact": true,
+  "sourced_point": {
+   "n4_none": {
+    "E_N": 0.0,
+    "cx_count": 36,
+    "z": -4.846454490668807,
+    "ideal_E_N": 0.04127953928803312,
+    "shots_for_3sigma": Infinity
+   },
+   "n4_tensored": {
+    "E_N": 0.0,
+    "cx_count": 36,
+    "z": -3.7843057671035853,
+    "ideal_E_N": 0.04127953928803312,
+    "shots_for_3sigma": Infinity
+   },
+   "n6_none": {
+    "E_N": 0.0,
+    "cx_count": 52,
+    "z": -5.723329590083779,
+    "ideal_E_N": 0.06842620644779145,
+    "shots_for_3sigma": Infinity
+   },
+   "n6_tensored": {
+    "E_N": 0.0,
+    "cx_count": 52,
+    "z": -4.753664256573008,
+    "ideal_E_N": 0.06842620644779145,
+    "shots_for_3sigma": Infinity
+   }
+  }
+ },
+ "harvest_gaussian_limit": [
+  {
+   "N": 2,
+   "lam": 0.1,
+   "E_N_gaussian": 0.0011310757970285172,
+   "E_N_qubit": {
+    "2": 0.0010802156486815115,
+    "4": 0.0011290967426959707
+   },
+   "relative_deviation": {
+    "2": -0.04496617156924576,
+    "4": -0.0017497097345251017
+   }
+  },
+  {
+   "N": 2,
+   "lam": 1.0,
+   "E_N_gaussian": 0.05337519361507094,
+   "E_N_qubit": {
+    "2": 0.08541808199967564,
+    "4": 0.06432037676390812
+   },
+   "relative_deviation": {
+    "2": 0.6003329677020061,
+    "4": 0.2050612355202157
+   }
+  }
+ ],
+ "harvest_thresholds": [
+  {
+   "n_steps": 6,
+   "mitigation": "tensored",
+   "axis": "all",
+   "nu_star": 0.4788016403492868,
+   "physical": {
+    "cnot_error": 0.002101939201133369,
+    "pauli_x_error": [
+     7.804466737693375e-05,
+     8.292844410849648e-05
+    ],
+    "readout_error": [
+     0.004069813942968938,
+     0.0038304131227942942
+    ],
+    "t1_us": [
+     305.8260199216924,
+     196.90826441451316
+    ],
+    "t2_us": [
+     343.12747942999965,
+     390.5375091522043
+    ]
+   },
+   "alive_at_source": false,
+   "note": null
+  }
+ ],
+ "sampled_crosschecks": [
+  {
+   "protocol": "qet",
+   "point": "sourced",
+   "pull_E_B_info": 0.40126520700905993,
+   "pull_E_B_ctrl": -0.32583608244952933
+  },
+  {
+   "protocol": "harvest",
+   "point": "all x 0.125",
+   "pull_lambda_min": 1.1431119345659544
+  }
+ ],
+ "free_tier": {
+  "qpu_time_formula": "t = 2 s + 0.00035 s x (circuits x shots)  [IBM 'Workload usage', transcribed in the sweep file]",
+  "open_plan_budget_s": 600.0,
+  "qet_information_signal": {
+   "qubits": 3,
+   "circuits": 11,
+   "depth_native": 36,
+   "cx_count_max": 8,
+   "shots_per_circuit_for_3sigma_at_sourced_noise": 3439,
+   "shots_per_circuit_used": 100000,
+   "qpu_time_s_at_used_shots": 387.0,
+   "qpu_time_s_at_3sigma_shots": 15.24015,
+   "fits_open_plan_budget": true,
+   "predicted_value_at_sourced_noise": 0.040103899558164624,
+   "predicted_std_error": 0.0024788229782663268,
+   "ideal_value": 0.04152218677914288,
+   "number_tested": "E_B_info = <H_B>_wrong-bit - <H_B>_right-bit > 0 at 3 sigma: the classical bit is worth a positive amount of Bob's local energy; predicted value and error above"
+  },
+  "qet_teleportation_signal": {
+   "predicted_E_B_ctrl_at_sourced_noise": -0.01118808180730646,
+   "predicted_E_B_raw_at_sourced_noise": -0.026350916875439223,
+   "verdict": "negative at the sourced point: not testable on this calibration (see thresholds)"
+  },
+  "harvesting": {
+   "qubits": 5,
+   "circuits": 11,
+   "depth_native": 102,
+   "cx_count": 52,
+   "shots_per_setting_used": 10000,
+   "qpu_time_s_at_used_shots": 40.5,
+   "predicted_E_N_at_sourced_noise": 0.0,
+   "verdict": "dead at the sourced point (lambda_min > 0); revives only at the 'all' multiplier in s4d"
+  }
+ }
+}

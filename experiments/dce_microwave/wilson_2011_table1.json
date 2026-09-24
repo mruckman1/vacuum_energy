@@ -1,0 +1,98 @@
+{
+  "source": "C. M. Wilson, G. Johansson, A. Pourkabirian, M. Simoen, J. R. Johansson, T. Duty, F. Nori, P. Delsing, 'Observation of the dynamical Casimir effect in a superconducting circuit', Nature 479, 376-379 (2011); arXiv:1105.4714",
+  "location": "Main text and figure captions of arXiv:1105.4714 (the paper contains no Table 1; per-quantity locations below). Filename follows the canonical example in experiments/README.md.",
+  "retrieved": "2026-08-31",
+  "transcribed_by": "vacuum-program build agent",
+  "comment": "Verbatim transcription from the arXiv full text (fetched 2026-08-31). The paper states several values as approximate ('~'); such values carry a note. Consumed by Layer 5 (vacuum.floquet); loaded and unit-converted only through vacuum.experiments_io.",
+  "quantities": {
+    "pump_frequency_fig2b": {
+      "value": 8.70,
+      "units": "GHz",
+      "location": "Fig. 2b caption (drive frequency)"
+    },
+    "pump_frequency_fig2c": {
+      "value": 11.30,
+      "units": "GHz",
+      "location": "Fig. 2c caption; also used in Fig. 3 ('The drive frequency is 11.30 GHz')"
+    },
+    "pump_frequency_scale": {
+      "value": 11,
+      "units": "GHz",
+      "location": "abstract",
+      "note": "stated as approximate: 'modulating the inductance of a SQUID at high frequencies (~11 GHz)'"
+    },
+    "drive_band": {
+      "value": [8, 12],
+      "units": "GHz",
+      "location": "main text (drive range for the 4-6 GHz analysis band)"
+    },
+    "analysis_band": {
+      "value": [4, 6],
+      "units": "GHz",
+      "location": "main text (photon analysis band)"
+    },
+    "probe_frequency_fig1d": {
+      "value": 6.18,
+      "units": "GHz",
+      "location": "Fig. 1d caption"
+    },
+    "bandpass_filter_band": {
+      "value": [8.4, 12],
+      "units": "GHz",
+      "location": "Fig. 1c caption (measurement-setup drive-line filter)"
+    },
+    "squid_inductance_modulation": {
+      "value": 10,
+      "units": "percent",
+      "location": "main text",
+      "note": "'a 10% modulation of the SQUID inductance'"
+    },
+    "effective_boundary_velocity_fraction": {
+      "value": 0.05,
+      "units": "dimensionless",
+      "location": "main text",
+      "note": "stated as approximate: effective boundary velocity 'approaching v/c ~ 0.05 for a 10% modulation of the SQUID inductance' (fraction of vacuum c)"
+    },
+    "line_speed_fraction_of_c": {
+      "value": 0.4,
+      "units": "dimensionless",
+      "location": "theory section",
+      "note": "stated as approximate: 'c0 ~ 0.4c is the speed of light in the transmission line' (fraction of vacuum c)"
+    },
+    "josephson_inductance_zero_field": {
+      "value": 0.23,
+      "units": "nH",
+      "location": "Fig. 1b caption",
+      "note": "L_J(0) = 0.23 nH"
+    },
+    "squid_normal_state_resistance": {
+      "value": 218,
+      "units": "ohm",
+      "location": "Fig. 1b caption"
+    },
+    "sample_temperature": {
+      "value": 50,
+      "units": "mK",
+      "location": "main text",
+      "note": "'The sample is cooled to 50 mK in a dilution refrigerator' — the line temperature for thermal-occupation estimates"
+    },
+    "thermal_occupation_at_reference": {
+      "value": 0.008,
+      "units": "dimensionless",
+      "location": "main text",
+      "note": "'thermal photon occupation number of n = 0.008 at 5 GHz' (at the 50 mK sample temperature); used as a published cross-check of this loader's temperature conversion"
+    },
+    "thermal_occupation_reference_frequency": {
+      "value": 5,
+      "units": "GHz",
+      "location": "main text",
+      "note": "frequency at which n = 0.008 is quoted"
+    },
+    "amplifier_noise_temperature": {
+      "value": 6,
+      "units": "K",
+      "location": "Fig. 1c caption",
+      "note": "stated as approximate: cryogenic HEMT amplifier system noise temperature T_N ~ 6 K"
+    }
+  }
+}

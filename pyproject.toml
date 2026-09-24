@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vacuum"
+version = "0.1.0"
+description = "The Vacuum Program: code-first investigation of the entanglement structure of the quantum vacuum"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "mpmath>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+tensor = ["physics-tenpy"]   # Layer 3+: QET on critical Ising chains via DMRG
+sdp = ["cvxpy"]              # Layer 3: strong-local-passivity general certificate
+diff = ["jax"]               # Layer 6: differentiable Gaussian stack
+ibm = ["qiskit", "qiskit-aer", "qiskit-ibm-runtime"]  # Layer 3/7: Ikeda protocol on simulated hardware; the L6 real-device on-ramp
+
+[tool.setuptools.packages.find]
+include = ["vacuum*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

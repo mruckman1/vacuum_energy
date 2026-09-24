@@ -1,0 +1,63 @@
+{
+  "source": "K. Ikeda, 'Demonstration of Quantum Energy Teleportation on Superconducting Quantum Hardware', Phys. Rev. Applied 20, 024051 (2023); arXiv:2301.02666v5",
+  "location": "Table II (Appendix B): analytical values and qasm_simulator values from the quantum circuit with conditional operations (Fig. 1(B)), five (h,k) pairs; each error is the statistical error of 10^5 shots",
+  "retrieved": "2026-09-01",
+  "transcribed_by": "vacuum-program build agent",
+  "comment": "Verbatim transcription from the arXiv v5 PDF (fetched 2026-09-01), text layer cross-read against a page render. The column order of every list is the (h,k) column order of the table: (1,0.1), (1,0.2), (1,0.5), (1,1), (1.5,1). The analytical rows are printed to four decimals and appear truncated rather than rounded (e.g. <V> at (1,0.5): exact -0.25989, printed -0.2598; <H1> at (1,1): exact 0.25989, printed 0.2598). <E1> = <H1> + <V> per the table caption. Values are model energies (hbar = 1, arbitrary units). The (1,1) qasm_simulator row differs from Table I's (1,1) qasm_simulator row (separate simulator runs).",
+  "quantities": {
+    "pairs_hk": {
+      "value": [[1, 0.1], [1, 0.2], [1, 0.5], [1, 1], [1.5, 1]],
+      "units": "dimensionless",
+      "location": "Table II header row '(h,k)'"
+    },
+    "analytical_E0": {
+      "value": [0.9950, 0.9806, 0.8944, 0.7071, 1.2481],
+      "units": "dimensionless",
+      "location": "Table II row 'Analytical <E0>'"
+    },
+    "qasm_E0": {
+      "value": [0.9929, 0.9807, 0.8948, 0.7067, 1.2492],
+      "error": [0.0010, 0.0010, 0.0010, 0.0010, 0.0015],
+      "units": "dimensionless",
+      "location": "Table II row 'qasm_simulator <E0>'"
+    },
+    "analytical_V": {
+      "value": [-0.0193, -0.0701, -0.2598, -0.3746, -0.4905],
+      "units": "dimensionless",
+      "location": "Table II row 'Analytical <V>'"
+    },
+    "qasm_V": {
+      "value": [-0.0194, -0.0682, -0.2625, -0.3729, -0.4860],
+      "error": [0.0057, 0.0011, 0.0061, 0.0063, 0.0061],
+      "units": "dimensionless",
+      "location": "Table II row 'qasm_simulator <V>'"
+    },
+    "analytical_H1": {
+      "value": [0.0144, 0.0521, 0.1873, 0.2598, 0.3480],
+      "units": "dimensionless",
+      "location": "Table II row 'Analytical <H1>'"
+    },
+    "qasm_H1": {
+      "value": [0.0136, 0.0501, 0.1857, 0.2550, 0.3493],
+      "error": [0.0006, 0.0011, 0.0022, 0.0028, 0.0038],
+      "units": "dimensionless",
+      "location": "Table II row 'qasm_simulator <H1>'"
+    },
+    "analytical_E1": {
+      "value": [-0.0049, -0.0180, -0.0726, -0.1147, -0.1425],
+      "units": "dimensionless",
+      "location": "Table II row 'Analytical <E1>'"
+    },
+    "qasm_E1": {
+      "value": [-0.0058, -0.0181, -0.0768, -0.1179, -0.1367],
+      "error": [0.0057, 0.016, 0.0064, 0.0068, 0.0072],
+      "units": "dimensionless",
+      "location": "Table II row 'qasm_simulator <E1>'"
+    },
+    "shots": {
+      "value": 100000,
+      "units": "counts",
+      "location": "Table II caption ('statistical error of 10^5 shots')"
+    }
+  }
+}

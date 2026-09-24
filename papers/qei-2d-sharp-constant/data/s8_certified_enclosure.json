@@ -1,0 +1,194 @@
+{
+  "_source": "notebook_certified.py",
+  "claim": "C_4d(gaussian)/C_FE lies in [lo, hi]; lo is a computer-assisted theorem (exhibited squeezed state + interval arithmetic), hi is Fewster & Eveson, PRD 58, 084010 (1998), Eq. (40).",
+  "lo": 0.45749070936495845,
+  "hi": 1.0,
+  "lo_method": "exhibited 64-mode Gaussian state in the Cholesky-orthonormalised phi basis, energy evaluated in mpmath interval arithmetic at dps=674 with a proved Gamma-series tail bound",
+  "hi_method": "Fewster & Eveson, PRD 58, 084010 (1998), Eq. (40): C_sharp(f) <= C_FE",
+  "width": 0.5425092906350415,
+  "archived_momentum_value": 0.45749073394875556,
+  "archived_manifest_headline": 0.4574904,
+  "gap_lo_to_archived": 2.4583797109123395e-08,
+  "ladder": [
+    {
+      "n_basis": 16,
+      "dps": 213,
+      "n_terms": 899,
+      "ratio_lower_bound": 0.4573384706208281,
+      "energy_interval": [
+        -0.07599481250804306,
+        -0.07599481250804306
+      ],
+      "energy_upper_bound": -0.07599481250804306,
+      "delta": 1e-71,
+      "gram_cond_log10": 6.389983381240184,
+      "max_element_rel_width": 3.349188657809051e-211,
+      "energy_width_log10": -157.73660647751115,
+      "element_rel_width_log10": -210.47506038822073,
+      "gap_to_archived": 0.0001522633279274488,
+      "seconds": 2.01
+    },
+    {
+      "n_basis": 24,
+      "dps": 290,
+      "n_terms": 1468,
+      "ratio_lower_bound": 0.45747308306349194,
+      "energy_interval": [
+        -0.07601718072764112,
+        -0.07601718072764112
+      ],
+      "energy_upper_bound": -0.07601718072764112,
+      "delta": 1e-96,
+      "gram_cond_log10": 13.102948953251726,
+      "max_element_rel_width": 4.717010652117118e-288,
+      "energy_width_log10": -200.29397851967192,
+      "element_rel_width_log10": -287.3263331430143,
+      "gap_to_archived": 1.7650885263620353e-05,
+      "seconds": 9.25
+    },
+    {
+      "n_basis": 32,
+      "dps": 367,
+      "n_terms": 1761,
+      "ratio_lower_bound": 0.45748752762270556,
+      "energy_interval": [
+        -0.07601958094463514,
+        -0.07601958094463514
+      ],
+      "energy_upper_bound": -0.07601958094463514,
+      "delta": 1e-122,
+      "gram_cond_log10": 20.96039382080964,
+      "max_element_rel_width": 0.0,
+      "energy_width_log10": -240.24113299389643,
+      "element_rel_width_log10": -Infinity,
+      "gap_to_archived": 3.206326049998154e-06,
+      "seconds": 20.44
+    },
+    {
+      "n_basis": 40,
+      "dps": 444,
+      "n_terms": 2026,
+      "ratio_lower_bound": 0.45748997467664254,
+      "energy_interval": [
+        -0.07601998756558895,
+        -0.07601998756558895
+      ],
+      "energy_upper_bound": -0.07601998756558895,
+      "delta": 1e-148,
+      "gram_cond_log10": 29.67389959231167,
+      "max_element_rel_width": 0.0,
+      "energy_width_log10": -278.75041464617874,
+      "element_rel_width_log10": -Infinity,
+      "gap_to_archived": 7.592721130156299e-07,
+      "seconds": 50.21
+    },
+    {
+      "n_basis": 48,
+      "dps": 520,
+      "n_terms": 2286,
+      "ratio_lower_bound": 0.4574905190545175,
+      "energy_interval": [
+        -0.0760200780235259,
+        -0.0760200780235259
+      ],
+      "energy_upper_bound": -0.0760200780235259,
+      "delta": 1e-173,
+      "gram_cond_log10": 39.07242259849517,
+      "max_element_rel_width": 0.0,
+      "energy_width_log10": -314.96397909754967,
+      "element_rel_width_log10": -Infinity,
+      "gap_to_archived": 2.1489423807086183e-07,
+      "seconds": 103.37
+    },
+    {
+      "n_basis": 56,
+      "dps": 597,
+      "n_terms": 2567,
+      "ratio_lower_bound": 0.4574906647334388,
+      "energy_interval": [
+        -0.07602010223063511,
+        -0.07602010223063511
+      ],
+      "energy_upper_bound": -0.07602010223063511,
+      "delta": 1e-199,
+      "gram_cond_log10": 49.04231252987121,
+      "max_element_rel_width": 0.0,
+      "energy_width_log10": -350.9213440434416,
+      "element_rel_width_log10": -Infinity,
+      "gap_to_archived": 6.921531675585513e-08,
+      "seconds": 182.38
+    },
+    {
+      "n_basis": 64,
+      "dps": 674,
+      "n_terms": 2847,
+      "ratio_lower_bound": 0.45749070936495845,
+      "energy_interval": [
+        -0.07602010964694533,
+        -0.07602010964694533
+      ],
+      "energy_upper_bound": -0.07602010964694533,
+      "delta": 1e-224,
+      "gram_cond_log10": 59.50244025932236,
+      "max_element_rel_width": 0.0,
+      "energy_width_log10": -385.58234137462165,
+      "element_rel_width_log10": -Infinity,
+      "gap_to_archived": 2.4583797109123395e-08,
+      "seconds": 234.09
+    }
+  ],
+  "element_crosscheck": {
+    "n_check": 6,
+    "n_nodes": 4000,
+    "omega_max": 40.0,
+    "max_rel_disagreement_A": 8.364420267525929e-13,
+    "max_rel_disagreement_B": 8.719691635405979e-13,
+    "note": "<phi_m, K phi_n> from the Gamma series against a direct 2D quadrature of the kernel built by qei.fhat_of(gaussian_f(1.0)) -- the formulation check of draft section 2"
+  },
+  "mutations": [
+    {
+      "mutation": "kernel_scale=1+1e-4",
+      "n_basis": 40,
+      "dps": 444,
+      "ratio_lower_bound": 0.4575357236741102,
+      "excludes_archived": true
+    },
+    {
+      "mutation": "b_scale=1+1e-4",
+      "n_basis": 40,
+      "dps": 444,
+      "ratio_lower_bound": 0.4576288404330673,
+      "excludes_archived": true
+    },
+    {
+      "mutation": "b_scale=1-1e-4",
+      "n_basis": 40,
+      "dps": 444,
+      "ratio_lower_bound": 0.4573511089202178,
+      "excludes_archived": false
+    }
+  ],
+  "powers_stormer_estimate_NOT_CERTIFIED": {
+    "STATUS": "ESTIMATE -- NOT CERTIFIED (float64, no quadrature remainder)",
+    "n": 400,
+    "omega_max": 14.0,
+    "e_Q_nystrom": -0.07602005199087164,
+    "ratio_nystrom": 0.45749036238942564,
+    "powers_stormer_energy_lower_estimate": -0.0957209073838098,
+    "powers_stormer_ratio_upper_estimate": 0.5760505479859733,
+    "trace_norm_K_minus_measured": 1.2113548246449328,
+    "trace_norm_K_minus_proved_bound": 1.2278213378537361,
+    "coarsened_rigorous_ratio_upper_bound_from_trace_norm": 3.6945280494653248,
+    "note": "the last row is RIGOROUS but weaker than Fewster-Eveson's 1; the Powers-Stormer row is the estimate discussed in draft section 7.3 and must not be quoted as a bound"
+  },
+  "quick": false,
+  "build": {
+    "utc": "2026-09-12T19:50:07Z",
+    "git_head": "7efd1b5c14b9a10ef81c84eb0a667cb47056d8fd",
+    "git_dirty": "M papers/hardware-as-noisy-field/notebook_vqe_deep.py\n M papers/qei-2d-sharp-constant/MANIFEST.md\n M papers/qei-2d-sharp-constant/data/s8_certified_enclosure.json\n M papers/qei-2d-sharp-constant/draft/proof_4d_gaussian_constant.md\n M papers/qei-2d-sharp-constant/notebook_certified.py\n M papers/toy-jacobson/notebook_continuum.py\n?? papers/hardware-as-noisy-field/data/jobs/\n?? papers/hardware-as-noisy-field/data/s2b_vqe_deep.json\n?? papers/interacting-vacua-first-numbers/data/jobs/s8_edlz_L5_nmax8_lam0.json\n?? papers/interacting-vacua-first-numbers/data/jobs/s8_edlz_L5_nmax8_lam4.spec.json",
+    "python": "3.13.3",
+    "mpmath": "1.4.1",
+    "numpy": "2.5.2",
+    "wall_seconds": 81.33
+  }
+}

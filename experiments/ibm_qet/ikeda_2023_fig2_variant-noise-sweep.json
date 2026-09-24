@@ -1,0 +1,104 @@
+{
+  "source": "K. Ikeda, 'Demonstration of Quantum Energy Teleportation on Superconducting Quantum Hardware', Phys. Rev. Applied 20, 024051 (2023); arXiv:2301.02666v5 (parent file); IBM Quantum documentation, 'Plans overview', https://quantum.cloud.ibm.com/docs/en/guides/plans-overview (Open Plan budget); IBM Quantum documentation, 'Workload usage', https://quantum.cloud.ibm.com/docs/guides/estimate-job-run-time (QPU-time estimate)",
+  "location": "Sweep grids around the parent file's Table III (ibm_cairo) calibration point; no grid entry other than the multiplier 1 is a published number. Open Plan budget: the IBM 'Plans overview' page, sentence 'up to 10 minutes per 28-day rolling window'",
+  "retrieved": "2026-09-02",
+  "transcribed_by": "vacuum-program build agent (vacuum.hardware)",
+  "variant_of": "ikeda_2023_fig2",
+  "synthetic": true,
+  "comment": "SYNTHETIC sweep axes for papers/hardware-as-noisy-field: dimensionless multipliers applied by vacuum.hardware.noise.scale_calibration to the parent file's sourced numbers (gate errors x nu, readout flips x nu, T1 and T2 / nu). Only nu = 1 is the device; every other point is a simulation choice, chosen to bracket where the two minimal protocols lose their 3-sigma signal. The shot budget is likewise a choice, sized against the Open Plan allowance transcribed here. The tiling of the two Table III rows over an N-qubit register is a modelling choice of vacuum.hardware.noise, not a number from any source.",
+  "changes": {
+    "gate_error_multiplier_grid": "new synthetic axis: multiplies the parent's qubit0/qubit1 Pauli-X errors and CNOT error together (relaxation kept at the sourced T1/T2)",
+    "readout_error_multiplier_grid": "new synthetic axis: multiplies the parent's readout assignment errors (clipped at 0.5)",
+    "t1_divisor_grid": "new synthetic axis: divides the parent's T1 and T2 (both, so T2 <= 2 T1 is preserved)",
+    "shots_per_circuit": "simulation choice for the survival analysis (not from the parent, whose runs used 10^5 shots)"
+  },
+  "synthetic_quantities": [
+    "gate_error_multiplier_grid",
+    "readout_error_multiplier_grid",
+    "t1_divisor_grid",
+    "shots_per_circuit"
+  ],
+  "quantities": {
+    "gate_error_multiplier_grid": {
+      "value": [
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "units": "dimensionless",
+      "provenance": "synthetic",
+      "location": "none (simulation grid); multiplier 1 = Table III of the parent"
+    },
+    "readout_error_multiplier_grid": {
+      "value": [
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "units": "dimensionless",
+      "provenance": "synthetic",
+      "location": "none (simulation grid); multiplier 1 = Table III of the parent"
+    },
+    "t1_divisor_grid": {
+      "value": [
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "units": "dimensionless",
+      "provenance": "synthetic",
+      "location": "none (simulation grid); divisor 1 = Table III of the parent (T1 = 146.43 us / 94.28 us)"
+    },
+    "shots_per_circuit": {
+      "value": 10000,
+      "units": "counts",
+      "provenance": "synthetic",
+      "location": "none (simulation choice)"
+    },
+    "open_plan_qpu_budget": {
+      "value": 600,
+      "units": "s",
+      "provenance": "transcribed",
+      "location": "IBM Quantum documentation, 'Plans overview' (https://quantum.cloud.ibm.com/docs/en/guides/plans-overview), retrieved 2026-09-02: 'up to 10 minutes per 28-day rolling window'",
+      "note": "10 minutes of QPU time per 28-day rolling window on the free Open Plan; stated as 600 s. The page lists no shot or circuit limit."
+    },
+    "qpu_time_overhead": {
+      "value": 2,
+      "units": "s",
+      "provenance": "transcribed",
+      "location": "IBM Quantum documentation, 'Workload usage' (https://quantum.cloud.ibm.com/docs/guides/estimate-job-run-time), retrieved 2026-09-02: 'If you aren't using any advanced error mitigation techniques or custom rep_delay, you can use 2+0.00035*<num executions> as a quick formula.'",
+      "note": "the constant term of the quick formula; QPU time in seconds"
+    },
+    "qpu_time_per_execution": {
+      "value": 0.00035,
+      "units": "s",
+      "provenance": "transcribed",
+      "location": "same sentence as qpu_time_overhead; '<num executions> is the total number of circuits times the number of shots, where the circuits are those generated after PUB elements are broadcasted'",
+      "note": "seconds per (circuit x shot); consistent with the stated default rep_delay: 'the default is given by backend.default_rep_delay, which is 250 microseconds on most IBM Quantum backends'"
+    }
+  }
+}

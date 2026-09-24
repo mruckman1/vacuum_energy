@@ -1,0 +1,126 @@
+{
+ "spec": {
+  "sites": [
+   0,
+   1
+  ],
+  "gap": 1.5,
+  "lam": 1.0,
+  "kind": "cos2",
+  "width": 1.5,
+  "window": 3.0,
+  "n_steps": 6
+ },
+ "shots_per_setting": 10000,
+ "n_settings": 9,
+ "ideal": {
+  "E_N": 0.06842620644779145,
+  "lambda_min": -0.03541080115275928,
+  "lambda_min_std_error": 0.0035694445134013563,
+  "z_score": 9.920535539860797,
+  "depth": 102,
+  "cx_count": 52,
+  "n_circuits": 9
+ },
+ "ideal_aer_vs_dense_trotter": 1.3322676369878692e-15,
+ "trotter_error_E_N": -0.013177116263271269,
+ "causal_contact": true,
+ "sourced_point": {
+  "n3_none": {
+   "signal": -0.015295064512351703,
+   "sigma": 0.0016024786417703641,
+   "E_N": 0.0,
+   "lambda_min": 0.015295064512351703,
+   "cx_count": 28,
+   "depth": 60,
+   "z": -9.544629247260502,
+   "n_steps": 3,
+   "ideal_E_N": 0.0,
+   "shots_for_3sigma": Infinity
+  },
+  "n3_tensored": {
+   "signal": -0.013927881206127209,
+   "sigma": 0.0016527159768438475,
+   "E_N": 0.0,
+   "lambda_min": 0.013927881206127209,
+   "cx_count": 28,
+   "depth": 60,
+   "z": -8.427268448584222,
+   "n_steps": 3,
+   "ideal_E_N": 0.0,
+   "shots_for_3sigma": Infinity
+  },
+  "n4_none": {
+   "signal": -0.006472822337454478,
+   "sigma": 0.001335578895854077,
+   "E_N": 0.0,
+   "lambda_min": 0.006472822337454478,
+   "cx_count": 36,
+   "depth": 74,
+   "z": -4.846454490668807,
+   "n_steps": 4,
+   "ideal_E_N": 0.04127953928803312,
+   "shots_for_3sigma": Infinity
+  },
+  "n4_tensored": {
+   "signal": -0.005711534325023296,
+   "sigma": 0.0015092687210089698,
+   "E_N": 0.0,
+   "lambda_min": 0.005711534325023296,
+   "cx_count": 36,
+   "depth": 74,
+   "z": -3.7843057671035853,
+   "n_steps": 4,
+   "ideal_E_N": 0.04127953928803312,
+   "shots_for_3sigma": Infinity
+  },
+  "n6_none": {
+   "signal": -0.008529678258691678,
+   "sigma": 0.0014903349744998383,
+   "E_N": 0.0,
+   "lambda_min": 0.008529678258691678,
+   "cx_count": 52,
+   "depth": 102,
+   "z": -5.723329590083779,
+   "n_steps": 6,
+   "ideal_E_N": 0.06842620644779145,
+   "shots_for_3sigma": Infinity
+  },
+  "n6_tensored": {
+   "signal": -0.007665624049054675,
+   "sigma": 0.0016125716153502488,
+   "E_N": 0.0,
+   "lambda_min": 0.007665624049054675,
+   "cx_count": 52,
+   "depth": 102,
+   "z": -4.753664256573008,
+   "n_steps": 6,
+   "ideal_E_N": 0.06842620644779145,
+   "shots_for_3sigma": Infinity
+  },
+  "n8_none": {
+   "signal": -0.010681170685560255,
+   "sigma": 0.0015157837794018481,
+   "E_N": 0.0,
+   "lambda_min": 0.010681170685560255,
+   "cx_count": 68,
+   "depth": 130,
+   "z": -7.046632132305315,
+   "n_steps": 8,
+   "ideal_E_N": 0.07478476029778293,
+   "shots_for_3sigma": Infinity
+  },
+  "n8_tensored": {
+   "signal": -0.009695299008597601,
+   "sigma": 0.0015847920301732237,
+   "E_N": 0.0,
+   "lambda_min": 0.009695299008597601,
+   "cx_count": 68,
+   "depth": 130,
+   "z": -6.117710604297946,
+   "n_steps": 8,
+   "ideal_E_N": 0.07478476029778293,
+   "shots_for_3sigma": Infinity
+  }
+ }
+}

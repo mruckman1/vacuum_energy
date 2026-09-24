@@ -4,13 +4,16 @@
 %
 % BEFORE SUBMISSION (see ../../MANIFEST.md and the commit that added this file):
 %  1. Read Fan et al. 2024 (PRA 110, 052424; QIP 23, 367) and Wu et al. 2024
-%     (PRA 109, 062208) in full. They are journal-only; the Related-work paragraph
-%     below describes them from their abstracts and from how Refs. [Xie2025, Yan2026]
-%     cite them. Check in particular whether their "QET passive" states coincide with
+%     (PRA 109, 062208) in full. They are journal-only (open-access retry 2026-09-23:
+%     Unpaywall, Semantic Scholar, arXiv, 7 citing papers -- still closed, no preprint);
+%     the Related-work paragraph describes them from their abstracts and from how
+%     Refs. [Xie2025, Yan2026] cite them, and disclaims the two-qubit cases of
+%     Propositions 1 and 3. Check in particular whether their "QET passive" states coincide with
 %     the free states here and whether their correlation-matrix analysis already
 %     contains Proposition 1 or Proposition 3 for the minimal model.
 %  2. Have a quantum-energy-teleportation researcher read the whole draft.
-%  3. Confirm or edit the AI-assistance disclosure in the acknowledgments.
+%  3. The AI-use statement in the acknowledgments (set 2026-09-23) is the author's to
+%     keep or edit; name any other AI tools that were used.
 \documentclass[aps,pra,twocolumn,reprint,superscriptaddress,nofootinbib,floatfix]{revtex4-2}
 
 \usepackage{amsmath,amssymb,amsthm}
@@ -113,10 +116,10 @@ most energy Bob can receive by free operations. Our results are the following.
 already delivered to Bob's device (Theorem~\ref{thm:ledger}). This is close to built in;
 the content lies in the next items.
 \item For commuting bond operators, the potential over commuting-Kraus instruments,
-$\WCK$, has a closed form (Proposition~\ref{prop:closed}). It is built on the conditional
-Hamiltonian that Xie, Sajjan, and Kais call Bob's local effective Hamiltonian~\cite{Xie2025}.
-For the minimal model it gives Hotta's optimum in the compact form
-$E_B^{\max}=\sqrt{h^2+4k^2}-(h^2+2k^2)/\sqrt{h^2+k^2}$.
+$\WCK$, is attained by Alice's projective bond measurement followed by Bob's reset to the
+ground state of the conditional Hamiltonian that Xie, Sajjan, and Kais call his local
+effective Hamiltonian~\cite{Xie2025} (Proposition~\ref{prop:closed}). We state it because
+the next two items rest on it; for the minimal model it reproduces Hotta's optimum.
 \item Commuting-Kraus instruments are the whole free class if and only if the joint
 eigenvalue vectors of the bond operators are in convex position
 (Theorem~\ref{thm:freeclass}).
@@ -901,13 +904,16 @@ state-independent. For commuting bonds, Theorem~\ref{thm:freeclass} shows it is 
 commutation constraint whenever the bond spectrum is in convex position. Wu \emph{et al.}~\cite{Wu2024}
 find strongly locally passive pure states of the minimal model by a correlation-matrix
 analysis, with Bob's yield exceeding Alice's injection for some non-ground states. Fan
-\emph{et al.}~\cite{Fan2024steering} analyse QET with the correlation matrix, relate it to
-quantum steering, and define ``QET passive'' states. Those states are the analogue of our free
-states; their class of allowed operations may differ. Fan \emph{et al.}~\cite{Fan2024resources}
-study how quantum resources affect the efficiency of QET and give necessary and sufficient
-conditions for the minimal model. As far as we know, none of these works formulates a class
-of free operations with a ledger monotone, characterizes the free class, or addresses two-way
-communication.
+\emph{et al.}~\cite{Fan2024steering} analyse QET with the correlation matrix, identify
+quantum steering as its essence, and define ``QET passive'' states. Those states are the
+analogue of our free states; their class of allowed operations may differ. Fan
+\emph{et al.}~\cite{Fan2024resources} study how quantum resources affect the efficiency of QET
+and give necessary and sufficient conditions for the minimal model. These correlation-matrix
+analyses may contain the two-qubit cases of Propositions~\ref{prop:closed}
+and~\ref{prop:salvia}. We claim neither: Proposition~\ref{prop:salvia} is Salvia
+\emph{et al.}'s, and in the minimal model Proposition~\ref{prop:closed} gives Hotta's value.
+As far as we know, none of these works formulates a class of free operations with a ledger
+monotone, characterizes the free class, or addresses two-way communication.
 
 % ---------------------------------------------------------------------------------------
 \section{Discussion and limitations}
@@ -917,7 +923,7 @@ The theory's central object is a linear functional. For commuting bonds in conve
 position, $\Wto(\rho)=\Tr[W_{\rm op}\rho]$, and everything Bob can receive by free means,
 with one-way or two-way communication, is the expectation of one operator. The limitations
 are the following.
-\begin{itemize}
+\begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}
 \item Proposition~\ref{prop:closed} and Theorems~\ref{thm:freeclass} and~\ref{thm:linear}
 assume commuting bond operators. Non-commuting bonds admit no finest free measurement, and we
 do not treat them.
@@ -934,10 +940,10 @@ statement about a thermodynamic limit or a quantum field.
 \end{itemize}
 
 \begin{acknowledgments}
-[Acknowledgments to be supplied.] [Draft disclosure, to be confirmed or edited by the author:
-the analysis code, the numerical checks, and a first draft of this manuscript were produced
-with the assistance of an AI system (Claude, Anthropic); the author is responsible for the
-content.]
+AI assistants, including Anthropic's Claude models, were used extensively in this work: to
+write and test the analysis code, to run the numerical checks, to search the literature, and
+to draft this manuscript. The author directed the work and takes full responsibility for its
+content.
 \end{acknowledgments}
 
 % ---------------------------------------------------------------------------------------

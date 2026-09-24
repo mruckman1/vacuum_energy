@@ -241,6 +241,14 @@ efficiency, necessary and sufficient conditions for the minimal model, Gibbs sta
 chains. None mentions a resource theory, a monotone, a free class, convex position, linearity or
 two-way communication. **Verdict unchanged: the core survives; three more credits.**
 
+**Retry for the full texts, later the same day.** Unpaywall and Semantic Scholar list all three
+papers as closed with no open copy, and an arXiv author search finds no preprint. Semantic
+Scholar lists 7 citing papers, 4 of them on arXiv; those mention the three only in passing.
+Abd-Rabbou et al. (arXiv:2601.18327) cite Fan et al., PRA 110, as framing QET "within the
+resource theories of quantum steering". That is one more reason to read it before the paper is
+presented as more than *a* resource theory of QET. Still unread in full. The manuscript now
+disclaims the two-qubit cases of its Propositions 1 and 3.
+
 ## Rerunning it
 
 INSPIRE REST API, `https://inspirehep.net/api/literature?q=<query>&size=250`: record ids from

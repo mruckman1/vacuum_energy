@@ -221,10 +221,19 @@ What writing it changed:
 
 Before submission:
 1. Read Fan et al., PRA 110, 052424 and QIP 23, 367, and Wu et al., PRA 109, 062208, in full.
-   They are journal-only, so this needs a library copy or a request to the authors.
-2. Have a QET researcher read the draft.
-3. Confirm or edit the AI-assistance disclosure. (Author, affiliation, e-mail, ORCID and the
-   repository URL were filled in on 2026-09-23.)
+   They are journal-only, so this needs a library copy or a request to the authors. An
+   open-access retry on 2026-09-23 found them still closed: Unpaywall and Semantic Scholar
+   list no copy, arXiv has no preprint, and their 7 citing papers mention them only in passing.
+   An outside reader's advice, taken the same day: until they are read, no public description
+   of the paper should lead with Proposition 1 (the closed form). Lead with the core instead:
+   convex position, linearity, and two-way communication paying Bob nothing. The paper itself
+   now disclaims the two-qubit cases of Propositions 1 and 3, which the correlation-matrix
+   analyses in those papers may contain.
+2. Have a QET researcher read the draft. Not needed before a preprint listing.
+3. Done 2026-09-23: author, affiliation, e-mail, ORCID and repository URL, and the AI-use
+   statement in the acknowledgments ("AI assistants, including Anthropic's Claude models, were
+   used extensively ..."). The author may edit the statement, and should name any other AI
+   tools that were used.
 4. Obtain an arXiv endorsement, and upload a freshly built `main.bbl` (arXiv does not run BibTeX).
 
 ---
